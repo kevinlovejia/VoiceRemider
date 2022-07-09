@@ -131,14 +131,6 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=TOIFDUBV
 
-[GeneratedDocument1]
-DocumentPath=Project Outputs for PCB_TEST\Design Rule Check - main.html
-DItemRevisionGUID=
-
-[GeneratedDocument2]
-DocumentPath=Project Outputs for PCB_TEST\Design Rule Check - mainV2.html
-DItemRevisionGUID=
-
 [Configuration1]
 Name=Sources
 ParameterCount=0
