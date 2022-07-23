@@ -1,0 +1,9 @@
+.\voiceremider\qrcodegen.o: ..\Drivers\lvgl\src\libs\qrcode\qrcodegen.c
+.\voiceremider\qrcodegen.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\assert.h
+.\voiceremider\qrcodegen.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\limits.h
+.\voiceremider\qrcodegen.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\voiceremider\qrcodegen.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\voiceremider\qrcodegen.o: ..\Drivers\lvgl\src\libs\qrcode\qrcodegen.h
+.\voiceremider\qrcodegen.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\voiceremider\qrcodegen.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\voiceremider\qrcodegen.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h

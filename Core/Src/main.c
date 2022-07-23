@@ -27,6 +27,9 @@
 #include "oled_i2c.h"
 #include "pcf8563.h"
 #include <stdio.h>
+#include "lvgl.h"
+#include "porting/lv_port_disp.h"
+#include "porting/lv_port_indev.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -108,28 +111,43 @@ int main(void)
 	pcf8563_gettime();
 	now_sec = g8563_Store[0];
 
-	OLED_Init();
+	
 	int i = 0;
 	OLED_Fill(0xFF);//È«ÆÁµãÁÁ
 	HAL_Delay(2000);
 	OLED_Fill(0x00);//È«ÆÁÃð
-	HAL_Delay(2000);
-
-  /* USER CODE END 2 */
-
-  /* Infinite loop */
-  /* USER CODE BEGIN WHILE */
+	HAL_Delay(2000);	
+	
 	HAL_UART_Transmit(&huart2, (uint8_t*)max_vol, sizeof(max_vol), 0xff);
 	HAL_Delay(200);
 	HAL_UART_Transmit(&huart2, (uint8_t*)max_vol, sizeof(max_vol), 0xff);
 	//HAL_Delay(2000);
 	
-	for(i=0;i<5;i++)
-	{
-		OLED_ShowCN(22+i*16,0,i);//²âÊÔÏÔÊ¾ÖÐÎÄ
-	}
+//	for(i=0;i<5;i++)
+//	{
+//		OLED_ShowCN(22+i*16,0,i);//²âÊÔÏÔÊ¾ÖÐÎÄ
+//	}
 	//OLED_ShowStr(0,3,(unsigned char*)"Say yes is no",1);//²âÊÔ6*8×Ö·û
 	//OLED_ShowStr(0,4,(unsigned char*)"Say no is yes",2);//²âÊÔ8*16×Ö·û
+
+	lv_init();
+	
+	lv_port_disp_init();
+	//lv_port_indev_init();
+	
+	lv_obj_t * label1 = lv_label_create(lv_scr_act());
+	lv_label_set_long_mode(label1, LV_LABEL_LONG_WRAP);     /*Break the long lines*/
+	lv_label_set_recolor(label1, true);                      /*Enable re-coloring by commands in the text*/
+	lv_label_set_text(label1, "#0000ff Re-color# #ff00ff words# #ff0000 of a# label, align the lines to the center "
+										"and wrap long text automatically.");
+	lv_obj_set_width(label1, 128);  /*Set smaller width to make the lines wrap*/
+	lv_obj_set_style_text_align(label1, LV_TEXT_ALIGN_CENTER, 0);
+	lv_obj_align(label1, LV_ALIGN_CENTER, 0, -40);
+
+  /* USER CODE END 2 */
+
+  /* Infinite loop */
+  /* USER CODE BEGIN WHILE */
   while (1)
   {
 		if(dir_flag != 2) {
@@ -161,9 +179,9 @@ int main(void)
 		if(now_sec != g8563_Store[0])
 		{
 			sprintf(time_str,"20%d/%02d/%02d",g8563_Store[5],g8563_Store[4],g8563_Store[3]);			
-			OLED_ShowStr(0,3  ,(unsigned char*)time_str,2);//²âÊÔ8*16×Ö·û			
+			//OLED_ShowStr(0,3  ,(unsigned char*)time_str,2);//²âÊÔ8*16×Ö·û			
 			sprintf(time_str,"%02d:%02d:%02d", g8563_Store[2],g8563_Store[1],g8563_Store[0]);			
-			OLED_ShowStr(0,5  ,(unsigned char*)time_str,2);//²âÊÔ8*16×Ö·û
+			//OLED_ShowStr(0,5  ,(unsigned char*)time_str,2);//²âÊÔ8*16×Ö·û
 			now_sec = g8563_Store[0];
 		}
   }

@@ -1,0 +1,11 @@
+.\voiceremider\lv_ll.o: ..\Drivers\lvgl\src\misc\lv_ll.c
+.\voiceremider\lv_ll.o: ..\Drivers\lvgl\src\misc\lv_ll.h
+.\voiceremider\lv_ll.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\voiceremider\lv_ll.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\voiceremider\lv_ll.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\voiceremider\lv_ll.o: ..\Drivers\lvgl\src\misc\lv_mem.h
+.\voiceremider\lv_ll.o: ..\Drivers\lvgl\src\misc\../lv_conf_internal.h
+.\voiceremider\lv_ll.o: ..\Drivers\lvgl\src\misc\../lv_conf_kconfig.h
+.\voiceremider\lv_ll.o: ..\Drivers\lvgl\src\misc\../../../lv_conf.h
+.\voiceremider\lv_ll.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\voiceremider\lv_ll.o: ..\Drivers\lvgl\src\misc\lv_types.h

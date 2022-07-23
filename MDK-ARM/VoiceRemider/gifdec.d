@@ -1,0 +1,16 @@
+.\voiceremider\gifdec.o: ..\Drivers\lvgl\src\libs\gif\gifdec.c
+.\voiceremider\gifdec.o: ..\Drivers\lvgl\src\libs\gif\gifdec.h
+.\voiceremider\gifdec.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\voiceremider\gifdec.o: ..\Drivers\lvgl\src\libs\gif\../../misc/lv_fs.h
+.\voiceremider\gifdec.o: ..\Drivers\lvgl\src\libs\gif\../../misc/../lv_conf_internal.h
+.\voiceremider\gifdec.o: ..\Drivers\lvgl\src\libs\gif\../../misc/../lv_conf_kconfig.h
+.\voiceremider\gifdec.o: ..\Drivers\lvgl\src\libs\gif\../../misc/../../../lv_conf.h
+.\voiceremider\gifdec.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\voiceremider\gifdec.o: ..\Drivers\lvgl\src\libs\gif\../../misc/lv_log.h
+.\voiceremider\gifdec.o: ..\Drivers\lvgl\src\libs\gif\../../misc/lv_types.h
+.\voiceremider\gifdec.o: ..\Drivers\lvgl\src\libs\gif\../../misc/lv_mem.h
+.\voiceremider\gifdec.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\voiceremider\gifdec.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\voiceremider\gifdec.o: ..\Drivers\lvgl\src\libs\gif\../../misc/lv_color.h
+.\voiceremider\gifdec.o: ..\Drivers\lvgl\src\libs\gif\../../misc/lv_assert.h
+.\voiceremider\gifdec.o: ..\Drivers\lvgl\src\libs\gif\../../misc/lv_math.h

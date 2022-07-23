@@ -1,0 +1,16 @@
+.\voiceremider\lv_font.o: ..\Drivers\lvgl\src\font\lv_font.c
+.\voiceremider\lv_font.o: ..\Drivers\lvgl\src\font\lv_font.h
+.\voiceremider\lv_font.o: ..\Drivers\lvgl\src\font\../lv_conf_internal.h
+.\voiceremider\lv_font.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\voiceremider\lv_font.o: ..\Drivers\lvgl\src\font\../lv_conf_kconfig.h
+.\voiceremider\lv_font.o: ..\Drivers\lvgl\src\font\../../../lv_conf.h
+.\voiceremider\lv_font.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\voiceremider\lv_font.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\voiceremider\lv_font.o: ..\Drivers\lvgl\src\font\lv_symbol_def.h
+.\voiceremider\lv_font.o: ..\Drivers\lvgl\src\font\../misc/lv_area.h
+.\voiceremider\lv_font.o: ..\Drivers\lvgl\src\font\../misc/lv_utils.h
+.\voiceremider\lv_font.o: ..\Drivers\lvgl\src\font\../misc/lv_log.h
+.\voiceremider\lv_font.o: ..\Drivers\lvgl\src\font\../misc/lv_types.h
+.\voiceremider\lv_font.o: ..\Drivers\lvgl\src\font\../misc/lv_assert.h
+.\voiceremider\lv_font.o: ..\Drivers\lvgl\src\font\../misc/lv_mem.h
+.\voiceremider\lv_font.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

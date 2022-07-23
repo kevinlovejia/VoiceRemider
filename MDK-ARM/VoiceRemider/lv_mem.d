@@ -1,0 +1,14 @@
+.\voiceremider\lv_mem.o: ..\Drivers\lvgl\src\misc\lv_mem.c
+.\voiceremider\lv_mem.o: ..\Drivers\lvgl\src\misc\lv_mem.h
+.\voiceremider\lv_mem.o: ..\Drivers\lvgl\src\misc\../lv_conf_internal.h
+.\voiceremider\lv_mem.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\voiceremider\lv_mem.o: ..\Drivers\lvgl\src\misc\../lv_conf_kconfig.h
+.\voiceremider\lv_mem.o: ..\Drivers\lvgl\src\misc\../../../lv_conf.h
+.\voiceremider\lv_mem.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\voiceremider\lv_mem.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\voiceremider\lv_mem.o: ..\Drivers\lvgl\src\misc\lv_types.h
+.\voiceremider\lv_mem.o: ..\Drivers\lvgl\src\misc\lv_tlsf.h
+.\voiceremider\lv_mem.o: ..\Drivers\lvgl\src\misc\lv_assert.h
+.\voiceremider\lv_mem.o: ..\Drivers\lvgl\src\misc\lv_log.h
+.\voiceremider\lv_mem.o: ..\Drivers\lvgl\src\misc\lv_malloc_builtin.h
+.\voiceremider\lv_mem.o: ..\Drivers\lvgl\src\misc\lv_memcpy_builtin.h
