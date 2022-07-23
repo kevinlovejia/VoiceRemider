@@ -8,10 +8,10 @@ unsigned char g8563_Store[6];//={0x22,0x06,0x02,0x21,0x40,0x00}; /*时间交换区,全
 unsigned char c8563_Store[6]={0x22,0x06,0x19,0x21,0x56,0x00}; /*写入时间初值：星期一 07:59:00*/
 
 //将数字转换为压缩BCD格式,最大支持99
-static unsigned int DECtoBCD(unsigned int DEC) 
-{
-	return ((unsigned int)(DEC/10)<<4)+(DEC%10);
-}
+//static unsigned int DECtoBCD(unsigned int DEC) 
+//{
+//	return ((unsigned int)(DEC/10)<<4)+(DEC%10);
+//}
 
 //将压缩BCD转为DEC,最大支持99
 static unsigned int BCDtoDEC(unsigned int BCD)

@@ -4,7 +4,7 @@
  *      *** Do not modify ! ***
  *
  * Project: 'VoiceRemider' 
- * Target:  'Encoder' 
+ * Target:  'VoiceRemider' 
  */
 
 #ifndef RTE_COMPONENTS_H
