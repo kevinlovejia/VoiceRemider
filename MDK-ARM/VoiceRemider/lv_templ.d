@@ -1,1 +1,1 @@
-.\voiceremider\lv_templ.o: ..\Drivers\lvgl\src\misc\lv_templ.c
+.\voiceremider\lv_templ.o: ..\Drivers\lvgl-release-v8.3\src\misc\lv_templ.c

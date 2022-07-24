@@ -133,12 +133,11 @@
         <SetRegEntry>
           <Number>0</Number>
           <Key>DLGUARM</Key>
-          <Name>?d</Name>
         </SetRegEntry>
         <SetRegEntry>
           <Number>0</Number>
           <Key>JL2CM3</Key>
-          <Name>-U522133299 -O14 -S1 -ZTIFSpeedSel10000 -A0 -C0 -JU1 -JI127.0.0.1 -JP0 -RST0 -N00("ARM CoreSight JTAG-DP") -D00(3BA00477) -L00(4) -N01("ST TMC") -D01(16410041) -L01(5) -TO18 -TC10000000 -TP21 -TDS8007 -TDT0 -TDC1F -TIEFFFFFFFF -TIP8 -TB1 -TFE0 -FO15 -FD20000000 -FC1000 -FN1 -FF0STM32F10x_128.FLM -FS08000000 -FL010000 -FP0($$Device:STM32F103C8$Flash\STM32F10x_128.FLM)</Name>
+          <Name>-U522133299 -O14 -S1 -ZTIFSpeedSel10000 -A0 -C0 -JU1 -JI127.0.0.1 -JP0 -RST0 -N00("ARM CoreSight JTAG-DP") -D00(3BA00477) -L00(4) -N01("ST TMC") -D01(16410041) -L01(5) -TO18 -TC10000000 -TP21 -TDS8007 -TDT0 -TDC1F -TIEFFFFFFFF -TIP8 -TB1 -TFE0 -FO15 -FD20000000 -FC5000 -FN1 -FF0STM32F10x_128.FLM -FS08000000 -FL010000 -FP0($$Device:STM32F103C8$Flash\STM32F10x_128.FLM)</Name>
         </SetRegEntry>
         <SetRegEntry>
           <Number>0</Number>
@@ -150,9 +149,9 @@
         <Bp>
           <Number>0</Number>
           <Type>0</Type>
-          <LineNumber>148</LineNumber>
+          <LineNumber>133</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134264424</Address>
+          <Address>134285852</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
@@ -161,14 +160,14 @@
           <BreakIfRCount>1</BreakIfRCount>
           <Filename>../Core/Src/main.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\VoiceRemider\../Core/Src/main.c\148</Expression>
+          <Expression>\\VoiceRemider\../Core/Src/main.c\133</Expression>
         </Bp>
         <Bp>
           <Number>1</Number>
           <Type>0</Type>
-          <LineNumber>131</LineNumber>
+          <LineNumber>153</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134264348</Address>
+          <Address>134285864</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
@@ -177,39 +176,23 @@
           <BreakIfRCount>1</BreakIfRCount>
           <Filename>../Core/Src/main.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\VoiceRemider\../Core/Src/main.c\131</Expression>
+          <Expression>\\VoiceRemider\../Core/Src/main.c\153</Expression>
         </Bp>
         <Bp>
           <Number>2</Number>
           <Type>0</Type>
-          <LineNumber>133</LineNumber>
+          <LineNumber>83</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>0</Address>
+          <Address>134285752</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>0</BreakIfRCount>
+          <BreakIfRCount>1</BreakIfRCount>
           <Filename>../Core/Src/main.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression></Expression>
-        </Bp>
-        <Bp>
-          <Number>3</Number>
-          <Type>0</Type>
-          <LineNumber>153</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>0</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>0</BreakIfRCount>
-          <Filename>../Core/Src/main.c</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression></Expression>
+          <Expression>\\VoiceRemider\../Core/Src/main.c\83</Expression>
         </Bp>
       </Breakpoint>
       <Tracepoint>
@@ -285,7 +268,7 @@
 
   <Group>
     <GroupName>Application/User/Core</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -605,7 +588,7 @@
 
   <Group>
     <GroupName>lvgl_core</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -616,8 +599,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\core\lv_disp.c</PathWithFileName>
-      <FilenameWithoutPath>lv_disp.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\core\lv_event.c</PathWithFileName>
+      <FilenameWithoutPath>lv_event.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -628,8 +611,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\core\lv_event.c</PathWithFileName>
-      <FilenameWithoutPath>lv_event.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\core\lv_group.c</PathWithFileName>
+      <FilenameWithoutPath>lv_group.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -640,8 +623,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\core\lv_group.c</PathWithFileName>
-      <FilenameWithoutPath>lv_group.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\core\lv_indev.c</PathWithFileName>
+      <FilenameWithoutPath>lv_indev.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -652,8 +635,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\core\lv_indev.c</PathWithFileName>
-      <FilenameWithoutPath>lv_indev.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\core\lv_indev_scroll.c</PathWithFileName>
+      <FilenameWithoutPath>lv_indev_scroll.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -664,8 +647,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\core\lv_indev_scroll.c</PathWithFileName>
-      <FilenameWithoutPath>lv_indev_scroll.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\core\lv_obj.c</PathWithFileName>
+      <FilenameWithoutPath>lv_obj.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -676,8 +659,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\core\lv_obj.c</PathWithFileName>
-      <FilenameWithoutPath>lv_obj.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\core\lv_obj_class.c</PathWithFileName>
+      <FilenameWithoutPath>lv_obj_class.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -688,8 +671,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\core\lv_obj_class.c</PathWithFileName>
-      <FilenameWithoutPath>lv_obj_class.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\core\lv_obj_draw.c</PathWithFileName>
+      <FilenameWithoutPath>lv_obj_draw.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -700,8 +683,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\core\lv_obj_draw.c</PathWithFileName>
-      <FilenameWithoutPath>lv_obj_draw.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\core\lv_obj_pos.c</PathWithFileName>
+      <FilenameWithoutPath>lv_obj_pos.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -712,8 +695,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\core\lv_obj_pos.c</PathWithFileName>
-      <FilenameWithoutPath>lv_obj_pos.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\core\lv_obj_scroll.c</PathWithFileName>
+      <FilenameWithoutPath>lv_obj_scroll.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -724,8 +707,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\core\lv_obj_scroll.c</PathWithFileName>
-      <FilenameWithoutPath>lv_obj_scroll.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\core\lv_obj_style.c</PathWithFileName>
+      <FilenameWithoutPath>lv_obj_style.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -736,8 +719,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\core\lv_obj_style.c</PathWithFileName>
-      <FilenameWithoutPath>lv_obj_style.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\core\lv_obj_style_gen.c</PathWithFileName>
+      <FilenameWithoutPath>lv_obj_style_gen.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -748,8 +731,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\core\lv_obj_style_gen.c</PathWithFileName>
-      <FilenameWithoutPath>lv_obj_style_gen.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\core\lv_obj_tree.c</PathWithFileName>
+      <FilenameWithoutPath>lv_obj_tree.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -760,8 +743,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\core\lv_obj_tree.c</PathWithFileName>
-      <FilenameWithoutPath>lv_obj_tree.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\core\lv_refr.c</PathWithFileName>
+      <FilenameWithoutPath>lv_refr.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -772,8 +755,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\core\lv_refr.c</PathWithFileName>
-      <FilenameWithoutPath>lv_refr.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\core\lv_disp.c</PathWithFileName>
+      <FilenameWithoutPath>lv_disp.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -784,7 +767,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\core\lv_theme.c</PathWithFileName>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\core\lv_theme.c</PathWithFileName>
       <FilenameWithoutPath>lv_theme.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -793,7 +776,7 @@
 
   <Group>
     <GroupName>lvgl_draw</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -804,7 +787,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\draw\lv_draw.c</PathWithFileName>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\draw\lv_draw.c</PathWithFileName>
       <FilenameWithoutPath>lv_draw.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -816,7 +799,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\draw\lv_draw_arc.c</PathWithFileName>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\draw\lv_draw_arc.c</PathWithFileName>
       <FilenameWithoutPath>lv_draw_arc.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -828,7 +811,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\draw\lv_draw_img.c</PathWithFileName>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\draw\lv_draw_img.c</PathWithFileName>
       <FilenameWithoutPath>lv_draw_img.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -840,7 +823,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\draw\lv_draw_label.c</PathWithFileName>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\draw\lv_draw_label.c</PathWithFileName>
       <FilenameWithoutPath>lv_draw_label.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -852,7 +835,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\draw\lv_draw_layer.c</PathWithFileName>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\draw\lv_draw_layer.c</PathWithFileName>
       <FilenameWithoutPath>lv_draw_layer.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -864,7 +847,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\draw\lv_draw_line.c</PathWithFileName>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\draw\lv_draw_line.c</PathWithFileName>
       <FilenameWithoutPath>lv_draw_line.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -876,7 +859,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\draw\lv_draw_mask.c</PathWithFileName>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\draw\lv_draw_mask.c</PathWithFileName>
       <FilenameWithoutPath>lv_draw_mask.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -888,7 +871,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\draw\lv_draw_rect.c</PathWithFileName>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\draw\lv_draw_rect.c</PathWithFileName>
       <FilenameWithoutPath>lv_draw_rect.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -900,7 +883,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\draw\lv_draw_transform.c</PathWithFileName>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\draw\lv_draw_transform.c</PathWithFileName>
       <FilenameWithoutPath>lv_draw_transform.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -912,7 +895,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\draw\lv_draw_triangle.c</PathWithFileName>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\draw\lv_draw_triangle.c</PathWithFileName>
       <FilenameWithoutPath>lv_draw_triangle.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -924,7 +907,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\draw\lv_img_buf.c</PathWithFileName>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\draw\lv_img_buf.c</PathWithFileName>
       <FilenameWithoutPath>lv_img_buf.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -936,7 +919,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\draw\lv_img_cache.c</PathWithFileName>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\draw\lv_img_cache.c</PathWithFileName>
       <FilenameWithoutPath>lv_img_cache.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -948,7 +931,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\draw\lv_img_decoder.c</PathWithFileName>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\draw\lv_img_decoder.c</PathWithFileName>
       <FilenameWithoutPath>lv_img_decoder.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -960,7 +943,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\draw\sw\lv_draw_sw.c</PathWithFileName>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\draw\sw\lv_draw_sw.c</PathWithFileName>
       <FilenameWithoutPath>lv_draw_sw.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -972,7 +955,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\draw\sw\lv_draw_sw_arc.c</PathWithFileName>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\draw\sw\lv_draw_sw_arc.c</PathWithFileName>
       <FilenameWithoutPath>lv_draw_sw_arc.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -984,7 +967,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\draw\sw\lv_draw_sw_blend.c</PathWithFileName>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\draw\sw\lv_draw_sw_blend.c</PathWithFileName>
       <FilenameWithoutPath>lv_draw_sw_blend.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -996,7 +979,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\draw\sw\lv_draw_sw_dither.c</PathWithFileName>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\draw\sw\lv_draw_sw_dither.c</PathWithFileName>
       <FilenameWithoutPath>lv_draw_sw_dither.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1008,7 +991,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\draw\sw\lv_draw_sw_gradient.c</PathWithFileName>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\draw\sw\lv_draw_sw_gradient.c</PathWithFileName>
       <FilenameWithoutPath>lv_draw_sw_gradient.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1020,7 +1003,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\draw\sw\lv_draw_sw_img.c</PathWithFileName>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\draw\sw\lv_draw_sw_img.c</PathWithFileName>
       <FilenameWithoutPath>lv_draw_sw_img.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1032,7 +1015,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\draw\sw\lv_draw_sw_layer.c</PathWithFileName>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\draw\sw\lv_draw_sw_layer.c</PathWithFileName>
       <FilenameWithoutPath>lv_draw_sw_layer.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1044,7 +1027,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\draw\sw\lv_draw_sw_letter.c</PathWithFileName>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\draw\sw\lv_draw_sw_letter.c</PathWithFileName>
       <FilenameWithoutPath>lv_draw_sw_letter.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1056,7 +1039,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\draw\sw\lv_draw_sw_line.c</PathWithFileName>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\draw\sw\lv_draw_sw_line.c</PathWithFileName>
       <FilenameWithoutPath>lv_draw_sw_line.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1068,7 +1051,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\draw\sw\lv_draw_sw_polygon.c</PathWithFileName>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\draw\sw\lv_draw_sw_polygon.c</PathWithFileName>
       <FilenameWithoutPath>lv_draw_sw_polygon.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1080,7 +1063,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\draw\sw\lv_draw_sw_rect.c</PathWithFileName>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\draw\sw\lv_draw_sw_rect.c</PathWithFileName>
       <FilenameWithoutPath>lv_draw_sw_rect.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1092,7 +1075,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\draw\sw\lv_draw_sw_transform.c</PathWithFileName>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\draw\sw\lv_draw_sw_transform.c</PathWithFileName>
       <FilenameWithoutPath>lv_draw_sw_transform.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1105,50 +1088,50 @@
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
-  </Group>
-
-  <Group>
-    <GroupName>lvgl_font</GroupName>
-    <tvExp>0</tvExp>
-    <tvExpOptDlg>0</tvExpOptDlg>
-    <cbSel>0</cbSel>
-    <RteFlg>0</RteFlg>
     <File>
-      <GroupNumber>9</GroupNumber>
+      <GroupNumber>8</GroupNumber>
       <FileNumber>66</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\font\lv_font.c</PathWithFileName>
-      <FilenameWithoutPath>lv_font.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\extra\lv_extra.c</PathWithFileName>
+      <FilenameWithoutPath>lv_extra.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
     <File>
-      <GroupNumber>9</GroupNumber>
+      <GroupNumber>8</GroupNumber>
       <FileNumber>67</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\font\lv_font_dejavu_16_persian_hebrew.c</PathWithFileName>
-      <FilenameWithoutPath>lv_font_dejavu_16_persian_hebrew.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\extra\layouts\flex\lv_flex.c</PathWithFileName>
+      <FilenameWithoutPath>lv_flex.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
     <File>
-      <GroupNumber>9</GroupNumber>
+      <GroupNumber>8</GroupNumber>
       <FileNumber>68</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\font\lv_font_fmt_txt.c</PathWithFileName>
-      <FilenameWithoutPath>lv_font_fmt_txt.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\extra\layouts\grid\lv_grid.c</PathWithFileName>
+      <FilenameWithoutPath>lv_grid.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
+  </Group>
+
+  <Group>
+    <GroupName>lvgl_font</GroupName>
+    <tvExp>1</tvExp>
+    <tvExpOptDlg>0</tvExpOptDlg>
+    <cbSel>0</cbSel>
+    <RteFlg>0</RteFlg>
     <File>
       <GroupNumber>9</GroupNumber>
       <FileNumber>69</FileNumber>
@@ -1156,8 +1139,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\font\lv_font_loader.c</PathWithFileName>
-      <FilenameWithoutPath>lv_font_loader.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\font\lv_font.c</PathWithFileName>
+      <FilenameWithoutPath>lv_font.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1168,8 +1151,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\font\lv_font_montserrat_8.c</PathWithFileName>
-      <FilenameWithoutPath>lv_font_montserrat_8.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\font\lv_font_dejavu_16_persian_hebrew.c</PathWithFileName>
+      <FilenameWithoutPath>lv_font_dejavu_16_persian_hebrew.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1180,8 +1163,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\font\lv_font_montserrat_10.c</PathWithFileName>
-      <FilenameWithoutPath>lv_font_montserrat_10.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\font\lv_font_fmt_txt.c</PathWithFileName>
+      <FilenameWithoutPath>lv_font_fmt_txt.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1192,8 +1175,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\font\lv_font_montserrat_12.c</PathWithFileName>
-      <FilenameWithoutPath>lv_font_montserrat_12.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\font\lv_font_loader.c</PathWithFileName>
+      <FilenameWithoutPath>lv_font_loader.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1204,8 +1187,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\font\lv_font_montserrat_12_subpx.c</PathWithFileName>
-      <FilenameWithoutPath>lv_font_montserrat_12_subpx.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\font\lv_font_montserrat_8.c</PathWithFileName>
+      <FilenameWithoutPath>lv_font_montserrat_8.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1216,8 +1199,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\font\lv_font_montserrat_14.c</PathWithFileName>
-      <FilenameWithoutPath>lv_font_montserrat_14.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\font\lv_font_montserrat_10.c</PathWithFileName>
+      <FilenameWithoutPath>lv_font_montserrat_10.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1228,8 +1211,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\font\lv_font_montserrat_16.c</PathWithFileName>
-      <FilenameWithoutPath>lv_font_montserrat_16.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\font\lv_font_montserrat_12.c</PathWithFileName>
+      <FilenameWithoutPath>lv_font_montserrat_12.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1240,8 +1223,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\font\lv_font_montserrat_18.c</PathWithFileName>
-      <FilenameWithoutPath>lv_font_montserrat_18.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\font\lv_font_montserrat_12_subpx.c</PathWithFileName>
+      <FilenameWithoutPath>lv_font_montserrat_12_subpx.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1252,8 +1235,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\font\lv_font_montserrat_20.c</PathWithFileName>
-      <FilenameWithoutPath>lv_font_montserrat_20.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\font\lv_font_montserrat_14.c</PathWithFileName>
+      <FilenameWithoutPath>lv_font_montserrat_14.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1264,8 +1247,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\font\lv_font_montserrat_22.c</PathWithFileName>
-      <FilenameWithoutPath>lv_font_montserrat_22.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\font\lv_font_montserrat_16.c</PathWithFileName>
+      <FilenameWithoutPath>lv_font_montserrat_16.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1276,8 +1259,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\font\lv_font_montserrat_24.c</PathWithFileName>
-      <FilenameWithoutPath>lv_font_montserrat_24.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\font\lv_font_montserrat_18.c</PathWithFileName>
+      <FilenameWithoutPath>lv_font_montserrat_18.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1288,8 +1271,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\font\lv_font_montserrat_26.c</PathWithFileName>
-      <FilenameWithoutPath>lv_font_montserrat_26.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\font\lv_font_montserrat_20.c</PathWithFileName>
+      <FilenameWithoutPath>lv_font_montserrat_20.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1300,8 +1283,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\font\lv_font_montserrat_28.c</PathWithFileName>
-      <FilenameWithoutPath>lv_font_montserrat_28.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\font\lv_font_montserrat_22.c</PathWithFileName>
+      <FilenameWithoutPath>lv_font_montserrat_22.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1312,8 +1295,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\font\lv_font_montserrat_28_compressed.c</PathWithFileName>
-      <FilenameWithoutPath>lv_font_montserrat_28_compressed.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\font\lv_font_montserrat_24.c</PathWithFileName>
+      <FilenameWithoutPath>lv_font_montserrat_24.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1324,8 +1307,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\font\lv_font_montserrat_30.c</PathWithFileName>
-      <FilenameWithoutPath>lv_font_montserrat_30.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\font\lv_font_montserrat_26.c</PathWithFileName>
+      <FilenameWithoutPath>lv_font_montserrat_26.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1336,8 +1319,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\font\lv_font_montserrat_32.c</PathWithFileName>
-      <FilenameWithoutPath>lv_font_montserrat_32.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\font\lv_font_montserrat_28.c</PathWithFileName>
+      <FilenameWithoutPath>lv_font_montserrat_28.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1348,8 +1331,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\font\lv_font_montserrat_34.c</PathWithFileName>
-      <FilenameWithoutPath>lv_font_montserrat_34.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\font\lv_font_montserrat_28_compressed.c</PathWithFileName>
+      <FilenameWithoutPath>lv_font_montserrat_28_compressed.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1360,8 +1343,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\font\lv_font_montserrat_36.c</PathWithFileName>
-      <FilenameWithoutPath>lv_font_montserrat_36.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\font\lv_font_montserrat_30.c</PathWithFileName>
+      <FilenameWithoutPath>lv_font_montserrat_30.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1372,8 +1355,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\font\lv_font_montserrat_38.c</PathWithFileName>
-      <FilenameWithoutPath>lv_font_montserrat_38.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\font\lv_font_montserrat_32.c</PathWithFileName>
+      <FilenameWithoutPath>lv_font_montserrat_32.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1384,8 +1367,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\font\lv_font_montserrat_40.c</PathWithFileName>
-      <FilenameWithoutPath>lv_font_montserrat_40.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\font\lv_font_montserrat_34.c</PathWithFileName>
+      <FilenameWithoutPath>lv_font_montserrat_34.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1396,8 +1379,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\font\lv_font_montserrat_42.c</PathWithFileName>
-      <FilenameWithoutPath>lv_font_montserrat_42.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\font\lv_font_montserrat_36.c</PathWithFileName>
+      <FilenameWithoutPath>lv_font_montserrat_36.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1408,8 +1391,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\font\lv_font_montserrat_44.c</PathWithFileName>
-      <FilenameWithoutPath>lv_font_montserrat_44.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\font\lv_font_montserrat_38.c</PathWithFileName>
+      <FilenameWithoutPath>lv_font_montserrat_38.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1420,8 +1403,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\font\lv_font_montserrat_46.c</PathWithFileName>
-      <FilenameWithoutPath>lv_font_montserrat_46.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\font\lv_font_montserrat_40.c</PathWithFileName>
+      <FilenameWithoutPath>lv_font_montserrat_40.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1432,8 +1415,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\font\lv_font_montserrat_48.c</PathWithFileName>
-      <FilenameWithoutPath>lv_font_montserrat_48.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\font\lv_font_montserrat_42.c</PathWithFileName>
+      <FilenameWithoutPath>lv_font_montserrat_42.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1444,8 +1427,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\font\lv_font_simsun_16_cjk.c</PathWithFileName>
-      <FilenameWithoutPath>lv_font_simsun_16_cjk.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\font\lv_font_montserrat_44.c</PathWithFileName>
+      <FilenameWithoutPath>lv_font_montserrat_44.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1456,8 +1439,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\font\lv_font_unscii_8.c</PathWithFileName>
-      <FilenameWithoutPath>lv_font_unscii_8.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\font\lv_font_montserrat_46.c</PathWithFileName>
+      <FilenameWithoutPath>lv_font_montserrat_46.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1468,7 +1451,31 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\font\lv_font_unscii_16.c</PathWithFileName>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\font\lv_font_montserrat_48.c</PathWithFileName>
+      <FilenameWithoutPath>lv_font_montserrat_48.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>9</GroupNumber>
+      <FileNumber>96</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\font\lv_font_unscii_8.c</PathWithFileName>
+      <FilenameWithoutPath>lv_font_unscii_8.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>9</GroupNumber>
+      <FileNumber>97</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\font\lv_font_unscii_16.c</PathWithFileName>
       <FilenameWithoutPath>lv_font_unscii_16.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1477,34 +1484,10 @@
 
   <Group>
     <GroupName>lvgl_hal</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
-    <File>
-      <GroupNumber>10</GroupNumber>
-      <FileNumber>96</FileNumber>
-      <FileType>1</FileType>
-      <tvExp>0</tvExp>
-      <tvExpOptDlg>0</tvExpOptDlg>
-      <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\hal\lv_hal_disp.c</PathWithFileName>
-      <FilenameWithoutPath>lv_hal_disp.c</FilenameWithoutPath>
-      <RteFlg>0</RteFlg>
-      <bShared>0</bShared>
-    </File>
-    <File>
-      <GroupNumber>10</GroupNumber>
-      <FileNumber>97</FileNumber>
-      <FileType>1</FileType>
-      <tvExp>0</tvExp>
-      <tvExpOptDlg>0</tvExpOptDlg>
-      <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\hal\lv_hal_indev.c</PathWithFileName>
-      <FilenameWithoutPath>lv_hal_indev.c</FilenameWithoutPath>
-      <RteFlg>0</RteFlg>
-      <bShared>0</bShared>
-    </File>
     <File>
       <GroupNumber>10</GroupNumber>
       <FileNumber>98</FileNumber>
@@ -1512,7 +1495,31 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\hal\lv_hal_tick.c</PathWithFileName>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\hal\lv_hal_disp.c</PathWithFileName>
+      <FilenameWithoutPath>lv_hal_disp.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>10</GroupNumber>
+      <FileNumber>99</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\hal\lv_hal_indev.c</PathWithFileName>
+      <FilenameWithoutPath>lv_hal_indev.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>10</GroupNumber>
+      <FileNumber>100</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\hal\lv_hal_tick.c</PathWithFileName>
       <FilenameWithoutPath>lv_hal_tick.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1521,34 +1528,10 @@
 
   <Group>
     <GroupName>lvgl_misc</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
-    <File>
-      <GroupNumber>11</GroupNumber>
-      <FileNumber>99</FileNumber>
-      <FileType>1</FileType>
-      <tvExp>0</tvExp>
-      <tvExpOptDlg>0</tvExpOptDlg>
-      <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\misc\lv_anim.c</PathWithFileName>
-      <FilenameWithoutPath>lv_anim.c</FilenameWithoutPath>
-      <RteFlg>0</RteFlg>
-      <bShared>0</bShared>
-    </File>
-    <File>
-      <GroupNumber>11</GroupNumber>
-      <FileNumber>100</FileNumber>
-      <FileType>1</FileType>
-      <tvExp>0</tvExp>
-      <tvExpOptDlg>0</tvExpOptDlg>
-      <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\misc\lv_anim_timeline.c</PathWithFileName>
-      <FilenameWithoutPath>lv_anim_timeline.c</FilenameWithoutPath>
-      <RteFlg>0</RteFlg>
-      <bShared>0</bShared>
-    </File>
     <File>
       <GroupNumber>11</GroupNumber>
       <FileNumber>101</FileNumber>
@@ -1556,8 +1539,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\misc\lv_area.c</PathWithFileName>
-      <FilenameWithoutPath>lv_area.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\misc\lv_anim.c</PathWithFileName>
+      <FilenameWithoutPath>lv_anim.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1568,8 +1551,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\misc\lv_async.c</PathWithFileName>
-      <FilenameWithoutPath>lv_async.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\misc\lv_anim_timeline.c</PathWithFileName>
+      <FilenameWithoutPath>lv_anim_timeline.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1580,8 +1563,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\misc\lv_bidi.c</PathWithFileName>
-      <FilenameWithoutPath>lv_bidi.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\misc\lv_area.c</PathWithFileName>
+      <FilenameWithoutPath>lv_area.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1592,8 +1575,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\misc\lv_color.c</PathWithFileName>
-      <FilenameWithoutPath>lv_color.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\misc\lv_async.c</PathWithFileName>
+      <FilenameWithoutPath>lv_async.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1604,8 +1587,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\misc\lv_fs.c</PathWithFileName>
-      <FilenameWithoutPath>lv_fs.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\misc\lv_bidi.c</PathWithFileName>
+      <FilenameWithoutPath>lv_bidi.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1616,8 +1599,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\misc\lv_gc.c</PathWithFileName>
-      <FilenameWithoutPath>lv_gc.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\misc\lv_color.c</PathWithFileName>
+      <FilenameWithoutPath>lv_color.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1628,8 +1611,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\misc\lv_ll.c</PathWithFileName>
-      <FilenameWithoutPath>lv_ll.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\misc\lv_gc.c</PathWithFileName>
+      <FilenameWithoutPath>lv_gc.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1640,8 +1623,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\misc\lv_log.c</PathWithFileName>
-      <FilenameWithoutPath>lv_log.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\misc\lv_ll.c</PathWithFileName>
+      <FilenameWithoutPath>lv_ll.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1652,8 +1635,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\misc\lv_lru.c</PathWithFileName>
-      <FilenameWithoutPath>lv_lru.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\misc\lv_log.c</PathWithFileName>
+      <FilenameWithoutPath>lv_log.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1664,8 +1647,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\misc\lv_malloc_builtin.c</PathWithFileName>
-      <FilenameWithoutPath>lv_malloc_builtin.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\misc\lv_lru.c</PathWithFileName>
+      <FilenameWithoutPath>lv_lru.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1676,8 +1659,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\misc\lv_math.c</PathWithFileName>
-      <FilenameWithoutPath>lv_math.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\misc\lv_mem.c</PathWithFileName>
+      <FilenameWithoutPath>lv_mem.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1688,8 +1671,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\misc\lv_mem.c</PathWithFileName>
-      <FilenameWithoutPath>lv_mem.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\misc\lv_printf.c</PathWithFileName>
+      <FilenameWithoutPath>lv_printf.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1700,8 +1683,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\misc\lv_memcpy_builtin.c</PathWithFileName>
-      <FilenameWithoutPath>lv_memcpy_builtin.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\misc\lv_style.c</PathWithFileName>
+      <FilenameWithoutPath>lv_style.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1712,8 +1695,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\misc\lv_printf.c</PathWithFileName>
-      <FilenameWithoutPath>lv_printf.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\misc\lv_style_gen.c</PathWithFileName>
+      <FilenameWithoutPath>lv_style_gen.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1724,8 +1707,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\misc\lv_style.c</PathWithFileName>
-      <FilenameWithoutPath>lv_style.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\misc\lv_templ.c</PathWithFileName>
+      <FilenameWithoutPath>lv_templ.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1736,8 +1719,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\misc\lv_style_gen.c</PathWithFileName>
-      <FilenameWithoutPath>lv_style_gen.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\misc\lv_timer.c</PathWithFileName>
+      <FilenameWithoutPath>lv_timer.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1748,8 +1731,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\misc\lv_templ.c</PathWithFileName>
-      <FilenameWithoutPath>lv_templ.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\misc\lv_tlsf.c</PathWithFileName>
+      <FilenameWithoutPath>lv_tlsf.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1760,8 +1743,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\misc\lv_timer.c</PathWithFileName>
-      <FilenameWithoutPath>lv_timer.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\misc\lv_txt.c</PathWithFileName>
+      <FilenameWithoutPath>lv_txt.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1772,8 +1755,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\misc\lv_tlsf.c</PathWithFileName>
-      <FilenameWithoutPath>lv_tlsf.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\misc\lv_txt_ap.c</PathWithFileName>
+      <FilenameWithoutPath>lv_txt_ap.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1784,8 +1767,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\misc\lv_txt.c</PathWithFileName>
-      <FilenameWithoutPath>lv_txt.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\misc\lv_utils.c</PathWithFileName>
+      <FilenameWithoutPath>lv_utils.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1796,8 +1779,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\misc\lv_txt_ap.c</PathWithFileName>
-      <FilenameWithoutPath>lv_txt_ap.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\misc\lv_fs.c</PathWithFileName>
+      <FilenameWithoutPath>lv_fs.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1808,8 +1791,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\misc\lv_utils.c</PathWithFileName>
-      <FilenameWithoutPath>lv_utils.c</FilenameWithoutPath>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\misc\lv_math.c</PathWithFileName>
+      <FilenameWithoutPath>lv_math.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1828,7 +1811,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\porting\lv_port_disp.c</PathWithFileName>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\porting\lv_port_disp.c</PathWithFileName>
       <FilenameWithoutPath>lv_port_disp.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1840,7 +1823,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\porting\lv_port_indev.c</PathWithFileName>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\porting\lv_port_indev.c</PathWithFileName>
       <FilenameWithoutPath>lv_port_indev.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1860,7 +1843,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Drivers\lvgl\src\widgets\label\lv_label.c</PathWithFileName>
+      <PathWithFileName>..\Drivers\lvgl-release-v8.3\src\widgets\lv_label.c</PathWithFileName>
       <FilenameWithoutPath>lv_label.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>

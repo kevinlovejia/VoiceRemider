@@ -140,7 +140,7 @@ int main(void)
 	lv_label_set_recolor(label1, true);                      /*Enable re-coloring by commands in the text*/
 	lv_label_set_text(label1, "#0000ff Re-color# #ff00ff words# #ff0000 of a# label, align the lines to the center "
 										"and wrap long text automatically.");
-	lv_obj_set_width(label1, 128);  /*Set smaller width to make the lines wrap*/
+	lv_obj_set_width(label1, 150);  /*Set smaller width to make the lines wrap*/
 	lv_obj_set_style_text_align(label1, LV_TEXT_ALIGN_CENTER, 0);
 	lv_obj_align(label1, LV_ALIGN_CENTER, 0, -40);
 

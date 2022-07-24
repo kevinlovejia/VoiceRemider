@@ -325,18 +325,18 @@
             <uSurpInc>0</uSurpInc>
             <uC99>1</uC99>
             <useXO>0</useXO>
-            <v6Lang>1</v6Lang>
-            <v6LangP>1</v6LangP>
+            <v6Lang>3</v6Lang>
+            <v6LangP>3</v6LangP>
             <vShortEn>1</vShortEn>
             <vShortWch>1</vShortWch>
             <v6Lto>0</v6Lto>
             <v6WtE>0</v6WtE>
             <v6Rtti>0</v6Rtti>
             <VariousControls>
-              <MiscControls>--C99</MiscControls>
+              <MiscControls>--C99 --flto</MiscControls>
               <Define>USE_HAL_DRIVER,STM32F103xB</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F1xx/Include;../Drivers/CMSIS/Include;..\Drivers;..\Drivers\lvgl</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F1xx/Include;../Drivers/CMSIS/Include;..\Drivers;..\Drivers\lvgl-release-v8.3</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -579,79 +579,79 @@
           <GroupName>lvgl_core</GroupName>
           <Files>
             <File>
-              <FileName>lv_disp.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\core\lv_disp.c</FilePath>
-            </File>
-            <File>
               <FileName>lv_event.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\core\lv_event.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\core\lv_event.c</FilePath>
             </File>
             <File>
               <FileName>lv_group.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\core\lv_group.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\core\lv_group.c</FilePath>
             </File>
             <File>
               <FileName>lv_indev.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\core\lv_indev.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\core\lv_indev.c</FilePath>
             </File>
             <File>
               <FileName>lv_indev_scroll.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\core\lv_indev_scroll.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\core\lv_indev_scroll.c</FilePath>
             </File>
             <File>
               <FileName>lv_obj.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\core\lv_obj.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\core\lv_obj.c</FilePath>
             </File>
             <File>
               <FileName>lv_obj_class.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\core\lv_obj_class.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\core\lv_obj_class.c</FilePath>
             </File>
             <File>
               <FileName>lv_obj_draw.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\core\lv_obj_draw.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\core\lv_obj_draw.c</FilePath>
             </File>
             <File>
               <FileName>lv_obj_pos.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\core\lv_obj_pos.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\core\lv_obj_pos.c</FilePath>
             </File>
             <File>
               <FileName>lv_obj_scroll.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\core\lv_obj_scroll.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\core\lv_obj_scroll.c</FilePath>
             </File>
             <File>
               <FileName>lv_obj_style.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\core\lv_obj_style.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\core\lv_obj_style.c</FilePath>
             </File>
             <File>
               <FileName>lv_obj_style_gen.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\core\lv_obj_style_gen.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\core\lv_obj_style_gen.c</FilePath>
             </File>
             <File>
               <FileName>lv_obj_tree.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\core\lv_obj_tree.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\core\lv_obj_tree.c</FilePath>
             </File>
             <File>
               <FileName>lv_refr.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\core\lv_refr.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\core\lv_refr.c</FilePath>
+            </File>
+            <File>
+              <FileName>lv_disp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\core\lv_disp.c</FilePath>
             </File>
             <File>
               <FileName>lv_theme.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\core\lv_theme.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\core\lv_theme.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -661,132 +661,149 @@
             <File>
               <FileName>lv_draw.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\draw\lv_draw.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\draw\lv_draw.c</FilePath>
             </File>
             <File>
               <FileName>lv_draw_arc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\draw\lv_draw_arc.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\draw\lv_draw_arc.c</FilePath>
             </File>
             <File>
               <FileName>lv_draw_img.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\draw\lv_draw_img.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\draw\lv_draw_img.c</FilePath>
             </File>
             <File>
               <FileName>lv_draw_label.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\draw\lv_draw_label.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\draw\lv_draw_label.c</FilePath>
             </File>
             <File>
               <FileName>lv_draw_layer.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\draw\lv_draw_layer.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\draw\lv_draw_layer.c</FilePath>
             </File>
             <File>
               <FileName>lv_draw_line.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\draw\lv_draw_line.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\draw\lv_draw_line.c</FilePath>
             </File>
             <File>
               <FileName>lv_draw_mask.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\draw\lv_draw_mask.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\draw\lv_draw_mask.c</FilePath>
             </File>
             <File>
               <FileName>lv_draw_rect.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\draw\lv_draw_rect.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\draw\lv_draw_rect.c</FilePath>
             </File>
             <File>
               <FileName>lv_draw_transform.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\draw\lv_draw_transform.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\draw\lv_draw_transform.c</FilePath>
             </File>
             <File>
               <FileName>lv_draw_triangle.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\draw\lv_draw_triangle.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\draw\lv_draw_triangle.c</FilePath>
             </File>
             <File>
               <FileName>lv_img_buf.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\draw\lv_img_buf.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\draw\lv_img_buf.c</FilePath>
             </File>
             <File>
               <FileName>lv_img_cache.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\draw\lv_img_cache.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\draw\lv_img_cache.c</FilePath>
             </File>
             <File>
               <FileName>lv_img_decoder.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\draw\lv_img_decoder.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\draw\lv_img_decoder.c</FilePath>
             </File>
             <File>
               <FileName>lv_draw_sw.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\draw\sw\lv_draw_sw.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\draw\sw\lv_draw_sw.c</FilePath>
             </File>
             <File>
               <FileName>lv_draw_sw_arc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\draw\sw\lv_draw_sw_arc.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\draw\sw\lv_draw_sw_arc.c</FilePath>
             </File>
             <File>
               <FileName>lv_draw_sw_blend.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\draw\sw\lv_draw_sw_blend.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\draw\sw\lv_draw_sw_blend.c</FilePath>
             </File>
             <File>
               <FileName>lv_draw_sw_dither.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\draw\sw\lv_draw_sw_dither.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\draw\sw\lv_draw_sw_dither.c</FilePath>
             </File>
             <File>
               <FileName>lv_draw_sw_gradient.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\draw\sw\lv_draw_sw_gradient.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\draw\sw\lv_draw_sw_gradient.c</FilePath>
             </File>
             <File>
               <FileName>lv_draw_sw_img.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\draw\sw\lv_draw_sw_img.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\draw\sw\lv_draw_sw_img.c</FilePath>
             </File>
             <File>
               <FileName>lv_draw_sw_layer.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\draw\sw\lv_draw_sw_layer.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\draw\sw\lv_draw_sw_layer.c</FilePath>
             </File>
             <File>
               <FileName>lv_draw_sw_letter.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\draw\sw\lv_draw_sw_letter.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\draw\sw\lv_draw_sw_letter.c</FilePath>
             </File>
             <File>
               <FileName>lv_draw_sw_line.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\draw\sw\lv_draw_sw_line.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\draw\sw\lv_draw_sw_line.c</FilePath>
             </File>
             <File>
               <FileName>lv_draw_sw_polygon.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\draw\sw\lv_draw_sw_polygon.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\draw\sw\lv_draw_sw_polygon.c</FilePath>
             </File>
             <File>
               <FileName>lv_draw_sw_rect.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\draw\sw\lv_draw_sw_rect.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\draw\sw\lv_draw_sw_rect.c</FilePath>
             </File>
             <File>
               <FileName>lv_draw_sw_transform.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\draw\sw\lv_draw_sw_transform.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\draw\sw\lv_draw_sw_transform.c</FilePath>
             </File>
           </Files>
         </Group>
         <Group>
           <GroupName>lvgl_extra</GroupName>
+          <Files>
+            <File>
+              <FileName>lv_extra.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\extra\lv_extra.c</FilePath>
+            </File>
+            <File>
+              <FileName>lv_flex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\extra\layouts\flex\lv_flex.c</FilePath>
+            </File>
+            <File>
+              <FileName>lv_grid.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\extra\layouts\grid\lv_grid.c</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>lvgl_font</GroupName>
@@ -794,152 +811,147 @@
             <File>
               <FileName>lv_font.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\font\lv_font.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\font\lv_font.c</FilePath>
             </File>
             <File>
               <FileName>lv_font_dejavu_16_persian_hebrew.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\font\lv_font_dejavu_16_persian_hebrew.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\font\lv_font_dejavu_16_persian_hebrew.c</FilePath>
             </File>
             <File>
               <FileName>lv_font_fmt_txt.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\font\lv_font_fmt_txt.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\font\lv_font_fmt_txt.c</FilePath>
             </File>
             <File>
               <FileName>lv_font_loader.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\font\lv_font_loader.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\font\lv_font_loader.c</FilePath>
             </File>
             <File>
               <FileName>lv_font_montserrat_8.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\font\lv_font_montserrat_8.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\font\lv_font_montserrat_8.c</FilePath>
             </File>
             <File>
               <FileName>lv_font_montserrat_10.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\font\lv_font_montserrat_10.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\font\lv_font_montserrat_10.c</FilePath>
             </File>
             <File>
               <FileName>lv_font_montserrat_12.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\font\lv_font_montserrat_12.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\font\lv_font_montserrat_12.c</FilePath>
             </File>
             <File>
               <FileName>lv_font_montserrat_12_subpx.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\font\lv_font_montserrat_12_subpx.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\font\lv_font_montserrat_12_subpx.c</FilePath>
             </File>
             <File>
               <FileName>lv_font_montserrat_14.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\font\lv_font_montserrat_14.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\font\lv_font_montserrat_14.c</FilePath>
             </File>
             <File>
               <FileName>lv_font_montserrat_16.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\font\lv_font_montserrat_16.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\font\lv_font_montserrat_16.c</FilePath>
             </File>
             <File>
               <FileName>lv_font_montserrat_18.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\font\lv_font_montserrat_18.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\font\lv_font_montserrat_18.c</FilePath>
             </File>
             <File>
               <FileName>lv_font_montserrat_20.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\font\lv_font_montserrat_20.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\font\lv_font_montserrat_20.c</FilePath>
             </File>
             <File>
               <FileName>lv_font_montserrat_22.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\font\lv_font_montserrat_22.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\font\lv_font_montserrat_22.c</FilePath>
             </File>
             <File>
               <FileName>lv_font_montserrat_24.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\font\lv_font_montserrat_24.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\font\lv_font_montserrat_24.c</FilePath>
             </File>
             <File>
               <FileName>lv_font_montserrat_26.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\font\lv_font_montserrat_26.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\font\lv_font_montserrat_26.c</FilePath>
             </File>
             <File>
               <FileName>lv_font_montserrat_28.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\font\lv_font_montserrat_28.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\font\lv_font_montserrat_28.c</FilePath>
             </File>
             <File>
               <FileName>lv_font_montserrat_28_compressed.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\font\lv_font_montserrat_28_compressed.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\font\lv_font_montserrat_28_compressed.c</FilePath>
             </File>
             <File>
               <FileName>lv_font_montserrat_30.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\font\lv_font_montserrat_30.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\font\lv_font_montserrat_30.c</FilePath>
             </File>
             <File>
               <FileName>lv_font_montserrat_32.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\font\lv_font_montserrat_32.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\font\lv_font_montserrat_32.c</FilePath>
             </File>
             <File>
               <FileName>lv_font_montserrat_34.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\font\lv_font_montserrat_34.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\font\lv_font_montserrat_34.c</FilePath>
             </File>
             <File>
               <FileName>lv_font_montserrat_36.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\font\lv_font_montserrat_36.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\font\lv_font_montserrat_36.c</FilePath>
             </File>
             <File>
               <FileName>lv_font_montserrat_38.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\font\lv_font_montserrat_38.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\font\lv_font_montserrat_38.c</FilePath>
             </File>
             <File>
               <FileName>lv_font_montserrat_40.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\font\lv_font_montserrat_40.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\font\lv_font_montserrat_40.c</FilePath>
             </File>
             <File>
               <FileName>lv_font_montserrat_42.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\font\lv_font_montserrat_42.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\font\lv_font_montserrat_42.c</FilePath>
             </File>
             <File>
               <FileName>lv_font_montserrat_44.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\font\lv_font_montserrat_44.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\font\lv_font_montserrat_44.c</FilePath>
             </File>
             <File>
               <FileName>lv_font_montserrat_46.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\font\lv_font_montserrat_46.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\font\lv_font_montserrat_46.c</FilePath>
             </File>
             <File>
               <FileName>lv_font_montserrat_48.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\font\lv_font_montserrat_48.c</FilePath>
-            </File>
-            <File>
-              <FileName>lv_font_simsun_16_cjk.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\font\lv_font_simsun_16_cjk.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\font\lv_font_montserrat_48.c</FilePath>
             </File>
             <File>
               <FileName>lv_font_unscii_8.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\font\lv_font_unscii_8.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\font\lv_font_unscii_8.c</FilePath>
             </File>
             <File>
               <FileName>lv_font_unscii_16.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\font\lv_font_unscii_16.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\font\lv_font_unscii_16.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -949,17 +961,17 @@
             <File>
               <FileName>lv_hal_disp.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\hal\lv_hal_disp.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\hal\lv_hal_disp.c</FilePath>
             </File>
             <File>
               <FileName>lv_hal_indev.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\hal\lv_hal_indev.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\hal\lv_hal_indev.c</FilePath>
             </File>
             <File>
               <FileName>lv_hal_tick.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\hal\lv_hal_tick.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\hal\lv_hal_tick.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -969,122 +981,112 @@
             <File>
               <FileName>lv_anim.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\misc\lv_anim.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\misc\lv_anim.c</FilePath>
             </File>
             <File>
               <FileName>lv_anim_timeline.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\misc\lv_anim_timeline.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\misc\lv_anim_timeline.c</FilePath>
             </File>
             <File>
               <FileName>lv_area.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\misc\lv_area.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\misc\lv_area.c</FilePath>
             </File>
             <File>
               <FileName>lv_async.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\misc\lv_async.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\misc\lv_async.c</FilePath>
             </File>
             <File>
               <FileName>lv_bidi.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\misc\lv_bidi.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\misc\lv_bidi.c</FilePath>
             </File>
             <File>
               <FileName>lv_color.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\misc\lv_color.c</FilePath>
-            </File>
-            <File>
-              <FileName>lv_fs.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\misc\lv_fs.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\misc\lv_color.c</FilePath>
             </File>
             <File>
               <FileName>lv_gc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\misc\lv_gc.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\misc\lv_gc.c</FilePath>
             </File>
             <File>
               <FileName>lv_ll.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\misc\lv_ll.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\misc\lv_ll.c</FilePath>
             </File>
             <File>
               <FileName>lv_log.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\misc\lv_log.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\misc\lv_log.c</FilePath>
             </File>
             <File>
               <FileName>lv_lru.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\misc\lv_lru.c</FilePath>
-            </File>
-            <File>
-              <FileName>lv_malloc_builtin.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\misc\lv_malloc_builtin.c</FilePath>
-            </File>
-            <File>
-              <FileName>lv_math.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\misc\lv_math.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\misc\lv_lru.c</FilePath>
             </File>
             <File>
               <FileName>lv_mem.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\misc\lv_mem.c</FilePath>
-            </File>
-            <File>
-              <FileName>lv_memcpy_builtin.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\misc\lv_memcpy_builtin.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\misc\lv_mem.c</FilePath>
             </File>
             <File>
               <FileName>lv_printf.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\misc\lv_printf.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\misc\lv_printf.c</FilePath>
             </File>
             <File>
               <FileName>lv_style.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\misc\lv_style.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\misc\lv_style.c</FilePath>
             </File>
             <File>
               <FileName>lv_style_gen.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\misc\lv_style_gen.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\misc\lv_style_gen.c</FilePath>
             </File>
             <File>
               <FileName>lv_templ.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\misc\lv_templ.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\misc\lv_templ.c</FilePath>
             </File>
             <File>
               <FileName>lv_timer.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\misc\lv_timer.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\misc\lv_timer.c</FilePath>
             </File>
             <File>
               <FileName>lv_tlsf.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\misc\lv_tlsf.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\misc\lv_tlsf.c</FilePath>
             </File>
             <File>
               <FileName>lv_txt.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\misc\lv_txt.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\misc\lv_txt.c</FilePath>
             </File>
             <File>
               <FileName>lv_txt_ap.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\misc\lv_txt_ap.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\misc\lv_txt_ap.c</FilePath>
             </File>
             <File>
               <FileName>lv_utils.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\misc\lv_utils.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\misc\lv_utils.c</FilePath>
+            </File>
+            <File>
+              <FileName>lv_fs.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\misc\lv_fs.c</FilePath>
+            </File>
+            <File>
+              <FileName>lv_math.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\misc\lv_math.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1094,12 +1096,12 @@
             <File>
               <FileName>lv_port_disp.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\porting\lv_port_disp.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\porting\lv_port_disp.c</FilePath>
             </File>
             <File>
               <FileName>lv_port_indev.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\porting\lv_port_indev.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\porting\lv_port_indev.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1109,7 +1111,7 @@
             <File>
               <FileName>lv_label.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\lvgl\src\widgets\label\lv_label.c</FilePath>
+              <FilePath>..\Drivers\lvgl-release-v8.3\src\widgets\lv_label.c</FilePath>
             </File>
           </Files>
         </Group>
