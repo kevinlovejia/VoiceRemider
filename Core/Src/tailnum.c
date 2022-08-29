@@ -45,16 +45,26 @@ void tailnum_select()
 	menuData.selected = 0;
 	
 	beginAnimation2(NULL);
-//	setPrevMenuExit(&prevMenuData);
-//	doAction(exitSelected());
-		
+	
+	static unsigned int sizeStruct = 0;
+	static driverInfo_s inFlash;
+	byte ruleInFlash = 0;
+	sizeStruct = sizeof(driverInfo);
+	readFlash(START_FLASH_ADDRESS, (uint16_t *)&inFlash, sizeStruct);
+	setting.val = inFlash.tailNo;	
 }
 
 static void mSelect()
 {
 	bool isExiting = exitSelected();
 	if(isExiting)
-		appconfig_save();
+	{
+		//save rules to flash
+		static unsigned int sizeStruct = 0;
+		sizeStruct = sizeof(driverInfo);
+		writeFlash(START_FLASH_ADDRESS, (uint16_t *)&driverInfo, sizeStruct);
+	}
+		//appconfig_save();
 
 	setPrevMenuExit(&prevMenuData);
 	doAction(isExiting);
