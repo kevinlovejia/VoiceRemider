@@ -31,12 +31,17 @@ void drawBattery()
 	draw_string(ad,NOINVERT,18,FRAME_HEIGHT-8);
 }
 millis8_t nowdr, lastdr = 0;
-
+static bool nextPage = 0;
 void drawDriveSignal()
 {
 	nowdr = millis();
-	if(nowdr - lastdr > 2000)
-	{		
+	if(nextPage == 0)
+	{
+		if(nowdr - lastdr > 800)
+		{
+			lastdr = nowdr;
+			nextPage = 1;
+		}			
 		draw_bitmap(0, FRAME_HEIGHT - 16, noEntering, 16, 16, NOINVERT, 0);
 		draw_bitmap(32-16, FRAME_HEIGHT - 16, textDisplay[0], 16, 16, NOINVERT, 0);
 		draw_bitmap(48-16, FRAME_HEIGHT - 16, textDisplay[15], 16, 16, NOINVERT, 0);
@@ -45,18 +50,19 @@ void drawDriveSignal()
 		draw_bitmap(FRAME_WIDTH-32, FRAME_HEIGHT - 16, textDisplay[23], 16, 16, NOINVERT, 0);//Æû³µ±êÖ¾
 		draw_bitmap(FRAME_WIDTH-14, FRAME_HEIGHT - 16, numFont11x16[1], 11, 16, NOINVERT, 0);//1
 	}
-	else if(nowdr - lastdr > 4000)
+	else
 	{
-		lastdr = nowdr;
+		if(nowdr - lastdr > 800)
+		{
+			lastdr = nowdr;
+			nextPage = 0;
+		}	
 		draw_bitmap(16, FRAME_HEIGHT - 16, driving, 16, 16, NOINVERT, 0);
 		draw_bitmap(32, FRAME_HEIGHT - 16, textDisplay[0+4], 16, 16, NOINVERT, 0);
 		draw_bitmap(48, FRAME_HEIGHT - 16, textDisplay[1+4], 16, 16, NOINVERT, 0);
 		draw_bitmap(64, FRAME_HEIGHT - 16, textDisplay[2+4], 16, 16, NOINVERT, 0);
 		draw_bitmap(80, FRAME_HEIGHT - 16, textDisplay[3+4], 16, 16, NOINVERT, 0);
 	}
-	
-	
-
-	
+			
 }
 

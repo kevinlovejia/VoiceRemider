@@ -105,17 +105,18 @@ static void setMenuOptions()
 //	setMenuOption_P(1, PSTR(STR_ALARMS), menu_volume[volAlarm], setVolumeAlarm);
 //	setMenuOption_P(2, PSTR(STR_HOURBEEPS), menu_volume[volHour], setVolumeHour);
 	
-	
-	setMenuOption_P(0, PSTR(STR_UI), arial_font[driverInfo.tailNo], selectTailNum);
+	byte fontPos = driverInfo.tailNo;																	//不转换直接使用会硬件故障，
+	setMenuOption_P(0, PSTR(STR_UI), arial_font[fontPos], selectTailNum);
 }
 
 static void makeTailNumStr(char* buff)
 {
 	//byte timeModeVal = (timeDateSet.time.ampm != CHAR_24) ? 12 : 24;
 //	sprintf_P(buff, PSTR("Tail No: %hhu"), driverInfo.tailNo);
+	byte fontPos = driverInfo.tailNo;	
 	draw_bitmap(4, 28 + 4 - 16, menu_tailnum[1] , 32, 32, NOINVERT, 0);			//尾
 	draw_bitmap(4+34, 28 + 4 - 16, menu_tailnum[2] , 32, 32, NOINVERT, 0);	//号
-	draw_bitmap(4+34+34, 24, midFont[driverInfo.tailNo] , 19, 24, INVERT, 0);// 19x24
+	draw_bitmap(4+34+34, 24, midFont[fontPos] , 19, 24, INVERT, 0);// 19x24
 }
 
 //static void selectTailNum(void)
