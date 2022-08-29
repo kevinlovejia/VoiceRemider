@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\VoiceRemider\VoiceRemider.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\VoiceRemider\VoiceRemider.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Mon Aug 29 21:22:06 2022
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Tue Aug 30 00:08:49 2022
 <BR><P>
 <H3>Maximum Stack Usage =        392 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -1707,13 +1707,14 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> mode_couple.o(i.modeCoupleSelect)
 </UL>
-<P><STRONG><a name="[145]"></a>modeOddevenSelect</STRONG> (Thumb, 50 bytes, Stack size 8 bytes, mode_oddeve.o(i.modeOddevenSelect))
+<P><STRONG><a name="[145]"></a>modeOddevenSelect</STRONG> (Thumb, 66 bytes, Stack size 8 bytes, mode_oddeve.o(i.modeOddevenSelect))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = modeOddevenSelect &rArr; setMenuInfo
 </UL>
 <BR>[Calls]<UL><LI><a href="#[138]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setPrevMenuOpen
 <LI><a href="#[137]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setMenuInfo
 <LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setMenuFuncs
 <LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;beginAnimation2
+<LI><a href="#[144]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;readFlash
 </UL>
 <BR>[Called By]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;selectOddOrEven
 </UL>
@@ -1802,7 +1803,8 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STMFLASH_Read
 </UL>
-<BR>[Called By]<UL><LI><a href="#[143]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;modeCoupleSelect
+<BR>[Called By]<UL><LI><a href="#[145]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;modeOddevenSelect
+<LI><a href="#[143]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;modeCoupleSelect
 <LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tailnum_select
 </UL>
 
@@ -2009,6 +2011,7 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mSelect
 <LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mSelect
+<LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mSelect
 </UL>
 <P>
 <H3>
@@ -2237,12 +2240,13 @@ Local Symbols
 <BR>[Address Reference Count : 2]<UL><LI> mode_oddeve.o(i.endSelect)
 <LI> mode_oddeve.o(i.modeOddevenSelect)
 </UL>
-<P><STRONG><a name="[46]"></a>mSelect</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, mode_oddeve.o(i.mSelect))
-<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = mSelect &rArr; setPrevMenuExit
+<P><STRONG><a name="[46]"></a>mSelect</STRONG> (Thumb, 42 bytes, Stack size 8 bytes, mode_oddeve.o(i.mSelect))
+<BR><BR>[Stack]<UL><LI>Max Depth = 144<LI>Call Chain = mSelect &rArr; writeFlash &rArr; STMFLASH_Write &rArr; STMFLASH_Write_NoCheck &rArr; HAL_FLASH_Program &rArr; FLASH_WaitForLastOperation
 </UL>
 <BR>[Calls]<UL><LI><a href="#[13b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setPrevMenuExit
 <LI><a href="#[139]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exitSelected
 <LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;doAction
+<LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;writeFlash
 </UL>
 <BR>[Address Reference Count : 3]<UL><LI> mode_oddeve.o(i.beginSelect)
 <LI> mode_oddeve.o(i.endSelect)
@@ -2256,7 +2260,7 @@ Local Symbols
 <BR>[Address Reference Count : 2]<UL><LI> mode_oddeve.o(i.endSelect)
 <LI> mode_oddeve.o(i.modeOddevenSelect)
 </UL>
-<P><STRONG><a name="[48]"></a>oddEvenNumDraw</STRONG> (Thumb, 452 bytes, Stack size 56 bytes, mode_oddeve.o(i.oddEvenNumDraw))
+<P><STRONG><a name="[48]"></a>oddEvenNumDraw</STRONG> (Thumb, 434 bytes, Stack size 56 bytes, mode_oddeve.o(i.oddEvenNumDraw))
 <BR><BR>[Stack]<UL><LI>Max Depth = 168<LI>Call Chain = oddEvenNumDraw &rArr; draw_bitmap
 </UL>
 <BR>[Calls]<UL><LI><a href="#[128]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw_clearArea
@@ -2290,7 +2294,7 @@ Local Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> mode_oddeve.o(i.showOddEvenStr)
 </UL>
-<P><STRONG><a name="[132]"></a>showDaysleftStr</STRONG> (Thumb, 320 bytes, Stack size 64 bytes, mode_oddeve.o(i.showDaysleftStr))
+<P><STRONG><a name="[132]"></a>showDaysleftStr</STRONG> (Thumb, 336 bytes, Stack size 64 bytes, mode_oddeve.o(i.showDaysleftStr))
 <BR><BR>[Stack]<UL><LI>Max Depth = 344<LI>Call Chain = showDaysleftStr &rArr; setMenuOption &rArr; sin &rArr; __ieee754_rem_pio2 &rArr; __aeabi_dmul &rArr; _double_epilogue &rArr; _double_round
 </UL>
 <BR>[Calls]<UL><LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setMenuOption
@@ -2299,7 +2303,7 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;itemLoader
 </UL>
 
-<P><STRONG><a name="[131]"></a>showOddEvenStr</STRONG> (Thumb, 116 bytes, Stack size 80 bytes, mode_oddeve.o(i.showOddEvenStr))
+<P><STRONG><a name="[131]"></a>showOddEvenStr</STRONG> (Thumb, 112 bytes, Stack size 80 bytes, mode_oddeve.o(i.showOddEvenStr))
 <BR><BR>[Stack]<UL><LI>Max Depth = 360<LI>Call Chain = showOddEvenStr &rArr; setMenuOption &rArr; sin &rArr; __ieee754_rem_pio2 &rArr; __aeabi_dmul &rArr; _double_epilogue &rArr; _double_round
 </UL>
 <BR>[Calls]<UL><LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setMenuOption

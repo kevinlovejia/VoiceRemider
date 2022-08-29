@@ -398,7 +398,7 @@
         <Ww>
           <count>18</count>
           <WinNumber>2</WinNumber>
-          <ItemText>setting</ItemText>
+          <ItemText>setting,0x0A</ItemText>
         </Ww>
       </WatchWindow2>
       <MemoryWindow1>
@@ -854,7 +854,7 @@
 
   <Group>
     <GroupName>Watch</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>

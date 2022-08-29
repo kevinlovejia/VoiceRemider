@@ -36,19 +36,13 @@ void modeOddevenSelect()
 
 	setPrevMenuOpen(&prevMenuData, modeOddevenSelect);	
 
-	//1.从flash读取当前的限号规则是多少
-//	static unsigned int sizeStruct = 0;
-//	static driverInfo_s inFlash;
-//	byte ruleInFlash = 0;
-//	sizeStruct = sizeof(driverInfo);
-//	readFlash(START_FLASH_ADDRESS, (uint16_t *)&inFlash, sizeStruct);
-//	//2.如果是123规则，则直接从presetMode中读取默认规则
-//	driverInfo.limitCouple.rule = 1;							//使用预设模式1,以防数据存储失败
-//	driverInfo.limitCouple.matchTimes = 3;									//每次进入界面，设置一次自动匹配次数
-//	if(inFlash.limitCouple.rule > 0 && inFlash.limitCouple.rule < 4)
-//	{
+	//1.从flash读取当前的单双号模式和退出天数
+	static unsigned int sizeStruct = 0;
+	//static driverInfo_s inFlash;
+	//byte ruleInFlash = 0;
+	sizeStruct = sizeof(driverInfo);
+	readFlash(START_FLASH_ADDRESS, (uint16_t *)&driverInfo, sizeStruct);
 
-//	}
 	menuData.selected = 1;	
 	beginAnimation2(NULL);
 }
@@ -77,9 +71,9 @@ static void mSelect()
 	if(isExiting)
 	{
 		//save rules to flash
-//		static unsigned int sizeStruct = 0;
-//		sizeStruct = sizeof(driverInfo);
-//		writeFlash(START_FLASH_ADDRESS, (uint16_t *)&driverInfo, sizeStruct);
+		static unsigned int sizeStruct = 0;
+		sizeStruct = sizeof(driverInfo);
+		writeFlash(START_FLASH_ADDRESS, (uint16_t *)&driverInfo, sizeStruct);
 	}
 	setPrevMenuExit(&prevMenuData);
 	doAction(exitSelected());
@@ -99,7 +93,7 @@ static void showOddEvenStr(void)
 	char buff[14] = {0};
 	byte fontArr[6] = {16, 18, 16, 15, 19, 7};
 	
-	if(setting.val == 1)
+	if(driverInfo.limitDS.normal == 0)
 		fontArr[0] = 16;//单
 	else
 		fontArr[0] = 17;//双
@@ -116,28 +110,28 @@ static void showDaysleftStr(void)		//绘制N日后退出界面
 	byte fontArr[4] = {15, 1, 25, 26};
 	byte fontWidth = 0;
 	const byte* bitmp;
-	byte bits = 1, hun, ten, one;
+	byte bits = 1;// hun, ten, one;
+	u16 newDays = 0;
+	newDays = driverInfo.limitDS.validDaysH *100 + driverInfo.limitDS.validDaysT *10 + \
+		driverInfo.limitDS.validDaysO;
 
-	hun = setting.val / 100;
-	ten = setting.val / 10 % 10;
-	one = setting.val % 10;	
-	if(setting.val / 100 || setting.now >= 2)
+	if(newDays / 100 || setting.now >= 2)
 	{
 		bits = 3;
-		draw_bitmap(PARAM_X, 8+16, numFont11x16[hun], 11, 16, NOINVERT, 0);
-		draw_bitmap(PARAM_X+12, 8+16, numFont11x16[ten], 11, 16, NOINVERT, 0);	
-		draw_bitmap(PARAM_X+24, 8+16, numFont11x16[one], 11, 16, NOINVERT, 0);
+		draw_bitmap(PARAM_X, 8+16, numFont11x16[driverInfo.limitDS.validDaysH], 11, 16, NOINVERT, 0);
+		draw_bitmap(PARAM_X+12, 8+16, numFont11x16[driverInfo.limitDS.validDaysT], 11, 16, NOINVERT, 0);	
+		draw_bitmap(PARAM_X+24, 8+16, numFont11x16[driverInfo.limitDS.validDaysO], 11, 16, NOINVERT, 0);
 	}		
-	else if(setting.val / 10)
+	else if(newDays / 10)
 	{
 		bits = 2;
-		draw_bitmap(PARAM_X, 8+16, numFont11x16[ten], 11, 16, NOINVERT, 0);	
-		draw_bitmap(PARAM_X+12, 8+16, numFont11x16[one], 11, 16, NOINVERT, 0);
+		draw_bitmap(PARAM_X, 8+16, numFont11x16[driverInfo.limitDS.validDaysT], 11, 16, NOINVERT, 0);	
+		draw_bitmap(PARAM_X+12, 8+16, numFont11x16[driverInfo.limitDS.validDaysO], 11, 16, NOINVERT, 0);
 	}		
 	else 
 	{
 		bits = 1;
-		draw_bitmap(PARAM_X, 8+16, numFont11x16[one], 11, 16, NOINVERT, 0);	
+		draw_bitmap(PARAM_X, 8+16, numFont11x16[driverInfo.limitDS.validDaysO], 11, 16, NOINVERT, 0);	
 	}		
 
 	LOOP(4, cnt)
@@ -166,7 +160,7 @@ static display_t oddEvenNumDraw()		//选中 N日后退出
 			y = 8;	
 			draw_clearArea(x, y, w);
 			draw_clearArea(x, y+8, w);
-			draw_bitmap(x, y, textDisplay[setting.val+16] , 16, 16, INVERT, 0);//
+			draw_bitmap(x, y, textDisplay[driverInfo.limitDS.normal+16] , 16, 16, INVERT, 0);//
 			break;
 		case SETTING_NOW_DAYS_HUN:
 			w = 11;
@@ -177,15 +171,15 @@ static display_t oddEvenNumDraw()		//选中 N日后退出
 			draw_bitmap(x+24, y, numFont11x16[driverInfo.limitDS.validDaysO] , 11, 16, NOINVERT, 0);
 			break;
 		case SETTING_NOW_DAYS_TEN:	
-			draw_clearArea(x+12, y, 35);
-			draw_clearArea(x+12, y+8, 35);
+			draw_clearArea(x, y, 35);
+			draw_clearArea(x, y+8, 35);
 			draw_bitmap(x, y, numFont11x16[driverInfo.limitDS.validDaysH] , 11, 16, NOINVERT, 0);
 			draw_bitmap(x+12, y, numFont11x16[driverInfo.limitDS.validDaysT] , 11, 16, INVERT, 0);
 			draw_bitmap(x+24, y, numFont11x16[driverInfo.limitDS.validDaysO] , 11, 16, NOINVERT, 0);
 			break;
 		case SETTING_NOW_DAYS_ONE:
-			draw_clearArea(x+24, y, 35);
-			draw_clearArea(x+24, y+8, 35);
+			draw_clearArea(x, y, 35);
+			draw_clearArea(x, y+8, 35);
 			draw_bitmap(x, y, numFont11x16[driverInfo.limitDS.validDaysH] , 11, 16, NOINVERT, 0);
 			draw_bitmap(x+12, y, numFont11x16[driverInfo.limitDS.validDaysT] , 11, 16, NOINVERT, 0);
 			draw_bitmap(x+24, y, numFont11x16[driverInfo.limitDS.validDaysO] , 11, 16, INVERT, 0);	
