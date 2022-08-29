@@ -1,7 +1,12 @@
 Dependencies for Project 'VoiceRemider', Target 'VoiceRemider': (DO NOT MODIFY !)
 F (startup_stm32f103xb.s)(0x6304436E)(--cpu Cortex-M3 -g --apcs=interwork --pd "__MICROLIB SETA 1"-I.\RTE\_VoiceRemider-ID:\Keil_v5\packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-ID:\Keil_v5\packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include--pd "__UVISION_VERSION SETA 524" --pd "_RTE_ SETA 1" --pd "STM32F10X_MD SETA 1"--list startup_stm32f103xb.lst --xref -o .\voiceremider\startup_stm32f103xb.o --depend .\voiceremider\startup_stm32f103xb.d)
+<<<<<<< Updated upstream
 F (..\Core\Src\flash.c)(0x630C22DB)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../MYAPP -I ../oledlib -I ../Watch --c99-I.\RTE\_VoiceRemider-ID:\Keil_v5\packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-ID:\Keil_v5\packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o .\voiceremider\flash.o --omf_browse .\voiceremider\flash.crf --depend .\voiceremider\flash.d)
 I (../Core/Inc/flash.h)(0x630C1666)
+=======
+F (..\Core\Src\flash.c)(0x630C320E)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../MYAPP -I ../oledlib -I ../Watch --c99-I.\RTE\_VoiceRemider-ID:\Keil_v5\packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-ID:\Keil_v5\packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o .\voiceremider\flash.o --omf_browse .\voiceremider\flash.crf --depend .\voiceremider\flash.d)
+I (../Core/Inc/flash.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (../Core/Inc/main.h)(0x6298273D)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x62DFA699)
 I (../Core/Inc/stm32f1xx_hal_conf.h)(0x6304436C)
@@ -128,7 +133,11 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x62DFA699)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x62DFA699)
 I (../Core/Inc/i2c.h)(0x62AB6053)
 I (../Core/Inc/tim.h)(0x62E09944)
+<<<<<<< Updated upstream
 I (../Watch/typedefs.h)(0x630C2017)
+=======
+I (../Watch/typedefs.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (d:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
 I (../Core/Inc/usart.h)(0x629B45D2)
 I (../Core/Inc/gpio.h)(0x6293A7A1)
@@ -179,7 +188,11 @@ I (../Watch/resources.h)(0x630611DA)
 I (../Core/Inc/mode.h)(0x62FDA8BF)
 I (../Core/Inc/tailnum.h)(0x63088777)
 I (../Core/Inc/mode_couple.h)(0x63085974)
+<<<<<<< Updated upstream
 I (../Core/Inc/flash.h)(0x630C1666)
+=======
+I (../Core/Inc/flash.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (../MYAPP/wait_data_clock.h)(0x61E111C1)
 I (../MYAPP/gui_log_console.h)(0x62DF974E)
 I (../oledlib/oled_driver.h)(0x62E09DB8)
@@ -191,7 +204,11 @@ I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\limits.h)(0x588B8344)
 I (../Watch/config.h)(0x62FB9613)
 I (../Watch/util.h)(0x62E099D7)
+<<<<<<< Updated upstream
 I (../Watch/typedefs.h)(0x630C2017)
+=======
+I (../Watch/typedefs.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (d:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
 I (../Watch/debug.h)(0x61E111C1)
@@ -261,10 +278,17 @@ I (../Watch/resources.h)(0x630611DA)
 I (../Core/Inc/mode.h)(0x62FDA8BF)
 I (../Core/Inc/tailnum.h)(0x63088777)
 I (../Core/Inc/mode_couple.h)(0x63085974)
+<<<<<<< Updated upstream
 I (../Core/Inc/flash.h)(0x630C1666)
 I (../MYAPP/wait_data_clock.h)(0x61E111C1)
 I (../MYAPP/gui_log_console.h)(0x62DF974E)
 F (..\Core\Src\mode_couple.c)(0x630C2C09)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../MYAPP -I ../oledlib -I ../Watch --c99-I.\RTE\_VoiceRemider-ID:\Keil_v5\packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-ID:\Keil_v5\packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o .\voiceremider\mode_couple.o --omf_browse .\voiceremider\mode_couple.crf --depend .\voiceremider\mode_couple.d)
+=======
+I (../Core/Inc/flash.h)(0x630C320E)
+I (../MYAPP/wait_data_clock.h)(0x61E111C1)
+I (../MYAPP/gui_log_console.h)(0x62DF974E)
+F (..\Core\Src\mode_couple.c)(0x630C320E)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../MYAPP -I ../oledlib -I ../Watch --c99-I.\RTE\_VoiceRemider-ID:\Keil_v5\packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-ID:\Keil_v5\packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o .\voiceremider\mode_couple.o --omf_browse .\voiceremider\mode_couple.crf --depend .\voiceremider\mode_couple.d)
+>>>>>>> Stashed changes
 I (../Watch/common.h)(0x630A4708)
 I (d:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588B8344)
@@ -272,7 +296,11 @@ I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\limits.h)(0x588B8344)
 I (../Watch/config.h)(0x62FB9613)
 I (../Watch/util.h)(0x62E099D7)
+<<<<<<< Updated upstream
 I (../Watch/typedefs.h)(0x630C2017)
+=======
+I (../Watch/typedefs.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (d:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
 I (../Watch/debug.h)(0x61E111C1)
@@ -342,12 +370,20 @@ I (../Watch/resources.h)(0x630611DA)
 I (../Core/Inc/mode.h)(0x62FDA8BF)
 I (../Core/Inc/tailnum.h)(0x63088777)
 I (../Core/Inc/mode_couple.h)(0x63085974)
+<<<<<<< Updated upstream
 I (../Core/Inc/flash.h)(0x630C1666)
+=======
+I (../Core/Inc/flash.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (../MYAPP/wait_data_clock.h)(0x61E111C1)
 I (../MYAPP/gui_log_console.h)(0x62DF974E)
 F (..\Core\Src\pcf8563.c)(0x62F66E1C)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../MYAPP -I ../oledlib -I ../Watch --c99-I.\RTE\_VoiceRemider-ID:\Keil_v5\packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-ID:\Keil_v5\packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o .\voiceremider\pcf8563.o --omf_browse .\voiceremider\pcf8563.crf --depend .\voiceremider\pcf8563.d)
 I (../Core/Inc/pcf8563.h)(0x62E0898A)
+<<<<<<< Updated upstream
 I (../Watch/typedefs.h)(0x630C2017)
+=======
+I (../Watch/typedefs.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (d:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
 I (../Core/Inc/i2c.h)(0x62AB6053)
@@ -425,7 +461,11 @@ I (../Watch/resources.h)(0x630611DA)
 I (../Core/Inc/mode.h)(0x62FDA8BF)
 I (../Core/Inc/tailnum.h)(0x63088777)
 I (../Core/Inc/mode_couple.h)(0x63085974)
+<<<<<<< Updated upstream
 I (../Core/Inc/flash.h)(0x630C1666)
+=======
+I (../Core/Inc/flash.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (../MYAPP/wait_data_clock.h)(0x61E111C1)
 I (../MYAPP/gui_log_console.h)(0x62DF974E)
 F (../Core/Src/stm32f1xx_it.c)(0x6304409B)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../MYAPP -I ../oledlib -I ../Watch --c99-I.\RTE\_VoiceRemider-ID:\Keil_v5\packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-ID:\Keil_v5\packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o .\voiceremider\stm32f1xx_it.o --omf_browse .\voiceremider\stm32f1xx_it.crf --depend .\voiceremider\stm32f1xx_it.d)
@@ -467,7 +507,11 @@ I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\limits.h)(0x588B8344)
 I (../Watch/config.h)(0x62FB9613)
 I (../Watch/util.h)(0x62E099D7)
+<<<<<<< Updated upstream
 I (../Watch/typedefs.h)(0x630C2017)
+=======
+I (../Watch/typedefs.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (d:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
 I (../Watch/debug.h)(0x61E111C1)
@@ -537,7 +581,11 @@ I (../Watch/resources.h)(0x630611DA)
 I (../Core/Inc/mode.h)(0x62FDA8BF)
 I (../Core/Inc/tailnum.h)(0x63088777)
 I (../Core/Inc/mode_couple.h)(0x63085974)
+<<<<<<< Updated upstream
 I (../Core/Inc/flash.h)(0x630C1666)
+=======
+I (../Core/Inc/flash.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (../MYAPP/wait_data_clock.h)(0x61E111C1)
 I (../MYAPP/gui_log_console.h)(0x62DF974E)
 F (../Core/Src/tim.c)(0x6304409A)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../MYAPP -I ../oledlib -I ../Watch --c99-I.\RTE\_VoiceRemider-ID:\Keil_v5\packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-ID:\Keil_v5\packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o .\voiceremider\tim.o --omf_browse .\voiceremider\tim.crf --depend .\voiceremider\tim.d)
@@ -571,7 +619,11 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x62DFA699)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x62DFA699)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x62DFA699)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x62DFA699)
+<<<<<<< Updated upstream
 I (../Watch/typedefs.h)(0x630C2017)
+=======
+I (../Watch/typedefs.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (d:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
 I (../Watch/common.h)(0x630A4708)
 I (d:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x588B8344)
@@ -619,7 +671,11 @@ I (../Watch/resources.h)(0x630611DA)
 I (../Core/Inc/mode.h)(0x62FDA8BF)
 I (../Core/Inc/tailnum.h)(0x63088777)
 I (../Core/Inc/mode_couple.h)(0x63085974)
+<<<<<<< Updated upstream
 I (../Core/Inc/flash.h)(0x630C1666)
+=======
+I (../Core/Inc/flash.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (../MYAPP/wait_data_clock.h)(0x61E111C1)
 I (../MYAPP/gui_log_console.h)(0x62DF974E)
 F (../Core/Src/usart.c)(0x629B45D2)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../MYAPP -I ../oledlib -I ../Watch --c99-I.\RTE\_VoiceRemider-ID:\Keil_v5\packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-ID:\Keil_v5\packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o .\voiceremider\usart.o --omf_browse .\voiceremider\usart.crf --depend .\voiceremider\usart.d)
@@ -1155,7 +1211,11 @@ I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\limits.h)(0x588B8344)
 I (..\Watch\config.h)(0x62FB9613)
 I (..\Watch\util.h)(0x62E099D7)
+<<<<<<< Updated upstream
 I (..\Watch\typedefs.h)(0x630C2017)
+=======
+I (..\Watch\typedefs.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (d:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
 I (..\Watch\debug.h)(0x61E111C1)
@@ -1225,7 +1285,11 @@ I (..\Watch\resources.h)(0x630611DA)
 I (../Core/Inc/mode.h)(0x62FDA8BF)
 I (../Core/Inc/tailnum.h)(0x63088777)
 I (../Core/Inc/mode_couple.h)(0x63085974)
+<<<<<<< Updated upstream
 I (../Core/Inc/flash.h)(0x630C1666)
+=======
+I (../Core/Inc/flash.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (../MYAPP/wait_data_clock.h)(0x61E111C1)
 I (../MYAPP/gui_log_console.h)(0x62DF974E)
 I (../Core/Inc/DS3231.h)(0x62DF9770)
@@ -1237,7 +1301,11 @@ I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\limits.h)(0x588B8344)
 I (..\Watch\config.h)(0x62FB9613)
 I (..\Watch\util.h)(0x62E099D7)
+<<<<<<< Updated upstream
 I (..\Watch\typedefs.h)(0x630C2017)
+=======
+I (..\Watch\typedefs.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (d:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
 I (..\Watch\debug.h)(0x61E111C1)
@@ -1307,7 +1375,11 @@ I (..\Watch\resources.h)(0x630611DA)
 I (../Core/Inc/mode.h)(0x62FDA8BF)
 I (../Core/Inc/tailnum.h)(0x63088777)
 I (../Core/Inc/mode_couple.h)(0x63085974)
+<<<<<<< Updated upstream
 I (../Core/Inc/flash.h)(0x630C1666)
+=======
+I (../Core/Inc/flash.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (../MYAPP/wait_data_clock.h)(0x61E111C1)
 I (../MYAPP/gui_log_console.h)(0x62DF974E)
 F (..\Watch\animation.c)(0x61E111C1)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../MYAPP -I ../oledlib -I ../Watch --c99-I.\RTE\_VoiceRemider-ID:\Keil_v5\packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-ID:\Keil_v5\packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o .\voiceremider\animation.o --omf_browse .\voiceremider\animation.crf --depend .\voiceremider\animation.d)
@@ -1318,7 +1390,11 @@ I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\limits.h)(0x588B8344)
 I (..\Watch\config.h)(0x62FB9613)
 I (..\Watch\util.h)(0x62E099D7)
+<<<<<<< Updated upstream
 I (..\Watch\typedefs.h)(0x630C2017)
+=======
+I (..\Watch\typedefs.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (d:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
 I (..\Watch\debug.h)(0x61E111C1)
@@ -1388,7 +1464,11 @@ I (..\Watch\resources.h)(0x630611DA)
 I (../Core/Inc/mode.h)(0x62FDA8BF)
 I (../Core/Inc/tailnum.h)(0x63088777)
 I (../Core/Inc/mode_couple.h)(0x63085974)
+<<<<<<< Updated upstream
 I (../Core/Inc/flash.h)(0x630C1666)
+=======
+I (../Core/Inc/flash.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (../MYAPP/wait_data_clock.h)(0x61E111C1)
 I (../MYAPP/gui_log_console.h)(0x62DF974E)
 F (..\Watch\appconfig.c)(0x62064854)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../MYAPP -I ../oledlib -I ../Watch --c99-I.\RTE\_VoiceRemider-ID:\Keil_v5\packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-ID:\Keil_v5\packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o .\voiceremider\appconfig.o --omf_browse .\voiceremider\appconfig.crf --depend .\voiceremider\appconfig.d)
@@ -1399,7 +1479,11 @@ I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\limits.h)(0x588B8344)
 I (..\Watch\config.h)(0x62FB9613)
 I (..\Watch\util.h)(0x62E099D7)
+<<<<<<< Updated upstream
 I (..\Watch\typedefs.h)(0x630C2017)
+=======
+I (..\Watch\typedefs.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (d:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
 I (..\Watch\debug.h)(0x61E111C1)
@@ -1469,12 +1553,20 @@ I (..\Watch\resources.h)(0x630611DA)
 I (../Core/Inc/mode.h)(0x62FDA8BF)
 I (../Core/Inc/tailnum.h)(0x63088777)
 I (../Core/Inc/mode_couple.h)(0x63085974)
+<<<<<<< Updated upstream
 I (../Core/Inc/flash.h)(0x630C1666)
+=======
+I (../Core/Inc/flash.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (../MYAPP/wait_data_clock.h)(0x61E111C1)
 I (../MYAPP/gui_log_console.h)(0x62DF974E)
 F (..\Watch\buttons.c)(0x630442E0)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../MYAPP -I ../oledlib -I ../Watch --c99-I.\RTE\_VoiceRemider-ID:\Keil_v5\packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-ID:\Keil_v5\packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o .\voiceremider\buttons.o --omf_browse .\voiceremider\buttons.crf --depend .\voiceremider\buttons.d)
 I (..\Watch\buttons.h)(0x630434CE)
+<<<<<<< Updated upstream
 I (..\Watch\typedefs.h)(0x630C2017)
+=======
+I (..\Watch\typedefs.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (d:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
 I (../Core/Inc/main.h)(0x6298273D)
@@ -1550,7 +1642,11 @@ I (..\Watch\resources.h)(0x630611DA)
 I (../Core/Inc/mode.h)(0x62FDA8BF)
 I (../Core/Inc/tailnum.h)(0x63088777)
 I (../Core/Inc/mode_couple.h)(0x63085974)
+<<<<<<< Updated upstream
 I (../Core/Inc/flash.h)(0x630C1666)
+=======
+I (../Core/Inc/flash.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (../MYAPP/wait_data_clock.h)(0x61E111C1)
 I (../MYAPP/gui_log_console.h)(0x62DF974E)
 I (../oledlib/oled_driver.h)(0x62E09DB8)
@@ -1564,7 +1660,11 @@ I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\limits.h)(0x588B8344)
 I (..\Watch\config.h)(0x62FB9613)
 I (..\Watch\util.h)(0x62E099D7)
+<<<<<<< Updated upstream
 I (..\Watch\typedefs.h)(0x630C2017)
+=======
+I (..\Watch\typedefs.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (d:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
 I (..\Watch\debug.h)(0x61E111C1)
@@ -1634,7 +1734,11 @@ I (..\Watch\resources.h)(0x630611DA)
 I (../Core/Inc/mode.h)(0x62FDA8BF)
 I (../Core/Inc/tailnum.h)(0x63088777)
 I (../Core/Inc/mode_couple.h)(0x63085974)
+<<<<<<< Updated upstream
 I (../Core/Inc/flash.h)(0x630C1666)
+=======
+I (../Core/Inc/flash.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (../MYAPP/wait_data_clock.h)(0x61E111C1)
 I (../MYAPP/gui_log_console.h)(0x62DF974E)
 F (..\Watch\display.c)(0x630194FD)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../MYAPP -I ../oledlib -I ../Watch --c99-I.\RTE\_VoiceRemider-ID:\Keil_v5\packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-ID:\Keil_v5\packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o .\voiceremider\display.o --omf_browse .\voiceremider\display.crf --depend .\voiceremider\display.d)
@@ -1645,7 +1749,11 @@ I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\limits.h)(0x588B8344)
 I (..\Watch\config.h)(0x62FB9613)
 I (..\Watch\util.h)(0x62E099D7)
+<<<<<<< Updated upstream
 I (..\Watch\typedefs.h)(0x630C2017)
+=======
+I (..\Watch\typedefs.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (d:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
 I (..\Watch\debug.h)(0x61E111C1)
@@ -1715,7 +1823,11 @@ I (..\Watch\resources.h)(0x630611DA)
 I (../Core/Inc/mode.h)(0x62FDA8BF)
 I (../Core/Inc/tailnum.h)(0x63088777)
 I (../Core/Inc/mode_couple.h)(0x63085974)
+<<<<<<< Updated upstream
 I (../Core/Inc/flash.h)(0x630C1666)
+=======
+I (../Core/Inc/flash.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (../MYAPP/wait_data_clock.h)(0x61E111C1)
 I (../MYAPP/gui_log_console.h)(0x62DF974E)
 F (..\Watch\draw.c)(0x63081788)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../MYAPP -I ../oledlib -I ../Watch --c99-I.\RTE\_VoiceRemider-ID:\Keil_v5\packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-ID:\Keil_v5\packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o .\voiceremider\draw.o --omf_browse .\voiceremider\draw.crf --depend .\voiceremider\draw.d)
@@ -1726,7 +1838,11 @@ I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\limits.h)(0x588B8344)
 I (..\Watch\config.h)(0x62FB9613)
 I (..\Watch\util.h)(0x62E099D7)
+<<<<<<< Updated upstream
 I (..\Watch\typedefs.h)(0x630C2017)
+=======
+I (..\Watch\typedefs.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (d:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
 I (..\Watch\debug.h)(0x61E111C1)
@@ -1796,7 +1912,11 @@ I (..\Watch\resources.h)(0x630611DA)
 I (../Core/Inc/mode.h)(0x62FDA8BF)
 I (../Core/Inc/tailnum.h)(0x63088777)
 I (../Core/Inc/mode_couple.h)(0x63085974)
+<<<<<<< Updated upstream
 I (../Core/Inc/flash.h)(0x630C1666)
+=======
+I (../Core/Inc/flash.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (../MYAPP/wait_data_clock.h)(0x61E111C1)
 I (../MYAPP/gui_log_console.h)(0x62DF974E)
 I (../oledlib/oled_driver.h)(0x62E09DB8)
@@ -1808,7 +1928,11 @@ I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\limits.h)(0x588B8344)
 I (..\Watch\config.h)(0x62FB9613)
 I (..\Watch\util.h)(0x62E099D7)
+<<<<<<< Updated upstream
 I (..\Watch\typedefs.h)(0x630C2017)
+=======
+I (..\Watch\typedefs.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (d:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
 I (..\Watch\debug.h)(0x61E111C1)
@@ -1878,7 +2002,11 @@ I (..\Watch\resources.h)(0x630611DA)
 I (../Core/Inc/mode.h)(0x62FDA8BF)
 I (../Core/Inc/tailnum.h)(0x63088777)
 I (../Core/Inc/mode_couple.h)(0x63085974)
+<<<<<<< Updated upstream
 I (../Core/Inc/flash.h)(0x630C1666)
+=======
+I (../Core/Inc/flash.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (../MYAPP/wait_data_clock.h)(0x61E111C1)
 I (../MYAPP/gui_log_console.h)(0x62DF974E)
 F (..\Watch\games.c)(0x62DF713E)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../MYAPP -I ../oledlib -I ../Watch --c99-I.\RTE\_VoiceRemider-ID:\Keil_v5\packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-ID:\Keil_v5\packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o .\voiceremider\games.o --omf_browse .\voiceremider\games.crf --depend .\voiceremider\games.d)
@@ -1889,7 +2017,11 @@ I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\limits.h)(0x588B8344)
 I (..\Watch\config.h)(0x62FB9613)
 I (..\Watch\util.h)(0x62E099D7)
+<<<<<<< Updated upstream
 I (..\Watch\typedefs.h)(0x630C2017)
+=======
+I (..\Watch\typedefs.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (d:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
 I (..\Watch\debug.h)(0x61E111C1)
@@ -1959,7 +2091,11 @@ I (..\Watch\resources.h)(0x630611DA)
 I (../Core/Inc/mode.h)(0x62FDA8BF)
 I (../Core/Inc/tailnum.h)(0x63088777)
 I (../Core/Inc/mode_couple.h)(0x63085974)
+<<<<<<< Updated upstream
 I (../Core/Inc/flash.h)(0x630C1666)
+=======
+I (../Core/Inc/flash.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (../MYAPP/wait_data_clock.h)(0x61E111C1)
 I (../MYAPP/gui_log_console.h)(0x62DF974E)
 F (..\Watch\global.c)(0x61E111C1)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../MYAPP -I ../oledlib -I ../Watch --c99-I.\RTE\_VoiceRemider-ID:\Keil_v5\packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-ID:\Keil_v5\packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o .\voiceremider\global.o --omf_browse .\voiceremider\global.crf --depend .\voiceremider\global.d)
@@ -1970,7 +2106,11 @@ I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\limits.h)(0x588B8344)
 I (..\Watch\config.h)(0x62FB9613)
 I (..\Watch\util.h)(0x62E099D7)
+<<<<<<< Updated upstream
 I (..\Watch\typedefs.h)(0x630C2017)
+=======
+I (..\Watch\typedefs.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (d:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
 I (..\Watch\debug.h)(0x61E111C1)
@@ -2040,7 +2180,11 @@ I (..\Watch\resources.h)(0x630611DA)
 I (../Core/Inc/mode.h)(0x62FDA8BF)
 I (../Core/Inc/tailnum.h)(0x63088777)
 I (../Core/Inc/mode_couple.h)(0x63085974)
+<<<<<<< Updated upstream
 I (../Core/Inc/flash.h)(0x630C1666)
+=======
+I (../Core/Inc/flash.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (../MYAPP/wait_data_clock.h)(0x61E111C1)
 I (../MYAPP/gui_log_console.h)(0x62DF974E)
 F (..\Watch\m_display.c)(0x62E09A00)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../MYAPP -I ../oledlib -I ../Watch --c99-I.\RTE\_VoiceRemider-ID:\Keil_v5\packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-ID:\Keil_v5\packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o .\voiceremider\m_display.o --omf_browse .\voiceremider\m_display.crf --depend .\voiceremider\m_display.d)
@@ -2051,7 +2195,11 @@ I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\limits.h)(0x588B8344)
 I (..\Watch\config.h)(0x62FB9613)
 I (..\Watch\util.h)(0x62E099D7)
+<<<<<<< Updated upstream
 I (..\Watch\typedefs.h)(0x630C2017)
+=======
+I (..\Watch\typedefs.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (d:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
 I (..\Watch\debug.h)(0x61E111C1)
@@ -2121,7 +2269,11 @@ I (..\Watch\resources.h)(0x630611DA)
 I (../Core/Inc/mode.h)(0x62FDA8BF)
 I (../Core/Inc/tailnum.h)(0x63088777)
 I (../Core/Inc/mode_couple.h)(0x63085974)
+<<<<<<< Updated upstream
 I (../Core/Inc/flash.h)(0x630C1666)
+=======
+I (../Core/Inc/flash.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (../MYAPP/wait_data_clock.h)(0x61E111C1)
 I (../MYAPP/gui_log_console.h)(0x62DF974E)
 I (../oledlib/draw_api.h)(0x61E111C1)
@@ -2142,7 +2294,11 @@ I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\limits.h)(0x588B8344)
 I (..\Watch\config.h)(0x62FB9613)
 I (..\Watch\util.h)(0x62E099D7)
+<<<<<<< Updated upstream
 I (..\Watch\typedefs.h)(0x630C2017)
+=======
+I (..\Watch\typedefs.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (d:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
 I (..\Watch\debug.h)(0x61E111C1)
@@ -2212,7 +2368,11 @@ I (..\Watch\resources.h)(0x630611DA)
 I (../Core/Inc/mode.h)(0x62FDA8BF)
 I (../Core/Inc/tailnum.h)(0x63088777)
 I (../Core/Inc/mode_couple.h)(0x63085974)
+<<<<<<< Updated upstream
 I (../Core/Inc/flash.h)(0x630C1666)
+=======
+I (../Core/Inc/flash.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (../MYAPP/wait_data_clock.h)(0x61E111C1)
 I (../MYAPP/gui_log_console.h)(0x62DF974E)
 F (..\Watch\menu.c)(0x63038428)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../MYAPP -I ../oledlib -I ../Watch --c99-I.\RTE\_VoiceRemider-ID:\Keil_v5\packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-ID:\Keil_v5\packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o .\voiceremider\menu.o --omf_browse .\voiceremider\menu.crf --depend .\voiceremider\menu.d)
@@ -2223,7 +2383,11 @@ I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\limits.h)(0x588B8344)
 I (..\Watch\config.h)(0x62FB9613)
 I (..\Watch\util.h)(0x62E099D7)
+<<<<<<< Updated upstream
 I (..\Watch\typedefs.h)(0x630C2017)
+=======
+I (..\Watch\typedefs.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (d:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
 I (..\Watch\debug.h)(0x61E111C1)
@@ -2293,7 +2457,11 @@ I (..\Watch\resources.h)(0x630611DA)
 I (../Core/Inc/mode.h)(0x62FDA8BF)
 I (../Core/Inc/tailnum.h)(0x63088777)
 I (../Core/Inc/mode_couple.h)(0x63085974)
+<<<<<<< Updated upstream
 I (../Core/Inc/flash.h)(0x630C1666)
+=======
+I (../Core/Inc/flash.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (../MYAPP/wait_data_clock.h)(0x61E111C1)
 I (../MYAPP/gui_log_console.h)(0x62DF974E)
 I (d:\Keil_v5\ARM\ARMCC\include\math.h)(0x588B8344)
@@ -2305,7 +2473,11 @@ I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\limits.h)(0x588B8344)
 I (..\Watch\config.h)(0x62FB9613)
 I (..\Watch\util.h)(0x62E099D7)
+<<<<<<< Updated upstream
 I (..\Watch\typedefs.h)(0x630C2017)
+=======
+I (..\Watch\typedefs.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (d:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
 I (..\Watch\debug.h)(0x61E111C1)
@@ -2375,7 +2547,11 @@ I (..\Watch\resources.h)(0x630611DA)
 I (../Core/Inc/mode.h)(0x62FDA8BF)
 I (../Core/Inc/tailnum.h)(0x63088777)
 I (../Core/Inc/mode_couple.h)(0x63085974)
+<<<<<<< Updated upstream
 I (../Core/Inc/flash.h)(0x630C1666)
+=======
+I (../Core/Inc/flash.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (../MYAPP/wait_data_clock.h)(0x61E111C1)
 I (../MYAPP/gui_log_console.h)(0x62DF974E)
 I (../MYAPP/My_Menu.h)(0x620684C5)
@@ -2388,7 +2564,11 @@ I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\limits.h)(0x588B8344)
 I (..\Watch\config.h)(0x62FB9613)
 I (..\Watch\util.h)(0x62E099D7)
+<<<<<<< Updated upstream
 I (..\Watch\typedefs.h)(0x630C2017)
+=======
+I (..\Watch\typedefs.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (d:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
 I (..\Watch\debug.h)(0x61E111C1)
@@ -2458,7 +2638,11 @@ I (..\Watch\resources.h)(0x630611DA)
 I (../Core/Inc/mode.h)(0x62FDA8BF)
 I (../Core/Inc/tailnum.h)(0x63088777)
 I (../Core/Inc/mode_couple.h)(0x63085974)
+<<<<<<< Updated upstream
 I (../Core/Inc/flash.h)(0x630C1666)
+=======
+I (../Core/Inc/flash.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (../MYAPP/wait_data_clock.h)(0x61E111C1)
 I (../MYAPP/gui_log_console.h)(0x62DF974E)
 F (..\Watch\resources.c)(0x63088589)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../MYAPP -I ../oledlib -I ../Watch --c99-I.\RTE\_VoiceRemider-ID:\Keil_v5\packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-ID:\Keil_v5\packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o .\voiceremider\resources.o --omf_browse .\voiceremider\resources.crf --depend .\voiceremider\resources.d)
@@ -2469,7 +2653,11 @@ I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\limits.h)(0x588B8344)
 I (..\Watch\config.h)(0x62FB9613)
 I (..\Watch\util.h)(0x62E099D7)
+<<<<<<< Updated upstream
 I (..\Watch\typedefs.h)(0x630C2017)
+=======
+I (..\Watch\typedefs.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (d:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
 I (..\Watch\debug.h)(0x61E111C1)
@@ -2539,7 +2727,11 @@ I (..\Watch\resources.h)(0x630611DA)
 I (../Core/Inc/mode.h)(0x62FDA8BF)
 I (../Core/Inc/tailnum.h)(0x63088777)
 I (../Core/Inc/mode_couple.h)(0x63085974)
+<<<<<<< Updated upstream
 I (../Core/Inc/flash.h)(0x630C1666)
+=======
+I (../Core/Inc/flash.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (../MYAPP/wait_data_clock.h)(0x61E111C1)
 I (../MYAPP/gui_log_console.h)(0x62DF974E)
 F (..\Watch\settings.c)(0x630739D4)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../MYAPP -I ../oledlib -I ../Watch --c99-I.\RTE\_VoiceRemider-ID:\Keil_v5\packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-ID:\Keil_v5\packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o .\voiceremider\settings.o --omf_browse .\voiceremider\settings.crf --depend .\voiceremider\settings.d)
@@ -2550,7 +2742,11 @@ I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\limits.h)(0x588B8344)
 I (..\Watch\config.h)(0x62FB9613)
 I (..\Watch\util.h)(0x62E099D7)
+<<<<<<< Updated upstream
 I (..\Watch\typedefs.h)(0x630C2017)
+=======
+I (..\Watch\typedefs.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (d:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
 I (..\Watch\debug.h)(0x61E111C1)
@@ -2620,7 +2816,11 @@ I (..\Watch\resources.h)(0x630611DA)
 I (../Core/Inc/mode.h)(0x62FDA8BF)
 I (../Core/Inc/tailnum.h)(0x63088777)
 I (../Core/Inc/mode_couple.h)(0x63085974)
+<<<<<<< Updated upstream
 I (../Core/Inc/flash.h)(0x630C1666)
+=======
+I (../Core/Inc/flash.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (../MYAPP/wait_data_clock.h)(0x61E111C1)
 I (../MYAPP/gui_log_console.h)(0x62DF974E)
 F (..\Watch\sleep.c)(0x62E0ED24)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../MYAPP -I ../oledlib -I ../Watch --c99-I.\RTE\_VoiceRemider-ID:\Keil_v5\packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-ID:\Keil_v5\packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o .\voiceremider\sleep.o --omf_browse .\voiceremider\sleep.crf --depend .\voiceremider\sleep.d)
@@ -2631,7 +2831,11 @@ I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\limits.h)(0x588B8344)
 I (..\Watch\config.h)(0x62FB9613)
 I (..\Watch\util.h)(0x62E099D7)
+<<<<<<< Updated upstream
 I (..\Watch\typedefs.h)(0x630C2017)
+=======
+I (..\Watch\typedefs.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (d:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
 I (..\Watch\debug.h)(0x61E111C1)
@@ -2701,7 +2905,11 @@ I (..\Watch\resources.h)(0x630611DA)
 I (../Core/Inc/mode.h)(0x62FDA8BF)
 I (../Core/Inc/tailnum.h)(0x63088777)
 I (../Core/Inc/mode_couple.h)(0x63085974)
+<<<<<<< Updated upstream
 I (../Core/Inc/flash.h)(0x630C1666)
+=======
+I (../Core/Inc/flash.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (../MYAPP/wait_data_clock.h)(0x61E111C1)
 I (../MYAPP/gui_log_console.h)(0x62DF974E)
 F (..\Watch\sound.c)(0x6304F18B)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../MYAPP -I ../oledlib -I ../Watch --c99-I.\RTE\_VoiceRemider-ID:\Keil_v5\packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-ID:\Keil_v5\packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o .\voiceremider\sound.o --omf_browse .\voiceremider\sound.crf --depend .\voiceremider\sound.d)
@@ -2712,7 +2920,11 @@ I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\limits.h)(0x588B8344)
 I (..\Watch\config.h)(0x62FB9613)
 I (..\Watch\util.h)(0x62E099D7)
+<<<<<<< Updated upstream
 I (..\Watch\typedefs.h)(0x630C2017)
+=======
+I (..\Watch\typedefs.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (d:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
 I (..\Watch\debug.h)(0x61E111C1)
@@ -2782,7 +2994,11 @@ I (..\Watch\resources.h)(0x630611DA)
 I (../Core/Inc/mode.h)(0x62FDA8BF)
 I (../Core/Inc/tailnum.h)(0x63088777)
 I (../Core/Inc/mode_couple.h)(0x63085974)
+<<<<<<< Updated upstream
 I (../Core/Inc/flash.h)(0x630C1666)
+=======
+I (../Core/Inc/flash.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (../MYAPP/wait_data_clock.h)(0x61E111C1)
 I (../MYAPP/gui_log_console.h)(0x62DF974E)
 F (..\Watch\stopwatch.c)(0x62FD6B0E)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../MYAPP -I ../oledlib -I ../Watch --c99-I.\RTE\_VoiceRemider-ID:\Keil_v5\packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-ID:\Keil_v5\packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o .\voiceremider\stopwatch.o --omf_browse .\voiceremider\stopwatch.crf --depend .\voiceremider\stopwatch.d)
@@ -2793,7 +3009,11 @@ I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\limits.h)(0x588B8344)
 I (..\Watch\config.h)(0x62FB9613)
 I (..\Watch\util.h)(0x62E099D7)
+<<<<<<< Updated upstream
 I (..\Watch\typedefs.h)(0x630C2017)
+=======
+I (..\Watch\typedefs.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (d:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
 I (..\Watch\debug.h)(0x61E111C1)
@@ -2863,7 +3083,11 @@ I (..\Watch\resources.h)(0x630611DA)
 I (../Core/Inc/mode.h)(0x62FDA8BF)
 I (../Core/Inc/tailnum.h)(0x63088777)
 I (../Core/Inc/mode_couple.h)(0x63085974)
+<<<<<<< Updated upstream
 I (../Core/Inc/flash.h)(0x630C1666)
+=======
+I (../Core/Inc/flash.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (../MYAPP/wait_data_clock.h)(0x61E111C1)
 I (../MYAPP/gui_log_console.h)(0x62DF974E)
 F (..\Watch\time.c)(0x62E089E4)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../MYAPP -I ../oledlib -I ../Watch --c99-I.\RTE\_VoiceRemider-ID:\Keil_v5\packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-ID:\Keil_v5\packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o .\voiceremider\time.o --omf_browse .\voiceremider\time.crf --depend .\voiceremider\time.d)
@@ -2874,7 +3098,11 @@ I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\limits.h)(0x588B8344)
 I (..\Watch\config.h)(0x62FB9613)
 I (..\Watch\util.h)(0x62E099D7)
+<<<<<<< Updated upstream
 I (..\Watch\typedefs.h)(0x630C2017)
+=======
+I (..\Watch\typedefs.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (d:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
 I (..\Watch\debug.h)(0x61E111C1)
@@ -2944,7 +3172,11 @@ I (..\Watch\resources.h)(0x630611DA)
 I (../Core/Inc/mode.h)(0x62FDA8BF)
 I (../Core/Inc/tailnum.h)(0x63088777)
 I (../Core/Inc/mode_couple.h)(0x63085974)
+<<<<<<< Updated upstream
 I (../Core/Inc/flash.h)(0x630C1666)
+=======
+I (../Core/Inc/flash.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (../MYAPP/wait_data_clock.h)(0x61E111C1)
 I (../MYAPP/gui_log_console.h)(0x62DF974E)
 I (../Core/Inc/pcf8563.h)(0x62E0898A)
@@ -2956,7 +3188,11 @@ I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\limits.h)(0x588B8344)
 I (..\Watch\config.h)(0x62FB9613)
 I (..\Watch\util.h)(0x62E099D7)
+<<<<<<< Updated upstream
 I (..\Watch\typedefs.h)(0x630C2017)
+=======
+I (..\Watch\typedefs.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (d:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
 I (..\Watch\debug.h)(0x61E111C1)
@@ -3026,7 +3262,11 @@ I (..\Watch\resources.h)(0x630611DA)
 I (../Core/Inc/mode.h)(0x62FDA8BF)
 I (../Core/Inc/tailnum.h)(0x63088777)
 I (../Core/Inc/mode_couple.h)(0x63085974)
+<<<<<<< Updated upstream
 I (../Core/Inc/flash.h)(0x630C1666)
+=======
+I (../Core/Inc/flash.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (../MYAPP/wait_data_clock.h)(0x61E111C1)
 I (../MYAPP/gui_log_console.h)(0x62DF974E)
 F (..\Watch\torch.c)(0x62FD6BBE)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../MYAPP -I ../oledlib -I ../Watch --c99-I.\RTE\_VoiceRemider-ID:\Keil_v5\packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-ID:\Keil_v5\packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o .\voiceremider\torch.o --omf_browse .\voiceremider\torch.crf --depend .\voiceremider\torch.d)
@@ -3037,7 +3277,11 @@ I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\limits.h)(0x588B8344)
 I (..\Watch\config.h)(0x62FB9613)
 I (..\Watch\util.h)(0x62E099D7)
+<<<<<<< Updated upstream
 I (..\Watch\typedefs.h)(0x630C2017)
+=======
+I (..\Watch\typedefs.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (d:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
 I (..\Watch\debug.h)(0x61E111C1)
@@ -3107,7 +3351,11 @@ I (..\Watch\resources.h)(0x630611DA)
 I (../Core/Inc/mode.h)(0x62FDA8BF)
 I (../Core/Inc/tailnum.h)(0x63088777)
 I (../Core/Inc/mode_couple.h)(0x63085974)
+<<<<<<< Updated upstream
 I (../Core/Inc/flash.h)(0x630C1666)
+=======
+I (../Core/Inc/flash.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (../MYAPP/wait_data_clock.h)(0x61E111C1)
 I (../MYAPP/gui_log_console.h)(0x62DF974E)
 F (..\Watch\tune.c)(0x62E0E7FD)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../MYAPP -I ../oledlib -I ../Watch --c99-I.\RTE\_VoiceRemider-ID:\Keil_v5\packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-ID:\Keil_v5\packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o .\voiceremider\tune.o --omf_browse .\voiceremider\tune.crf --depend .\voiceremider\tune.d)
@@ -3118,7 +3366,11 @@ I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\limits.h)(0x588B8344)
 I (..\Watch\config.h)(0x62FB9613)
 I (..\Watch\util.h)(0x62E099D7)
+<<<<<<< Updated upstream
 I (..\Watch\typedefs.h)(0x630C2017)
+=======
+I (..\Watch\typedefs.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (d:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
 I (..\Watch\debug.h)(0x61E111C1)
@@ -3188,7 +3440,11 @@ I (..\Watch\resources.h)(0x630611DA)
 I (../Core/Inc/mode.h)(0x62FDA8BF)
 I (../Core/Inc/tailnum.h)(0x63088777)
 I (../Core/Inc/mode_couple.h)(0x63085974)
+<<<<<<< Updated upstream
 I (../Core/Inc/flash.h)(0x630C1666)
+=======
+I (../Core/Inc/flash.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (../MYAPP/wait_data_clock.h)(0x61E111C1)
 I (../MYAPP/gui_log_console.h)(0x62DF974E)
 F (..\Watch\tunemaker.c)(0x62E07066)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../MYAPP -I ../oledlib -I ../Watch --c99-I.\RTE\_VoiceRemider-ID:\Keil_v5\packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-ID:\Keil_v5\packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o .\voiceremider\tunemaker.o --omf_browse .\voiceremider\tunemaker.crf --depend .\voiceremider\tunemaker.d)
@@ -3199,7 +3455,11 @@ I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\limits.h)(0x588B8344)
 I (..\Watch\config.h)(0x62FB9613)
 I (..\Watch\util.h)(0x62E099D7)
+<<<<<<< Updated upstream
 I (..\Watch\typedefs.h)(0x630C2017)
+=======
+I (..\Watch\typedefs.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (d:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
 I (..\Watch\debug.h)(0x61E111C1)
@@ -3269,7 +3529,11 @@ I (..\Watch\resources.h)(0x630611DA)
 I (../Core/Inc/mode.h)(0x62FDA8BF)
 I (../Core/Inc/tailnum.h)(0x63088777)
 I (../Core/Inc/mode_couple.h)(0x63085974)
+<<<<<<< Updated upstream
 I (../Core/Inc/flash.h)(0x630C1666)
+=======
+I (../Core/Inc/flash.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (../MYAPP/wait_data_clock.h)(0x61E111C1)
 I (../MYAPP/gui_log_console.h)(0x62DF974E)
 I (../Core/Inc/usart.h)(0x629B45D2)
@@ -3281,7 +3545,11 @@ I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\limits.h)(0x588B8344)
 I (..\Watch\config.h)(0x62FB9613)
 I (..\Watch\util.h)(0x62E099D7)
+<<<<<<< Updated upstream
 I (..\Watch\typedefs.h)(0x630C2017)
+=======
+I (..\Watch\typedefs.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (d:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
 I (..\Watch\debug.h)(0x61E111C1)
@@ -3351,7 +3619,11 @@ I (..\Watch\resources.h)(0x630611DA)
 I (../Core/Inc/mode.h)(0x62FDA8BF)
 I (../Core/Inc/tailnum.h)(0x63088777)
 I (../Core/Inc/mode_couple.h)(0x63085974)
+<<<<<<< Updated upstream
 I (../Core/Inc/flash.h)(0x630C1666)
+=======
+I (../Core/Inc/flash.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (../MYAPP/wait_data_clock.h)(0x61E111C1)
 I (../MYAPP/gui_log_console.h)(0x62DF974E)
 F (..\Watch\ui.c)(0x630614AC)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../MYAPP -I ../oledlib -I ../Watch --c99-I.\RTE\_VoiceRemider-ID:\Keil_v5\packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-ID:\Keil_v5\packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o .\voiceremider\ui.o --omf_browse .\voiceremider\ui.crf --depend .\voiceremider\ui.d)
@@ -3362,7 +3634,11 @@ I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\limits.h)(0x588B8344)
 I (..\Watch\config.h)(0x62FB9613)
 I (..\Watch\util.h)(0x62E099D7)
+<<<<<<< Updated upstream
 I (..\Watch\typedefs.h)(0x630C2017)
+=======
+I (..\Watch\typedefs.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (d:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
 I (..\Watch\debug.h)(0x61E111C1)
@@ -3432,7 +3708,11 @@ I (..\Watch\resources.h)(0x630611DA)
 I (../Core/Inc/mode.h)(0x62FDA8BF)
 I (../Core/Inc/tailnum.h)(0x63088777)
 I (../Core/Inc/mode_couple.h)(0x63085974)
+<<<<<<< Updated upstream
 I (../Core/Inc/flash.h)(0x630C1666)
+=======
+I (../Core/Inc/flash.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (../MYAPP/wait_data_clock.h)(0x61E111C1)
 I (../MYAPP/gui_log_console.h)(0x62DF974E)
 F (..\oledlib\oled_basic.c)(0x620A4D84)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../MYAPP -I ../oledlib -I ../Watch --c99-I.\RTE\_VoiceRemider-ID:\Keil_v5\packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-ID:\Keil_v5\packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o .\voiceremider\oled_basic.o --omf_browse .\voiceremider\oled_basic.crf --depend .\voiceremider\oled_basic.d)
@@ -3585,7 +3865,11 @@ I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\limits.h)(0x588B8344)
 I (../Watch/config.h)(0x62FB9613)
 I (../Watch/util.h)(0x62E099D7)
+<<<<<<< Updated upstream
 I (../Watch/typedefs.h)(0x630C2017)
+=======
+I (../Watch/typedefs.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (d:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
 I (../Watch/debug.h)(0x61E111C1)
 I (../Watch/buttons.h)(0x630434CE)
@@ -3626,7 +3910,11 @@ I (../Watch/resources.h)(0x630611DA)
 I (../Core/Inc/mode.h)(0x62FDA8BF)
 I (../Core/Inc/tailnum.h)(0x63088777)
 I (../Core/Inc/mode_couple.h)(0x63085974)
+<<<<<<< Updated upstream
 I (../Core/Inc/flash.h)(0x630C1666)
+=======
+I (../Core/Inc/flash.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (../MYAPP/wait_data_clock.h)(0x61E111C1)
 I (../MYAPP/gui_log_console.h)(0x62DF974E)
 F (..\oledlib\oled_font.c)(0x62DFCCA8)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../MYAPP -I ../oledlib -I ../Watch --c99-I.\RTE\_VoiceRemider-ID:\Keil_v5\packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-ID:\Keil_v5\packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o .\voiceremider\oled_font.o --omf_browse .\voiceremider\oled_font.crf --depend .\voiceremider\oled_font.d)
@@ -3684,7 +3972,11 @@ I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\limits.h)(0x588B8344)
 I (../Watch/config.h)(0x62FB9613)
 I (../Watch/util.h)(0x62E099D7)
+<<<<<<< Updated upstream
 I (../Watch/typedefs.h)(0x630C2017)
+=======
+I (../Watch/typedefs.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (d:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
 I (../Watch/debug.h)(0x61E111C1)
@@ -3754,7 +4046,11 @@ I (../Watch/resources.h)(0x630611DA)
 I (../Core/Inc/mode.h)(0x62FDA8BF)
 I (../Core/Inc/tailnum.h)(0x63088777)
 I (../Core/Inc/mode_couple.h)(0x63085974)
+<<<<<<< Updated upstream
 I (../Core/Inc/flash.h)(0x630C1666)
+=======
+I (../Core/Inc/flash.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (../MYAPP/wait_data_clock.h)(0x61E111C1)
 I (../MYAPP/gui_log_console.h)(0x62DF974E)
 I (..\MYAPP\altitude_display.h)(0x620B753B)
@@ -3768,7 +4064,11 @@ I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\limits.h)(0x588B8344)
 I (../Watch/config.h)(0x62FB9613)
 I (../Watch/util.h)(0x62E099D7)
+<<<<<<< Updated upstream
 I (../Watch/typedefs.h)(0x630C2017)
+=======
+I (../Watch/typedefs.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
 I (../Watch/debug.h)(0x61E111C1)
 I (../Watch/buttons.h)(0x630434CE)
@@ -3837,7 +4137,11 @@ I (../Watch/resources.h)(0x630611DA)
 I (../Core/Inc/mode.h)(0x62FDA8BF)
 I (../Core/Inc/tailnum.h)(0x63088777)
 I (../Core/Inc/mode_couple.h)(0x63085974)
+<<<<<<< Updated upstream
 I (../Core/Inc/flash.h)(0x630C1666)
+=======
+I (../Core/Inc/flash.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (../MYAPP/wait_data_clock.h)(0x61E111C1)
 I (../oledlib/oled_driver.h)(0x62E09DB8)
 I (d:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x588B8344)
@@ -3849,7 +4153,11 @@ I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\limits.h)(0x588B8344)
 I (../Watch/config.h)(0x62FB9613)
 I (../Watch/util.h)(0x62E099D7)
+<<<<<<< Updated upstream
 I (../Watch/typedefs.h)(0x630C2017)
+=======
+I (../Watch/typedefs.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (d:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
 I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
 I (../Watch/debug.h)(0x61E111C1)
@@ -3919,7 +4227,11 @@ I (../Watch/resources.h)(0x630611DA)
 I (../Core/Inc/mode.h)(0x62FDA8BF)
 I (../Core/Inc/tailnum.h)(0x63088777)
 I (../Core/Inc/mode_couple.h)(0x63085974)
+<<<<<<< Updated upstream
 I (../Core/Inc/flash.h)(0x630C1666)
+=======
+I (../Core/Inc/flash.h)(0x630C320E)
+>>>>>>> Stashed changes
 I (../MYAPP/wait_data_clock.h)(0x61E111C1)
 I (../MYAPP/gui_log_console.h)(0x62DF974E)
 I (../oledlib/oled_driver.h)(0x62E09DB8)
