@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\VoiceRemider\VoiceRemider.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\VoiceRemider\VoiceRemider.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Mon Aug 29 19:19:34 2022
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Mon Aug 29 21:22:06 2022
 <BR><P>
 <H3>Maximum Stack Usage =        392 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -1753,7 +1753,7 @@ Global Symbols
 <LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw_end
 </UL>
 
-<P><STRONG><a name="[148]"></a>paramUpdate</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, mode_oddeve.o(i.paramUpdate))
+<P><STRONG><a name="[148]"></a>paramUpdate</STRONG> (Thumb, 50 bytes, Stack size 0 bytes, mode_oddeve.o(i.paramUpdate))
 <BR><BR>[Called By]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;paramDataUp
 <LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;paramDataDown
 </UL>
@@ -2256,7 +2256,7 @@ Local Symbols
 <BR>[Address Reference Count : 2]<UL><LI> mode_oddeve.o(i.endSelect)
 <LI> mode_oddeve.o(i.modeOddevenSelect)
 </UL>
-<P><STRONG><a name="[48]"></a>oddEvenNumDraw</STRONG> (Thumb, 382 bytes, Stack size 56 bytes, mode_oddeve.o(i.oddEvenNumDraw))
+<P><STRONG><a name="[48]"></a>oddEvenNumDraw</STRONG> (Thumb, 452 bytes, Stack size 56 bytes, mode_oddeve.o(i.oddEvenNumDraw))
 <BR><BR>[Stack]<UL><LI>Max Depth = 168<LI>Call Chain = oddEvenNumDraw &rArr; draw_bitmap
 </UL>
 <BR>[Calls]<UL><LI><a href="#[128]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw_clearArea
@@ -2264,21 +2264,17 @@ Local Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> mode_oddeve.o(i.beginSelect)
 </UL>
-<P><STRONG><a name="[45]"></a>paramDataDown</STRONG> (Thumb, 36 bytes, Stack size 4 bytes, mode_oddeve.o(i.paramDataDown))
-<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = paramDataDown
-</UL>
-<BR>[Calls]<UL><LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;paramUpdate
+<P><STRONG><a name="[45]"></a>paramDataDown</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, mode_oddeve.o(i.paramDataDown))
+<BR><BR>[Calls]<UL><LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;paramUpdate
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> mode_oddeve.o(i.beginSelect)
 </UL>
-<P><STRONG><a name="[47]"></a>paramDataUp</STRONG> (Thumb, 36 bytes, Stack size 4 bytes, mode_oddeve.o(i.paramDataUp))
-<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = paramDataUp
-</UL>
-<BR>[Calls]<UL><LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;paramUpdate
+<P><STRONG><a name="[47]"></a>paramDataUp</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, mode_oddeve.o(i.paramDataUp))
+<BR><BR>[Calls]<UL><LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;paramUpdate
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> mode_oddeve.o(i.beginSelect)
 </UL>
-<P><STRONG><a name="[78]"></a>selectDaysleftNum</STRONG> (Thumb, 46 bytes, Stack size 8 bytes, mode_oddeve.o(i.selectDaysleftNum))
+<P><STRONG><a name="[78]"></a>selectDaysleftNum</STRONG> (Thumb, 66 bytes, Stack size 8 bytes, mode_oddeve.o(i.selectDaysleftNum))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = selectDaysleftNum &rArr; endSelect &rArr; setMenuFuncs
 </UL>
 <BR>[Calls]<UL><LI><a href="#[12a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;endSelect
@@ -2294,7 +2290,7 @@ Local Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> mode_oddeve.o(i.showOddEvenStr)
 </UL>
-<P><STRONG><a name="[132]"></a>showDaysleftStr</STRONG> (Thumb, 316 bytes, Stack size 64 bytes, mode_oddeve.o(i.showDaysleftStr))
+<P><STRONG><a name="[132]"></a>showDaysleftStr</STRONG> (Thumb, 320 bytes, Stack size 64 bytes, mode_oddeve.o(i.showDaysleftStr))
 <BR><BR>[Stack]<UL><LI>Max Depth = 344<LI>Call Chain = showDaysleftStr &rArr; setMenuOption &rArr; sin &rArr; __ieee754_rem_pio2 &rArr; __aeabi_dmul &rArr; _double_epilogue &rArr; _double_round
 </UL>
 <BR>[Calls]<UL><LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setMenuOption

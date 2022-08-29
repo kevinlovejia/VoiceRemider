@@ -103,7 +103,9 @@ typedef struct {
 //模式2
 typedef struct {
 	bool normal;								//常规为真是：尾号单数单日行驶，反常为：尾号单数双日行驶
-	byte validDays;							//多少天后退出单双号模式
+	byte validDaysH;						//多少百天后退出单双号模式
+	byte validDaysT;						//十
+	byte validDaysO;						//个
 }limitDS_s;										//单双号
 //模式3
 typedef struct {				

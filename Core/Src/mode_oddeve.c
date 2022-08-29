@@ -12,7 +12,9 @@
 #define PARAM_X								6//
 #define SETTING_NOW_NONE			0
 #define SETTING_NOW_ODDEVEN		1
-#define SETTING_NOW_DAYLEFT		2
+#define SETTING_NOW_DAYS_HUN	2
+#define SETTING_NOW_DAYS_TEN	3
+#define SETTING_NOW_DAYS_ONE	4
 
 static prev_menu_s prevMenuData;
 static void mSelect(void);
@@ -108,7 +110,7 @@ static void showOddEvenStr(void)
 	setMenuOption(1, buff, NULL, selectOddEvenNum);
 }
 
-static void showDaysleftStr(void)
+static void showDaysleftStr(void)		//绘制N日后退出界面
 {
 	char buff[14] = {0};
 	byte fontArr[4] = {15, 1, 25, 26};
@@ -119,18 +121,18 @@ static void showDaysleftStr(void)
 	hun = setting.val / 100;
 	ten = setting.val / 10 % 10;
 	one = setting.val % 10;	
-	if(setting.val / 100)
+	if(setting.val / 100 || setting.now >= 2)
 	{
 		bits = 3;
 		draw_bitmap(PARAM_X, 8+16, numFont11x16[hun], 11, 16, NOINVERT, 0);
-		draw_bitmap(PARAM_X+11, 8+16, numFont11x16[ten], 11, 16, NOINVERT, 0);	
-		draw_bitmap(PARAM_X+22, 8+16, numFont11x16[one], 11, 16, NOINVERT, 0);
+		draw_bitmap(PARAM_X+12, 8+16, numFont11x16[ten], 11, 16, NOINVERT, 0);	
+		draw_bitmap(PARAM_X+24, 8+16, numFont11x16[one], 11, 16, NOINVERT, 0);
 	}		
 	else if(setting.val / 10)
 	{
 		bits = 2;
 		draw_bitmap(PARAM_X, 8+16, numFont11x16[ten], 11, 16, NOINVERT, 0);	
-		draw_bitmap(PARAM_X+11, 8+16, numFont11x16[one], 11, 16, NOINVERT, 0);
+		draw_bitmap(PARAM_X+12, 8+16, numFont11x16[one], 11, 16, NOINVERT, 0);
 	}		
 	else 
 	{
@@ -142,17 +144,21 @@ static void showDaysleftStr(void)
 	{	
 		bitmp = textDisplay[fontArr[cnt]];
 		fontWidth = 16;					
-		draw_bitmap(PARAM_X+bits*11+cnt*16, 8+16, bitmp, fontWidth, 16, NOINVERT, 0);
+		draw_bitmap(PARAM_X+bits*12+cnt*16, 8+16, bitmp, fontWidth, 16, NOINVERT, 0);
 	}	
 	setMenuOption(3, buff, NULL, selectDaysleftNum);
 }
 
-static display_t oddEvenNumDraw()
+static display_t oddEvenNumDraw()		//选中 N日后退出
 {
 	byte x = PARAM_X;//79
-	byte y = 8;
+	byte y = 24;
 	byte w = 16;
-	byte hun = 0, ten = 0, one = 0;		//剩余天数是几位数
+//	byte hun = 0, ten = 0, one = 0;		//剩余天数是几位数
+
+//	hun = setting.val / 100;
+//	ten = setting.val / 10 % 10;
+//	one = setting.val % 10;
 
 	switch(setting.now)
 	{
@@ -162,33 +168,27 @@ static display_t oddEvenNumDraw()
 			draw_clearArea(x, y+8, w);
 			draw_bitmap(x, y, textDisplay[setting.val+16] , 16, 16, INVERT, 0);//
 			break;
-		case SETTING_NOW_DAYLEFT:
-			y = 8+16;
+		case SETTING_NOW_DAYS_HUN:
 			w = 11;
-			hun = setting.val / 100;
-			ten = setting.val / 10 % 10;
-			one = setting.val % 10;
-			if(hun)	//百位有数字
-			{
-				draw_clearArea(x, y, 33);
-				draw_clearArea(x, y+8, 33);
-				draw_bitmap(x, y, numFont11x16[hun] , 11, 16, INVERT, 0);
-				draw_bitmap(x+11, y, numFont11x16[ten] , 11, 16, INVERT, 0);
-				draw_bitmap(x+22, y, numFont11x16[one] , 11, 16, INVERT, 0);
-			}
-			else if(ten)
-			{
-				draw_clearArea(x, y, 22);
-				draw_clearArea(x, y+8, 22);
-				draw_bitmap(x, y, numFont11x16[ten] , 11, 16, INVERT, 0);
-				draw_bitmap(x+11, y, numFont11x16[one] , 11, 16, INVERT, 0);
-			}
-			else
-			{
-				draw_clearArea(x, y, 11);
-				draw_clearArea(x, y+8, 11);
-				draw_bitmap(x, y, numFont11x16[one] , 11, 16, INVERT, 0);	
-			}			
+			draw_clearArea(x, y, 35);
+			draw_clearArea(x, y+8, 35);
+			draw_bitmap(x, y, numFont11x16[driverInfo.limitDS.validDaysH] , 11, 16, INVERT, 0);
+			draw_bitmap(x+12, y, numFont11x16[driverInfo.limitDS.validDaysT] , 11, 16, NOINVERT, 0);
+			draw_bitmap(x+24, y, numFont11x16[driverInfo.limitDS.validDaysO] , 11, 16, NOINVERT, 0);
+			break;
+		case SETTING_NOW_DAYS_TEN:	
+			draw_clearArea(x+12, y, 35);
+			draw_clearArea(x+12, y+8, 35);
+			draw_bitmap(x, y, numFont11x16[driverInfo.limitDS.validDaysH] , 11, 16, NOINVERT, 0);
+			draw_bitmap(x+12, y, numFont11x16[driverInfo.limitDS.validDaysT] , 11, 16, INVERT, 0);
+			draw_bitmap(x+24, y, numFont11x16[driverInfo.limitDS.validDaysO] , 11, 16, NOINVERT, 0);
+			break;
+		case SETTING_NOW_DAYS_ONE:
+			draw_clearArea(x+24, y, 35);
+			draw_clearArea(x+24, y+8, 35);
+			draw_bitmap(x, y, numFont11x16[driverInfo.limitDS.validDaysH] , 11, 16, NOINVERT, 0);
+			draw_bitmap(x+12, y, numFont11x16[driverInfo.limitDS.validDaysT] , 11, 16, NOINVERT, 0);
+			draw_bitmap(x+24, y, numFont11x16[driverInfo.limitDS.validDaysO] , 11, 16, INVERT, 0);	
 			break;
 		default:
 			break;
@@ -200,21 +200,21 @@ static display_t oddEvenNumDraw()
 static void paramDataUp()
 {
 	setting.val++;
-	if(setting.val > 180)
+	if(setting.val > 9)
 		setting.val = 0;
 	paramUpdate();
-	driverInfo.limitDS.normal = setting.val;			//把当前调整后的值存在用户结构体内
+	//driverInfo.limitDS.normal = setting.val;			//把当前调整后的值存在用户结构体内
 }
 
 static void paramDataDown()
 {
 	setting.val--;
 		
-	byte max = 180;
+	byte max = 9;
 	if(setting.val > max)																		// Overflow
 		setting.val = max;
 	paramUpdate();
-	driverInfo.limitDS.normal = setting.val;			//把当前调整后的值存在用户结构体内
+	//driverInfo.limitDS.normal = setting.val;			//把当前调整后的值存在用户结构体内
 }
 
 static void beginSelect()
@@ -238,10 +238,10 @@ static void selectOddEvenNum()
 	{
 		case SETTING_NOW_NONE:
 			setting.now = SETTING_NOW_ODDEVEN;
-			//setting.val = driverInfo.limitDS.normal;
+			setting.val = driverInfo.limitDS.normal;
 			break;
 		case SETTING_NOW_ODDEVEN:
-			//setting.val = driverInfo.limitDS.normal;	
+			setting.val = driverInfo.limitDS.normal;				
 			endSelect();		
 			break;
 		default:
@@ -257,11 +257,20 @@ static void selectDaysleftNum()
 	switch(setting.now)
 	{
 		case SETTING_NOW_NONE:
-			setting.now = SETTING_NOW_DAYLEFT;
-			//setting.val = driverInfo.limitDS.validDays;
+			setting.now = SETTING_NOW_DAYS_HUN;
+			setting.val = driverInfo.limitDS.validDaysH;
 			break;
-		case SETTING_NOW_DAYLEFT:
-			//setting.val = driverInfo.limitDS.validDays;
+		case SETTING_NOW_DAYS_HUN:
+			setting.now = SETTING_NOW_DAYS_TEN;
+			setting.val = driverInfo.limitDS.validDaysH;
+			break;
+		case SETTING_NOW_DAYS_TEN:	
+			setting.now = SETTING_NOW_DAYS_ONE;		
+			setting.val = driverInfo.limitDS.validDaysT;
+			break;
+		case SETTING_NOW_DAYS_ONE:
+			setting.now = SETTING_NOW_NONE;
+			setting.val = driverInfo.limitDS.validDaysO;
 			endSelect();
 			break;
 		default:
@@ -273,16 +282,19 @@ static void selectDaysleftNum()
 
 void paramUpdate(void)
 {
-	byte oddOrEven = 0;
 	switch(setting.now)
 	{
 		case SETTING_NOW_ODDEVEN:
-			oddOrEven = setting.val;
-			oddOrEven ? (oddOrEven = 0) : (oddOrEven = 1);
-			setting.val = oddOrEven;
+			driverInfo.limitDS.normal ? (driverInfo.limitDS.normal = 0) : (driverInfo.limitDS.normal = 1);
 			break;
-		case SETTING_NOW_DAYLEFT:
-			//setting.val = driverInfo.limitDS.validDays;
+		case SETTING_NOW_DAYS_HUN:
+			driverInfo.limitDS.validDaysH = setting.val;
+			break;
+		case SETTING_NOW_DAYS_TEN:
+			driverInfo.limitDS.validDaysT = setting.val;
+			break;
+		case SETTING_NOW_DAYS_ONE:
+			driverInfo.limitDS.validDaysO = setting.val;
 			break;
 		default:
 			break;
