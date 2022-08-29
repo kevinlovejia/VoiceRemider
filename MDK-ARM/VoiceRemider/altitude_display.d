@@ -78,6 +78,7 @@
 .\voiceremider\altitude_display.o: ../Core/Inc/mode.h
 .\voiceremider\altitude_display.o: ../Core/Inc/tailnum.h
 .\voiceremider\altitude_display.o: ../Core/Inc/mode_couple.h
+.\voiceremider\altitude_display.o: ../Core/Inc/mode_oddeve.h
 .\voiceremider\altitude_display.o: ../Core/Inc/flash.h
 .\voiceremider\altitude_display.o: ../MYAPP/wait_data_clock.h
 .\voiceremider\altitude_display.o: ../MYAPP/gui_log_console.h

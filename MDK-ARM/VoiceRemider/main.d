@@ -83,6 +83,7 @@
 .\voiceremider\main.o: ../Core/Inc/mode.h
 .\voiceremider\main.o: ../Core/Inc/tailnum.h
 .\voiceremider\main.o: ../Core/Inc/mode_couple.h
+.\voiceremider\main.o: ../Core/Inc/mode_oddeve.h
 .\voiceremider\main.o: ../Core/Inc/flash.h
 .\voiceremider\main.o: ../MYAPP/wait_data_clock.h
 .\voiceremider\main.o: ../MYAPP/gui_log_console.h

@@ -81,6 +81,7 @@
 .\voiceremider\oled_driver.o: ../Core/Inc/mode.h
 .\voiceremider\oled_driver.o: ../Core/Inc/tailnum.h
 .\voiceremider\oled_driver.o: ../Core/Inc/mode_couple.h
+.\voiceremider\oled_driver.o: ../Core/Inc/mode_oddeve.h
 .\voiceremider\oled_driver.o: ../Core/Inc/flash.h
 .\voiceremider\oled_driver.o: ../MYAPP/wait_data_clock.h
 .\voiceremider\oled_driver.o: ../MYAPP/gui_log_console.h

@@ -78,6 +78,7 @@
 .\voiceremider\draw.o: ../Core/Inc/mode.h
 .\voiceremider\draw.o: ../Core/Inc/tailnum.h
 .\voiceremider\draw.o: ../Core/Inc/mode_couple.h
+.\voiceremider\draw.o: ../Core/Inc/mode_oddeve.h
 .\voiceremider\draw.o: ../Core/Inc/flash.h
 .\voiceremider\draw.o: ../MYAPP/wait_data_clock.h
 .\voiceremider\draw.o: ../MYAPP/gui_log_console.h

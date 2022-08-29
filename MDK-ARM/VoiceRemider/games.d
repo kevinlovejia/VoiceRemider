@@ -78,6 +78,7 @@
 .\voiceremider\games.o: ../Core/Inc/mode.h
 .\voiceremider\games.o: ../Core/Inc/tailnum.h
 .\voiceremider\games.o: ../Core/Inc/mode_couple.h
+.\voiceremider\games.o: ../Core/Inc/mode_oddeve.h
 .\voiceremider\games.o: ../Core/Inc/flash.h
 .\voiceremider\games.o: ../MYAPP/wait_data_clock.h
 .\voiceremider\games.o: ../MYAPP/gui_log_console.h

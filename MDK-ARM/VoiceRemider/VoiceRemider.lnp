@@ -6,6 +6,7 @@
 ".\voiceremider\main.o"
 ".\voiceremider\mode.o"
 ".\voiceremider\mode_couple.o"
+".\voiceremider\mode_oddeve.o"
 ".\voiceremider\pcf8563.o"
 ".\voiceremider\stm32f1xx_it.o"
 ".\voiceremider\tailnum.o"

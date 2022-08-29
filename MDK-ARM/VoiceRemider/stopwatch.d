@@ -78,6 +78,7 @@
 .\voiceremider\stopwatch.o: ../Core/Inc/mode.h
 .\voiceremider\stopwatch.o: ../Core/Inc/tailnum.h
 .\voiceremider\stopwatch.o: ../Core/Inc/mode_couple.h
+.\voiceremider\stopwatch.o: ../Core/Inc/mode_oddeve.h
 .\voiceremider\stopwatch.o: ../Core/Inc/flash.h
 .\voiceremider\stopwatch.o: ../MYAPP/wait_data_clock.h
 .\voiceremider\stopwatch.o: ../MYAPP/gui_log_console.h

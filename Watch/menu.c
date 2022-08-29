@@ -230,41 +230,6 @@ void setMenuOption(byte num, const char* name, const byte* icon, menu_f actionFu
 	}
 }
 
-void setMenuOption_Pro(byte num, const char* name, const byte* icon, menu_f actionFunc, bool invert)
-{
-	if(num != operation.id)
-		return;
-
- 	switch(operation.op)
-	{
-		case OPERATION_DRAWICON:
-			{
-				byte a = operation.data;
-				//if(a > FRAME_WIDTH)
-				//	a -= (FRAME_WIDTH+32);
-				float x = ((a/(float)(FRAME_WIDTH-32)) * (M_PI / 2)) + (M_PI / 4);
-				byte y = (sin(x) * 32);
-				y = 28; // comment this out for magic
-
-				draw_bitmap(operation.data, y + 4 - 16, icon , 32, 32, invert, 0);
-			}
-			break;
-		case OPERATION_DRAWNAME_ICON:
-			draw_string((char*)name, false, 0, FRAME_HEIGHT - 8);
-			break;
-		case OPERATION_DRAWNAME_STR:
-			draw_string((char*)name, false, 6, operation.data);	
-			break;
-		case OPERATION_ACTION:
-			if(actionFunc != NULL)
-				operation.data ? beginAnimation(actionFunc) : actionFunc();
-			break;
-		default:
-			break;
-	}
-}
-
-
 bool menu_isOpen()
 {
 	return menuData.isOpen;
@@ -359,7 +324,7 @@ void setMenuInfo(byte optionCount, menu_type_t menuType, const char* title)
 	clear();
 	menuData.scroll = 0;
 	menuData.selected = 0;
-	menuData.optionCount = optionCount + 1;//wei 2022.8.2 "optionCount + 1;";
+	menuData.optionCount = optionCount + 1;			//wei 2022.8.2 "optionCount + 1;";
 	menuData.menuType = menuType;
 	menuData.title = title;
 }

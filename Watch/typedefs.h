@@ -103,8 +103,7 @@ typedef struct {
 //模式2
 typedef struct {
 	bool normal;								//常规为真是：尾号单数单日行驶，反常为：尾号单数双日行驶
-	byte startYMD[3];						//开始单双号的年月日，startYMD[0]=年,startYMD[1]=月，startYMD[2]=日
-	byte endYMD[3];							//结束单双号的年月日，startYMD[0]=年,startYMD[1]=月，startYMD[2]=日
+	byte validDays;							//多少天后退出单双号模式
 }limitDS_s;										//单双号
 //模式3
 typedef struct {				

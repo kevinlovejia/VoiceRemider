@@ -9,7 +9,6 @@
 
 #define OPTION_COUNT	3
 
-bool select_who[3] = {NOINVERT,NOINVERT,NOINVERT};
 
 static prev_menu_s prevMenuData;
 static void mSelect(void);
@@ -78,14 +77,12 @@ static display_t thisdraw()
 	return DISPLAY_DONE;
 }
 
-
 static void setMenuOptions()
 {
-	setMenuOption_Pro(0, PSTR(STR_LIMITODDOREVEN), 	menu_threemode[1], 	selectCouple, select_who[1]);		//俩号
-	setMenuOption_Pro(1, PSTR(STR_LIMITCOUPLE), 		menu_threemode[0], 	selectOddOrEven, select_who[0]);//单双
-	setMenuOption_Pro(2, PSTR(STR_LIMITCOUPLELOOP), menu_threemode[2], 	selectCoupleLoop, select_who[2]);//轮替
+	setMenuOption_P(0, PSTR(STR_LIMITODDOREVEN), 	menu_threemode[1], 	selectCouple);			//俩号
+	setMenuOption_P(1, PSTR(STR_LIMITCOUPLE), 		menu_threemode[0], 	selectOddOrEven);		//单双
+	setMenuOption_P(2, PSTR(STR_LIMITCOUPLELOOP), menu_threemode[2], 	selectCoupleLoop);	//轮替
 }	
-
 
 static void selectCouple()
 {
@@ -95,14 +92,10 @@ static void selectCouple()
 	//画出来了但是又被擦掉了，一直在画图
 //	char name[3];
 //	sprintf(name,"%d",appConfig.volUI);
-//	draw_string((char*)name, false, 64, FRAME_HEIGHT - 8);
-	
-	select_who[1] = INVERT;
-	select_who[0] = NOINVERT;
-	select_who[2] = NOINVERT;
-	driverInfo.mode = 0;
-	
-	mode_couple_select();
+//	draw_string((char*)name, false, 64, FRAME_HEIGHT - 8);	
+
+	driverInfo.mode = 1;	
+	modeCoupleSelect();
 }
 
 static void selectOddOrEven()
@@ -110,10 +103,9 @@ static void selectOddOrEven()
 //	volAlarm = setVolume(volAlarm);
 
 	//appConfig.volAlarm = setVolume(appConfig.volAlarm);
-	select_who[1] = NOINVERT;
-	select_who[0] = INVERT;
-	select_who[2] = NOINVERT;
-	driverInfo.mode = 1;
+
+	driverInfo.mode = 2;
+	modeOddevenSelect();
 }
 
 static void selectCoupleLoop()
@@ -121,10 +113,8 @@ static void selectCoupleLoop()
 //	volHour = setVolume(volHour);
 
 	//appConfig.volHour = setVolume(appConfig.volHour);
-	select_who[1] = NOINVERT;
-	select_who[0] = NOINVERT;
-	select_who[2] = INVERT;
-	driverInfo.mode = 2;
+
+	driverInfo.mode = 3;
 }
 
 

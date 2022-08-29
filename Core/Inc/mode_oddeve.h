@@ -5,14 +5,18 @@
  * License: GNU GPL v3 (see License.txt)
  */
 
-#ifndef MODE_COUPLE_H_
-#define MODE_COUPLE_H_
+#ifndef MODE_ODDEVE_H_
+#define MODE_ODDEVE_H_
 
-void modeCoupleSelect(void);
-extern byte presetMode[][10];
+void modeOddevenSelect(void);
 
 
-#endif /* MODE_COUPLE_H_ */
+#endif /* MODE_ODDEVE_H_ */
+
+
+
+
+
 
 
 

@@ -31,6 +31,7 @@ void drawBattery()
 	draw_string(ad,NOINVERT,18,FRAME_HEIGHT-8);
 }
 millis8_t nowdr, lastdr = 0;
+
 void drawDriveSignal()
 {
 	nowdr = millis();
@@ -38,7 +39,7 @@ void drawDriveSignal()
 	{		
 		draw_bitmap(0, FRAME_HEIGHT - 16, noEntering, 16, 16, NOINVERT, 0);
 		draw_bitmap(32-16, FRAME_HEIGHT - 16, textDisplay[0], 16, 16, NOINVERT, 0);
-		draw_bitmap(48-16, FRAME_HEIGHT - 16, textDisplay[1], 16, 16, NOINVERT, 0);
+		draw_bitmap(48-16, FRAME_HEIGHT - 16, textDisplay[15], 16, 16, NOINVERT, 0);
 		draw_bitmap(64-16, FRAME_HEIGHT - 16, textDisplay[2], 16, 16, NOINVERT, 0);
 		draw_bitmap(80-16, FRAME_HEIGHT - 16, textDisplay[3], 16, 16, NOINVERT, 0);
 		draw_bitmap(FRAME_WIDTH-32, FRAME_HEIGHT - 16, textDisplay[23], 16, 16, NOINVERT, 0);//Æû³µ±êÖ¾

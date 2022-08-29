@@ -77,6 +77,8 @@
 #include "mode.h"
 #include "tailnum.h"
 #include "mode_couple.h"
+#include "mode_oddeve.h"
+
 #include "flash.h"
 
 

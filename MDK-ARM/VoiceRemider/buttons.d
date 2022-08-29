@@ -78,6 +78,7 @@
 .\voiceremider\buttons.o: ../Core/Inc/mode.h
 .\voiceremider\buttons.o: ../Core/Inc/tailnum.h
 .\voiceremider\buttons.o: ../Core/Inc/mode_couple.h
+.\voiceremider\buttons.o: ../Core/Inc/mode_oddeve.h
 .\voiceremider\buttons.o: ../Core/Inc/flash.h
 .\voiceremider\buttons.o: ../MYAPP/wait_data_clock.h
 .\voiceremider\buttons.o: ../MYAPP/gui_log_console.h

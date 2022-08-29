@@ -63,21 +63,17 @@ byte presetMode[][10] ={
 	},
  };
 
-void mode_couple_select()
+void modeCoupleSelect()
 {
-//	saved = false;
-
 //	setMenuInfo(OPTION_COUNT, MENU_TYPE_ICON, PSTR(STR_MODEMENU));
 //	setMenuFuncs(MENUFUNC_NEXT, mSelect, MENUFUNC_PREV, itemLoader);
-	setMenuInfo(OPTION_COUNT, MENU_TYPE_STR, PSTR(STR_MODEMENU));
+	setMenuInfo(OPTION_COUNT, MENU_TYPE_STR, PSTR(STR_LIMITCOUPLE));
 	setMenuFuncs(mDown, mSelect, mUp, itemLoader);
 //	setMenuOptions();
-	
 	//menuData.func.draw = thisdraw; //绑定菜单画图函数，不知道退出时，这个函数并没有继续执行的原因
 
-	setPrevMenuOpen(&prevMenuData, mode_couple_select);	
-	
-	
+	setPrevMenuOpen(&prevMenuData, modeCoupleSelect);	
+
 	//1.从flash读取当前的限号规则是多少
 	static unsigned int sizeStruct = 0;
 	static driverInfo_s inFlash;
@@ -351,7 +347,8 @@ static void endSelect()
 {
 	setting.now = SETTING_NOW_NONE;
 	setMenuFuncs(mDown, mSelect, mUp, itemLoader);
-	//setMenuFuncs(MENUFUNC_NEXT, mSelect, MENUFUNC_PREV, itemLoader);//在保存完当前参数后，再调用它，现在使用不会略过没有选项的空半行
+	//setMenuFuncs(MENUFUNC_NEXT, mSelect, MENUFUNC_PREV, itemLoader);
+	//在保存完当前参数后，再调用它，现在使用不会略过没有选项的空半行
 	menuData.func.draw = NULL;
 }
 

@@ -90,9 +90,9 @@
 #define STR_SAVED		"Saved"
 
 #define STR_MODEMENU	"< MODE >"
-#define STR_LIMITCOUPLE	"Couple"
-#define STR_LIMITODDOREVEN	"Odd & Even"
-#define STR_LIMITCOUPLELOOP	"Couple loop"
+#define STR_LIMITCOUPLE	"< Couple >"
+#define STR_LIMITODDOREVEN	"< Odd & Even >"
+#define STR_LIMITCOUPLELOOP	"< Couple loop >"
 
 #define STR_TAILNOMENU	"< TAIL NUM >"
 

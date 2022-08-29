@@ -79,6 +79,7 @@
 .\voiceremider\gui_log_console.o: ../Core/Inc/mode.h
 .\voiceremider\gui_log_console.o: ../Core/Inc/tailnum.h
 .\voiceremider\gui_log_console.o: ../Core/Inc/mode_couple.h
+.\voiceremider\gui_log_console.o: ../Core/Inc/mode_oddeve.h
 .\voiceremider\gui_log_console.o: ../Core/Inc/flash.h
 .\voiceremider\gui_log_console.o: ../MYAPP/wait_data_clock.h
 .\voiceremider\gui_log_console.o: ../oledlib/oled_driver.h
