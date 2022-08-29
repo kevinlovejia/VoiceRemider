@@ -1,0 +1,10 @@
+.\voiceremider\oled_draw.o: ..\oledlib\oled_draw.c
+.\voiceremider\oled_draw.o: ..\oledlib\oled_draw.h
+.\voiceremider\oled_draw.o: ..\oledlib\oled_basic.h
+.\voiceremider\oled_draw.o: ..\oledlib\oled_color.h
+.\voiceremider\oled_draw.o: ..\oledlib\oled_buffer.h
+.\voiceremider\oled_draw.o: ..\oledlib\oled_config.h
+.\voiceremider\oled_draw.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\voiceremider\oled_draw.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+.\voiceremider\oled_draw.o: ..\oledlib\oled_bmp.h
+.\voiceremider\oled_draw.o: ..\oledlib\oled_font.h
