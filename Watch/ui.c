@@ -37,7 +37,7 @@ void drawDriveSignal()
 	nowdr = millis();
 	if(nextPage == 0)
 	{
-		if(nowdr - lastdr > 800)
+		if(nowdr - lastdr > 1000)
 		{
 			lastdr = nowdr;
 			nextPage = 1;
@@ -52,7 +52,7 @@ void drawDriveSignal()
 	}
 	else
 	{
-		if(nowdr - lastdr > 800)
+		if(nowdr - lastdr > 1000)
 		{
 			lastdr = nowdr;
 			nextPage = 0;

@@ -148,14 +148,12 @@ static void drawDate()
 	sprintf_P(buff, PSTR(DATE_FORMAT), day, timeDate.date.date, month, timeDate.date.year);
 	draw_string(buff,false,12,0);
 }
+
 static void drawHeadLine()	//日期|周一|单号行驶|D/S
 {
 	char day[BUFFSIZE_STR_DAYS];
 	char dayOfWeek = 0;
 	strcpy(day, days[timeDate.date.day]);		//周几
-	// Get month string
-	char month[BUFFSIZE_STR_MONTHS];
-	//strcpy(month, months[]);
 	
 	// Get date string
 	char buff[BUFFSIZE_DATE_FORMAT];

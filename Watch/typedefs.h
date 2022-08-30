@@ -94,19 +94,29 @@ typedef struct {
 //模式1
 typedef struct {
 	byte limitRules[10];				//周一到周五限哪些尾号
+	byte rule;									//rule=1,2,3,4 规则1,规则2,规则3,自定义规则
+}limitCouple_s;								//一天限俩号
+
+typedef struct {
 	bool usedRule1;							//是否使用了匹配规则1
 	bool usedRule2;							//是否使用了匹配规则2
 	bool usedRule3;							//是否使用了匹配规则3
-	byte rule;									//rule=1,2,3,4 规则1,规则2,规则3,自定义规则
 	byte matchTimes;							//一天限俩号模式下，自动匹配三次
-}limitCouple_s;								//一天限俩号
+}limCoupLocal_s;								//本地变量，不存入flash
+
 //模式2
 typedef struct {
 	bool normal;								//常规为真是：尾号单数单日行驶，反常为：尾号单数双日行驶
+	byte startYMD[3];						//单双号开始年月日
+	byte endYMD[3];							//单双号结束年月日
+}limitDS_s;										//单双号
+
+typedef struct {
 	byte validDaysH;						//多少百天后退出单双号模式
 	byte validDaysT;						//十
 	byte validDaysO;						//个
-}limitDS_s;										//单双号
+}limDSLocal_s;								//本地变量，不存入flash
+
 //模式3
 typedef struct {				
 	byte startYMD[3];						//阶段开始年月日

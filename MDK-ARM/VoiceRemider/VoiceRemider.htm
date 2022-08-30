@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\VoiceRemider\VoiceRemider.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\VoiceRemider\VoiceRemider.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Tue Aug 30 01:19:52 2022
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Tue Aug 30 22:07:50 2022
 <BR><P>
 <H3>Maximum Stack Usage =        392 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -18,7 +18,7 @@ Mutually Recursive functions
  <LI><a href="#[6]">NMI_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[6]">NMI_Handler</a><BR>
  <LI><a href="#[a]">UsageFault_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[a]">UsageFault_Handler</a><BR>
  <LI><a href="#[10c]">console_log</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[10c]">console_log</a><BR>
- <LI><a href="#[146]">next</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[146]">next</a><BR>
+ <LI><a href="#[148]">next</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[148]">next</a><BR>
 </UL>
 <P>
 <H3>
@@ -125,8 +125,8 @@ Function Pointers
  <LI><a href="#[64]">menu_select</a> from menu.o(i.menu_select) referenced from m_main.o(i.mOpen)
  <LI><a href="#[64]">menu_select</a> from menu.o(i.menu_select) referenced from normal.o(i.watchface_normal)
  <LI><a href="#[68]">menu_up</a> from menu.o(i.menu_up) referenced from m_main.o(i.mOpen)
- <LI><a href="#[143]">modeCoupleSelect</a> from mode_couple.o(i.modeCoupleSelect) referenced from mode_couple.o(i.modeCoupleSelect)
- <LI><a href="#[145]">modeOddevenSelect</a> from mode_oddeve.o(i.modeOddevenSelect) referenced from mode_oddeve.o(i.modeOddevenSelect)
+ <LI><a href="#[145]">modeCoupleSelect</a> from mode_couple.o(i.modeCoupleSelect) referenced from mode_couple.o(i.modeCoupleSelect)
+ <LI><a href="#[146]">modeOddevenSelect</a> from mode_oddeve.o(i.modeOddevenSelect) referenced from mode_oddeve.o(i.modeOddevenSelect)
  <LI><a href="#[5d]">mode_select</a> from mode.o(i.mode_select) referenced from m_main.o(i.itemLoader)
  <LI><a href="#[5d]">mode_select</a> from mode.o(i.mode_select) referenced from mode.o(i.mode_select)
  <LI><a href="#[55]">nextOption</a> from menu.o(i.nextOption) referenced from tailnum.o(i.endSelect)
@@ -181,7 +181,7 @@ Global Symbols
 <P><STRONG><a name="[3c]"></a>__main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry.o(.ARM.Collect$$$$00000000))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f103xb.o(.text)
 </UL>
-<P><STRONG><a name="[15a]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
+<P><STRONG><a name="[15b]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
 
 <P><STRONG><a name="[7b]"></a>_main_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
 <BR><BR>[Calls]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
@@ -191,15 +191,15 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
-<P><STRONG><a name="[15b]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
+<P><STRONG><a name="[15c]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
 
-<P><STRONG><a name="[15c]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
+<P><STRONG><a name="[15d]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
 
-<P><STRONG><a name="[15d]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
+<P><STRONG><a name="[15e]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
 
-<P><STRONG><a name="[15e]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000D))
+<P><STRONG><a name="[15f]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000D))
 
-<P><STRONG><a name="[15f]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$0000000F))
+<P><STRONG><a name="[160]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$0000000F))
 
 <P><STRONG><a name="[5]"></a>Reset_Handler</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, startup_stm32f103xb.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f103xb.o(RESET)
@@ -339,7 +339,7 @@ Global Symbols
 <LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2ulz
 </UL>
 
-<P><STRONG><a name="[160]"></a>_ll_ushift_r</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llushr.o(.text), UNUSED)
+<P><STRONG><a name="[161]"></a>_ll_ushift_r</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llushr.o(.text), UNUSED)
 
 <P><STRONG><a name="[7e]"></a>__aeabi_memset</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, memseta.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;crt_animation
@@ -348,9 +348,9 @@ Global Symbols
 <LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
 </UL>
 
-<P><STRONG><a name="[161]"></a>__aeabi_memset4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<P><STRONG><a name="[162]"></a>__aeabi_memset4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
-<P><STRONG><a name="[162]"></a>__aeabi_memset8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<P><STRONG><a name="[163]"></a>__aeabi_memset8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
 <P><STRONG><a name="[7d]"></a>__aeabi_memclr</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, memseta.o(.text))
 <BR><BR>[Calls]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
@@ -367,7 +367,7 @@ Global Symbols
 <LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;clear
 </UL>
 
-<P><STRONG><a name="[163]"></a>__aeabi_memclr8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<P><STRONG><a name="[164]"></a>__aeabi_memclr8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
 <P><STRONG><a name="[7f]"></a>_memset$wrapper</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, memseta.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
@@ -382,10 +382,11 @@ Global Symbols
 <LI><a href="#[125]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drawTitle
 </UL>
 
-<P><STRONG><a name="[159]"></a>memcmp</STRONG> (Thumb, 26 bytes, Stack size 12 bytes, memcmp.o(.text))
+<P><STRONG><a name="[13e]"></a>memcmp</STRONG> (Thumb, 26 bytes, Stack size 12 bytes, memcmp.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = memcmp
 </UL>
-<BR>[Called By]<UL><LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;writeFlash
+<BR>[Called By]<UL><LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mSelect
+<LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;writeFlash
 </UL>
 
 <P><STRONG><a name="[123]"></a>strcpy</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, strcpy.o(.text))
@@ -473,7 +474,7 @@ Global Symbols
 <LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kernel_cos
 </UL>
 
-<P><STRONG><a name="[164]"></a>scalbn</STRONG> (Thumb, 0 bytes, Stack size 16 bytes, dscalb.o(.text), UNUSED)
+<P><STRONG><a name="[165]"></a>scalbn</STRONG> (Thumb, 0 bytes, Stack size 16 bytes, dscalb.o(.text), UNUSED)
 
 <P><STRONG><a name="[8b]"></a>__aeabi_ui2f</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, ffltui.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = __aeabi_ui2f &rArr; _float_epilogue
@@ -508,7 +509,7 @@ Global Symbols
 <LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kernel_cos
 </UL>
 
-<P><STRONG><a name="[150]"></a>__aeabi_f2d</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, f2d.o(.text))
+<P><STRONG><a name="[152]"></a>__aeabi_f2d</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, f2d.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setMenuOption
 </UL>
 
@@ -520,7 +521,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setMenuOption
 </UL>
 
-<P><STRONG><a name="[165]"></a>__aeabi_uidiv</STRONG> (Thumb, 0 bytes, Stack size 12 bytes, uidiv.o(.text), UNUSED)
+<P><STRONG><a name="[166]"></a>__aeabi_uidiv</STRONG> (Thumb, 0 bytes, Stack size 12 bytes, uidiv.o(.text), UNUSED)
 
 <P><STRONG><a name="[f6]"></a>__aeabi_uidivmod</STRONG> (Thumb, 44 bytes, Stack size 12 bytes, uidiv.o(.text), UNUSED)
 <BR><BR>[Called By]<UL><LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
@@ -541,15 +542,15 @@ Global Symbols
 <LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2ulz
 </UL>
 
-<P><STRONG><a name="[166]"></a>_ll_shift_l</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llshl.o(.text), UNUSED)
+<P><STRONG><a name="[167]"></a>_ll_shift_l</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llshl.o(.text), UNUSED)
 
 <P><STRONG><a name="[84]"></a>__aeabi_lasr</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, llsshr.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 </UL>
 
-<P><STRONG><a name="[167]"></a>_ll_sshift_r</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llsshr.o(.text), UNUSED)
+<P><STRONG><a name="[168]"></a>_ll_sshift_r</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llsshr.o(.text), UNUSED)
 
-<P><STRONG><a name="[168]"></a>__I$use$fp</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, iusefp.o(.text), UNUSED)
+<P><STRONG><a name="[169]"></a>__I$use$fp</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, iusefp.o(.text), UNUSED)
 
 <P><STRONG><a name="[81]"></a>_float_round</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, fepilogue.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fdiv
@@ -600,11 +601,11 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_main_scatterload
 </UL>
 
-<P><STRONG><a name="[169]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
+<P><STRONG><a name="[16a]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
 
-<P><STRONG><a name="[16a]"></a>__decompress</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __dczerorl2.o(.text), UNUSED)
+<P><STRONG><a name="[16b]"></a>__decompress</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __dczerorl2.o(.text), UNUSED)
 
-<P><STRONG><a name="[16b]"></a>__decompress1</STRONG> (Thumb, 86 bytes, Stack size unknown bytes, __dczerorl2.o(.text), UNUSED)
+<P><STRONG><a name="[16c]"></a>__decompress1</STRONG> (Thumb, 86 bytes, Stack size unknown bytes, __dczerorl2.o(.text), UNUSED)
 
 <P><STRONG><a name="[121]"></a>AlarmEnalbe</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, alarm.o(i.AlarmEnalbe))
 <BR><BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw
@@ -1063,14 +1064,14 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_Mem_Read
 </UL>
-<BR>[Called By]<UL><LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pcf8563_Read
+<BR>[Called By]<UL><LI><a href="#[14b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pcf8563_Read
 </UL>
 
 <P><STRONG><a name="[db]"></a>STMFLASH_Read</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, flash.o(i.STMFLASH_Read))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = STMFLASH_Read
 </UL>
-<BR>[Called By]<UL><LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;writeFlash
-<LI><a href="#[144]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;readFlash
+<BR>[Called By]<UL><LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;writeFlash
+<LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;readFlash
 <LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STMFLASH_Write
 </UL>
 
@@ -1084,7 +1085,7 @@ Global Symbols
 <LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STMFLASH_Write_NoCheck
 <LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STMFLASH_Read
 </UL>
-<BR>[Called By]<UL><LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;writeFlash
+<BR>[Called By]<UL><LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;writeFlash
 </UL>
 
 <P><STRONG><a name="[dd]"></a>STMFLASH_Write_NoCheck</STRONG> (Thumb, 44 bytes, Stack size 24 bytes, flash.o(i.STMFLASH_Write_NoCheck))
@@ -1103,7 +1104,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;writeData
 </UL>
-<BR>[Called By]<UL><LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;time_set
+<BR>[Called By]<UL><LI><a href="#[14f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;time_set
 </UL>
 
 <P><STRONG><a name="[e1]"></a>Set_PCF8563_date</STRONG> (Thumb, 114 bytes, Stack size 16 bytes, pcf8563.o(i.Set_PCF8563_date))
@@ -1112,7 +1113,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;writeData
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-<LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;time_set
+<LI><a href="#[14f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;time_set
 </UL>
 
 <P><STRONG><a name="[e]"></a>SysTick_Handler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f1xx_it.o(i.SysTick_Handler))
@@ -1183,7 +1184,7 @@ Global Symbols
 <LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
 </UL>
 
-<P><STRONG><a name="[16c]"></a>__1sprintf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0sprintf), UNUSED)
+<P><STRONG><a name="[16d]"></a>__1sprintf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0sprintf), UNUSED)
 
 <P><STRONG><a name="[117]"></a>__2sprintf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0sprintf))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = __2sprintf
@@ -1196,20 +1197,20 @@ Global Symbols
 <LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drawHeadLine
 </UL>
 
-<P><STRONG><a name="[16d]"></a>__c89sprintf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0sprintf), UNUSED)
+<P><STRONG><a name="[16e]"></a>__c89sprintf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0sprintf), UNUSED)
 
-<P><STRONG><a name="[16e]"></a>sprintf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0sprintf), UNUSED)
+<P><STRONG><a name="[16f]"></a>sprintf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0sprintf), UNUSED)
 
 <P><STRONG><a name="[e8]"></a>__0vsprintf</STRONG> (Thumb, 30 bytes, Stack size 24 bytes, printfa.o(i.__0vsprintf), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sputc
 <LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
 </UL>
 
-<P><STRONG><a name="[16f]"></a>__1vsprintf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0vsprintf), UNUSED)
+<P><STRONG><a name="[170]"></a>__1vsprintf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0vsprintf), UNUSED)
 
-<P><STRONG><a name="[170]"></a>__2vsprintf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0vsprintf), UNUSED)
+<P><STRONG><a name="[171]"></a>__2vsprintf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0vsprintf), UNUSED)
 
-<P><STRONG><a name="[171]"></a>__c89vsprintf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0vsprintf), UNUSED)
+<P><STRONG><a name="[172]"></a>__c89vsprintf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0vsprintf), UNUSED)
 
 <P><STRONG><a name="[10d]"></a>vsprintf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0vsprintf))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = vsprintf
@@ -1233,7 +1234,7 @@ Global Symbols
 <LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ui2d
 <LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_scalbn
 </UL>
-<BR>[Called By]<UL><LI><a href="#[151]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sin
+<BR>[Called By]<UL><LI><a href="#[153]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sin
 </UL>
 
 <P><STRONG><a name="[eb]"></a>__kernel_cos</STRONG> (Thumb, 230 bytes, Stack size 48 bytes, cos_i.o(i.__kernel_cos))
@@ -1246,7 +1247,7 @@ Global Symbols
 <LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_scalbn
 <LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kernel_poly
 </UL>
-<BR>[Called By]<UL><LI><a href="#[151]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sin
+<BR>[Called By]<UL><LI><a href="#[153]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sin
 </UL>
 
 <P><STRONG><a name="[ec]"></a>__kernel_poly</STRONG> (Thumb, 170 bytes, Stack size 24 bytes, poly.o(i.__kernel_poly))
@@ -1271,7 +1272,7 @@ Global Symbols
 <LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_fpclassify
 <LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_underflow
 </UL>
-<BR>[Called By]<UL><LI><a href="#[151]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sin
+<BR>[Called By]<UL><LI><a href="#[153]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sin
 </UL>
 
 <P><STRONG><a name="[f0]"></a>__mathlib_dbl_infnan</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, dunder.o(i.__mathlib_dbl_infnan))
@@ -1279,7 +1280,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_scalbn
 </UL>
-<BR>[Called By]<UL><LI><a href="#[151]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sin
+<BR>[Called By]<UL><LI><a href="#[153]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sin
 </UL>
 
 <P><STRONG><a name="[f1]"></a>__mathlib_dbl_invalid</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, dunder.o(i.__mathlib_dbl_invalid))
@@ -1287,7 +1288,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
 </UL>
-<BR>[Called By]<UL><LI><a href="#[151]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sin
+<BR>[Called By]<UL><LI><a href="#[153]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sin
 </UL>
 
 <P><STRONG><a name="[ef]"></a>__mathlib_dbl_underflow</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, dunder.o(i.__mathlib_dbl_underflow))
@@ -1298,14 +1299,14 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kernel_sin
 </UL>
 
-<P><STRONG><a name="[172]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
+<P><STRONG><a name="[173]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
 
-<P><STRONG><a name="[173]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
+<P><STRONG><a name="[174]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
 
-<P><STRONG><a name="[174]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
+<P><STRONG><a name="[175]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
 
-<P><STRONG><a name="[153]"></a>__set_errno</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, errno.o(i.__set_errno))
-<BR><BR>[Called By]<UL><LI><a href="#[151]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sin
+<P><STRONG><a name="[155]"></a>__set_errno</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, errno.o(i.__set_errno))
+<BR><BR>[Called By]<UL><LI><a href="#[153]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sin
 </UL>
 
 <P><STRONG><a name="[f7]"></a>addBackOption</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, menu.o(i.addBackOption))
@@ -1338,7 +1339,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getNextAlarm
 </UL>
-<BR>[Called By]<UL><LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;time_set
+<BR>[Called By]<UL><LI><a href="#[14f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;time_set
 </UL>
 
 <P><STRONG><a name="[116]"></a>animation_active</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, animation.o(i.animation_active))
@@ -1368,11 +1369,11 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;display_update
 </UL>
 
-<P><STRONG><a name="[13e]"></a>appconfig_init</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, appconfig.o(i.appconfig_init))
+<P><STRONG><a name="[140]"></a>appconfig_init</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, appconfig.o(i.appconfig_init))
 <BR><BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[175]"></a>appconfig_reset</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, appconfig.o(i.appconfig_reset), UNUSED)
+<P><STRONG><a name="[176]"></a>appconfig_reset</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, appconfig.o(i.appconfig_reset), UNUSED)
 
 <P><STRONG><a name="[13a]"></a>appconfig_save</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, appconfig.o(i.appconfig_save))
 <BR><BR>[Called By]<UL><LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mSelect
@@ -1397,8 +1398,8 @@ Global Symbols
 <P><STRONG><a name="[ff]"></a>beginAnimation2</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, menu.o(i.beginAnimation2))
 <BR><BR>[Calls]<UL><LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;animation_start
 </UL>
-<BR>[Called By]<UL><LI><a href="#[145]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;modeOddevenSelect
-<LI><a href="#[143]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;modeCoupleSelect
+<BR>[Called By]<UL><LI><a href="#[146]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;modeOddevenSelect
+<LI><a href="#[145]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;modeCoupleSelect
 <LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mode_select
 <LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tailnum_select
 <LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mTimeDateOpen
@@ -1433,6 +1434,12 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
+<P><STRONG><a name="[147]"></a>checkDataValid</STRONG> (Thumb, 68 bytes, Stack size 12 bytes, mode_oddeve.o(i.checkDataValid))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = checkDataValid
+</UL>
+<BR>[Called By]<UL><LI><a href="#[146]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;modeOddevenSelect
+</UL>
+
 <P><STRONG><a name="[10c]"></a>console_log</STRONG> (Thumb, 362 bytes, Stack size 56 bytes, gui_log_console.o(i.console_log))
 <BR><BR>[Stack]<UL><LI>Max Depth = 232 + In Cycle
 <LI>Call Chain = console_log &rArr;  console_log (Cycle)
@@ -1452,12 +1459,12 @@ Global Symbols
 <LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[141]"></a>display_load</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, display.o(i.display_load))
+<P><STRONG><a name="[143]"></a>display_load</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, display.o(i.display_load))
 <BR><BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 <LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_close
 </UL>
 
-<P><STRONG><a name="[140]"></a>display_set</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, display.o(i.display_set))
+<P><STRONG><a name="[142]"></a>display_set</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, display.o(i.display_set))
 <BR><BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
@@ -1480,7 +1487,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;c_loop
 </UL>
 
-<P><STRONG><a name="[154]"></a>div10</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, global.o(i.div10))
+<P><STRONG><a name="[156]"></a>div10</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, global.o(i.div10))
 <BR><BR>[Called By]<UL><LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ticker
 </UL>
 
@@ -1524,7 +1531,7 @@ Global Symbols
 <LI><a href="#[124]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drawTickerNum
 <LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drawHeadLine
 <LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw
-<LI><a href="#[142]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_drawIcon
+<LI><a href="#[144]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_drawIcon
 </UL>
 
 <P><STRONG><a name="[128]"></a>draw_clearArea</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, draw.o(i.draw_clearArea))
@@ -1616,15 +1623,15 @@ Global Symbols
 <BR>[Address Reference Count : 2]<UL><LI> m_main.o(i.itemLoader)
 <LI> timedate.o(i.mTimeDateOpen)
 </UL>
-<P><STRONG><a name="[3a]"></a>main</STRONG> (Thumb, 166 bytes, Stack size 0 bytes, main.o(i.main))
+<P><STRONG><a name="[3a]"></a>main</STRONG> (Thumb, 170 bytes, Stack size 0 bytes, main.o(i.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 232<LI>Call Chain = main &rArr; console_log &rArr;  console_log (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[13f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pwrmgr_init
-<LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pcf8563_gettime
-<LI><a href="#[140]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;display_set
-<LI><a href="#[141]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;display_load
+<BR>[Calls]<UL><LI><a href="#[141]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pwrmgr_init
+<LI><a href="#[13f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pcf8563_gettime
+<LI><a href="#[142]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;display_set
+<LI><a href="#[143]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;display_load
 <LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;console_log
-<LI><a href="#[13e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;appconfig_init
+<LI><a href="#[140]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;appconfig_init
 <LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;alarm_init
 <LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Set_PCF8563_date
 <LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Init
@@ -1643,7 +1650,7 @@ Global Symbols
 <P><STRONG><a name="[60]"></a>menu_close</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, menu.o(i.menu_close))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = menu_close
 </UL>
-<BR>[Calls]<UL><LI><a href="#[141]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;display_load
+<BR>[Calls]<UL><LI><a href="#[143]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;display_load
 <LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;clear
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> m_main.o(i.itemLoader)
@@ -1659,7 +1666,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 264<LI>Call Chain = menu_draw &rArr; menu_drawIcon &rArr; drawTitle &rArr; draw_string &rArr; draw_bitmap
 </UL>
 <BR>[Calls]<UL><LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw_string
-<LI><a href="#[142]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_drawIcon
+<LI><a href="#[144]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_drawIcon
 <LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;loader
 <LI><a href="#[125]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drawTitle
 </UL>
@@ -1690,31 +1697,32 @@ Global Symbols
 <LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drawDriveSignal
 </UL>
 
-<P><STRONG><a name="[155]"></a>mod10</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, global.o(i.mod10))
+<P><STRONG><a name="[157]"></a>mod10</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, global.o(i.mod10))
 <BR><BR>[Called By]<UL><LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ticker
 </UL>
 
-<P><STRONG><a name="[143]"></a>modeCoupleSelect</STRONG> (Thumb, 196 bytes, Stack size 16 bytes, mode_couple.o(i.modeCoupleSelect))
-<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = modeCoupleSelect &rArr; setMenuInfo
+<P><STRONG><a name="[145]"></a>modeCoupleSelect</STRONG> (Thumb, 106 bytes, Stack size 8 bytes, mode_couple.o(i.modeCoupleSelect))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = modeCoupleSelect &rArr; setMenuInfo
 </UL>
 <BR>[Calls]<UL><LI><a href="#[138]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setPrevMenuOpen
 <LI><a href="#[137]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setMenuInfo
 <LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setMenuFuncs
 <LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;beginAnimation2
-<LI><a href="#[144]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;readFlash
+<LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;readFlash
 </UL>
 <BR>[Called By]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;selectCouple
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> mode_couple.o(i.modeCoupleSelect)
 </UL>
-<P><STRONG><a name="[145]"></a>modeOddevenSelect</STRONG> (Thumb, 66 bytes, Stack size 8 bytes, mode_oddeve.o(i.modeOddevenSelect))
+<P><STRONG><a name="[146]"></a>modeOddevenSelect</STRONG> (Thumb, 70 bytes, Stack size 8 bytes, mode_oddeve.o(i.modeOddevenSelect))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = modeOddevenSelect &rArr; setMenuInfo
 </UL>
 <BR>[Calls]<UL><LI><a href="#[138]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setPrevMenuOpen
 <LI><a href="#[137]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setMenuInfo
 <LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setMenuFuncs
 <LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;beginAnimation2
-<LI><a href="#[144]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;readFlash
+<LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;readFlash
+<LI><a href="#[147]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkDataValid
 </UL>
 <BR>[Called By]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;selectOddOrEven
 </UL>
@@ -1732,15 +1740,15 @@ Global Symbols
 <LI> m_main.o(i.itemLoader)
 </UL>
 <P><STRONG><a name="[55]"></a>nextOption</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, menu.o(i.nextOption))
-<BR><BR>[Calls]<UL><LI><a href="#[147]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkScroll
+<BR><BR>[Calls]<UL><LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkScroll
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mDown
 <LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mDown
 <LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mDown
 </UL>
 <BR>[Address Reference Count : 5]<UL><LI> mode.o(i.mode_select)
-<LI> tailnum.o(i.endSelect)
 <LI> tailnum.o(i.tailnum_select)
+<LI> tailnum.o(i.endSelect)
 <LI> m_main.o(i.mOpen)
 <LI> sound.o(i.mSoundOpen)
 </UL>
@@ -1754,43 +1762,43 @@ Global Symbols
 <LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw_end
 </UL>
 
-<P><STRONG><a name="[148]"></a>paramUpdate</STRONG> (Thumb, 50 bytes, Stack size 0 bytes, mode_oddeve.o(i.paramUpdate))
+<P><STRONG><a name="[14a]"></a>paramUpdate</STRONG> (Thumb, 62 bytes, Stack size 0 bytes, mode_oddeve.o(i.paramUpdate))
 <BR><BR>[Called By]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;paramDataUp
 <LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;paramDataDown
 </UL>
 
-<P><STRONG><a name="[149]"></a>pcf8563_Read</STRONG> (Thumb, 126 bytes, Stack size 24 bytes, pcf8563.o(i.pcf8563_Read))
+<P><STRONG><a name="[14b]"></a>pcf8563_Read</STRONG> (Thumb, 126 bytes, Stack size 24 bytes, pcf8563.o(i.pcf8563_Read))
 <BR><BR>[Stack]<UL><LI>Max Depth = 176<LI>Call Chain = pcf8563_Read &rArr; ReadData &rArr; HAL_I2C_Mem_Read &rArr; I2C_RequestMemoryRead &rArr; I2C_WaitOnMasterAddressFlagUntilTimeout
 </UL>
 <BR>[Calls]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ReadData
-<LI><a href="#[14a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BCDtoDEC
+<LI><a href="#[14c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BCDtoDEC
 </UL>
-<BR>[Called By]<UL><LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pcf8563_gettime
+<BR>[Called By]<UL><LI><a href="#[13f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pcf8563_gettime
 </UL>
 
-<P><STRONG><a name="[13d]"></a>pcf8563_gettime</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, pcf8563.o(i.pcf8563_gettime))
+<P><STRONG><a name="[13f]"></a>pcf8563_gettime</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, pcf8563.o(i.pcf8563_gettime))
 <BR><BR>[Stack]<UL><LI>Max Depth = 184<LI>Call Chain = pcf8563_gettime &rArr; pcf8563_Read &rArr; ReadData &rArr; HAL_I2C_Mem_Read &rArr; I2C_RequestMemoryRead &rArr; I2C_WaitOnMasterAddressFlagUntilTimeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pcf8563_Read
+<BR>[Calls]<UL><LI><a href="#[14b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pcf8563_Read
 </UL>
 <BR>[Called By]<UL><LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;time_update
 <LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
 <P><STRONG><a name="[53]"></a>prevOption</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, menu.o(i.prevOption))
-<BR><BR>[Calls]<UL><LI><a href="#[147]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkScroll
+<BR><BR>[Calls]<UL><LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkScroll
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mUp
 <LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mUp
 <LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mUp
 </UL>
 <BR>[Address Reference Count : 5]<UL><LI> mode.o(i.mode_select)
-<LI> tailnum.o(i.endSelect)
 <LI> tailnum.o(i.tailnum_select)
+<LI> tailnum.o(i.endSelect)
 <LI> m_main.o(i.mOpen)
 <LI> sound.o(i.mSoundOpen)
 </UL>
-<P><STRONG><a name="[13f]"></a>pwrmgr_init</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, pwrmgr.o(i.pwrmgr_init))
+<P><STRONG><a name="[141]"></a>pwrmgr_init</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, pwrmgr.o(i.pwrmgr_init))
 <BR><BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
@@ -1798,14 +1806,16 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;c_loop
 </UL>
 
-<P><STRONG><a name="[144]"></a>readFlash</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, flash.o(i.readFlash))
+<P><STRONG><a name="[13c]"></a>readFlash</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, flash.o(i.readFlash))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = readFlash &rArr; STMFLASH_Read
 </UL>
 <BR>[Calls]<UL><LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STMFLASH_Read
 </UL>
-<BR>[Called By]<UL><LI><a href="#[145]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;modeOddevenSelect
-<LI><a href="#[143]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;modeCoupleSelect
+<BR>[Called By]<UL><LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mSelect
+<LI><a href="#[146]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;modeOddevenSelect
+<LI><a href="#[145]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;modeCoupleSelect
 <LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tailnum_select
+<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mSelect
 </UL>
 
 <P><STRONG><a name="[101]"></a>setMenuFuncs</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, menu.o(i.setMenuFuncs))
@@ -1813,8 +1823,8 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[129]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;endSelect
 <LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;beginSelect
-<LI><a href="#[145]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;modeOddevenSelect
-<LI><a href="#[143]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;modeCoupleSelect
+<LI><a href="#[146]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;modeOddevenSelect
+<LI><a href="#[145]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;modeCoupleSelect
 <LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mode_select
 <LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tailnum_select
 <LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;selectTailNum
@@ -1833,8 +1843,8 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;clear
 </UL>
-<BR>[Called By]<UL><LI><a href="#[145]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;modeOddevenSelect
-<LI><a href="#[143]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;modeCoupleSelect
+<BR>[Called By]<UL><LI><a href="#[146]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;modeOddevenSelect
+<LI><a href="#[145]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;modeCoupleSelect
 <LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mode_select
 <LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tailnum_select
 <LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mTimeDateOpen
@@ -1849,12 +1859,12 @@ Global Symbols
 <LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw_bitmap
 <LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ui2f
 <LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fdiv
-<LI><a href="#[150]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
+<LI><a href="#[152]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
 <LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
 <LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 <LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2f
 <LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;beginAnimation
-<LI><a href="#[151]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sin
+<LI><a href="#[153]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sin
 </UL>
 <BR>[Called By]<UL><LI><a href="#[130]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;showWeekStr
 <LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setMenuOption_P
@@ -1892,8 +1902,8 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[138]"></a>setPrevMenuOpen</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, menu.o(i.setPrevMenuOpen))
-<BR><BR>[Called By]<UL><LI><a href="#[145]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;modeOddevenSelect
-<LI><a href="#[143]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;modeCoupleSelect
+<BR><BR>[Called By]<UL><LI><a href="#[146]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;modeOddevenSelect
+<LI><a href="#[145]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;modeCoupleSelect
 <LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mode_select
 <LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tailnum_select
 <LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mTimeDateOpen
@@ -1901,10 +1911,10 @@ Global Symbols
 <LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mOpen
 </UL>
 
-<P><STRONG><a name="[151]"></a>sin</STRONG> (Thumb, 150 bytes, Stack size 32 bytes, sin.o(i.sin))
+<P><STRONG><a name="[153]"></a>sin</STRONG> (Thumb, 150 bytes, Stack size 32 bytes, sin.o(i.sin))
 <BR><BR>[Stack]<UL><LI>Max Depth = 248<LI>Call Chain = sin &rArr; __ieee754_rem_pio2 &rArr; __aeabi_dmul &rArr; _double_epilogue &rArr; _double_round
 </UL>
-<BR>[Calls]<UL><LI><a href="#[153]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__set_errno
+<BR>[Calls]<UL><LI><a href="#[155]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__set_errno
 <LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kernel_sin
 <LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ieee754_rem_pio2
 <LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_invalid
@@ -1920,39 +1930,39 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;console_log
 </UL>
 
-<P><STRONG><a name="[14c]"></a>switchTwoNum</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, mode_couple.o(i.switchTwoNum))
-<BR><BR>[Called By]<UL><LI><a href="#[14b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ruleAutoMatch
+<P><STRONG><a name="[14e]"></a>switchTwoNum</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, mode_couple.o(i.switchTwoNum))
+<BR><BR>[Called By]<UL><LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ruleAutoMatch
 </UL>
 
-<P><STRONG><a name="[5c]"></a>tailnum_select</STRONG> (Thumb, 70 bytes, Stack size 8 bytes, tailnum.o(i.tailnum_select))
+<P><STRONG><a name="[5c]"></a>tailnum_select</STRONG> (Thumb, 66 bytes, Stack size 8 bytes, tailnum.o(i.tailnum_select))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = tailnum_select &rArr; setMenuInfo
 </UL>
 <BR>[Calls]<UL><LI><a href="#[138]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setPrevMenuOpen
 <LI><a href="#[137]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setMenuInfo
 <LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setMenuFuncs
 <LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;beginAnimation2
-<LI><a href="#[144]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;readFlash
+<LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;readFlash
 </UL>
 <BR>[Address Reference Count : 2]<UL><LI> tailnum.o(i.tailnum_select)
 <LI> m_main.o(i.itemLoader)
 </UL>
-<P><STRONG><a name="[14e]"></a>time_dow</STRONG> (Thumb, 92 bytes, Stack size 0 bytes, time.o(i.time_dow))
+<P><STRONG><a name="[150]"></a>time_dow</STRONG> (Thumb, 92 bytes, Stack size 0 bytes, time.o(i.time_dow))
 <BR><BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;selectDate
 </UL>
 
-<P><STRONG><a name="[157]"></a>time_isLeapYear</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, time.o(i.time_isLeapYear))
-<BR><BR>[Called By]<UL><LI><a href="#[14f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;time_monthDayCount
+<P><STRONG><a name="[159]"></a>time_isLeapYear</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, time.o(i.time_isLeapYear))
+<BR><BR>[Called By]<UL><LI><a href="#[151]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;time_monthDayCount
 </UL>
 
-<P><STRONG><a name="[14f]"></a>time_monthDayCount</STRONG> (Thumb, 24 bytes, Stack size 4 bytes, time.o(i.time_monthDayCount))
+<P><STRONG><a name="[151]"></a>time_monthDayCount</STRONG> (Thumb, 24 bytes, Stack size 4 bytes, time.o(i.time_monthDayCount))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = time_monthDayCount
 </UL>
-<BR>[Calls]<UL><LI><a href="#[157]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;time_isLeapYear
+<BR>[Calls]<UL><LI><a href="#[159]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;time_isLeapYear
 </UL>
 <BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;selectDate
 </UL>
 
-<P><STRONG><a name="[14d]"></a>time_set</STRONG> (Thumb, 50 bytes, Stack size 8 bytes, time.o(i.time_set))
+<P><STRONG><a name="[14f]"></a>time_set</STRONG> (Thumb, 50 bytes, Stack size 8 bytes, time.o(i.time_set))
 <BR><BR>[Stack]<UL><LI>Max Depth = 176<LI>Call Chain = time_set &rArr; Set_PCF8563_date &rArr; writeData &rArr; HAL_I2C_Mem_Write &rArr; I2C_RequestMemoryWrite &rArr; I2C_WaitOnMasterAddressFlagUntilTimeout
 </UL>
 <BR>[Calls]<UL><LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Set_PCF8563_date
@@ -1966,20 +1976,20 @@ Global Symbols
 <P><STRONG><a name="[12d]"></a>time_timeMode</STRONG> (Thumb, 76 bytes, Stack size 0 bytes, time.o(i.time_timeMode))
 <BR><BR>[Called By]<UL><LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getNextAlarm
 <LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;selectTime
-<LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;time_set
+<LI><a href="#[14f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;time_set
 </UL>
 
 <P><STRONG><a name="[108]"></a>time_update</STRONG> (Thumb, 54 bytes, Stack size 16 bytes, time.o(i.time_update))
 <BR><BR>[Stack]<UL><LI>Max Depth = 200<LI>Call Chain = time_update &rArr; pcf8563_gettime &rArr; pcf8563_Read &rArr; ReadData &rArr; HAL_I2C_Mem_Read &rArr; I2C_RequestMemoryRead &rArr; I2C_WaitOnMasterAddressFlagUntilTimeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pcf8563_gettime
-<LI><a href="#[158]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tune_play
+<BR>[Calls]<UL><LI><a href="#[13f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pcf8563_gettime
+<LI><a href="#[15a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tune_play
 </UL>
 <BR>[Called By]<UL><LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;c_loop
 </UL>
 
-<P><STRONG><a name="[158]"></a>tune_play</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, tune.o(i.tune_play))
-<BR><BR>[Calls]<UL><LI><a href="#[146]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;next
+<P><STRONG><a name="[15a]"></a>tune_play</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, tune.o(i.tune_play))
+<BR><BR>[Calls]<UL><LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;next
 </UL>
 <BR>[Called By]<UL><LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;time_update
 </UL>
@@ -2002,12 +2012,12 @@ Global Symbols
 <LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Set_PCF8563_Time
 </UL>
 
-<P><STRONG><a name="[13c]"></a>writeFlash</STRONG> (Thumb, 48 bytes, Stack size 16 bytes, flash.o(i.writeFlash))
+<P><STRONG><a name="[13d]"></a>writeFlash</STRONG> (Thumb, 48 bytes, Stack size 16 bytes, flash.o(i.writeFlash))
 <BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = writeFlash &rArr; STMFLASH_Write &rArr; STMFLASH_Write_NoCheck &rArr; HAL_FLASH_Program &rArr; FLASH_WaitForLastOperation
 </UL>
 <BR>[Calls]<UL><LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STMFLASH_Write
 <LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STMFLASH_Read
-<LI><a href="#[159]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;memcmp
+<LI><a href="#[13e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;memcmp
 </UL>
 <BR>[Called By]<UL><LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mSelect
 <LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mSelect
@@ -2036,9 +2046,9 @@ Local Symbols
 <BR>[Address Reference Count : 1]<UL><LI> mode.o(i.mode_select)
 </UL>
 <P><STRONG><a name="[58]"></a>selectCouple</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, mode.o(i.selectCouple))
-<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = selectCouple &rArr; modeCoupleSelect &rArr; setMenuInfo
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = selectCouple &rArr; modeCoupleSelect &rArr; setMenuInfo
 </UL>
-<BR>[Calls]<UL><LI><a href="#[143]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;modeCoupleSelect
+<BR>[Calls]<UL><LI><a href="#[145]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;modeCoupleSelect
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> mode.o(i.itemLoader)
 </UL>
@@ -2048,7 +2058,7 @@ Local Symbols
 <P><STRONG><a name="[59]"></a>selectOddOrEven</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, mode.o(i.selectOddOrEven))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = selectOddOrEven &rArr; modeOddevenSelect &rArr; setMenuInfo
 </UL>
-<BR>[Calls]<UL><LI><a href="#[145]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;modeOddevenSelect
+<BR>[Calls]<UL><LI><a href="#[146]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;modeOddevenSelect
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> mode.o(i.itemLoader)
 </UL>
@@ -2102,13 +2112,15 @@ Local Symbols
 <BR>[Address Reference Count : 2]<UL><LI> mode_couple.o(i.endSelect)
 <LI> mode_couple.o(i.modeCoupleSelect)
 </UL>
-<P><STRONG><a name="[41]"></a>mSelect</STRONG> (Thumb, 42 bytes, Stack size 8 bytes, mode_couple.o(i.mSelect))
-<BR><BR>[Stack]<UL><LI>Max Depth = 144<LI>Call Chain = mSelect &rArr; writeFlash &rArr; STMFLASH_Write &rArr; STMFLASH_Write_NoCheck &rArr; HAL_FLASH_Program &rArr; FLASH_WaitForLastOperation
+<P><STRONG><a name="[41]"></a>mSelect</STRONG> (Thumb, 96 bytes, Stack size 104 bytes, mode_couple.o(i.mSelect))
+<BR><BR>[Stack]<UL><LI>Max Depth = 240<LI>Call Chain = mSelect &rArr; writeFlash &rArr; STMFLASH_Write &rArr; STMFLASH_Write_NoCheck &rArr; HAL_FLASH_Program &rArr; FLASH_WaitForLastOperation
 </UL>
 <BR>[Calls]<UL><LI><a href="#[13b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setPrevMenuExit
 <LI><a href="#[139]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exitSelected
 <LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;doAction
-<LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;writeFlash
+<LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;writeFlash
+<LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;readFlash
+<LI><a href="#[13e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;memcmp
 </UL>
 <BR>[Address Reference Count : 3]<UL><LI> mode_couple.o(i.beginSelect)
 <LI> mode_couple.o(i.endSelect)
@@ -2122,10 +2134,10 @@ Local Symbols
 <BR>[Address Reference Count : 2]<UL><LI> mode_couple.o(i.endSelect)
 <LI> mode_couple.o(i.modeCoupleSelect)
 </UL>
-<P><STRONG><a name="[14b]"></a>ruleAutoMatch</STRONG> (Thumb, 212 bytes, Stack size 12 bytes, mode_couple.o(i.ruleAutoMatch))
-<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = ruleAutoMatch
+<P><STRONG><a name="[14d]"></a>ruleAutoMatch</STRONG> (Thumb, 216 bytes, Stack size 16 bytes, mode_couple.o(i.ruleAutoMatch))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = ruleAutoMatch
 </UL>
-<BR>[Calls]<UL><LI><a href="#[14c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;switchTwoNum
+<BR>[Calls]<UL><LI><a href="#[14e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;switchTwoNum
 </UL>
 <BR>[Called By]<UL><LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;weekNumDataUp
 <LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;weekNumDataDown
@@ -2182,16 +2194,16 @@ Local Symbols
 </UL>
 
 <P><STRONG><a name="[40]"></a>weekNumDataDown</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, mode_couple.o(i.weekNumDataDown))
-<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = weekNumDataDown &rArr; ruleAutoMatch
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = weekNumDataDown &rArr; ruleAutoMatch
 </UL>
-<BR>[Calls]<UL><LI><a href="#[14b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ruleAutoMatch
+<BR>[Calls]<UL><LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ruleAutoMatch
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> mode_couple.o(i.beginSelect)
 </UL>
 <P><STRONG><a name="[42]"></a>weekNumDataUp</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, mode_couple.o(i.weekNumDataUp))
-<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = weekNumDataUp &rArr; ruleAutoMatch
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = weekNumDataUp &rArr; ruleAutoMatch
 </UL>
-<BR>[Calls]<UL><LI><a href="#[14b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ruleAutoMatch
+<BR>[Calls]<UL><LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ruleAutoMatch
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> mode_couple.o(i.beginSelect)
 </UL>
@@ -2222,7 +2234,7 @@ Local Symbols
 </UL>
 
 <P><STRONG><a name="[44]"></a>itemLoader</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, mode_oddeve.o(i.itemLoader))
-<BR><BR>[Stack]<UL><LI>Max Depth = 368<LI>Call Chain = itemLoader &rArr; showOddEvenStr &rArr; setMenuOption &rArr; sin &rArr; __ieee754_rem_pio2 &rArr; __aeabi_dmul &rArr; _double_epilogue &rArr; _double_round
+<BR><BR>[Stack]<UL><LI>Max Depth = 384<LI>Call Chain = itemLoader &rArr; showDaysleftStr &rArr; setMenuOption &rArr; sin &rArr; __ieee754_rem_pio2 &rArr; __aeabi_dmul &rArr; _double_epilogue &rArr; _double_round
 </UL>
 <BR>[Calls]<UL><LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;addBackOption
 <LI><a href="#[131]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;showOddEvenStr
@@ -2232,7 +2244,7 @@ Local Symbols
 <LI> mode_oddeve.o(i.endSelect)
 <LI> mode_oddeve.o(i.modeOddevenSelect)
 </UL>
-<P><STRONG><a name="[51]"></a>mDown</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, mode_oddeve.o(i.mDown))
+<P><STRONG><a name="[51]"></a>mDown</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, mode_oddeve.o(i.mDown))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = mDown
 </UL>
 <BR>[Calls]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nextOption
@@ -2246,13 +2258,13 @@ Local Symbols
 <BR>[Calls]<UL><LI><a href="#[13b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setPrevMenuExit
 <LI><a href="#[139]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exitSelected
 <LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;doAction
-<LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;writeFlash
+<LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;writeFlash
 </UL>
 <BR>[Address Reference Count : 3]<UL><LI> mode_oddeve.o(i.beginSelect)
 <LI> mode_oddeve.o(i.endSelect)
 <LI> mode_oddeve.o(i.modeOddevenSelect)
 </UL>
-<P><STRONG><a name="[50]"></a>mUp</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, mode_oddeve.o(i.mUp))
+<P><STRONG><a name="[50]"></a>mUp</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, mode_oddeve.o(i.mUp))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = mUp
 </UL>
 <BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prevOption
@@ -2260,7 +2272,7 @@ Local Symbols
 <BR>[Address Reference Count : 2]<UL><LI> mode_oddeve.o(i.endSelect)
 <LI> mode_oddeve.o(i.modeOddevenSelect)
 </UL>
-<P><STRONG><a name="[48]"></a>oddEvenNumDraw</STRONG> (Thumb, 434 bytes, Stack size 56 bytes, mode_oddeve.o(i.oddEvenNumDraw))
+<P><STRONG><a name="[48]"></a>oddEvenNumDraw</STRONG> (Thumb, 736 bytes, Stack size 56 bytes, mode_oddeve.o(i.oddEvenNumDraw))
 <BR><BR>[Stack]<UL><LI>Max Depth = 168<LI>Call Chain = oddEvenNumDraw &rArr; draw_bitmap
 </UL>
 <BR>[Calls]<UL><LI><a href="#[128]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw_clearArea
@@ -2269,16 +2281,16 @@ Local Symbols
 <BR>[Address Reference Count : 1]<UL><LI> mode_oddeve.o(i.beginSelect)
 </UL>
 <P><STRONG><a name="[45]"></a>paramDataDown</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, mode_oddeve.o(i.paramDataDown))
-<BR><BR>[Calls]<UL><LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;paramUpdate
+<BR><BR>[Calls]<UL><LI><a href="#[14a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;paramUpdate
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> mode_oddeve.o(i.beginSelect)
 </UL>
 <P><STRONG><a name="[47]"></a>paramDataUp</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, mode_oddeve.o(i.paramDataUp))
-<BR><BR>[Calls]<UL><LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;paramUpdate
+<BR><BR>[Calls]<UL><LI><a href="#[14a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;paramUpdate
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> mode_oddeve.o(i.beginSelect)
 </UL>
-<P><STRONG><a name="[78]"></a>selectDaysleftNum</STRONG> (Thumb, 66 bytes, Stack size 8 bytes, mode_oddeve.o(i.selectDaysleftNum))
+<P><STRONG><a name="[78]"></a>selectDaysleftNum</STRONG> (Thumb, 92 bytes, Stack size 8 bytes, mode_oddeve.o(i.selectDaysleftNum))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = selectDaysleftNum &rArr; endSelect &rArr; setMenuFuncs
 </UL>
 <BR>[Calls]<UL><LI><a href="#[12a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;endSelect
@@ -2294,8 +2306,8 @@ Local Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> mode_oddeve.o(i.showOddEvenStr)
 </UL>
-<P><STRONG><a name="[132]"></a>showDaysleftStr</STRONG> (Thumb, 336 bytes, Stack size 64 bytes, mode_oddeve.o(i.showDaysleftStr))
-<BR><BR>[Stack]<UL><LI>Max Depth = 344<LI>Call Chain = showDaysleftStr &rArr; setMenuOption &rArr; sin &rArr; __ieee754_rem_pio2 &rArr; __aeabi_dmul &rArr; _double_epilogue &rArr; _double_round
+<P><STRONG><a name="[132]"></a>showDaysleftStr</STRONG> (Thumb, 370 bytes, Stack size 96 bytes, mode_oddeve.o(i.showDaysleftStr))
+<BR><BR>[Stack]<UL><LI>Max Depth = 376<LI>Call Chain = showDaysleftStr &rArr; setMenuOption &rArr; sin &rArr; __ieee754_rem_pio2 &rArr; __aeabi_dmul &rArr; _double_epilogue &rArr; _double_round
 </UL>
 <BR>[Calls]<UL><LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setMenuOption
 <LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw_bitmap
@@ -2312,8 +2324,8 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;itemLoader
 </UL>
 
-<P><STRONG><a name="[14a]"></a>BCDtoDEC</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, pcf8563.o(i.BCDtoDEC))
-<BR><BR>[Called By]<UL><LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pcf8563_Read
+<P><STRONG><a name="[14c]"></a>BCDtoDEC</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, pcf8563.o(i.BCDtoDEC))
+<BR><BR>[Called By]<UL><LI><a href="#[14b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pcf8563_Read
 </UL>
 
 <P><STRONG><a name="[12b]"></a>endSelect</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, tailnum.o(i.endSelect))
@@ -2330,21 +2342,22 @@ Local Symbols
 <BR>[Calls]<UL><LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setMenuOption_P
 <LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;addBackOption
 </UL>
-<BR>[Address Reference Count : 3]<UL><LI> tailnum.o(i.endSelect)
-<LI> tailnum.o(i.selectTailNum)
+<BR>[Address Reference Count : 3]<UL><LI> tailnum.o(i.selectTailNum)
 <LI> tailnum.o(i.tailnum_select)
+<LI> tailnum.o(i.endSelect)
 </UL>
-<P><STRONG><a name="[54]"></a>mSelect</STRONG> (Thumb, 42 bytes, Stack size 8 bytes, tailnum.o(i.mSelect))
+<P><STRONG><a name="[54]"></a>mSelect</STRONG> (Thumb, 68 bytes, Stack size 8 bytes, tailnum.o(i.mSelect))
 <BR><BR>[Stack]<UL><LI>Max Depth = 144<LI>Call Chain = mSelect &rArr; writeFlash &rArr; STMFLASH_Write &rArr; STMFLASH_Write_NoCheck &rArr; HAL_FLASH_Program &rArr; FLASH_WaitForLastOperation
 </UL>
 <BR>[Calls]<UL><LI><a href="#[13b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setPrevMenuExit
 <LI><a href="#[139]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exitSelected
 <LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;doAction
-<LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;writeFlash
+<LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;writeFlash
+<LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;readFlash
 </UL>
-<BR>[Address Reference Count : 3]<UL><LI> tailnum.o(i.endSelect)
-<LI> tailnum.o(i.selectTailNum)
+<BR>[Address Reference Count : 3]<UL><LI> tailnum.o(i.selectTailNum)
 <LI> tailnum.o(i.tailnum_select)
+<LI> tailnum.o(i.endSelect)
 </UL>
 <P><STRONG><a name="[5b]"></a>selectTailNum</STRONG> (Thumb, 72 bytes, Stack size 8 bytes, tailnum.o(i.selectTailNum))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = selectTailNum &rArr; endSelect &rArr; setMenuFuncs
@@ -2544,7 +2557,7 @@ Local Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> m_main.o(i.mOpen)
 </UL>
-<P><STRONG><a name="[147]"></a>checkScroll</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, menu.o(i.checkScroll))
+<P><STRONG><a name="[149]"></a>checkScroll</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, menu.o(i.checkScroll))
 <BR><BR>[Called By]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prevOption
 <LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nextOption
 </UL>
@@ -2574,17 +2587,17 @@ Local Symbols
 <LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
 <LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
 </UL>
-<BR>[Called By]<UL><LI><a href="#[142]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_drawIcon
+<BR>[Called By]<UL><LI><a href="#[144]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_drawIcon
 <LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_draw
 </UL>
 
 <P><STRONG><a name="[11b]"></a>loader</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, menu.o(i.loader))
 <BR><BR>[Called By]<UL><LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;doAction
-<LI><a href="#[142]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_drawIcon
+<LI><a href="#[144]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_drawIcon
 <LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_draw
 </UL>
 
-<P><STRONG><a name="[142]"></a>menu_drawIcon</STRONG> (Thumb, 210 bytes, Stack size 40 bytes, menu.o(i.menu_drawIcon))
+<P><STRONG><a name="[144]"></a>menu_drawIcon</STRONG> (Thumb, 210 bytes, Stack size 40 bytes, menu.o(i.menu_drawIcon))
 <BR><BR>[Stack]<UL><LI>Max Depth = 232<LI>Call Chain = menu_drawIcon &rArr; drawTitle &rArr; draw_string &rArr; draw_bitmap
 </UL>
 <BR>[Calls]<UL><LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw_bitmap
@@ -2629,8 +2642,8 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw_string
 <LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw_bitmap
-<LI><a href="#[155]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mod10
-<LI><a href="#[154]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;div10
+<LI><a href="#[157]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mod10
+<LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;div10
 <LI><a href="#[124]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drawTickerNum
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw
@@ -2662,7 +2675,7 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;itemLoader
 </UL>
 
-<P><STRONG><a name="[152]"></a>setVolume</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, sound.o(i.setVolume))
+<P><STRONG><a name="[154]"></a>setVolume</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, sound.o(i.setVolume))
 <BR><BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setVolumeUI
 <LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setVolumeHour
 <LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setVolumeAlarm
@@ -2671,21 +2684,21 @@ Local Symbols
 <P><STRONG><a name="[76]"></a>setVolumeAlarm</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, sound.o(i.setVolumeAlarm))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = setVolumeAlarm
 </UL>
-<BR>[Calls]<UL><LI><a href="#[152]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setVolume
+<BR>[Calls]<UL><LI><a href="#[154]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setVolume
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> sound.o(i.setMenuOptions)
 </UL>
 <P><STRONG><a name="[77]"></a>setVolumeHour</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, sound.o(i.setVolumeHour))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = setVolumeHour
 </UL>
-<BR>[Calls]<UL><LI><a href="#[152]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setVolume
+<BR>[Calls]<UL><LI><a href="#[154]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setVolume
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> sound.o(i.setMenuOptions)
 </UL>
 <P><STRONG><a name="[75]"></a>setVolumeUI</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, sound.o(i.setVolumeUI))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = setVolumeUI
 </UL>
-<BR>[Calls]<UL><LI><a href="#[152]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setVolume
+<BR>[Calls]<UL><LI><a href="#[154]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setVolume
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> sound.o(i.setMenuOptions)
 </UL>
@@ -2715,7 +2728,7 @@ Local Symbols
 <LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;selectDate
 </UL>
 
-<P><STRONG><a name="[156]"></a>getMaxValForSetting</STRONG> (Thumb, 56 bytes, Stack size 0 bytes, timedate.o(i.getMaxValForSetting))
+<P><STRONG><a name="[158]"></a>getMaxValForSetting</STRONG> (Thumb, 56 bytes, Stack size 0 bytes, timedate.o(i.getMaxValForSetting))
 <BR><BR>[Called By]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timeDataUp
 <LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timeDataDown
 </UL>
@@ -2764,7 +2777,7 @@ Local Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 184<LI>Call Chain = saveTimeDate &rArr; time_set &rArr; Set_PCF8563_date &rArr; writeData &rArr; HAL_I2C_Mem_Write &rArr; I2C_RequestMemoryWrite &rArr; I2C_WaitOnMasterAddressFlagUntilTimeout
 </UL>
 <BR>[Calls]<UL><LI><a href="#[13a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;appconfig_save
-<LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;time_set
+<LI><a href="#[14f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;time_set
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> timedate.o(i.itemLoader)
 </UL>
@@ -2773,8 +2786,8 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[12c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;endSelect
 <LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;beginSelect
-<LI><a href="#[14f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;time_monthDayCount
-<LI><a href="#[14e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;time_dow
+<LI><a href="#[151]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;time_monthDayCount
+<LI><a href="#[150]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;time_dow
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> timedate.o(i.itemLoader)
 </UL>
@@ -2790,14 +2803,14 @@ Local Symbols
 <P><STRONG><a name="[4c]"></a>timeDataDown</STRONG> (Thumb, 62 bytes, Stack size 16 bytes, timedate.o(i.timeDataDown))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = timeDataDown
 </UL>
-<BR>[Calls]<UL><LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getMaxValForSetting
+<BR>[Calls]<UL><LI><a href="#[158]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getMaxValForSetting
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> timedate.o(i.beginSelect)
 </UL>
 <P><STRONG><a name="[4a]"></a>timeDataUp</STRONG> (Thumb, 56 bytes, Stack size 8 bytes, timedate.o(i.timeDataUp))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = timeDataUp
 </UL>
-<BR>[Calls]<UL><LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getMaxValForSetting
+<BR>[Calls]<UL><LI><a href="#[158]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getMaxValForSetting
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> timedate.o(i.beginSelect)
 </UL>
@@ -2811,11 +2824,11 @@ Local Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> timedate.o(i.beginSelect)
 </UL>
-<P><STRONG><a name="[146]"></a>next</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, tune.o(i.next))
-<BR><BR>[Calls]<UL><LI><a href="#[146]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;next
+<P><STRONG><a name="[148]"></a>next</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, tune.o(i.next))
+<BR><BR>[Calls]<UL><LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;next
 </UL>
-<BR>[Called By]<UL><LI><a href="#[158]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tune_play
-<LI><a href="#[146]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;next
+<BR>[Called By]<UL><LI><a href="#[15a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tune_play
+<LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;next
 </UL>
 
 <P><STRONG><a name="[f2]"></a>_fp_digits</STRONG> (Thumb, 366 bytes, Stack size 64 bytes, printfa.o(i._fp_digits), UNUSED)
