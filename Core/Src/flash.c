@@ -18,6 +18,10 @@
 
 uint16_t STMFLASH_BUF[STM_SECTOR_SIZE/2];		//最多是2K字节
 
+static FLASH_EraseInitTypeDef EraseInitStruct;
+
+
+
 //读取指定地址的半字(16位数据)
 //faddr:读地址
 //返回值:对应数据.
@@ -140,5 +144,35 @@ void writeFlash(uint32_t WriteAddr,uint16_t *pBuffer,uint16_t NumToWrite)
 void readFlash(uint32_t ReadAddr,uint16_t *pBuffer,uint16_t NumToRead)
 {
 	STMFLASH_Read(ReadAddr, pBuffer, NumToRead);
+}
+uint32_t PAGEError = 0;
+void eraseFlash(void)
+{
+	/* Fill EraseInit structure*/
+	EraseInitStruct.TypeErase   = FLASH_TYPEERASE_PAGES;
+	EraseInitStruct.PageAddress = START_FLASH_ADDRESS;
+	EraseInitStruct.NbPages     = (END_FLASH_ADDRESS - START_FLASH_ADDRESS) / STM_SECTOR_SIZE;
+
+	if (HAL_FLASHEx_Erase(&EraseInitStruct, &PAGEError) != HAL_OK)
+  	{
+    /*
+      Error occurred while page erase.
+      User can add here some code to deal with this error.
+      PAGEError will contain the faulty page and then to know the code error on this page,
+      user can call function 'HAL_FLASH_GetError()'
+    */
+  	}
+}
+void wFlash(uint32_t WriteAddr,uint16_t *pBuffer,uint16_t NumToWrite)
+{
+	HAL_FLASH_Unlock();
+	eraseFlash();
+	uint16_t i;
+	for(i=0;i<NumToWrite;i++)
+	{
+		HAL_FLASH_Program(FLASH_TYPEPROGRAM_HALFWORD,WriteAddr,pBuffer[i]);//每次写入半字
+	    WriteAddr+=2;//地址增加2.
+	}
+	HAL_FLASH_Lock();
 }
 

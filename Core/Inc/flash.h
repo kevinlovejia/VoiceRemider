@@ -15,6 +15,7 @@
 #define STM32_FLASH_WREN 			1              	//使能FLASH写入(0：不使能；1：使能)
 #define FLASH_WAITETIME  			50000          	//FLASH等待超时时间
 #define START_FLASH_ADDRESS		0x0800FC00			//flash存入地址
+#define END_FLASH_ADDRESS       0x08010000
 
 extern void    FLASH_PageErase(uint32_t PageAddress);
 
@@ -32,6 +33,7 @@ void STMFLASH_Write(uint32_t WriteAddr,uint16_t *pBuffer,uint16_t NumToWrite);		
 void STMFLASH_Read(uint32_t ReadAddr,uint16_t *pBuffer,uint16_t NumToRead);   		//从指定地址开始读出指定长度的数据
 void writeFlash(uint32_t WriteAddr,uint16_t *pBuffer,uint16_t NumToWrite);
 void readFlash(uint32_t ReadAddr,uint16_t *pBuffer,uint16_t NumToRead);
+void wFlash(uint32_t WriteAddr,uint16_t *pBuffer,uint16_t NumToWrite);
 //测试写入
 void Test_Write(uint32_t WriteAddr,uint16_t WriteData);
 

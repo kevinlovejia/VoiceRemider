@@ -96,11 +96,7 @@ typedef struct {
 //Mode 1
 typedef struct {
 	byte limitRules[10];					//周一到周五限哪些尾号
-	bool usedRule1;							//是否使用了匹配规则1
-	bool usedRule2;							//是否使用了匹配规则2
-	bool usedRule3;							//是否使用了匹配规则3
-	byte rule;								//rule=1,2,3,4 规则1,规则2,规则3,自定义规则
-	byte matchTimes;						//一天限俩号模式下，自动匹配三次
+	byte rule;									//rule=1,2,3,4 规则1,规则2,规则3,自定义规则
 }limitCouple_s;								//一天限俩号
 //Mode 2
 typedef struct {
@@ -112,7 +108,7 @@ typedef struct {
 
 //Mode 2
 typedef struct {
-	bool normal;							//=0 single tail num drive in single days, 1=else
+	bool normal;								//=0 single tail num drive in single days, 1=else
 	byte startYMD[3];						//
 	byte endYMD[3];							//
 }limitDS_s;										//?????

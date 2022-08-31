@@ -54,10 +54,11 @@ static void mSelect()
 		flashCont = (driverInfo_s *)malloc(sizeof(driverInfo_s));
 		if(flashCont == NULL)
 			while(1);//Todo: 		
-		readFlash(START_FLASH_ADDRESS, (uint16_t *)driverInfo_P, sizeStruct);
+		readFlash(START_FLASH_ADDRESS, (uint16_t *)flashCont, sizeStruct);
 		if(flashCont->tailNo != driverInfo_P->tailNo)
-			writeFlash(START_FLASH_ADDRESS, (uint16_t *)driverInfo_P, sizeStruct);
+			wFlash(START_FLASH_ADDRESS, (uint16_t *)driverInfo_P, sizeStruct);
 		free(flashCont);
+		flashCont = NULL;
 	}
 }
 
@@ -71,6 +72,8 @@ static void itemLoader(byte num)
 static void setMenuOptions()
 {
 	byte fontPos = driverInfo_P->tailNo & 0xFF;																	//不转换直接使用会硬件故障，
+	if(fontPos > 9)	//出错或者还未选择尾号
+		fontPos = 0;
 	setMenuOption_P(0, PSTR(STR_UI), arial_font[fontPos], selectTailNum);
 }
 

@@ -85,15 +85,16 @@ static void mSelect()
 			while(1);//Todo: 
 		readFlash(START_FLASH_ADDRESS, (uint16_t *)flashCont, sizeStruct);
 		if(flashCont->limitDS.normal != driverInfo_P->limitDS.normal)
-			writeFlash(START_FLASH_ADDRESS, (uint16_t *)driverInfo_P, sizeStruct);
+			wFlash(START_FLASH_ADDRESS, (uint16_t *)driverInfo_P, sizeStruct);
 		else
 		{
 			ret = memcmp(flashCont->limitDS.endYMD, driverInfo_P->limitDS.endYMD, \
 			sizeof(flashCont->limitDS.endYMD));
 			if(ret != 0)
-				writeFlash(START_FLASH_ADDRESS, (uint16_t *)driverInfo_P, sizeStruct);
+				wFlash(START_FLASH_ADDRESS, (uint16_t *)driverInfo_P, sizeStruct);
 		}
 		free(flashCont);
+		flashCont = NULL;
 	}
 	setPrevMenuExit(&prevMenuData);
 	doAction(exitSelected());	

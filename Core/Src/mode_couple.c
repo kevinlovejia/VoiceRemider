@@ -81,7 +81,7 @@ void modeCoupleSelect()
 //	static unsigned int sizeStruct = 0;
 //	// static driverInfo_s inFlash;
 //	sizeStruct = sizeof(driverInfo);
-//	readFlash(START_FLASH_ADDRESS, (uint16_t *)&driverInfo, sizeStruct);
+	readFlash(START_FLASH_ADDRESS, (uint16_t *)driverInfo_P, sizeof(driverInfo_s));
 	//2.?????123??????????presetMode???????????
 	//driverInfo_P->limitCouple.rule = 1;							//????????1,????????????
 	coupleDetails.matchTimes = 3;									//???????????????????????????
@@ -89,9 +89,10 @@ void modeCoupleSelect()
 	coupleDetails.usedRule2 = false;
 	coupleDetails.usedRule3 = false;
 
-	if(driverInfo_P->limitCouple.rule == 0 || driverInfo_P->limitCouple.rule > 4) //???????
+	if(driverInfo_P->limitCouple.rule == 0 || driverInfo_P->limitCouple.rule > 4) //遇到出错或者没有选择任何规则
 	{
 		memcpy(driverInfo_P->limitCouple.limitRules, presetMode[0], sizeof(driverInfo_P->limitCouple.limitRules));
+		coupleDetails.usedRule1 = 1;
 	}
 	menuData.selected = 1;
 	
@@ -132,15 +133,16 @@ static void mSelect()
 			while(1);//Todo: 
 		readFlash(START_FLASH_ADDRESS, (uint16_t *)flashCont, sizeStruct);
 		if(flashCont->limitCouple.rule != driverInfo_P->limitCouple.rule)
-			writeFlash(START_FLASH_ADDRESS, (uint16_t *)driverInfo_P, sizeStruct);
+			wFlash(START_FLASH_ADDRESS, (uint16_t *)driverInfo_P, sizeStruct);
 		else if(flashCont->limitCouple.rule == 4)
 		{
 			ret = memcmp(flashCont->limitCouple.limitRules, driverInfo_P->limitCouple.limitRules, \
 			sizeof(flashCont->limitCouple.limitRules));
 			if(ret != 0)
-				writeFlash(START_FLASH_ADDRESS, (uint16_t *)driverInfo_P, sizeStruct);
+				wFlash(START_FLASH_ADDRESS, (uint16_t *)driverInfo_P, sizeStruct);
 		}
 		free(flashCont);
+		flashCont = NULL;
 	}
 
 	setPrevMenuExit(&prevMenuData);
@@ -448,12 +450,12 @@ static void ruleAutoMatch(void)
 		{
 			if(setting.now == SETTING_NOW_MON_1 || setting.now == SETTING_NOW_MON_2)//只有设置周一的数字会自动匹配规则
 			{
-				if(driverInfo_P->limitCouple.usedRule2 == false)	//匹配规则2没有使用过
+				if(coupleDetails.usedRule2 == false)	//匹配规则2没有使用过
 				{
-					driverInfo_P->limitCouple.usedRule2 = true;
+					coupleDetails.usedRule2 = true;
 					driverInfo_P->limitCouple.rule = 2;						//使用预设模式2
 					memcpy(driverInfo_P->limitCouple.limitRules, presetMode[1], sizeof(driverInfo_P->limitCouple.limitRules));		//使用预设模式2
-					driverInfo_P->limitCouple.matchTimes -= 1;
+					coupleDetails.matchTimes -= 1;
 					if(setting.now == SETTING_NOW_MON_1 && setting.val == 7)	//如果在周一的第一个数位置选择了规则2，把周一的两个号码交换位置
 						switchTwoNum(&driverInfo_P->limitCouple.limitRules[0], &driverInfo_P->limitCouple.limitRules[1]);
 				}	
@@ -463,12 +465,12 @@ static void ruleAutoMatch(void)
 		{
 			if(setting.now == SETTING_NOW_MON_1 || setting.now == SETTING_NOW_MON_2)//只有设置周一的数字会自动匹配规则
 			{
-				if(driverInfo_P->limitCouple.usedRule3 == false)			//匹配规则3没有使用过
+				if(coupleDetails.usedRule3 == false)			//匹配规则3没有使用过
 				{
-					driverInfo_P->limitCouple.usedRule3 = true;				
+					coupleDetails.usedRule3 = true;				
 					driverInfo_P->limitCouple.rule = 3;								//使用预设模式3
 					memcpy(driverInfo_P->limitCouple.limitRules, presetMode[5], sizeof(driverInfo_P->limitCouple.limitRules));		//使用预设模式3
-					driverInfo_P->limitCouple.matchTimes -= 1;	
+					coupleDetails.matchTimes -= 1;	
 					if(setting.now == SETTING_NOW_MON_1)						//如果在周一的第一个数位置选择了规则3，把周一的两个号码交换位置
 						switchTwoNum(&driverInfo_P->limitCouple.limitRules[0], &driverInfo_P->limitCouple.limitRules[1]);
 				}			
@@ -478,12 +480,12 @@ static void ruleAutoMatch(void)
 		{
 			if(setting.now == SETTING_NOW_MON_1 || setting.now == SETTING_NOW_MON_2)//只有设置周一的数字会自动匹配规则
 			{
-				if(driverInfo_P->limitCouple.usedRule1 == false)			//匹配规则1没有使用过
+				if(coupleDetails.usedRule1 == false)			//匹配规则1没有使用过
 				{
-					driverInfo_P->limitCouple.usedRule1 = true;				
+					coupleDetails.usedRule1 = true;				
 					driverInfo_P->limitCouple.rule = 1;								//使用预设模式1
 					memcpy(driverInfo_P->limitCouple.limitRules, presetMode[0], sizeof(driverInfo_P->limitCouple.limitRules));		//使用预设模式3
-					driverInfo_P->limitCouple.matchTimes -= 1;	
+					coupleDetails.matchTimes -= 1;	
 					if(setting.now == SETTING_NOW_MON_1 && setting.val == 6)						//如果在周一的第一个数位置选择了规则1，把周一的两个号码交换位置
 						switchTwoNum(&driverInfo_P->limitCouple.limitRules[0], &driverInfo_P->limitCouple.limitRules[1]);
 				}			
