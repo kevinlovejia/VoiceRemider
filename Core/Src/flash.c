@@ -127,14 +127,14 @@ void Test_Write(uint32_t WriteAddr,uint16_t WriteData)
 
 void writeFlash(uint32_t WriteAddr,uint16_t *pBuffer,uint16_t NumToWrite)
 {
-	//step 1. 读取flash内容
-	static driverInfo_s testFlash;
-	static int ret = 0;
-	STMFLASH_Read(WriteAddr, (uint16_t *)&testFlash, NumToWrite);
-	//step 2. 比较读取和写入内容是否一致
-	ret = memcmp(pBuffer, (uint16_t *)&testFlash, NumToWrite);
-	//step 3. 写入数据或者退出
-	if(ret)			//ret = 0 两个内存区域相等,不相等再存储
+//	//step 1. 读取flash内容
+//	static driverInfo_s testFlash;
+//	static int ret = 0;
+//	STMFLASH_Read(WriteAddr, (uint16_t *)&testFlash, NumToWrite);
+//	//step 2. 比较读取和写入内容是否一致
+//	ret = memcmp(pBuffer, (uint16_t *)&testFlash, NumToWrite);
+//	//step 3. 写入数据或者退出
+//	if(ret)			//ret = 0 两个内存区域相等,不相等再存储
 		STMFLASH_Write(WriteAddr, pBuffer, NumToWrite);
 }
 void readFlash(uint32_t ReadAddr,uint16_t *pBuffer,uint16_t NumToRead)
