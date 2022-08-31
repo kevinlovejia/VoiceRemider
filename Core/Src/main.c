@@ -126,7 +126,7 @@ int main(void)
 	alarm_init();              //无法储存闹钟，每次重启以后需要自定义
 	Set_PCF8563_date();
 	pwrmgr_init();
-	console_log(10,"START !");
+	console_log(500,"START !");
 	display_set(watchface_normal);
 	display_load();//启动表盘	
 

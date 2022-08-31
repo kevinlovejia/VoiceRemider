@@ -38,7 +38,7 @@ void modeOddevenSelect()
 
 	setPrevMenuOpen(&prevMenuData, modeOddevenSelect);	
 
-	//1.??flash???????????????????????
+	//1.从flash读取当前的单双号模式和退出天数
 	static unsigned int sizeStruct = 0;
 	sizeStruct = sizeof(driverInfo);
 	readFlash(START_FLASH_ADDRESS, (uint16_t *)&driverInfo, sizeStruct);
@@ -69,7 +69,7 @@ static void mUp()
 	if(menuData.selected == 3)
 		prevOption();
 	// Some lines are blank, skip them
-	if(menuData.selected == 0 || menuData.selected == 2)
+	if(menuData.selected == 0 || menuData.selected == 2 || menuData.selected == 4)
 		prevOption();
 }
 
@@ -101,9 +101,9 @@ static void showOddEvenStr(void)
 	byte fontArr[6] = {16, 18, 16, 15, 19, 7};
 	
 	if(driverInfo.limitDS.normal == 0)
-		fontArr[0] = 16;//??
+		fontArr[0] = 16;//单
 	else
-		fontArr[0] = 17;//?
+		fontArr[0] = 17;//双
 	LOOP(6, cnt)
 	{			
 		draw_bitmap(PARAM_X+cnt*16, 8, textDisplay[fontArr[cnt]], 16, 16, NOINVERT, 0);
@@ -289,7 +289,7 @@ static void selectDaysleftNum()
 			break;
 		case SETTING_NOW_START_M:	
 			setting.now = SETTING_NOW_START_D;		
-			setting.val = driverInfo.limitDS.startYMD[1];			
+			setting.val = driverInfo.limitDS.startYMD[1];
 			break;
 		case SETTING_NOW_START_D:
 			setting.now = SETTING_NOW_END_Y;

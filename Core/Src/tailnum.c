@@ -60,9 +60,7 @@ static void mSelect()
 //		//save rules to flash
 		unsigned int sizeStruct = 0;
 		sizeStruct = sizeof(driverInfo);
-//		readFlash(START_FLASH_ADDRESS, (uint16_t *)&flashInfo, sizeStruct);
-//		if(flashInfo.tailNo != driverInfo.tailNo)
-			writeFlash(START_FLASH_ADDRESS, (uint16_t *)&driverInfo, sizeStruct);
+		writeFlash(START_FLASH_ADDRESS, (uint16_t *)&driverInfo, sizeStruct);
 	}
 }
 
@@ -75,7 +73,11 @@ static void itemLoader(byte num)
 
 static void setMenuOptions()
 {
-	byte fontPos = driverInfo.tailNo & 0xFF;									//????????????????????
+//	setMenuOption_P(0, PSTR(STR_UI), menu_volume[volUI], setVolumeUI);
+//	setMenuOption_P(1, PSTR(STR_ALARMS), menu_volume[volAlarm], setVolumeAlarm);
+//	setMenuOption_P(2, PSTR(STR_HOURBEEPS), menu_volume[volHour], setVolumeHour);
+	
+	byte fontPos = driverInfo.tailNo;																	//不转换直接使用会硬件故障，
 	setMenuOption_P(0, PSTR(STR_UI), arial_font[fontPos], selectTailNum);
 }
 
@@ -149,7 +151,8 @@ static void selectTailNum()
 			if(driverInfo.tailNo > 9)
 				driverInfo.tailNo = 9;
 //			setting.now = SETTING_NOW_NONE;
-			setting.val = driverInfo.tailNo & 0xFF;			
+			setting.val = driverInfo.tailNo;
+			
 			endSelect();
 			break;
 		default: // Also SETTING_NOW_FINISH
@@ -159,13 +162,8 @@ static void selectTailNum()
 	}	
 }
 
-//static void makeTailNumStr(char* buff)
-//{
-//	byte fontPos = driverInfo.tailNo;	
-//	draw_bitmap(4, 28 + 4 - 16, menu_tailnum[1] , 32, 32, NOINVERT, 0);			//β
-//	draw_bitmap(4+34, 28 + 4 - 16, menu_tailnum[2] , 32, 32, NOINVERT, 0);	//??
-//	draw_bitmap(4+34+34, 24, midFont[fontPos] , 19, 24, INVERT, 0);// 19x24
-//}
+
+
 
 //static void showTailNumStr()
 //{

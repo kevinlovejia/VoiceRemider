@@ -91,12 +91,16 @@ typedef struct {
 	time_s time;
 	date_s date;
 }timeDate_s;
-//??1
+//模式1
 typedef struct {
-	byte limitRules[10];				//?????????????Щβ??
-	byte rule;									//rule=1,2,3,4 ????1,????2,????3,????????
-}limitCouple_s;								//?????????
-
+	byte limitRules[10];				//周一到周五限哪些尾号
+	bool usedRule1;							//是否使用了匹配规则1
+	bool usedRule2;							//是否使用了匹配规则2
+	bool usedRule3;							//是否使用了匹配规则3
+	byte rule;									//rule=1,2,3,4 规则1,规则2,规则3,自定义规则
+	byte matchTimes;							//一天限俩号模式下，自动匹配三次
+}limitCouple_s;								//一天限俩号
+//模式2
 typedef struct {
 	bool usedRule1;							//??????????????1
 	bool usedRule2;							//??????????????2
@@ -231,10 +235,10 @@ typedef struct{
 }prev_menu_s;
 
 typedef struct{
-	bool active;             //????
-	byte offsetY;            //???Y
-	void (*animOnComplete)(void);    //???????
-	bool goingOffScreen;   //????????
+	bool active;             //开关
+	byte offsetY;            //反转Y
+	void (*animOnComplete)(void);    //指向的函数
+	bool goingOffScreen;   //是否离开屏幕
 }anim_s;
 
 typedef struct{

@@ -11,10 +11,10 @@
 #include "main.h"
 
 //用户根据自己的需要设置
-#define STM32_FLASH_SIZE 	64 	 						//所选STM32的FLASH容量大小(单位为K)
-#define STM32_FLASH_WREN 	1              	//使能FLASH写入(0：不使能；1：使能)
-#define FLASH_WAITETIME  	50000          	//FLASH等待超时时间
-#define START_FLASH_ADDRESS	0x0800FC00		//flash存入地址
+#define STM32_FLASH_SIZE 			64 	 						//所选STM32的FLASH容量大小(单位为K)
+#define STM32_FLASH_WREN 			1              	//使能FLASH写入(0：不使能；1：使能)
+#define FLASH_WAITETIME  			50000          	//FLASH等待超时时间
+#define START_FLASH_ADDRESS		0x0800FA00			//flash存入地址
 
 extern void    FLASH_PageErase(uint32_t PageAddress);
 
