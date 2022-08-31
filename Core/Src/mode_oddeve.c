@@ -38,10 +38,11 @@ void modeOddevenSelect()
 	setMenuFuncs(mDown, mSelect, mUp, itemLoader);
 
 	setPrevMenuOpen(&prevMenuData, modeOddevenSelect);
-	//1.从flash读取当前的单双号模式和退出天数
+	//1.从flash读取当前的单双号模式和退出时间
 	static unsigned int sizeStruct = 0;
 	sizeStruct = sizeof(driverInfo_s);
 	readFlash(START_FLASH_ADDRESS, (uint16_t *)driverInfo_P, sizeStruct);
+	driverInfo_P->mode = 2;
 	checkDataValid();
 	menuData.selected = 1;	
 	beginAnimation2(NULL);
@@ -77,24 +78,19 @@ static void mSelect()
 	if(isExiting)
 	{
 		//save rules to flash	
-		unsigned int sizeStruct = 0, ret = 99;
-		sizeStruct = sizeof(driverInfo_s);			
-		driverInfo_s *flashCont;
-		flashCont = (driverInfo_s *)malloc(sizeof(driverInfo_s));
-		if(flashCont == NULL)
-			while(1);//Todo: 
-		readFlash(START_FLASH_ADDRESS, (uint16_t *)flashCont, sizeStruct);
+		unsigned int ret = 99;
+		readFlash(START_FLASH_ADDRESS, (uint16_t *)flashCont, sizeof(driverInfo_s));
 		if(flashCont->limitDS.normal != driverInfo_P->limitDS.normal)
-			wFlash(START_FLASH_ADDRESS, (uint16_t *)driverInfo_P, sizeStruct);
+			wFlash(START_FLASH_ADDRESS, (uint16_t *)driverInfo_P, sizeof(driverInfo_s));
 		else
 		{
 			ret = memcmp(flashCont->limitDS.endYMD, driverInfo_P->limitDS.endYMD, \
 			sizeof(flashCont->limitDS.endYMD));
 			if(ret != 0)
-				wFlash(START_FLASH_ADDRESS, (uint16_t *)driverInfo_P, sizeStruct);
+				wFlash(START_FLASH_ADDRESS, (uint16_t *)driverInfo_P, sizeof(driverInfo_s));
 		}
-		free(flashCont);
-		flashCont = NULL;
+		if(flashCont->mode != driverInfo_P->mode)
+			wFlash(START_FLASH_ADDRESS, (uint16_t *)driverInfo_P, sizeof(driverInfo_s));
 	}
 	setPrevMenuExit(&prevMenuData);
 	doAction(exitSelected());	

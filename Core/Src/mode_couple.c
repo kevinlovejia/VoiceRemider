@@ -82,6 +82,7 @@ void modeCoupleSelect()
 //	// static driverInfo_s inFlash;
 //	sizeStruct = sizeof(driverInfo);
 	readFlash(START_FLASH_ADDRESS, (uint16_t *)driverInfo_P, sizeof(driverInfo_s));
+	driverInfo_P->mode = 1;		//selected mode 1
 	//2.?????123??????????presetMode???????????
 	//driverInfo_P->limitCouple.rule = 1;							//????????1,????????????
 	coupleDetails.matchTimes = 3;									//???????????????????????????
@@ -125,24 +126,20 @@ static void mSelect()
 	if(isExiting)
 	{
 		//save rules to flash	
-		unsigned int sizeStruct = 0, ret = 99;
-		sizeStruct = sizeof(driverInfo_s);			
-		driverInfo_s *flashCont;
-		flashCont = (driverInfo_s *)malloc(sizeof(driverInfo_s));
-		if(flashCont == NULL)
-			while(1);//Todo: 
-		readFlash(START_FLASH_ADDRESS, (uint16_t *)flashCont, sizeStruct);
+		unsigned int ret = 99;
+
+		readFlash(START_FLASH_ADDRESS, (uint16_t *)flashCont, sizeof(driverInfo_s));
 		if(flashCont->limitCouple.rule != driverInfo_P->limitCouple.rule)
-			wFlash(START_FLASH_ADDRESS, (uint16_t *)driverInfo_P, sizeStruct);
+			wFlash(START_FLASH_ADDRESS, (uint16_t *)driverInfo_P, sizeof(driverInfo_s));
 		else if(flashCont->limitCouple.rule == 4)
 		{
 			ret = memcmp(flashCont->limitCouple.limitRules, driverInfo_P->limitCouple.limitRules, \
 			sizeof(flashCont->limitCouple.limitRules));
 			if(ret != 0)
-				wFlash(START_FLASH_ADDRESS, (uint16_t *)driverInfo_P, sizeStruct);
+				wFlash(START_FLASH_ADDRESS, (uint16_t *)driverInfo_P, sizeof(driverInfo_s));
 		}
-		free(flashCont);
-		flashCont = NULL;
+		if(flashCont->mode != driverInfo_P->mode)
+			wFlash(START_FLASH_ADDRESS, (uint16_t *)driverInfo_P, sizeof(driverInfo_s));
 	}
 
 	setPrevMenuExit(&prevMenuData);

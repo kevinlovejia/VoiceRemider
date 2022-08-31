@@ -22,7 +22,7 @@ static void selectCoupleLoop(void);
 
 void mode_select()
 {
-	// Create copy of current time & date
+// Create copy of current time & date
 //	memcpy(&timeDateSet, &timeDate, sizeof(timeDate_s));
 //	timeMode = appConfig.timeMode;
 
@@ -42,7 +42,6 @@ void mode_select()
 	beginAnimation2(NULL);
 }
 
-
 static void mSelect()
 {
 	bool isExiting = exitSelected();
@@ -50,9 +49,7 @@ static void mSelect()
 		appconfig_save();
  
 	setPrevMenuExit(&prevMenuData);
-	doAction(isExiting);
-	
-	
+	doAction(isExiting);	
 }
 
 static void itemLoader(byte num)
@@ -85,15 +82,12 @@ static void setMenuOptions()
 }	
 
 static void selectCouple()
-{
-
-	driverInfo_P->mode = 1;	
+{		
 	modeCoupleSelect();
 }
 
 static void selectOddOrEven()
 {
-	driverInfo_P->mode = 2;
 	modeOddevenSelect();
 }
 

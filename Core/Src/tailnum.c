@@ -13,7 +13,7 @@
 #define SETTING_NOW_FINISH	2
 
 static prev_menu_s prevMenuData;
-driverInfo_s driverInfo, *driverInfo_P;
+driverInfo_s *flashCont, *driverInfo_P;
 //static driverInfo_s flashInfo;
 static void mSelect(void);
 static void itemLoader(byte num);
@@ -48,17 +48,9 @@ static void mSelect()
 	if(isExiting)
 	{
 		//save rules to flash
-		unsigned int sizeStruct = 0;
-		sizeStruct = sizeof(driverInfo);
-		driverInfo_s *flashCont;
-		flashCont = (driverInfo_s *)malloc(sizeof(driverInfo_s));
-		if(flashCont == NULL)
-			while(1);//Todo: 		
-		readFlash(START_FLASH_ADDRESS, (uint16_t *)flashCont, sizeStruct);
+		readFlash(START_FLASH_ADDRESS, (uint16_t *)flashCont, sizeof(driverInfo_s));
 		if(flashCont->tailNo != driverInfo_P->tailNo)
-			wFlash(START_FLASH_ADDRESS, (uint16_t *)driverInfo_P, sizeStruct);
-		free(flashCont);
-		flashCont = NULL;
+			wFlash(START_FLASH_ADDRESS, (uint16_t *)driverInfo_P, sizeof(driverInfo_s));		
 	}
 }
 

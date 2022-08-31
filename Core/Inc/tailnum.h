@@ -9,6 +9,6 @@
 #define TAILNUM_H_
 
 void tailnum_select(void);
-extern driverInfo_s *driverInfo_P;
+extern driverInfo_s *flashCont, *driverInfo_P;;
 
 #endif /* TAILNUM_H_ */
