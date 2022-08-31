@@ -126,7 +126,7 @@ static void showDaysleftStr(void)		//????N??????????
 	byte fontArr[4] = {27, 28, 25, 26};
 	byte xArr[10] = {6, 6+11,  6+11+11+8, 6+11+11+8+11, 6+11+11+8+11+11+8, 6+11+11+8+11+11+8+11};
 	byte highB = 0, lowB = 0;
-	LOOP(6, cnt)					//????????6???????????
+	LOOP(6, cnt)					//draw 6 start year, month, day
 	{	
 		highB = driverInfo_P->limitDS.startYMD[cnt/2] / 10;
 		lowB = driverInfo_P->limitDS.startYMD[cnt/2] % 10;
@@ -134,7 +134,7 @@ static void showDaysleftStr(void)		//????N??????????
 		draw_bitmap(xArr[cnt+1], 8+16, numFont11x16[lowB],  11, 16, NOINVERT, 0);	
 		cnt += 1;
 	}
-	LOOP(6, cnt)					//?????????6???????????
+	LOOP(6, cnt)					//draw 6 end year, month, day
 	{	
 		highB = driverInfo_P->limitDS.endYMD[cnt/2] / 10;
 		lowB = driverInfo_P->limitDS.endYMD[cnt/2] % 10;
@@ -142,7 +142,7 @@ static void showDaysleftStr(void)		//????N??????????
 		draw_bitmap(xArr[cnt+1], 8+16+16, numFont11x16[lowB],  11, 16, NOINVERT, 0);	
 		cnt += 1;
 	}
-	LOOP(32, y)						//????????????4????????
+	LOOP(32, y)						//draw 4 point
 	{
 		draw_bitmap(28, 8+16+y, numFont11x16[11], 8, 16, NOINVERT, 0);	
 		draw_bitmap(58, 8+16+y, numFont11x16[11],  8, 16, NOINVERT, 0);
@@ -294,23 +294,23 @@ static void selectDaysleftNum()
 			break;
 		case SETTING_NOW_START_Y:
 			setting.now = SETTING_NOW_START_M;
-			setting.val = driverInfo_P->limitDS.startYMD[0];
+			setting.val = driverInfo_P->limitDS.startYMD[1];
 			break;
 		case SETTING_NOW_START_M:	
 			setting.now = SETTING_NOW_START_D;		
-			setting.val = driverInfo_P->limitDS.startYMD[1];
+			setting.val = driverInfo_P->limitDS.startYMD[2];
 			break;
 		case SETTING_NOW_START_D:
 			setting.now = SETTING_NOW_END_Y;
-			setting.val = driverInfo_P->limitDS.startYMD[2];
+			setting.val = driverInfo_P->limitDS.endYMD[0];
 			break;
 		case SETTING_NOW_END_Y:
 			setting.now = SETTING_NOW_END_M;
-			setting.val = driverInfo_P->limitDS.endYMD[0];
+			setting.val = driverInfo_P->limitDS.endYMD[1];
 			break;
 		case SETTING_NOW_END_M:
 			setting.now = SETTING_NOW_END_D;
-			setting.val = driverInfo_P->limitDS.endYMD[1];
+			setting.val = driverInfo_P->limitDS.endYMD[2];
 			break;
 		case SETTING_NOW_END_D:
 			setting.val = driverInfo_P->limitDS.endYMD[2];
@@ -380,6 +380,8 @@ void paramUpdate(void)
 void checkDataValid(void)
 {
 	byte cnt;
+	if(driverInfo_P->limitDS.normal > 1)
+		driverInfo_P->limitDS.normal = 0;
 	for(cnt = 0; cnt < 3; cnt++)
 	{
 		if(driverInfo_P->limitDS.startYMD[cnt] == 0 || driverInfo_P->limitDS.startYMD[cnt] == 0xFF)

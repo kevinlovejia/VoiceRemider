@@ -108,7 +108,7 @@ typedef struct {
 
 //Mode 2
 typedef struct {
-	bool normal;								//=0 single tail num drive in single days, 1=else
+	bool normal;								//=1 single tail num drive in single days, 0=else
 	byte startYMD[3];						//
 	byte endYMD[3];							//
 }limitDS_s;										//?????
