@@ -86,25 +86,14 @@ static void setMenuOptions()
 
 static void selectCouple()
 {
-//   volUI = setVolume(volUI);
 
-	//appConfig.volUI = setVolume(appConfig.volUI);
-	//画出来了但是又被擦掉了，一直在画图
-//	char name[3];
-//	sprintf(name,"%d",appConfig.volUI);
-//	draw_string((char*)name, false, 64, FRAME_HEIGHT - 8);	
-
-	driverInfo.mode = 1;	
+	driverInfo_P->mode = 1;	
 	modeCoupleSelect();
 }
 
 static void selectOddOrEven()
 {
-//	volAlarm = setVolume(volAlarm);
-
-	//appConfig.volAlarm = setVolume(appConfig.volAlarm);
-
-	driverInfo.mode = 2;
+	driverInfo_P->mode = 2;
 	modeOddevenSelect();
 }
 
@@ -114,7 +103,7 @@ static void selectCoupleLoop()
 
 	//appConfig.volHour = setVolume(appConfig.volHour);
 
-	driverInfo.mode = 3;
+	driverInfo_P->mode = 3;
 }
 
 

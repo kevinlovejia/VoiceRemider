@@ -23,6 +23,8 @@
 #define WEEKNUM_X1					48//6+16+16+8+2
 #define WEEKNUM_X2					79//6+16+16+8+11+16+2+4
 
+//static driverInfo_s driverInfo;
+
 static prev_menu_s prevMenuData;
 limCoupLocal_s coupleDetails;
 static void mSelect(void);
@@ -76,48 +78,20 @@ void modeCoupleSelect()
 	setPrevMenuOpen(&prevMenuData, modeCoupleSelect);	
 
 	//1.从flash读取当前的限号规则是多少
-	static unsigned int sizeStruct = 0;
-	// static driverInfo_s inFlash;
-	sizeStruct = sizeof(driverInfo);
-	readFlash(START_FLASH_ADDRESS, (uint16_t *)&inFlash, sizeStruct);
-	//2.如果是123规则，则直接从presetMode中读取默认规则
-	driverInfo.limitCouple.rule = 1;							//使用预设模式1,以防数据存储失败
-	driverInfo.limitCouple.matchTimes = 3;									//每次进入界面，设置一次自动匹配次数
-	if(inFlash.limitCouple.rule > 0 && inFlash.limitCouple.rule < 4)
+//	static unsigned int sizeStruct = 0;
+//	// static driverInfo_s inFlash;
+//	sizeStruct = sizeof(driverInfo);
+//	readFlash(START_FLASH_ADDRESS, (uint16_t *)&driverInfo, sizeStruct);
+	//2.?????123??????????presetMode???????????
+	//driverInfo_P->limitCouple.rule = 1;							//????????1,????????????
+	coupleDetails.matchTimes = 3;									//???????????????????????????
+	coupleDetails.usedRule1 = false;
+	coupleDetails.usedRule2 = false;
+	coupleDetails.usedRule3 = false;
+
+	if(driverInfo_P->limitCouple.rule == 0 || driverInfo_P->limitCouple.rule > 4) //???????
 	{
-		if(inFlash.limitCouple.rule == 3)
-			ruleInFlash = 5;
-		else 
-			ruleInFlash = inFlash.limitCouple.rule-1;
-		memcpy(driverInfo.limitCouple.limitRules, presetMode[ruleInFlash], sizeof(driverInfo.limitCouple.limitRules));
-		driverInfo.limitCouple.matchTimes -= 1;				//自动匹配次数减1
-		driverInfo.limitCouple.rule = inFlash.limitCouple.rule;
-		if(driverInfo.limitCouple.rule == 1)
-		{
-			driverInfo.limitCouple.usedRule1 = true;		//初始化匹配规则2和3的标志位
-			driverInfo.limitCouple.usedRule2 = false;
-			driverInfo.limitCouple.usedRule3 = false;
-		}
-		else if(driverInfo.limitCouple.rule == 2)
-		{
-			driverInfo.limitCouple.usedRule1 = false;
-			driverInfo.limitCouple.usedRule2 = true;		//初始化匹配规则2和3的标志位
-			driverInfo.limitCouple.usedRule3 = false;
-		}
-		else if(driverInfo.limitCouple.rule == 3)
-		{
-			driverInfo.limitCouple.usedRule1 = false;
-			driverInfo.limitCouple.usedRule2 = false;
-			driverInfo.limitCouple.usedRule3 = true;
-		}
-	}
-	else	//3.如果是4规则，从flash读取
-	{
-		memcpy(driverInfo.limitCouple.limitRules, inFlash.limitCouple.limitRules, sizeof(driverInfo.limitCouple.limitRules));
-		driverInfo.limitCouple.usedRule1 = false;
-		driverInfo.limitCouple.usedRule2 = false;
-		driverInfo.limitCouple.usedRule3 = false;
-		driverInfo.limitCouple.rule = 4;
+		memcpy(driverInfo_P->limitCouple.limitRules, presetMode[0], sizeof(driverInfo_P->limitCouple.limitRules));
 	}
 	menuData.selected = 1;
 	
@@ -149,15 +123,25 @@ static void mSelect()
 	bool isExiting = exitSelected();
 	if(isExiting)
 	{
-		//save rules to flash
-		static unsigned int sizeStruct = 0;
-		sizeStruct = sizeof(driverInfo);
-		writeFlash(START_FLASH_ADDRESS, (uint16_t *)&driverInfo, sizeStruct);
+		//save rules to flash	
+		unsigned int sizeStruct = 0, ret = 99;
+		sizeStruct = sizeof(driverInfo_s);			
+		driverInfo_s *flashCont;
+		flashCont = (driverInfo_s *)malloc(sizeof(driverInfo_s));
+		if(flashCont == NULL)
+			while(1);//Todo: 
+		readFlash(START_FLASH_ADDRESS, (uint16_t *)flashCont, sizeStruct);
+		if(flashCont->limitCouple.rule != driverInfo_P->limitCouple.rule)
+			writeFlash(START_FLASH_ADDRESS, (uint16_t *)driverInfo_P, sizeStruct);
+		else if(flashCont->limitCouple.rule == 4)
+		{
+			ret = memcmp(flashCont->limitCouple.limitRules, driverInfo_P->limitCouple.limitRules, \
+			sizeof(flashCont->limitCouple.limitRules));
+			if(ret != 0)
+				writeFlash(START_FLASH_ADDRESS, (uint16_t *)driverInfo_P, sizeStruct);
+		}
+		free(flashCont);
 	}
-	
-//		appconfig_save();
-//	
-//	setMenuFuncs(mUp, mSelect, mDown, itemLoader);
 
 	setPrevMenuExit(&prevMenuData);
 	doAction(exitSelected());	
@@ -169,21 +153,6 @@ static void itemLoader(byte num)
 	showWeekStr(num);
 	addBackOption();
 }
-
-//static display_t thisdraw()
-//{
-//	char name[3];
-//	
-//	switch(menuData.selected)
-//	{
-//		case 0:sprintf(name,"%d",appConfig.volUI);break;
-//		case 1:sprintf(name,"%d",appConfig.volAlarm);break;
-//		case 2:sprintf(name,"%d",appConfig.volHour);break;
-//	}
-//	
-//	draw_string((char*)name, false, 122, 0);
-//	return DISPLAY_DONE;
-//}
 
 static display_t weekNumDraw()
 {
@@ -285,7 +254,7 @@ static void showWeekStr(byte num)
 				break;
 			case 3://1
 				wordWidth = 11;
-				fontValue = driverInfo.limitCouple.limitRules[weekCalc*2];
+				fontValue = driverInfo_P->limitCouple.limitRules[weekCalc*2];
 				bitmp = numFont11x16[fontValue];
 				break;
 			case 4://和
@@ -294,7 +263,7 @@ static void showWeekStr(byte num)
 				break;
 			case 5://6
 				wordWidth = 11;
-				fontValue = driverInfo.limitCouple.limitRules[weekCalc*2+1];
+				fontValue = driverInfo_P->limitCouple.limitRules[weekCalc*2+1];
 				bitmp = numFont11x16[fontValue];
 				break;
 			case 6://限
@@ -308,9 +277,6 @@ static void showWeekStr(byte num)
 			default:
 				break;
 		}
-//		if(posY == 0)	//当前坐标会盖住标题
-//			draw_bitmap(posXArray[cnt], 8, bitmp+wordWidth, wordWidth, 8, NOINVERT, 0);//只显示汉字的下半部分
-//		else	
 		draw_bitmap(posXArray[cnt], posY, bitmp, wordWidth, 16, NOINVERT, 0);
 	}	
 	setMenuOption(1+weekCalc*2, buff, NULL, weekDrawFunc[weekCalc]);
@@ -322,7 +288,7 @@ static void weekNumDataUp()
 	if(setting.val > 9)
 		setting.val = 0;
 	ruleAutoMatch();
-	driverInfo.limitCouple.limitRules[setting.now-1] = setting.val;			//?????????????????????????
+	driverInfo_P->limitCouple.limitRules[setting.now-1] = setting.val;			//?????????????????????????
 }
 
 static void weekNumDataDown()
@@ -333,7 +299,7 @@ static void weekNumDataDown()
 	if(setting.val > max)																		// Overflow
 		setting.val = max;
 	ruleAutoMatch();
-	driverInfo.limitCouple.limitRules[setting.now-1] = setting.val;			//?????????????????????????
+	driverInfo_P->limitCouple.limitRules[setting.now-1] = setting.val;			//?????????????????????????
 }
 
 static void beginSelect()
@@ -359,14 +325,14 @@ static void selectMondayNum()
 	{
 		case SETTING_NOW_NONE:
 			setting.now = SETTING_NOW_MON_1;
-			setting.val = driverInfo.limitCouple.limitRules[SETTING_NOW_MON_1-1];
+			setting.val = driverInfo_P->limitCouple.limitRules[SETTING_NOW_MON_1-1];
 			break;
 		case SETTING_NOW_MON_1:
 			setting.now = SETTING_NOW_MON_2;
-			setting.val = driverInfo.limitCouple.limitRules[SETTING_NOW_MON_2-1];			
+			setting.val = driverInfo_P->limitCouple.limitRules[SETTING_NOW_MON_2-1];			
 			break;
 		case SETTING_NOW_MON_2:
-			setting.val = driverInfo.limitCouple.limitRules[SETTING_NOW_MON_2-1];		
+			setting.val = driverInfo_P->limitCouple.limitRules[SETTING_NOW_MON_2-1];		
 			endSelect();
 			break;
 		default:
@@ -383,14 +349,14 @@ static void selectTuesdayNum()
 	{
 		case SETTING_NOW_NONE:
 			setting.now = SETTING_NOW_TUE_1;
-			setting.val = driverInfo.limitCouple.limitRules[SETTING_NOW_TUE_1-1];
+			setting.val = driverInfo_P->limitCouple.limitRules[SETTING_NOW_TUE_1-1];
 			break;
 		case SETTING_NOW_TUE_1:
 			setting.now = SETTING_NOW_TUE_2;
-			setting.val = driverInfo.limitCouple.limitRules[SETTING_NOW_TUE_2-1];
+			setting.val = driverInfo_P->limitCouple.limitRules[SETTING_NOW_TUE_2-1];
 			break;
 		case SETTING_NOW_TUE_2:
-			setting.val = driverInfo.limitCouple.limitRules[SETTING_NOW_TUE_2-1];
+			setting.val = driverInfo_P->limitCouple.limitRules[SETTING_NOW_TUE_2-1];
 			endSelect();
 			break;
 		default:
@@ -408,14 +374,14 @@ static void selectWednesdayNum()
 	{
 		case SETTING_NOW_NONE:
 			setting.now = SETTING_NOW_WED_1;
-			setting.val = driverInfo.limitCouple.limitRules[SETTING_NOW_WED_1-1];
+			setting.val = driverInfo_P->limitCouple.limitRules[SETTING_NOW_WED_1-1];
 			break;
 		case SETTING_NOW_WED_1:
 			setting.now = SETTING_NOW_WED_2;
-			setting.val = driverInfo.limitCouple.limitRules[SETTING_NOW_WED_2-1];
+			setting.val = driverInfo_P->limitCouple.limitRules[SETTING_NOW_WED_2-1];
 			break;
 		case SETTING_NOW_WED_2:
-			setting.val = driverInfo.limitCouple.limitRules[SETTING_NOW_WED_2-1];
+			setting.val = driverInfo_P->limitCouple.limitRules[SETTING_NOW_WED_2-1];
 			endSelect();
 			break;
 		default:
@@ -432,14 +398,14 @@ static void selectThursdayNum()
 	{
 		case SETTING_NOW_NONE:
 			setting.now = SETTING_NOW_THU_1;
-			setting.val = driverInfo.limitCouple.limitRules[SETTING_NOW_THU_1-1];
+			setting.val = driverInfo_P->limitCouple.limitRules[SETTING_NOW_THU_1-1];
 			break;
 		case SETTING_NOW_THU_1:
 			setting.now = SETTING_NOW_THU_2;
-			setting.val = driverInfo.limitCouple.limitRules[SETTING_NOW_THU_2-1];
+			setting.val = driverInfo_P->limitCouple.limitRules[SETTING_NOW_THU_2-1];
 			break;
 		case SETTING_NOW_THU_2:
-			setting.val = driverInfo.limitCouple.limitRules[SETTING_NOW_THU_2-1];
+			setting.val = driverInfo_P->limitCouple.limitRules[SETTING_NOW_THU_2-1];
 			endSelect();
 			break;
 		default: 
@@ -457,14 +423,14 @@ static void selectFridayNum()
 	{
 		case SETTING_NOW_NONE:
 			setting.now = SETTING_NOW_FRI_1;
-			setting.val = driverInfo.limitCouple.limitRules[SETTING_NOW_FRI_1-1];
+			setting.val = driverInfo_P->limitCouple.limitRules[SETTING_NOW_FRI_1-1];
 			break;
 		case SETTING_NOW_FRI_1:
 			setting.now = SETTING_NOW_FRI_2;
-			setting.val = driverInfo.limitCouple.limitRules[SETTING_NOW_FRI_2-1];
+			setting.val = driverInfo_P->limitCouple.limitRules[SETTING_NOW_FRI_2-1];
 			break;
 		case SETTING_NOW_FRI_2:
-			setting.val = driverInfo.limitCouple.limitRules[SETTING_NOW_FRI_2-1];
+			setting.val = driverInfo_P->limitCouple.limitRules[SETTING_NOW_FRI_2-1];
 			endSelect();
 			break;
 		default: 
@@ -482,14 +448,14 @@ static void ruleAutoMatch(void)
 		{
 			if(setting.now == SETTING_NOW_MON_1 || setting.now == SETTING_NOW_MON_2)//只有设置周一的数字会自动匹配规则
 			{
-				if(driverInfo.limitCouple.usedRule2 == false)	//匹配规则2没有使用过
+				if(driverInfo_P->limitCouple.usedRule2 == false)	//匹配规则2没有使用过
 				{
-					driverInfo.limitCouple.usedRule2 = true;
-					driverInfo.limitCouple.rule = 2;						//使用预设模式2
-					memcpy(driverInfo.limitCouple.limitRules, presetMode[1], sizeof(driverInfo.limitCouple.limitRules));		//使用预设模式2
-					driverInfo.limitCouple.matchTimes -= 1;
+					driverInfo_P->limitCouple.usedRule2 = true;
+					driverInfo_P->limitCouple.rule = 2;						//使用预设模式2
+					memcpy(driverInfo_P->limitCouple.limitRules, presetMode[1], sizeof(driverInfo_P->limitCouple.limitRules));		//使用预设模式2
+					driverInfo_P->limitCouple.matchTimes -= 1;
 					if(setting.now == SETTING_NOW_MON_1 && setting.val == 7)	//如果在周一的第一个数位置选择了规则2，把周一的两个号码交换位置
-						switchTwoNum(&driverInfo.limitCouple.limitRules[0], &driverInfo.limitCouple.limitRules[1]);
+						switchTwoNum(&driverInfo_P->limitCouple.limitRules[0], &driverInfo_P->limitCouple.limitRules[1]);
 				}	
 			}		
 		}
@@ -497,14 +463,14 @@ static void ruleAutoMatch(void)
 		{
 			if(setting.now == SETTING_NOW_MON_1 || setting.now == SETTING_NOW_MON_2)//只有设置周一的数字会自动匹配规则
 			{
-				if(driverInfo.limitCouple.usedRule3 == false)			//匹配规则3没有使用过
+				if(driverInfo_P->limitCouple.usedRule3 == false)			//匹配规则3没有使用过
 				{
-					driverInfo.limitCouple.usedRule3 = true;				
-					driverInfo.limitCouple.rule = 3;								//使用预设模式3
-					memcpy(driverInfo.limitCouple.limitRules, presetMode[5], sizeof(driverInfo.limitCouple.limitRules));		//使用预设模式3
-					driverInfo.limitCouple.matchTimes -= 1;	
+					driverInfo_P->limitCouple.usedRule3 = true;				
+					driverInfo_P->limitCouple.rule = 3;								//使用预设模式3
+					memcpy(driverInfo_P->limitCouple.limitRules, presetMode[5], sizeof(driverInfo_P->limitCouple.limitRules));		//使用预设模式3
+					driverInfo_P->limitCouple.matchTimes -= 1;	
 					if(setting.now == SETTING_NOW_MON_1)						//如果在周一的第一个数位置选择了规则3，把周一的两个号码交换位置
-						switchTwoNum(&driverInfo.limitCouple.limitRules[0], &driverInfo.limitCouple.limitRules[1]);
+						switchTwoNum(&driverInfo_P->limitCouple.limitRules[0], &driverInfo_P->limitCouple.limitRules[1]);
 				}			
 			}
 		}
@@ -512,22 +478,22 @@ static void ruleAutoMatch(void)
 		{
 			if(setting.now == SETTING_NOW_MON_1 || setting.now == SETTING_NOW_MON_2)//只有设置周一的数字会自动匹配规则
 			{
-				if(driverInfo.limitCouple.usedRule1 == false)			//匹配规则1没有使用过
+				if(driverInfo_P->limitCouple.usedRule1 == false)			//匹配规则1没有使用过
 				{
-					driverInfo.limitCouple.usedRule1 = true;				
-					driverInfo.limitCouple.rule = 1;								//使用预设模式1
-					memcpy(driverInfo.limitCouple.limitRules, presetMode[0], sizeof(driverInfo.limitCouple.limitRules));		//使用预设模式3
-					driverInfo.limitCouple.matchTimes -= 1;	
+					driverInfo_P->limitCouple.usedRule1 = true;				
+					driverInfo_P->limitCouple.rule = 1;								//使用预设模式1
+					memcpy(driverInfo_P->limitCouple.limitRules, presetMode[0], sizeof(driverInfo_P->limitCouple.limitRules));		//使用预设模式3
+					driverInfo_P->limitCouple.matchTimes -= 1;	
 					if(setting.now == SETTING_NOW_MON_1 && setting.val == 6)						//如果在周一的第一个数位置选择了规则1，把周一的两个号码交换位置
-						switchTwoNum(&driverInfo.limitCouple.limitRules[0], &driverInfo.limitCouple.limitRules[1]);
+						switchTwoNum(&driverInfo_P->limitCouple.limitRules[0], &driverInfo_P->limitCouple.limitRules[1]);
 				}			
 			}
 		}
 		else//当前的值为0,3,4,5,8时
-			driverInfo.limitCouple.rule = 4;									//使用自定义模式4			
+			driverInfo_P->limitCouple.rule = 4;									//使用自定义模式4			
 	}
 	else
-		driverInfo.limitCouple.rule = 4;										//使用自定义模式4
+		driverInfo_P->limitCouple.rule = 4;										//使用自定义模式4
 }
 
 void switchTwoNum(byte *one, byte *two)

@@ -19,6 +19,7 @@
 #define SETTING_NOW_END_M			6
 #define SETTING_NOW_END_D			7
 
+//static driverInfo_s driverInfo;
 static prev_menu_s prevMenuData;
 static void mSelect(void);
 static void itemLoader(byte num);
@@ -36,12 +37,11 @@ void modeOddevenSelect()
 	setMenuInfo(OPTION_COUNT, MENU_TYPE_STR, PSTR(STR_LIMITODDOREVEN));
 	setMenuFuncs(mDown, mSelect, mUp, itemLoader);
 
-	setPrevMenuOpen(&prevMenuData, modeOddevenSelect);	
-
+	setPrevMenuOpen(&prevMenuData, modeOddevenSelect);
 	//1.从flash读取当前的单双号模式和退出天数
 	static unsigned int sizeStruct = 0;
-	sizeStruct = sizeof(driverInfo);
-	readFlash(START_FLASH_ADDRESS, (uint16_t *)&driverInfo, sizeStruct);
+	sizeStruct = sizeof(driverInfo_s);
+	readFlash(START_FLASH_ADDRESS, (uint16_t *)driverInfo_P, sizeStruct);
 	checkDataValid();
 	menuData.selected = 1;	
 	beginAnimation2(NULL);
@@ -50,7 +50,6 @@ void modeOddevenSelect()
 static void mDown()
 {
 	nextOption();
-
 	// Some lines are blank, skip them
 	if(menuData.selected == 0 || menuData.selected == 2)
 		nextOption();
@@ -63,7 +62,6 @@ static void mDown()
 static void mUp()
 {
 	prevOption();
-
 	if(menuData.selected == 4)
 		prevOption();
 	if(menuData.selected == 3)
@@ -78,10 +76,24 @@ static void mSelect()
 	bool isExiting = exitSelected();
 	if(isExiting)
 	{
-		//save rules to flash
-		static unsigned int sizeStruct = 0;
-		sizeStruct = sizeof(driverInfo);
-		writeFlash(START_FLASH_ADDRESS, (uint16_t *)&driverInfo, sizeStruct);
+		//save rules to flash	
+		unsigned int sizeStruct = 0, ret = 99;
+		sizeStruct = sizeof(driverInfo_s);			
+		driverInfo_s *flashCont;
+		flashCont = (driverInfo_s *)malloc(sizeof(driverInfo_s));
+		if(flashCont == NULL)
+			while(1);//Todo: 
+		readFlash(START_FLASH_ADDRESS, (uint16_t *)flashCont, sizeStruct);
+		if(flashCont->limitDS.normal != driverInfo_P->limitDS.normal)
+			writeFlash(START_FLASH_ADDRESS, (uint16_t *)driverInfo_P, sizeStruct);
+		else
+		{
+			ret = memcmp(flashCont->limitDS.endYMD, driverInfo_P->limitDS.endYMD, \
+			sizeof(flashCont->limitDS.endYMD));
+			if(ret != 0)
+				writeFlash(START_FLASH_ADDRESS, (uint16_t *)driverInfo_P, sizeStruct);
+		}
+		free(flashCont);
 	}
 	setPrevMenuExit(&prevMenuData);
 	doAction(exitSelected());	
@@ -100,7 +112,7 @@ static void showOddEvenStr(void)
 	char buff[14] = {0};
 	byte fontArr[6] = {16, 18, 16, 15, 19, 7};
 	
-	if(driverInfo.limitDS.normal == 0)
+	if(driverInfo_P->limitDS.normal == 0)
 		fontArr[0] = 16;//单
 	else
 		fontArr[0] = 17;//双
@@ -119,16 +131,16 @@ static void showDaysleftStr(void)		//????N??????????
 	byte highB = 0, lowB = 0;
 	LOOP(6, cnt)					//????????6???????????
 	{	
-		highB = driverInfo.limitDS.startYMD[cnt/2] / 10;
-		lowB = driverInfo.limitDS.startYMD[cnt/2] % 10;
+		highB = driverInfo_P->limitDS.startYMD[cnt/2] / 10;
+		lowB = driverInfo_P->limitDS.startYMD[cnt/2] % 10;
 		draw_bitmap(xArr[cnt], 	 8+16, numFont11x16[highB], 11, 16, NOINVERT, 0);	
 		draw_bitmap(xArr[cnt+1], 8+16, numFont11x16[lowB],  11, 16, NOINVERT, 0);	
 		cnt += 1;
 	}
 	LOOP(6, cnt)					//?????????6???????????
 	{	
-		highB = driverInfo.limitDS.endYMD[cnt/2] / 10;
-		lowB = driverInfo.limitDS.endYMD[cnt/2] % 10;
+		highB = driverInfo_P->limitDS.endYMD[cnt/2] / 10;
+		lowB = driverInfo_P->limitDS.endYMD[cnt/2] % 10;
 		draw_bitmap(xArr[cnt], 	 8+16+16, numFont11x16[highB], 11, 16, NOINVERT, 0);	
 		draw_bitmap(xArr[cnt+1], 8+16+16, numFont11x16[lowB],  11, 16, NOINVERT, 0);	
 		cnt += 1;
@@ -163,12 +175,12 @@ static display_t oddEvenNumDraw()		//???&???????
 			y = 8;	
 			draw_clearArea(x, y, w);
 			draw_clearArea(x, y+8, w);
-			draw_bitmap(x, y, textDisplay[driverInfo.limitDS.normal+16] , 16, 16, INVERT, 0);//
+			draw_bitmap(x, y, textDisplay[driverInfo_P->limitDS.normal+16] , 16, 16, INVERT, 0);//
 			break;
 		case SETTING_NOW_START_Y:
 			y = 8+16;
-			highB = driverInfo.limitDS.startYMD[0] / 10;
-			lowB = driverInfo.limitDS.startYMD[0] % 10;
+			highB = driverInfo_P->limitDS.startYMD[0] / 10;
+			lowB = driverInfo_P->limitDS.startYMD[0] % 10;
 			draw_clearArea(xArr[0], y, 22);
 			draw_clearArea(xArr[0], y+8, 22);
 			draw_bitmap(xArr[0], y, numFont11x16[highB] , 11, 16, INVERT, 0);
@@ -176,8 +188,8 @@ static display_t oddEvenNumDraw()		//???&???????
 			break;
 		case SETTING_NOW_START_M:
 			y = 8+16;				
-			highB = driverInfo.limitDS.startYMD[1] / 10;
-			lowB = driverInfo.limitDS.startYMD[1] % 10;
+			highB = driverInfo_P->limitDS.startYMD[1] / 10;
+			lowB = driverInfo_P->limitDS.startYMD[1] % 10;
 			draw_clearArea(xArr[3], y, 22);
 			draw_clearArea(xArr[3], y+8, 22);
 			draw_bitmap(xArr[3], y, numFont11x16[highB] , 11, 16, INVERT, 0);
@@ -185,8 +197,8 @@ static display_t oddEvenNumDraw()		//???&???????
 			break;
 		case SETTING_NOW_START_D:
 			y = 8+16;	
-			highB = driverInfo.limitDS.startYMD[2] / 10;
-			lowB = driverInfo.limitDS.startYMD[2] % 10;
+			highB = driverInfo_P->limitDS.startYMD[2] / 10;
+			lowB = driverInfo_P->limitDS.startYMD[2] % 10;
 			draw_clearArea(xArr[6], y, 22);
 			draw_clearArea(xArr[6], y+8, 22);
 			draw_bitmap(xArr[6], y, numFont11x16[highB] , 11, 16, INVERT, 0);
@@ -194,8 +206,8 @@ static display_t oddEvenNumDraw()		//???&???????
 			break;
 		case SETTING_NOW_END_Y:
 			y = 8+16+16;	
-			highB = driverInfo.limitDS.endYMD[0] / 10;
-			lowB = driverInfo.limitDS.endYMD[0] % 10;
+			highB = driverInfo_P->limitDS.endYMD[0] / 10;
+			lowB = driverInfo_P->limitDS.endYMD[0] % 10;
 			draw_clearArea(xArr[0], y, 22);
 			draw_clearArea(xArr[0], y+8, 22);
 			draw_bitmap(xArr[0], y, numFont11x16[highB] , 11, 16, INVERT, 0);
@@ -203,8 +215,8 @@ static display_t oddEvenNumDraw()		//???&???????
 			break;
 		case SETTING_NOW_END_M:
 			y = 8+16+16;	
-			highB = driverInfo.limitDS.endYMD[1] / 10;
-			lowB = driverInfo.limitDS.endYMD[1] % 10;
+			highB = driverInfo_P->limitDS.endYMD[1] / 10;
+			lowB = driverInfo_P->limitDS.endYMD[1] % 10;
 			draw_clearArea(xArr[3], y, 22);
 			draw_clearArea(xArr[3], y+8, 22);
 			draw_bitmap(xArr[3], y, numFont11x16[highB] , 11, 16, INVERT, 0);
@@ -212,8 +224,8 @@ static display_t oddEvenNumDraw()		//???&???????
 			break;
 		case SETTING_NOW_END_D:
 			y = 8+16+16;	
-			highB = driverInfo.limitDS.endYMD[2] / 10;
-			lowB = driverInfo.limitDS.endYMD[2] % 10;
+			highB = driverInfo_P->limitDS.endYMD[2] / 10;
+			lowB = driverInfo_P->limitDS.endYMD[2] % 10;
 			draw_clearArea(xArr[6], y, 22);
 			draw_clearArea(xArr[6], y+8, 22);
 			draw_bitmap(xArr[6], y, numFont11x16[highB] , 11, 16, INVERT, 0);
@@ -230,14 +242,14 @@ static void paramDataUp()
 {
 	setting.val++;
 	paramUpdate();
-	//driverInfo.limitDS.normal = setting.val;			//?????????????????????????
+	//driverInfo_P->limitDS.normal = setting.val;			//?????????????????????????
 }
 
 static void paramDataDown()
 {
 	setting.val--;
 	paramUpdate();
-	//driverInfo.limitDS.normal = setting.val;			//?????????????????????????
+	//driverInfo_P->limitDS.normal = setting.val;			//?????????????????????????
 }
 
 static void beginSelect()
@@ -261,10 +273,10 @@ static void selectOddEvenNum()
 	{
 		case SETTING_NOW_NONE:
 			setting.now = SETTING_NOW_ODDEVEN;
-			setting.val = driverInfo.limitDS.normal;
+			setting.val = driverInfo_P->limitDS.normal;
 			break;
 		case SETTING_NOW_ODDEVEN:
-			setting.val = driverInfo.limitDS.normal;				
+			setting.val = driverInfo_P->limitDS.normal;				
 			endSelect();		
 			break;
 		default:
@@ -281,30 +293,30 @@ static void selectDaysleftNum()
 	{
 		case SETTING_NOW_NONE:
 			setting.now = SETTING_NOW_START_Y;
-			setting.val = driverInfo.limitDS.startYMD[0];
+			setting.val = driverInfo_P->limitDS.startYMD[0];
 			break;
 		case SETTING_NOW_START_Y:
 			setting.now = SETTING_NOW_START_M;
-			setting.val = driverInfo.limitDS.startYMD[0];
+			setting.val = driverInfo_P->limitDS.startYMD[0];
 			break;
 		case SETTING_NOW_START_M:	
 			setting.now = SETTING_NOW_START_D;		
-			setting.val = driverInfo.limitDS.startYMD[1];
+			setting.val = driverInfo_P->limitDS.startYMD[1];
 			break;
 		case SETTING_NOW_START_D:
 			setting.now = SETTING_NOW_END_Y;
-			setting.val = driverInfo.limitDS.startYMD[2];
+			setting.val = driverInfo_P->limitDS.startYMD[2];
 			break;
 		case SETTING_NOW_END_Y:
 			setting.now = SETTING_NOW_END_M;
-			setting.val = driverInfo.limitDS.endYMD[0];
+			setting.val = driverInfo_P->limitDS.endYMD[0];
 			break;
 		case SETTING_NOW_END_M:
 			setting.now = SETTING_NOW_END_D;
-			setting.val = driverInfo.limitDS.endYMD[1];
+			setting.val = driverInfo_P->limitDS.endYMD[1];
 			break;
 		case SETTING_NOW_END_D:
-			setting.val = driverInfo.limitDS.endYMD[2];
+			setting.val = driverInfo_P->limitDS.endYMD[2];
 			endSelect();
 			break;
 		default:
@@ -319,49 +331,49 @@ void paramUpdate(void)
 	switch(setting.now)
 	{
 		case SETTING_NOW_ODDEVEN:
-			driverInfo.limitDS.normal ? (driverInfo.limitDS.normal = 0) : (driverInfo.limitDS.normal = 1);
+			driverInfo_P->limitDS.normal ? (driverInfo_P->limitDS.normal = 0) : (driverInfo_P->limitDS.normal = 1);
 			break;
 		case SETTING_NOW_START_Y:
 			if(setting.val > 99)
 				setting.val = 22;
 			else if(setting.val < 22)
 				setting.val = 99;
-			driverInfo.limitDS.startYMD[0] = setting.val;
+			driverInfo_P->limitDS.startYMD[0] = setting.val;
 			break;
 		case SETTING_NOW_START_M:
 			if(setting.val > 12)
 				setting.val = 1;
 			else if(setting.val < 1)
 				setting.val = 12;
-			driverInfo.limitDS.startYMD[1] = setting.val;
+			driverInfo_P->limitDS.startYMD[1] = setting.val;
 			break;
 		case SETTING_NOW_START_D:
 			if(setting.val > 31)	//Todo:need replace 31
 				setting.val = 1;
 			else if(setting.val < 1)
 				setting.val = 31;		//Todo:need replace 31
-			driverInfo.limitDS.startYMD[2] = setting.val;
+			driverInfo_P->limitDS.startYMD[2] = setting.val;
 			break;		
 		case SETTING_NOW_END_Y:
 			if(setting.val > 99)
 				setting.val = 22;
 			else if(setting.val < 22)
 				setting.val = 99;
-			driverInfo.limitDS.endYMD[0] = setting.val;
+			driverInfo_P->limitDS.endYMD[0] = setting.val;
 			break;		
 		case SETTING_NOW_END_M:
 			if(setting.val > 12)
 				setting.val = 1;
 			else if(setting.val < 1)
 				setting.val = 12;
-			driverInfo.limitDS.endYMD[1] = setting.val;
+			driverInfo_P->limitDS.endYMD[1] = setting.val;
 			break;		
 		case SETTING_NOW_END_D:
 			if(setting.val > 31)	//Todo:need replace 31
 				setting.val = 1;
 			else if(setting.val < 1)
 				setting.val = 31;		//Todo:need replace 31
-			driverInfo.limitDS.endYMD[2] = setting.val;
+			driverInfo_P->limitDS.endYMD[2] = setting.val;
 			break;
 		default:
 			break;
@@ -373,28 +385,28 @@ void checkDataValid(void)
 	byte cnt;
 	for(cnt = 0; cnt < 3; cnt++)
 	{
-		if(driverInfo.limitDS.startYMD[cnt] == 0 || driverInfo.limitDS.startYMD[cnt] == 0xFF)
+		if(driverInfo_P->limitDS.startYMD[cnt] == 0 || driverInfo_P->limitDS.startYMD[cnt] == 0xFF)
 			break;
 	}
 	if(cnt != 3) //????????0????
 	{
-		//????driverInfo.limitDS.startYMD[cnt]
-		driverInfo.limitDS.startYMD[0] = timeDate.date.year;
-		driverInfo.limitDS.startYMD[1] = timeDate.date.month+1;
-		driverInfo.limitDS.startYMD[2] = timeDate.date.date;
+		//????driverInfo_P->limitDS.startYMD[cnt]
+		driverInfo_P->limitDS.startYMD[0] = timeDate.date.year;
+		driverInfo_P->limitDS.startYMD[1] = timeDate.date.month+1;
+		driverInfo_P->limitDS.startYMD[2] = timeDate.date.date;
 	}
 
 	for(cnt = 0; cnt < 3; cnt++)
 	{
-		if(driverInfo.limitDS.endYMD[cnt] == 0 || driverInfo.limitDS.endYMD[cnt] == 0xFF)
+		if(driverInfo_P->limitDS.endYMD[cnt] == 0 || driverInfo_P->limitDS.endYMD[cnt] == 0xFF)
 			break;
 	}
 	if(cnt != 3) //????????0????
 	{
-		//????driverInfo.limitDS.endYMD[cnt]
-		driverInfo.limitDS.endYMD[0] = timeDate.date.year;
-		driverInfo.limitDS.endYMD[1] = timeDate.date.month+1;
-		driverInfo.limitDS.endYMD[2] = timeDate.date.date;
+		//????driverInfo_P->limitDS.endYMD[cnt]
+		driverInfo_P->limitDS.endYMD[0] = timeDate.date.year;
+		driverInfo_P->limitDS.endYMD[1] = timeDate.date.month+1;
+		driverInfo_P->limitDS.endYMD[2] = timeDate.date.date;
 	}
 	
 }

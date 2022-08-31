@@ -70,6 +70,7 @@ void test_loop(void);
 extern unsigned char g8563_Store[6];
 unsigned char now_sec;
 char time_str[25];
+static driverInfo_s driverInfo;
 /* USER CODE END 0 */
 
 /**
@@ -95,7 +96,9 @@ int main(void)
   SystemClock_Config();
 
   /* USER CODE BEGIN SysInit */
-
+	driverInfo_P = (driverInfo_s *)malloc(sizeof(driverInfo_s));
+  if(driverInfo_P == NULL)
+    while(1);//Todo: 
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
@@ -129,8 +132,8 @@ int main(void)
 	console_log(500,"START !");
 	display_set(watchface_normal);
 	display_load();//∆Ù∂Ø±Ì≈Ã	
-
-
+	
+	
   /* USER CODE END 2 */
 
   /* Infinite loop */
