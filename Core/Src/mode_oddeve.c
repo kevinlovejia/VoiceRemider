@@ -407,7 +407,6 @@ void checkDataValid(void)
 		driverInfo_P->limitDS.endYMD[1] = timeDate.date.month+1;
 		driverInfo_P->limitDS.endYMD[2] = timeDate.date.date;
 	}
-	
 }
 
 

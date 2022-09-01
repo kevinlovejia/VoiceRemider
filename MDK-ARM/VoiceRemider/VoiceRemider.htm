@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\VoiceRemider\VoiceRemider.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\VoiceRemider\VoiceRemider.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Thu Sep 01 00:11:29 2022
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Thu Sep 01 11:45:45 2022
 <BR><P>
 <H3>Maximum Stack Usage =        392 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -2749,7 +2749,7 @@ Local Symbols
 <LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timeDataDown
 </UL>
 
-<P><STRONG><a name="[49]"></a>itemLoader</STRONG> (Thumb, 144 bytes, Stack size 40 bytes, timedate.o(i.itemLoader))
+<P><STRONG><a name="[49]"></a>itemLoader</STRONG> (Thumb, 124 bytes, Stack size 40 bytes, timedate.o(i.itemLoader))
 <BR><BR>[Stack]<UL><LI>Max Depth = 360<LI>Call Chain = itemLoader &rArr; setMenuOption_P &rArr; setMenuOption &rArr; sin &rArr; __ieee754_rem_pio2 &rArr; __aeabi_dmul &rArr; _double_epilogue &rArr; _double_round
 </UL>
 <BR>[Calls]<UL><LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setMenuOption_P
@@ -2758,17 +2758,17 @@ Local Symbols
 <LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcpy
 <LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
 </UL>
-<BR>[Address Reference Count : 3]<UL><LI> timedate.o(i.mTimeDateOpen)
+<BR>[Address Reference Count : 3]<UL><LI> timedate.o(i.endSelect)
+<LI> timedate.o(i.mTimeDateOpen)
 <LI> timedate.o(i.beginSelect)
-<LI> timedate.o(i.endSelect)
 </UL>
 <P><STRONG><a name="[57]"></a>mDown</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, timedate.o(i.mDown))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = mDown
 </UL>
 <BR>[Calls]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nextOption
 </UL>
-<BR>[Address Reference Count : 2]<UL><LI> timedate.o(i.mTimeDateOpen)
-<LI> timedate.o(i.endSelect)
+<BR>[Address Reference Count : 2]<UL><LI> timedate.o(i.endSelect)
+<LI> timedate.o(i.mTimeDateOpen)
 </UL>
 <P><STRONG><a name="[4b]"></a>mSelect</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, timedate.o(i.mSelect))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = mSelect &rArr; setPrevMenuExit
@@ -2777,17 +2777,17 @@ Local Symbols
 <LI><a href="#[137]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exitSelected
 <LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;doAction
 </UL>
-<BR>[Address Reference Count : 3]<UL><LI> timedate.o(i.mTimeDateOpen)
+<BR>[Address Reference Count : 3]<UL><LI> timedate.o(i.endSelect)
+<LI> timedate.o(i.mTimeDateOpen)
 <LI> timedate.o(i.beginSelect)
-<LI> timedate.o(i.endSelect)
 </UL>
 <P><STRONG><a name="[56]"></a>mUp</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, timedate.o(i.mUp))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = mUp
 </UL>
 <BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prevOption
 </UL>
-<BR>[Address Reference Count : 2]<UL><LI> timedate.o(i.mTimeDateOpen)
-<LI> timedate.o(i.endSelect)
+<BR>[Address Reference Count : 2]<UL><LI> timedate.o(i.endSelect)
+<LI> timedate.o(i.mTimeDateOpen)
 </UL>
 <P><STRONG><a name="[63]"></a>saveTimeDate</STRONG> (Thumb, 38 bytes, Stack size 8 bytes, timedate.o(i.saveTimeDate))
 <BR><BR>[Stack]<UL><LI>Max Depth = 184<LI>Call Chain = saveTimeDate &rArr; time_set &rArr; Set_PCF8563_date &rArr; writeData &rArr; HAL_I2C_Mem_Write &rArr; I2C_RequestMemoryWrite &rArr; I2C_WaitOnMasterAddressFlagUntilTimeout

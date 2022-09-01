@@ -9,7 +9,7 @@
 #include "common.h"
 #include "main.h"
 
-#define OPTION_COUNT		7//去掉返回菜单之外的所有行，3行菜单+3行空行
+#define OPTION_COUNT		6//去掉返回菜单之外的所有行，3行菜单+3行空行
 
 #define SETTING_NOW_NONE	0
 #define SETTING_NOW_TIMEMODE	1
@@ -92,7 +92,6 @@ static void itemLoader(byte num)
 	showDateStr();
 	showTimeStr();
 	setMenuOption_P(5, saved ? PSTR(STR_SAVED) : PSTR(STR_SAVE), NULL, saveTimeDate);
-	setMenuOption_P(6, saved ? PSTR(STR_SAVED) : PSTR(STR_SAVE), NULL, saveTimeDate);
 	addBackOption();
 }
 
@@ -129,7 +128,7 @@ static void selectDate()
 		case SETTING_NOW_MONTH:
 		{
 			timeDateSet.date.month = (month_t)setting.val;
-			byte numDays = time_monthDayCount(timeDateSet.date.month, timeDateSet.date.year);
+			byte numDays = time_monthDayCount(timeDateSet.date.month, timeDateSet.date.year);//days of every month
 			if(timeDateSet.date.date > numDays)
 				timeDateSet.date.date = numDays;
 			setting.now = SETTING_NOW_YEAR;
@@ -138,7 +137,7 @@ static void selectDate()
 			break;
 		default: // Also SETTING_NOW_YEAR
 			timeDateSet.date.year = setting.val;
-			timeDateSet.date.day = time_dow(timeDateSet.date.year, timeDateSet.date.month, timeDateSet.date.date);
+			timeDateSet.date.day = time_dow(timeDateSet.date.year, timeDateSet.date.month, timeDateSet.date.date);//weeks
 
 			endSelect();
 			break;
@@ -356,3 +355,81 @@ static void saveTimeDate()
 
 	saved = true;
 }
+
+//different years, return calcDate to the end of the year
+int daysRemaining(timeDate_s calcDate)
+{
+	unsigned int monthLeft = 0, totalDays = 0;
+	timeDate_s nowDate;
+	byte numDays = time_monthDayCount(calcDate.date.month, calcDate.date.year);//days of every month
+	monthLeft = numDays - calcDate.date.date;	//day of current month remaining 	
+	nowDate.date.year 	= calcDate.date.year;
+	nowDate.date.month 	= calcDate.date.month;
+	nowDate.date.day 	= calcDate.date.date;
+	for(; nowDate.date.month <= 12; nowDate.date.month++)
+		totalDays += time_monthDayCount(nowDate.date.month, nowDate.date.year);
+	totalDays += monthLeft;
+	return totalDays;
+}
+
+//different years, return days from the beginning of the year to calcDate
+int daysPassed(timeDate_s calcDate)
+{
+	unsigned int monthLeft = 0, totalDays = 0;
+	timeDate_s nowDate;
+	monthLeft = calcDate.date.day;
+	nowDate.date.year 	= calcDate.date.year;
+	nowDate.date.month 	= 1;		//count from January 1.
+	nowDate.date.day 	= 1;
+	for(;nowDate.date.month <= calcDate.date.month-1; nowDate.date.month++)
+		totalDays += time_monthDayCount(nowDate.date.month, nowDate.date.year);
+	totalDays += monthLeft;
+	return totalDays;
+}
+//if start and stop are in different years
+int daysDiffYear(timeDate_s start, timeDate_s stop){
+	unsigned int midd = 0, tmp;
+	byte cnt = 0;
+	for(cnt = start.date.year+1; cnt <= stop.date.year-1; cnt++)
+	{
+		if(time_isLeapYear(cnt))
+			tmp=366;
+		else
+			tmp=365;
+		midd += tmp;
+	}
+	return daysRemaining(start) + midd + daysPassed(stop);
+}
+//if start and stop are in same year
+int daysSameYear(timeDate_s start, timeDate_s stop)
+{
+	if(start.date.month == stop.date.month)
+		return stop.date.day - start.date.day;
+	else if(start.date.month < stop.date.month)
+	{
+		unsigned int total = 0, monthLeft = 0;
+		timeDate_s nowDate;
+		monthLeft = time_monthDayCount(start.date.month, start.date.year)\
+		 - start.date.day;			//first month
+		nowDate.date.year 	= start.date.year;
+		nowDate.date.month 	= start.date.month+1;
+		nowDate.date.day 	= start.date.day;
+		for(;nowDate.date.month <= stop.date.month-1; nowDate.date.month++)
+			total += time_monthDayCount(nowDate.date.month, nowDate.date.year);		// all midddle month
+		return  monthLeft + total + stop.date.day;
+	}
+	else
+		;//exit(1);//start later than stop
+}
+
+unsigned int daysCounter(timeDate_s start, timeDate_s stop)
+{
+	if(start.date.year == stop.date.year)
+		return daysSameYear(start, stop);
+	else if(start.date.year < stop.date.year)
+		return daysDiffYear(start, stop);
+	else
+		;//exit(1);//start later than stop
+}
+
+

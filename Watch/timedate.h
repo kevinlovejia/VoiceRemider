@@ -10,5 +10,6 @@
 #define TIMEDATE_H_
 
 void mTimeDateOpen(void);
+unsigned int daysCounter(timeDate_s start, timeDate_s stop);
 
 #endif /* TIMEDATE_H_ */

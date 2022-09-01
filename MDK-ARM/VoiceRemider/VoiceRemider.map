@@ -1357,6 +1357,14 @@ Section Cross References
     timedate.o(i.beginSelect) refers to timedate.o(i.timeDataDown) for timeDataDown
     timedate.o(i.beginSelect) refers to timedate.o(i.timeDateDraw) for timeDateDraw
     timedate.o(i.beginSelect) refers to menu.o(.bss) for menuData
+    timedate.o(i.daysCounter) refers to timedate.o(i.daysSameYear) for daysSameYear
+    timedate.o(i.daysCounter) refers to timedate.o(i.daysDiffYear) for daysDiffYear
+    timedate.o(i.daysDiffYear) refers to time.o(i.time_isLeapYear) for time_isLeapYear
+    timedate.o(i.daysDiffYear) refers to timedate.o(i.daysRemaining) for daysRemaining
+    timedate.o(i.daysDiffYear) refers to timedate.o(i.daysPassed) for daysPassed
+    timedate.o(i.daysPassed) refers to time.o(i.time_monthDayCount) for time_monthDayCount
+    timedate.o(i.daysRemaining) refers to time.o(i.time_monthDayCount) for time_monthDayCount
+    timedate.o(i.daysSameYear) refers to time.o(i.time_monthDayCount) for time_monthDayCount
     timedate.o(i.endSelect) refers to menu.o(i.setMenuFuncs) for setMenuFuncs
     timedate.o(i.endSelect) refers to menu.o(.data) for setting
     timedate.o(i.endSelect) refers to timedate.o(i.itemLoader) for itemLoader
@@ -2927,6 +2935,11 @@ Removing Unused input sections from the image.
     Removing timedate.o(.rev16_text), (4 bytes).
     Removing timedate.o(.revsh_text), (4 bytes).
     Removing timedate.o(.rrx_text), (6 bytes).
+    Removing timedate.o(i.daysCounter), (28 bytes).
+    Removing timedate.o(i.daysDiffYear), (82 bytes).
+    Removing timedate.o(i.daysPassed), (68 bytes).
+    Removing timedate.o(i.daysRemaining), (76 bytes).
+    Removing timedate.o(i.daysSameYear), (110 bytes).
     Removing torch.o(.rev16_text), (4 bytes).
     Removing torch.o(.revsh_text), (4 bytes).
     Removing torch.o(.rrx_text), (6 bytes).
@@ -3131,7 +3144,7 @@ Removing Unused input sections from the image.
     Removing cdcmple.o(.text), (48 bytes).
     Removing cfrcmple.o(.text), (20 bytes).
 
-851 unused section(s) (total 70051 bytes) removed from the image.
+856 unused section(s) (total 70415 bytes) removed from the image.
 
 ==============================================================================
 
@@ -3622,202 +3635,202 @@ Image Symbol Table
     i.itemLoader                             0x0800489c   Section        0  sound.o(i.itemLoader)
     itemLoader                               0x0800489d   Thumb Code    14  sound.o(i.itemLoader)
     i.itemLoader                             0x080048ac   Section        0  timedate.o(i.itemLoader)
-    itemLoader                               0x080048ad   Thumb Code   144  timedate.o(i.itemLoader)
-    i.loader                                 0x08004994   Section        0  menu.o(i.loader)
-    loader                                   0x08004995   Thumb Code    24  menu.o(i.loader)
-    i.mDown                                  0x080049b4   Section        0  mode_couple.o(i.mDown)
-    mDown                                    0x080049b5   Thumb Code    38  mode_couple.o(i.mDown)
-    i.mDown                                  0x080049e0   Section        0  mode_oddeve.o(i.mDown)
-    mDown                                    0x080049e1   Thumb Code    46  mode_oddeve.o(i.mDown)
-    i.mDown                                  0x08004a14   Section        0  timedate.o(i.mDown)
-    mDown                                    0x08004a15   Thumb Code    30  timedate.o(i.mDown)
-    i.mMainOpen                              0x08004a38   Section        0  m_main.o(i.mMainOpen)
-    i.mOpen                                  0x08004a58   Section        0  m_main.o(i.mOpen)
-    mOpen                                    0x08004a59   Thumb Code    58  m_main.o(i.mOpen)
-    i.mSelect                                0x08004acc   Section        0  mode.o(i.mSelect)
-    mSelect                                  0x08004acd   Thumb Code    30  mode.o(i.mSelect)
-    i.mSelect                                0x08004af0   Section        0  mode_couple.o(i.mSelect)
-    mSelect                                  0x08004af1   Thumb Code   104  mode_couple.o(i.mSelect)
-    i.mSelect                                0x08004b68   Section        0  mode_oddeve.o(i.mSelect)
-    mSelect                                  0x08004b69   Thumb Code   100  mode_oddeve.o(i.mSelect)
-    i.mSelect                                0x08004bdc   Section        0  tailnum.o(i.mSelect)
-    mSelect                                  0x08004bdd   Thumb Code    66  tailnum.o(i.mSelect)
-    i.mSelect                                0x08004c28   Section        0  m_main.o(i.mSelect)
-    mSelect                                  0x08004c29   Thumb Code    18  m_main.o(i.mSelect)
-    i.mSelect                                0x08004c40   Section        0  sound.o(i.mSelect)
-    mSelect                                  0x08004c41   Thumb Code    30  sound.o(i.mSelect)
-    i.mSelect                                0x08004c64   Section        0  timedate.o(i.mSelect)
-    mSelect                                  0x08004c65   Thumb Code    20  timedate.o(i.mSelect)
-    i.mSoundOpen                             0x08004c7c   Section        0  sound.o(i.mSoundOpen)
-    i.mTimeDateOpen                          0x08004cd8   Section        0  timedate.o(i.mTimeDateOpen)
-    i.mUp                                    0x08004d50   Section        0  mode_couple.o(i.mUp)
-    mUp                                      0x08004d51   Thumb Code    38  mode_couple.o(i.mUp)
-    i.mUp                                    0x08004d7c   Section        0  mode_oddeve.o(i.mUp)
-    mUp                                      0x08004d7d   Thumb Code    50  mode_oddeve.o(i.mUp)
-    i.mUp                                    0x08004db4   Section        0  timedate.o(i.mUp)
-    mUp                                      0x08004db5   Thumb Code    30  timedate.o(i.mUp)
-    i.main                                   0x08004dd8   Section        0  main.o(i.main)
-    i.malloc                                 0x08004f70   Section        0  malloc.o(i.malloc)
-    i.menu_close                             0x08004fdc   Section        0  menu.o(i.menu_close)
-    i.menu_down                              0x08004ff8   Section        0  menu.o(i.menu_down)
-    i.menu_draw                              0x0800500c   Section        0  menu.o(i.menu_draw)
-    i.menu_drawIcon                          0x0800509c   Section        0  menu.o(i.menu_drawIcon)
-    menu_drawIcon                            0x0800509d   Thumb Code   210  menu.o(i.menu_drawIcon)
-    i.menu_select                            0x08005184   Section        0  menu.o(i.menu_select)
-    i.menu_up                                0x080051b0   Section        0  menu.o(i.menu_up)
-    i.millis_get                             0x080051c4   Section        0  tim.o(i.millis_get)
-    i.mod10                                  0x080051d0   Section        0  global.o(i.mod10)
-    i.modeCoupleSelect                       0x080051dc   Section        0  mode_couple.o(i.modeCoupleSelect)
-    i.modeOddevenSelect                      0x08005278   Section        0  mode_oddeve.o(i.modeOddevenSelect)
-    i.mode_select                            0x080052f8   Section        0  mode.o(i.mode_select)
-    i.next                                   0x08005354   Section        0  tune.o(i.next)
-    next                                     0x08005355   Thumb Code    34  tune.o(i.next)
-    i.nextOption                             0x0800537c   Section        0  menu.o(i.nextOption)
-    i.oddEvenNumDraw                         0x08005398   Section        0  mode_oddeve.o(i.oddEvenNumDraw)
-    oddEvenNumDraw                           0x08005399   Thumb Code   722  mode_oddeve.o(i.oddEvenNumDraw)
-    i.oled_flush                             0x08005688   Section        0  oled_driver.o(i.oled_flush)
-    i.paramDataDown                          0x080056dc   Section        0  mode_oddeve.o(i.paramDataDown)
-    paramDataDown                            0x080056dd   Thumb Code    12  mode_oddeve.o(i.paramDataDown)
-    i.paramDataUp                            0x080056ec   Section        0  mode_oddeve.o(i.paramDataUp)
-    paramDataUp                              0x080056ed   Thumb Code    12  mode_oddeve.o(i.paramDataUp)
-    i.paramUpdate                            0x080056fc   Section        0  mode_oddeve.o(i.paramUpdate)
-    i.pcf8563_Read                           0x080057b0   Section        0  pcf8563.o(i.pcf8563_Read)
-    i.pcf8563_gettime                        0x08005838   Section        0  pcf8563.o(i.pcf8563_gettime)
-    i.prevOption                             0x08005854   Section        0  menu.o(i.prevOption)
-    i.processButtons                         0x08005870   Section        0  buttons.o(i.processButtons)
-    processButtons                           0x08005871   Thumb Code   210  buttons.o(i.processButtons)
-    i.pwrmgr_init                            0x08005950   Section        0  pwrmgr.o(i.pwrmgr_init)
-    i.pwrmgr_userActive                      0x08005960   Section        0  pwrmgr.o(i.pwrmgr_userActive)
-    i.readFlash                              0x08005974   Section        0  flash.o(i.readFlash)
-    i.readPixels                             0x08005978   Section        0  draw.o(i.readPixels)
-    readPixels                               0x08005979   Thumb Code    12  draw.o(i.readPixels)
-    i.ruleAutoMatch                          0x08005984   Section        0  mode_couple.o(i.ruleAutoMatch)
-    ruleAutoMatch                            0x08005985   Thumb Code   216  mode_couple.o(i.ruleAutoMatch)
-    i.saveTimeDate                           0x08005a68   Section        0  timedate.o(i.saveTimeDate)
-    saveTimeDate                             0x08005a69   Thumb Code    38  timedate.o(i.saveTimeDate)
-    i.selectCouple                           0x08005a9c   Section        0  mode.o(i.selectCouple)
-    selectCouple                             0x08005a9d   Thumb Code     4  mode.o(i.selectCouple)
-    i.selectCoupleLoop                       0x08005aa0   Section        0  mode.o(i.selectCoupleLoop)
-    selectCoupleLoop                         0x08005aa1   Thumb Code    10  mode.o(i.selectCoupleLoop)
-    i.selectDate                             0x08005ab0   Section        0  timedate.o(i.selectDate)
-    selectDate                               0x08005ab1   Thumb Code    96  timedate.o(i.selectDate)
-    i.selectDaysleftNum                      0x08005b18   Section        0  mode_oddeve.o(i.selectDaysleftNum)
-    selectDaysleftNum                        0x08005b19   Thumb Code   110  mode_oddeve.o(i.selectDaysleftNum)
-    i.selectFridayNum                        0x08005b90   Section        0  mode_couple.o(i.selectFridayNum)
-    selectFridayNum                          0x08005b91   Thumb Code    64  mode_couple.o(i.selectFridayNum)
-    i.selectMondayNum                        0x08005bd8   Section        0  mode_couple.o(i.selectMondayNum)
-    selectMondayNum                          0x08005bd9   Thumb Code    64  mode_couple.o(i.selectMondayNum)
-    i.selectOddEvenNum                       0x08005c20   Section        0  mode_oddeve.o(i.selectOddEvenNum)
-    selectOddEvenNum                         0x08005c21   Thumb Code    50  mode_oddeve.o(i.selectOddEvenNum)
-    i.selectOddOrEven                        0x08005c5c   Section        0  mode.o(i.selectOddOrEven)
-    selectOddOrEven                          0x08005c5d   Thumb Code     4  mode.o(i.selectOddOrEven)
-    i.selectTailNum                          0x08005c60   Section        0  tailnum.o(i.selectTailNum)
-    selectTailNum                            0x08005c61   Thumb Code    78  tailnum.o(i.selectTailNum)
-    i.selectThursdayNum                      0x08005cd0   Section        0  mode_couple.o(i.selectThursdayNum)
-    selectThursdayNum                        0x08005cd1   Thumb Code    64  mode_couple.o(i.selectThursdayNum)
-    i.selectTime                             0x08005d18   Section        0  timedate.o(i.selectTime)
-    selectTime                               0x08005d19   Thumb Code   126  timedate.o(i.selectTime)
-    i.selectTuesdayNum                       0x08005da0   Section        0  mode_couple.o(i.selectTuesdayNum)
-    selectTuesdayNum                         0x08005da1   Thumb Code    64  mode_couple.o(i.selectTuesdayNum)
-    i.selectWednesdayNum                     0x08005de8   Section        0  mode_couple.o(i.selectWednesdayNum)
-    selectWednesdayNum                       0x08005de9   Thumb Code    64  mode_couple.o(i.selectWednesdayNum)
-    i.setMenuFuncs                           0x08005e30   Section        0  menu.o(i.setMenuFuncs)
-    i.setMenuInfo                            0x08005e44   Section        0  menu.o(i.setMenuInfo)
-    i.setMenuOption                          0x08005e68   Section        0  menu.o(i.setMenuOption)
-    i.setMenuOption_P                        0x08005f18   Section        0  menu.o(i.setMenuOption_P)
-    i.setMenuOptions                         0x08005f44   Section        0  sound.o(i.setMenuOptions)
-    setMenuOptions                           0x08005f45   Thumb Code    58  sound.o(i.setMenuOptions)
-    i.setPrevMenuExit                        0x08005fac   Section        0  menu.o(i.setPrevMenuExit)
-    i.setPrevMenuOpen                        0x08005fd0   Section        0  menu.o(i.setPrevMenuOpen)
-    i.setVolume                              0x08005fe8   Section        0  sound.o(i.setVolume)
-    setVolume                                0x08005fe9   Thumb Code    12  sound.o(i.setVolume)
-    i.setVolumeAlarm                         0x08005ff4   Section        0  sound.o(i.setVolumeAlarm)
-    setVolumeAlarm                           0x08005ff5   Thumb Code    14  sound.o(i.setVolumeAlarm)
-    i.setVolumeHour                          0x08006008   Section        0  sound.o(i.setVolumeHour)
-    setVolumeHour                            0x08006009   Thumb Code    14  sound.o(i.setVolumeHour)
-    i.setVolumeUI                            0x0800601c   Section        0  sound.o(i.setVolumeUI)
-    setVolumeUI                              0x0800601d   Thumb Code    14  sound.o(i.setVolumeUI)
-    i.showDaysleftStr                        0x08006030   Section        0  mode_oddeve.o(i.showDaysleftStr)
-    showDaysleftStr                          0x08006031   Thumb Code   378  mode_oddeve.o(i.showDaysleftStr)
-    i.showOddEvenStr                         0x080061c4   Section        0  mode_oddeve.o(i.showOddEvenStr)
-    showOddEvenStr                           0x080061c5   Thumb Code   116  mode_oddeve.o(i.showOddEvenStr)
-    i.showWeekStr                            0x0800624c   Section        0  mode_couple.o(i.showWeekStr)
-    showWeekStr                              0x0800624d   Thumb Code   252  mode_couple.o(i.showWeekStr)
-    i.sin                                    0x0800636c   Section        0  sin.o(i.sin)
-    i.strcopy_cnt                            0x0800640c   Section        0  gui_log_console.o(i.strcopy_cnt)
-    i.switchTwoNum                           0x08006424   Section        0  mode_couple.o(i.switchTwoNum)
-    i.tailNumDataDown                        0x08006430   Section        0  tailnum.o(i.tailNumDataDown)
-    tailNumDataDown                          0x08006431   Thumb Code    20  tailnum.o(i.tailNumDataDown)
-    i.tailNumDataUp                          0x08006448   Section        0  tailnum.o(i.tailNumDataUp)
-    tailNumDataUp                            0x08006449   Thumb Code    20  tailnum.o(i.tailNumDataUp)
-    i.tailNumDraw                            0x08006460   Section        0  tailnum.o(i.tailNumDraw)
-    tailNumDraw                              0x08006461   Thumb Code    82  tailnum.o(i.tailNumDraw)
-    i.tailnum_select                         0x080064bc   Section        0  tailnum.o(i.tailnum_select)
-    i.thisdraw                               0x0800653c   Section        0  mode.o(i.thisdraw)
-    thisdraw                                 0x0800653d   Thumb Code    54  mode.o(i.thisdraw)
-    i.thisdraw                               0x08006580   Section        0  sound.o(i.thisdraw)
-    thisdraw                                 0x08006581   Thumb Code    54  sound.o(i.thisdraw)
-    i.ticker                                 0x080065c4   Section        0  normal.o(i.ticker)
-    ticker                                   0x080065c5   Thumb Code   656  normal.o(i.ticker)
-    i.timeDataDown                           0x08006870   Section        0  timedate.o(i.timeDataDown)
-    timeDataDown                             0x08006871   Thumb Code    62  timedate.o(i.timeDataDown)
-    i.timeDataUp                             0x080068b8   Section        0  timedate.o(i.timeDataUp)
-    timeDataUp                               0x080068b9   Thumb Code    56  timedate.o(i.timeDataUp)
-    i.timeDateDraw                           0x080068f8   Section        0  timedate.o(i.timeDateDraw)
-    timeDateDraw                             0x080068f9   Thumb Code   184  timedate.o(i.timeDateDraw)
-    i.time_dow                               0x080069c0   Section        0  time.o(i.time_dow)
-    i.time_isLeapYear                        0x08006a1c   Section        0  time.o(i.time_isLeapYear)
-    i.time_monthDayCount                     0x08006a28   Section        0  time.o(i.time_monthDayCount)
-    i.time_set                               0x08006a44   Section        0  time.o(i.time_set)
-    i.time_timeMode                          0x08006a80   Section        0  time.o(i.time_timeMode)
-    i.time_update                            0x08006acc   Section        0  time.o(i.time_update)
-    i.toMinutes                              0x08006b0c   Section        0  alarm.o(i.toMinutes)
-    toMinutes                                0x08006b0d   Thumb Code    24  alarm.o(i.toMinutes)
-    i.tune_play                              0x08006b24   Section        0  tune.o(i.tune_play)
-    i.wFlash                                 0x08006b40   Section        0  flash.o(i.wFlash)
-    i.watchface_normal                       0x08006b78   Section        0  normal.o(i.watchface_normal)
-    i.weekNumDataDown                        0x08006ba0   Section        0  mode_couple.o(i.weekNumDataDown)
-    weekNumDataDown                          0x08006ba1   Thumb Code    38  mode_couple.o(i.weekNumDataDown)
-    i.weekNumDataUp                          0x08006bd0   Section        0  mode_couple.o(i.weekNumDataUp)
-    weekNumDataUp                            0x08006bd1   Thumb Code    38  mode_couple.o(i.weekNumDataUp)
-    i.weekNumDraw                            0x08006c00   Section        0  mode_couple.o(i.weekNumDraw)
-    weekNumDraw                              0x08006c01   Thumb Code   174  mode_couple.o(i.weekNumDraw)
-    i.writeData                              0x08006cbc   Section        0  pcf8563.o(i.writeData)
-    .constdata                               0x08006ce4   Section       10  mode_oddeve.o(.constdata)
-    .constdata                               0x08006cee   Section       16  system_stm32f1xx.o(.constdata)
-    .constdata                               0x08006cfe   Section        8  system_stm32f1xx.o(.constdata)
-    .constdata                               0x08006d06   Section        5  menu.o(.constdata)
-    .constdata                               0x08006d0b   Section       28  resources.o(.constdata)
-    .constdata                               0x08006d27   Section       48  resources.o(.constdata)
-    .constdata                               0x08006d57   Section      128  resources.o(.constdata)
-    .constdata                               0x08006dd7   Section      128  resources.o(.constdata)
-    .constdata                               0x08006e57   Section      512  resources.o(.constdata)
-    .constdata                               0x08007057   Section      384  resources.o(.constdata)
-    .constdata                               0x080071d7   Section      384  resources.o(.constdata)
-    .constdata                               0x08007357   Section       32  resources.o(.constdata)
-    .constdata                               0x08007377   Section       32  resources.o(.constdata)
-    .constdata                               0x08007397   Section      992  resources.o(.constdata)
-    .constdata                               0x08007777   Section      264  resources.o(.constdata)
-    .constdata                               0x0800787f   Section      485  resources.o(.constdata)
-    .constdata                               0x08007a64   Section        8  resources.o(.constdata)
-    .constdata                               0x08007a6c   Section      570  resources.o(.constdata)
-    .constdata                               0x08007ca6   Section      220  resources.o(.constdata)
-    .constdata                               0x08007d82   Section       18  resources.o(.constdata)
-    .constdata                               0x08007d94   Section       36  resources.o(.constdata)
-    .constdata                               0x08007db8   Section       36  resources.o(.constdata)
-    .constdata                               0x08007ddc   Section      128  resources.o(.constdata)
-    .constdata                               0x08007e5c   Section      128  resources.o(.constdata)
-    .constdata                               0x08007edc   Section     1280  resources.o(.constdata)
-    .constdata                               0x080083dc   Section       12  time.o(.constdata)
-    monthDayCount                            0x080083dc   Data          12  time.o(.constdata)
-    .constdata                               0x080083e8   Section       16  tunes.o(.constdata)
-    .constdata                               0x080083f8   Section       48  cos_i.o(.constdata)
-    C                                        0x080083f8   Data          48  cos_i.o(.constdata)
-    .constdata                               0x08008428   Section      200  rred.o(.constdata)
-    pio2s                                    0x08008428   Data          48  rred.o(.constdata)
-    twooverpi                                0x08008458   Data         152  rred.o(.constdata)
-    .constdata                               0x080084f0   Section       40  sin_i.o(.constdata)
-    S                                        0x080084f0   Data          40  sin_i.o(.constdata)
+    itemLoader                               0x080048ad   Thumb Code   124  timedate.o(i.itemLoader)
+    i.loader                                 0x08004980   Section        0  menu.o(i.loader)
+    loader                                   0x08004981   Thumb Code    24  menu.o(i.loader)
+    i.mDown                                  0x080049a0   Section        0  mode_couple.o(i.mDown)
+    mDown                                    0x080049a1   Thumb Code    38  mode_couple.o(i.mDown)
+    i.mDown                                  0x080049cc   Section        0  mode_oddeve.o(i.mDown)
+    mDown                                    0x080049cd   Thumb Code    46  mode_oddeve.o(i.mDown)
+    i.mDown                                  0x08004a00   Section        0  timedate.o(i.mDown)
+    mDown                                    0x08004a01   Thumb Code    30  timedate.o(i.mDown)
+    i.mMainOpen                              0x08004a24   Section        0  m_main.o(i.mMainOpen)
+    i.mOpen                                  0x08004a44   Section        0  m_main.o(i.mOpen)
+    mOpen                                    0x08004a45   Thumb Code    58  m_main.o(i.mOpen)
+    i.mSelect                                0x08004ab8   Section        0  mode.o(i.mSelect)
+    mSelect                                  0x08004ab9   Thumb Code    30  mode.o(i.mSelect)
+    i.mSelect                                0x08004adc   Section        0  mode_couple.o(i.mSelect)
+    mSelect                                  0x08004add   Thumb Code   104  mode_couple.o(i.mSelect)
+    i.mSelect                                0x08004b54   Section        0  mode_oddeve.o(i.mSelect)
+    mSelect                                  0x08004b55   Thumb Code   100  mode_oddeve.o(i.mSelect)
+    i.mSelect                                0x08004bc8   Section        0  tailnum.o(i.mSelect)
+    mSelect                                  0x08004bc9   Thumb Code    66  tailnum.o(i.mSelect)
+    i.mSelect                                0x08004c14   Section        0  m_main.o(i.mSelect)
+    mSelect                                  0x08004c15   Thumb Code    18  m_main.o(i.mSelect)
+    i.mSelect                                0x08004c2c   Section        0  sound.o(i.mSelect)
+    mSelect                                  0x08004c2d   Thumb Code    30  sound.o(i.mSelect)
+    i.mSelect                                0x08004c50   Section        0  timedate.o(i.mSelect)
+    mSelect                                  0x08004c51   Thumb Code    20  timedate.o(i.mSelect)
+    i.mSoundOpen                             0x08004c68   Section        0  sound.o(i.mSoundOpen)
+    i.mTimeDateOpen                          0x08004cc4   Section        0  timedate.o(i.mTimeDateOpen)
+    i.mUp                                    0x08004d3c   Section        0  mode_couple.o(i.mUp)
+    mUp                                      0x08004d3d   Thumb Code    38  mode_couple.o(i.mUp)
+    i.mUp                                    0x08004d68   Section        0  mode_oddeve.o(i.mUp)
+    mUp                                      0x08004d69   Thumb Code    50  mode_oddeve.o(i.mUp)
+    i.mUp                                    0x08004da0   Section        0  timedate.o(i.mUp)
+    mUp                                      0x08004da1   Thumb Code    30  timedate.o(i.mUp)
+    i.main                                   0x08004dc4   Section        0  main.o(i.main)
+    i.malloc                                 0x08004f5c   Section        0  malloc.o(i.malloc)
+    i.menu_close                             0x08004fc8   Section        0  menu.o(i.menu_close)
+    i.menu_down                              0x08004fe4   Section        0  menu.o(i.menu_down)
+    i.menu_draw                              0x08004ff8   Section        0  menu.o(i.menu_draw)
+    i.menu_drawIcon                          0x08005088   Section        0  menu.o(i.menu_drawIcon)
+    menu_drawIcon                            0x08005089   Thumb Code   210  menu.o(i.menu_drawIcon)
+    i.menu_select                            0x08005170   Section        0  menu.o(i.menu_select)
+    i.menu_up                                0x0800519c   Section        0  menu.o(i.menu_up)
+    i.millis_get                             0x080051b0   Section        0  tim.o(i.millis_get)
+    i.mod10                                  0x080051bc   Section        0  global.o(i.mod10)
+    i.modeCoupleSelect                       0x080051c8   Section        0  mode_couple.o(i.modeCoupleSelect)
+    i.modeOddevenSelect                      0x08005264   Section        0  mode_oddeve.o(i.modeOddevenSelect)
+    i.mode_select                            0x080052e4   Section        0  mode.o(i.mode_select)
+    i.next                                   0x08005340   Section        0  tune.o(i.next)
+    next                                     0x08005341   Thumb Code    34  tune.o(i.next)
+    i.nextOption                             0x08005368   Section        0  menu.o(i.nextOption)
+    i.oddEvenNumDraw                         0x08005384   Section        0  mode_oddeve.o(i.oddEvenNumDraw)
+    oddEvenNumDraw                           0x08005385   Thumb Code   722  mode_oddeve.o(i.oddEvenNumDraw)
+    i.oled_flush                             0x08005674   Section        0  oled_driver.o(i.oled_flush)
+    i.paramDataDown                          0x080056c8   Section        0  mode_oddeve.o(i.paramDataDown)
+    paramDataDown                            0x080056c9   Thumb Code    12  mode_oddeve.o(i.paramDataDown)
+    i.paramDataUp                            0x080056d8   Section        0  mode_oddeve.o(i.paramDataUp)
+    paramDataUp                              0x080056d9   Thumb Code    12  mode_oddeve.o(i.paramDataUp)
+    i.paramUpdate                            0x080056e8   Section        0  mode_oddeve.o(i.paramUpdate)
+    i.pcf8563_Read                           0x0800579c   Section        0  pcf8563.o(i.pcf8563_Read)
+    i.pcf8563_gettime                        0x08005824   Section        0  pcf8563.o(i.pcf8563_gettime)
+    i.prevOption                             0x08005840   Section        0  menu.o(i.prevOption)
+    i.processButtons                         0x0800585c   Section        0  buttons.o(i.processButtons)
+    processButtons                           0x0800585d   Thumb Code   210  buttons.o(i.processButtons)
+    i.pwrmgr_init                            0x0800593c   Section        0  pwrmgr.o(i.pwrmgr_init)
+    i.pwrmgr_userActive                      0x0800594c   Section        0  pwrmgr.o(i.pwrmgr_userActive)
+    i.readFlash                              0x08005960   Section        0  flash.o(i.readFlash)
+    i.readPixels                             0x08005964   Section        0  draw.o(i.readPixels)
+    readPixels                               0x08005965   Thumb Code    12  draw.o(i.readPixels)
+    i.ruleAutoMatch                          0x08005970   Section        0  mode_couple.o(i.ruleAutoMatch)
+    ruleAutoMatch                            0x08005971   Thumb Code   216  mode_couple.o(i.ruleAutoMatch)
+    i.saveTimeDate                           0x08005a54   Section        0  timedate.o(i.saveTimeDate)
+    saveTimeDate                             0x08005a55   Thumb Code    38  timedate.o(i.saveTimeDate)
+    i.selectCouple                           0x08005a88   Section        0  mode.o(i.selectCouple)
+    selectCouple                             0x08005a89   Thumb Code     4  mode.o(i.selectCouple)
+    i.selectCoupleLoop                       0x08005a8c   Section        0  mode.o(i.selectCoupleLoop)
+    selectCoupleLoop                         0x08005a8d   Thumb Code    10  mode.o(i.selectCoupleLoop)
+    i.selectDate                             0x08005a9c   Section        0  timedate.o(i.selectDate)
+    selectDate                               0x08005a9d   Thumb Code    96  timedate.o(i.selectDate)
+    i.selectDaysleftNum                      0x08005b04   Section        0  mode_oddeve.o(i.selectDaysleftNum)
+    selectDaysleftNum                        0x08005b05   Thumb Code   110  mode_oddeve.o(i.selectDaysleftNum)
+    i.selectFridayNum                        0x08005b7c   Section        0  mode_couple.o(i.selectFridayNum)
+    selectFridayNum                          0x08005b7d   Thumb Code    64  mode_couple.o(i.selectFridayNum)
+    i.selectMondayNum                        0x08005bc4   Section        0  mode_couple.o(i.selectMondayNum)
+    selectMondayNum                          0x08005bc5   Thumb Code    64  mode_couple.o(i.selectMondayNum)
+    i.selectOddEvenNum                       0x08005c0c   Section        0  mode_oddeve.o(i.selectOddEvenNum)
+    selectOddEvenNum                         0x08005c0d   Thumb Code    50  mode_oddeve.o(i.selectOddEvenNum)
+    i.selectOddOrEven                        0x08005c48   Section        0  mode.o(i.selectOddOrEven)
+    selectOddOrEven                          0x08005c49   Thumb Code     4  mode.o(i.selectOddOrEven)
+    i.selectTailNum                          0x08005c4c   Section        0  tailnum.o(i.selectTailNum)
+    selectTailNum                            0x08005c4d   Thumb Code    78  tailnum.o(i.selectTailNum)
+    i.selectThursdayNum                      0x08005cbc   Section        0  mode_couple.o(i.selectThursdayNum)
+    selectThursdayNum                        0x08005cbd   Thumb Code    64  mode_couple.o(i.selectThursdayNum)
+    i.selectTime                             0x08005d04   Section        0  timedate.o(i.selectTime)
+    selectTime                               0x08005d05   Thumb Code   126  timedate.o(i.selectTime)
+    i.selectTuesdayNum                       0x08005d8c   Section        0  mode_couple.o(i.selectTuesdayNum)
+    selectTuesdayNum                         0x08005d8d   Thumb Code    64  mode_couple.o(i.selectTuesdayNum)
+    i.selectWednesdayNum                     0x08005dd4   Section        0  mode_couple.o(i.selectWednesdayNum)
+    selectWednesdayNum                       0x08005dd5   Thumb Code    64  mode_couple.o(i.selectWednesdayNum)
+    i.setMenuFuncs                           0x08005e1c   Section        0  menu.o(i.setMenuFuncs)
+    i.setMenuInfo                            0x08005e30   Section        0  menu.o(i.setMenuInfo)
+    i.setMenuOption                          0x08005e54   Section        0  menu.o(i.setMenuOption)
+    i.setMenuOption_P                        0x08005f04   Section        0  menu.o(i.setMenuOption_P)
+    i.setMenuOptions                         0x08005f30   Section        0  sound.o(i.setMenuOptions)
+    setMenuOptions                           0x08005f31   Thumb Code    58  sound.o(i.setMenuOptions)
+    i.setPrevMenuExit                        0x08005f98   Section        0  menu.o(i.setPrevMenuExit)
+    i.setPrevMenuOpen                        0x08005fbc   Section        0  menu.o(i.setPrevMenuOpen)
+    i.setVolume                              0x08005fd4   Section        0  sound.o(i.setVolume)
+    setVolume                                0x08005fd5   Thumb Code    12  sound.o(i.setVolume)
+    i.setVolumeAlarm                         0x08005fe0   Section        0  sound.o(i.setVolumeAlarm)
+    setVolumeAlarm                           0x08005fe1   Thumb Code    14  sound.o(i.setVolumeAlarm)
+    i.setVolumeHour                          0x08005ff4   Section        0  sound.o(i.setVolumeHour)
+    setVolumeHour                            0x08005ff5   Thumb Code    14  sound.o(i.setVolumeHour)
+    i.setVolumeUI                            0x08006008   Section        0  sound.o(i.setVolumeUI)
+    setVolumeUI                              0x08006009   Thumb Code    14  sound.o(i.setVolumeUI)
+    i.showDaysleftStr                        0x0800601c   Section        0  mode_oddeve.o(i.showDaysleftStr)
+    showDaysleftStr                          0x0800601d   Thumb Code   378  mode_oddeve.o(i.showDaysleftStr)
+    i.showOddEvenStr                         0x080061b0   Section        0  mode_oddeve.o(i.showOddEvenStr)
+    showOddEvenStr                           0x080061b1   Thumb Code   116  mode_oddeve.o(i.showOddEvenStr)
+    i.showWeekStr                            0x08006238   Section        0  mode_couple.o(i.showWeekStr)
+    showWeekStr                              0x08006239   Thumb Code   252  mode_couple.o(i.showWeekStr)
+    i.sin                                    0x08006358   Section        0  sin.o(i.sin)
+    i.strcopy_cnt                            0x080063f8   Section        0  gui_log_console.o(i.strcopy_cnt)
+    i.switchTwoNum                           0x08006410   Section        0  mode_couple.o(i.switchTwoNum)
+    i.tailNumDataDown                        0x0800641c   Section        0  tailnum.o(i.tailNumDataDown)
+    tailNumDataDown                          0x0800641d   Thumb Code    20  tailnum.o(i.tailNumDataDown)
+    i.tailNumDataUp                          0x08006434   Section        0  tailnum.o(i.tailNumDataUp)
+    tailNumDataUp                            0x08006435   Thumb Code    20  tailnum.o(i.tailNumDataUp)
+    i.tailNumDraw                            0x0800644c   Section        0  tailnum.o(i.tailNumDraw)
+    tailNumDraw                              0x0800644d   Thumb Code    82  tailnum.o(i.tailNumDraw)
+    i.tailnum_select                         0x080064a8   Section        0  tailnum.o(i.tailnum_select)
+    i.thisdraw                               0x08006528   Section        0  mode.o(i.thisdraw)
+    thisdraw                                 0x08006529   Thumb Code    54  mode.o(i.thisdraw)
+    i.thisdraw                               0x0800656c   Section        0  sound.o(i.thisdraw)
+    thisdraw                                 0x0800656d   Thumb Code    54  sound.o(i.thisdraw)
+    i.ticker                                 0x080065b0   Section        0  normal.o(i.ticker)
+    ticker                                   0x080065b1   Thumb Code   656  normal.o(i.ticker)
+    i.timeDataDown                           0x0800685c   Section        0  timedate.o(i.timeDataDown)
+    timeDataDown                             0x0800685d   Thumb Code    62  timedate.o(i.timeDataDown)
+    i.timeDataUp                             0x080068a4   Section        0  timedate.o(i.timeDataUp)
+    timeDataUp                               0x080068a5   Thumb Code    56  timedate.o(i.timeDataUp)
+    i.timeDateDraw                           0x080068e4   Section        0  timedate.o(i.timeDateDraw)
+    timeDateDraw                             0x080068e5   Thumb Code   184  timedate.o(i.timeDateDraw)
+    i.time_dow                               0x080069ac   Section        0  time.o(i.time_dow)
+    i.time_isLeapYear                        0x08006a08   Section        0  time.o(i.time_isLeapYear)
+    i.time_monthDayCount                     0x08006a14   Section        0  time.o(i.time_monthDayCount)
+    i.time_set                               0x08006a30   Section        0  time.o(i.time_set)
+    i.time_timeMode                          0x08006a6c   Section        0  time.o(i.time_timeMode)
+    i.time_update                            0x08006ab8   Section        0  time.o(i.time_update)
+    i.toMinutes                              0x08006af8   Section        0  alarm.o(i.toMinutes)
+    toMinutes                                0x08006af9   Thumb Code    24  alarm.o(i.toMinutes)
+    i.tune_play                              0x08006b10   Section        0  tune.o(i.tune_play)
+    i.wFlash                                 0x08006b2c   Section        0  flash.o(i.wFlash)
+    i.watchface_normal                       0x08006b64   Section        0  normal.o(i.watchface_normal)
+    i.weekNumDataDown                        0x08006b8c   Section        0  mode_couple.o(i.weekNumDataDown)
+    weekNumDataDown                          0x08006b8d   Thumb Code    38  mode_couple.o(i.weekNumDataDown)
+    i.weekNumDataUp                          0x08006bbc   Section        0  mode_couple.o(i.weekNumDataUp)
+    weekNumDataUp                            0x08006bbd   Thumb Code    38  mode_couple.o(i.weekNumDataUp)
+    i.weekNumDraw                            0x08006bec   Section        0  mode_couple.o(i.weekNumDraw)
+    weekNumDraw                              0x08006bed   Thumb Code   174  mode_couple.o(i.weekNumDraw)
+    i.writeData                              0x08006ca8   Section        0  pcf8563.o(i.writeData)
+    .constdata                               0x08006cd0   Section       10  mode_oddeve.o(.constdata)
+    .constdata                               0x08006cda   Section       16  system_stm32f1xx.o(.constdata)
+    .constdata                               0x08006cea   Section        8  system_stm32f1xx.o(.constdata)
+    .constdata                               0x08006cf2   Section        5  menu.o(.constdata)
+    .constdata                               0x08006cf7   Section       28  resources.o(.constdata)
+    .constdata                               0x08006d13   Section       48  resources.o(.constdata)
+    .constdata                               0x08006d43   Section      128  resources.o(.constdata)
+    .constdata                               0x08006dc3   Section      128  resources.o(.constdata)
+    .constdata                               0x08006e43   Section      512  resources.o(.constdata)
+    .constdata                               0x08007043   Section      384  resources.o(.constdata)
+    .constdata                               0x080071c3   Section      384  resources.o(.constdata)
+    .constdata                               0x08007343   Section       32  resources.o(.constdata)
+    .constdata                               0x08007363   Section       32  resources.o(.constdata)
+    .constdata                               0x08007383   Section      992  resources.o(.constdata)
+    .constdata                               0x08007763   Section      264  resources.o(.constdata)
+    .constdata                               0x0800786b   Section      485  resources.o(.constdata)
+    .constdata                               0x08007a50   Section        8  resources.o(.constdata)
+    .constdata                               0x08007a58   Section      570  resources.o(.constdata)
+    .constdata                               0x08007c92   Section      220  resources.o(.constdata)
+    .constdata                               0x08007d6e   Section       18  resources.o(.constdata)
+    .constdata                               0x08007d80   Section       36  resources.o(.constdata)
+    .constdata                               0x08007da4   Section       36  resources.o(.constdata)
+    .constdata                               0x08007dc8   Section      128  resources.o(.constdata)
+    .constdata                               0x08007e48   Section      128  resources.o(.constdata)
+    .constdata                               0x08007ec8   Section     1280  resources.o(.constdata)
+    .constdata                               0x080083c8   Section       12  time.o(.constdata)
+    monthDayCount                            0x080083c8   Data          12  time.o(.constdata)
+    .constdata                               0x080083d4   Section       16  tunes.o(.constdata)
+    .constdata                               0x080083e8   Section       48  cos_i.o(.constdata)
+    C                                        0x080083e8   Data          48  cos_i.o(.constdata)
+    .constdata                               0x08008418   Section      200  rred.o(.constdata)
+    pio2s                                    0x08008418   Data          48  rred.o(.constdata)
+    twooverpi                                0x08008448   Data         152  rred.o(.constdata)
+    .constdata                               0x080084e0   Section       40  sin_i.o(.constdata)
+    S                                        0x080084e0   Data          40  sin_i.o(.constdata)
     .data                                    0x20000000   Section        4  flash.o(.data)
     .data                                    0x20000004   Section        2  main.o(.data)
     count                                    0x20000004   Data           1  main.o(.data)
@@ -4199,77 +4212,77 @@ Image Symbol Table
     exitSelected                             0x0800460d   Thumb Code    20  menu.o(i.exitSelected)
     find_huanhang_str_idx                    0x08004625   Thumb Code    28  gui_log_console.o(i.find_huanhang_str_idx)
     gui_print_s                              0x08004721   Thumb Code    20  gui_log_console.o(i.gui_print_s)
-    mMainOpen                                0x08004a39   Thumb Code    22  m_main.o(i.mMainOpen)
-    mSoundOpen                               0x08004c7d   Thumb Code    50  sound.o(i.mSoundOpen)
-    mTimeDateOpen                            0x08004cd9   Thumb Code    72  timedate.o(i.mTimeDateOpen)
-    main                                     0x08004dd9   Thumb Code   202  main.o(i.main)
-    malloc                                   0x08004f71   Thumb Code    92  malloc.o(i.malloc)
-    menu_close                               0x08004fdd   Thumb Code    22  menu.o(i.menu_close)
-    menu_down                                0x08004ff9   Thumb Code    14  menu.o(i.menu_down)
-    menu_draw                                0x0800500d   Thumb Code   136  menu.o(i.menu_draw)
-    menu_select                              0x08005185   Thumb Code    40  menu.o(i.menu_select)
-    menu_up                                  0x080051b1   Thumb Code    14  menu.o(i.menu_up)
-    millis_get                               0x080051c5   Thumb Code     6  tim.o(i.millis_get)
-    mod10                                    0x080051d1   Thumb Code    12  global.o(i.mod10)
-    modeCoupleSelect                         0x080051dd   Thumb Code   110  mode_couple.o(i.modeCoupleSelect)
-    modeOddevenSelect                        0x08005279   Thumb Code    78  mode_oddeve.o(i.modeOddevenSelect)
-    mode_select                              0x080052f9   Thumb Code    50  mode.o(i.mode_select)
-    nextOption                               0x0800537d   Thumb Code    24  menu.o(i.nextOption)
-    oled_flush                               0x08005689   Thumb Code    74  oled_driver.o(i.oled_flush)
-    paramUpdate                              0x080056fd   Thumb Code   170  mode_oddeve.o(i.paramUpdate)
-    pcf8563_Read                             0x080057b1   Thumb Code   126  pcf8563.o(i.pcf8563_Read)
-    pcf8563_gettime                          0x08005839   Thumb Code    24  pcf8563.o(i.pcf8563_gettime)
-    prevOption                               0x08005855   Thumb Code    24  menu.o(i.prevOption)
-    pwrmgr_init                              0x08005951   Thumb Code    10  pwrmgr.o(i.pwrmgr_init)
-    pwrmgr_userActive                        0x08005961   Thumb Code    14  pwrmgr.o(i.pwrmgr_userActive)
-    readFlash                                0x08005975   Thumb Code     4  flash.o(i.readFlash)
-    setMenuFuncs                             0x08005e31   Thumb Code    14  menu.o(i.setMenuFuncs)
-    setMenuInfo                              0x08005e45   Thumb Code    30  menu.o(i.setMenuInfo)
-    setMenuOption                            0x08005e69   Thumb Code   154  menu.o(i.setMenuOption)
-    setMenuOption_P                          0x08005f19   Thumb Code    40  menu.o(i.setMenuOption_P)
-    setPrevMenuExit                          0x08005fad   Thumb Code    30  menu.o(i.setPrevMenuExit)
-    setPrevMenuOpen                          0x08005fd1   Thumb Code    18  menu.o(i.setPrevMenuOpen)
-    sin                                      0x0800636d   Thumb Code   150  sin.o(i.sin)
-    strcopy_cnt                              0x0800640d   Thumb Code    24  gui_log_console.o(i.strcopy_cnt)
-    switchTwoNum                             0x08006425   Thumb Code    10  mode_couple.o(i.switchTwoNum)
-    tailnum_select                           0x080064bd   Thumb Code    80  tailnum.o(i.tailnum_select)
-    time_dow                                 0x080069c1   Thumb Code    92  time.o(i.time_dow)
-    time_isLeapYear                          0x08006a1d   Thumb Code    12  time.o(i.time_isLeapYear)
-    time_monthDayCount                       0x08006a29   Thumb Code    24  time.o(i.time_monthDayCount)
-    time_set                                 0x08006a45   Thumb Code    50  time.o(i.time_set)
-    time_timeMode                            0x08006a81   Thumb Code    76  time.o(i.time_timeMode)
-    time_update                              0x08006acd   Thumb Code    54  time.o(i.time_update)
-    tune_play                                0x08006b25   Thumb Code    22  tune.o(i.tune_play)
-    wFlash                                   0x08006b41   Thumb Code    56  flash.o(i.wFlash)
-    watchface_normal                         0x08006b79   Thumb Code    30  normal.o(i.watchface_normal)
-    writeData                                0x08006cbd   Thumb Code    34  pcf8563.o(i.writeData)
-    AHBPrescTable                            0x08006cee   Data          16  system_stm32f1xx.o(.constdata)
-    APBPrescTable                            0x08006cfe   Data           8  system_stm32f1xx.o(.constdata)
-    menuBack                                 0x08006d06   Data           5  menu.o(.constdata)
-    days                                     0x08006d0b   Data          28  resources.o(.constdata)
-    months                                   0x08006d27   Data          48  resources.o(.constdata)
-    menu_timedate                            0x08006d57   Data         128  resources.o(.constdata)
-    menu_sound                               0x08006dd7   Data         128  resources.o(.constdata)
-    menu_volume                              0x08006e57   Data         512  resources.o(.constdata)
-    menu_threemode                           0x08007057   Data         384  resources.o(.constdata)
-    menu_tailnum                             0x080071d7   Data         384  resources.o(.constdata)
-    noEntering                               0x08007357   Data          32  resources.o(.constdata)
-    driving                                  0x08007377   Data          32  resources.o(.constdata)
-    textDisplay                              0x08007397   Data         992  resources.o(.constdata)
-    numFont11x16                             0x08007777   Data         264  resources.o(.constdata)
-    smallFont                                0x0800787f   Data         485  resources.o(.constdata)
-    smallFontAlarm                           0x08007a64   Data           8  resources.o(.constdata)
-    midFont                                  0x08007a6c   Data         570  resources.o(.constdata)
-    small2Font                               0x08007ca6   Data         220  resources.o(.constdata)
-    colon                                    0x08007d82   Data          18  resources.o(.constdata)
-    selectbar_top                            0x08007d94   Data          36  resources.o(.constdata)
-    selectbar_bottom                         0x08007db8   Data          36  resources.o(.constdata)
-    menu_mode                                0x08007ddc   Data         128  resources.o(.constdata)
-    menu_exit                                0x08007e5c   Data         128  resources.o(.constdata)
-    arial_font                               0x08007edc   Data        1280  resources.o(.constdata)
-    tuneHour                                 0x080083e8   Data          16  tunes.o(.constdata)
-    Region$$Table$$Base                      0x08008518   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x08008538   Number         0  anon$$obj.o(Region$$Table)
+    mMainOpen                                0x08004a25   Thumb Code    22  m_main.o(i.mMainOpen)
+    mSoundOpen                               0x08004c69   Thumb Code    50  sound.o(i.mSoundOpen)
+    mTimeDateOpen                            0x08004cc5   Thumb Code    72  timedate.o(i.mTimeDateOpen)
+    main                                     0x08004dc5   Thumb Code   202  main.o(i.main)
+    malloc                                   0x08004f5d   Thumb Code    92  malloc.o(i.malloc)
+    menu_close                               0x08004fc9   Thumb Code    22  menu.o(i.menu_close)
+    menu_down                                0x08004fe5   Thumb Code    14  menu.o(i.menu_down)
+    menu_draw                                0x08004ff9   Thumb Code   136  menu.o(i.menu_draw)
+    menu_select                              0x08005171   Thumb Code    40  menu.o(i.menu_select)
+    menu_up                                  0x0800519d   Thumb Code    14  menu.o(i.menu_up)
+    millis_get                               0x080051b1   Thumb Code     6  tim.o(i.millis_get)
+    mod10                                    0x080051bd   Thumb Code    12  global.o(i.mod10)
+    modeCoupleSelect                         0x080051c9   Thumb Code   110  mode_couple.o(i.modeCoupleSelect)
+    modeOddevenSelect                        0x08005265   Thumb Code    78  mode_oddeve.o(i.modeOddevenSelect)
+    mode_select                              0x080052e5   Thumb Code    50  mode.o(i.mode_select)
+    nextOption                               0x08005369   Thumb Code    24  menu.o(i.nextOption)
+    oled_flush                               0x08005675   Thumb Code    74  oled_driver.o(i.oled_flush)
+    paramUpdate                              0x080056e9   Thumb Code   170  mode_oddeve.o(i.paramUpdate)
+    pcf8563_Read                             0x0800579d   Thumb Code   126  pcf8563.o(i.pcf8563_Read)
+    pcf8563_gettime                          0x08005825   Thumb Code    24  pcf8563.o(i.pcf8563_gettime)
+    prevOption                               0x08005841   Thumb Code    24  menu.o(i.prevOption)
+    pwrmgr_init                              0x0800593d   Thumb Code    10  pwrmgr.o(i.pwrmgr_init)
+    pwrmgr_userActive                        0x0800594d   Thumb Code    14  pwrmgr.o(i.pwrmgr_userActive)
+    readFlash                                0x08005961   Thumb Code     4  flash.o(i.readFlash)
+    setMenuFuncs                             0x08005e1d   Thumb Code    14  menu.o(i.setMenuFuncs)
+    setMenuInfo                              0x08005e31   Thumb Code    30  menu.o(i.setMenuInfo)
+    setMenuOption                            0x08005e55   Thumb Code   154  menu.o(i.setMenuOption)
+    setMenuOption_P                          0x08005f05   Thumb Code    40  menu.o(i.setMenuOption_P)
+    setPrevMenuExit                          0x08005f99   Thumb Code    30  menu.o(i.setPrevMenuExit)
+    setPrevMenuOpen                          0x08005fbd   Thumb Code    18  menu.o(i.setPrevMenuOpen)
+    sin                                      0x08006359   Thumb Code   150  sin.o(i.sin)
+    strcopy_cnt                              0x080063f9   Thumb Code    24  gui_log_console.o(i.strcopy_cnt)
+    switchTwoNum                             0x08006411   Thumb Code    10  mode_couple.o(i.switchTwoNum)
+    tailnum_select                           0x080064a9   Thumb Code    80  tailnum.o(i.tailnum_select)
+    time_dow                                 0x080069ad   Thumb Code    92  time.o(i.time_dow)
+    time_isLeapYear                          0x08006a09   Thumb Code    12  time.o(i.time_isLeapYear)
+    time_monthDayCount                       0x08006a15   Thumb Code    24  time.o(i.time_monthDayCount)
+    time_set                                 0x08006a31   Thumb Code    50  time.o(i.time_set)
+    time_timeMode                            0x08006a6d   Thumb Code    76  time.o(i.time_timeMode)
+    time_update                              0x08006ab9   Thumb Code    54  time.o(i.time_update)
+    tune_play                                0x08006b11   Thumb Code    22  tune.o(i.tune_play)
+    wFlash                                   0x08006b2d   Thumb Code    56  flash.o(i.wFlash)
+    watchface_normal                         0x08006b65   Thumb Code    30  normal.o(i.watchface_normal)
+    writeData                                0x08006ca9   Thumb Code    34  pcf8563.o(i.writeData)
+    AHBPrescTable                            0x08006cda   Data          16  system_stm32f1xx.o(.constdata)
+    APBPrescTable                            0x08006cea   Data           8  system_stm32f1xx.o(.constdata)
+    menuBack                                 0x08006cf2   Data           5  menu.o(.constdata)
+    days                                     0x08006cf7   Data          28  resources.o(.constdata)
+    months                                   0x08006d13   Data          48  resources.o(.constdata)
+    menu_timedate                            0x08006d43   Data         128  resources.o(.constdata)
+    menu_sound                               0x08006dc3   Data         128  resources.o(.constdata)
+    menu_volume                              0x08006e43   Data         512  resources.o(.constdata)
+    menu_threemode                           0x08007043   Data         384  resources.o(.constdata)
+    menu_tailnum                             0x080071c3   Data         384  resources.o(.constdata)
+    noEntering                               0x08007343   Data          32  resources.o(.constdata)
+    driving                                  0x08007363   Data          32  resources.o(.constdata)
+    textDisplay                              0x08007383   Data         992  resources.o(.constdata)
+    numFont11x16                             0x08007763   Data         264  resources.o(.constdata)
+    smallFont                                0x0800786b   Data         485  resources.o(.constdata)
+    smallFontAlarm                           0x08007a50   Data           8  resources.o(.constdata)
+    midFont                                  0x08007a58   Data         570  resources.o(.constdata)
+    small2Font                               0x08007c92   Data         220  resources.o(.constdata)
+    colon                                    0x08007d6e   Data          18  resources.o(.constdata)
+    selectbar_top                            0x08007d80   Data          36  resources.o(.constdata)
+    selectbar_bottom                         0x08007da4   Data          36  resources.o(.constdata)
+    menu_mode                                0x08007dc8   Data         128  resources.o(.constdata)
+    menu_exit                                0x08007e48   Data         128  resources.o(.constdata)
+    arial_font                               0x08007ec8   Data        1280  resources.o(.constdata)
+    tuneHour                                 0x080083d4   Data          16  tunes.o(.constdata)
+    Region$$Table$$Base                      0x08008508   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08008528   Number         0  anon$$obj.o(Region$$Table)
     PAGEError                                0x20000000   Data           4  flash.o(.data)
     coupleDetails                            0x20000010   Data           4  mode_couple.o(.data)
     weekDrawFunc                             0x2000001c   Data          20  mode_couple.o(.data)
@@ -4330,52 +4343,52 @@ Memory Map of the image
 
   Image Entry point : 0x080000ed
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x000086b4, Max: 0x00010000, ABSOLUTE, COMPRESSED[0x000085a0])
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x000086a4, Max: 0x00010000, ABSOLUTE, COMPRESSED[0x00008590])
 
-    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00008538, Max: 0x00010000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00008528, Max: 0x00010000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x08000000   0x08000000   0x000000ec   Data   RO            3    RESET               startup_stm32f103xb.o
-    0x080000ec   0x080000ec   0x00000000   Code   RO         6923  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
-    0x080000ec   0x080000ec   0x00000004   Code   RO         7305    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
-    0x080000f0   0x080000f0   0x00000004   Code   RO         7308    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
-    0x080000f4   0x080000f4   0x00000000   Code   RO         7310    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
-    0x080000f4   0x080000f4   0x00000000   Code   RO         7312    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
-    0x080000f4   0x080000f4   0x00000008   Code   RO         7313    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
-    0x080000fc   0x080000fc   0x00000000   Code   RO         7315    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
-    0x080000fc   0x080000fc   0x00000000   Code   RO         7317    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
-    0x080000fc   0x080000fc   0x00000004   Code   RO         7306    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x080000ec   0x080000ec   0x00000000   Code   RO         6953  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x080000ec   0x080000ec   0x00000004   Code   RO         7335    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x080000f0   0x080000f0   0x00000004   Code   RO         7338    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x080000f4   0x080000f4   0x00000000   Code   RO         7340    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x080000f4   0x080000f4   0x00000000   Code   RO         7342    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x080000f4   0x080000f4   0x00000008   Code   RO         7343    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x080000fc   0x080000fc   0x00000000   Code   RO         7345    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x080000fc   0x080000fc   0x00000000   Code   RO         7347    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x080000fc   0x080000fc   0x00000004   Code   RO         7336    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
     0x08000100   0x08000100   0x00000024   Code   RO            4    .text               startup_stm32f103xb.o
-    0x08000124   0x08000124   0x00000020   Code   RO         6926    .text               mc_w.l(llushr.o)
-    0x08000144   0x08000144   0x00000024   Code   RO         6933    .text               mc_w.l(memseta.o)
-    0x08000168   0x08000168   0x00000018   Code   RO         6935    .text               mc_w.l(strcat.o)
-    0x08000180   0x08000180   0x0000000e   Code   RO         6937    .text               mc_w.l(strlen.o)
-    0x0800018e   0x0800018e   0x0000001a   Code   RO         6939    .text               mc_w.l(memcmp.o)
-    0x080001a8   0x080001a8   0x00000012   Code   RO         6941    .text               mc_w.l(strcpy.o)
-    0x080001ba   0x080001ba   0x0000007c   Code   RO         7236    .text               mf_w.l(fdiv.o)
-    0x08000236   0x08000236   0x0000014e   Code   RO         7240    .text               mf_w.l(dadd.o)
-    0x08000384   0x08000384   0x000000e4   Code   RO         7242    .text               mf_w.l(dmul.o)
-    0x08000468   0x08000468   0x000000de   Code   RO         7244    .text               mf_w.l(ddiv.o)
-    0x08000546   0x08000546   0x0000002e   Code   RO         7246    .text               mf_w.l(dscalb.o)
-    0x08000574   0x08000574   0x0000000a   Code   RO         7250    .text               mf_w.l(ffltui.o)
-    0x0800057e   0x0800057e   0x00000022   Code   RO         7252    .text               mf_w.l(dflti.o)
-    0x080005a0   0x080005a0   0x0000001a   Code   RO         7254    .text               mf_w.l(dfltui.o)
-    0x080005ba   0x080005ba   0x0000003e   Code   RO         7256    .text               mf_w.l(dfixi.o)
-    0x080005f8   0x080005f8   0x00000026   Code   RO         7258    .text               mf_w.l(f2d.o)
-    0x0800061e   0x0800061e   0x00000038   Code   RO         7262    .text               mf_w.l(d2f.o)
-    0x08000656   0x08000656   0x0000002c   Code   RO         7322    .text               mc_w.l(uidiv.o)
-    0x08000682   0x08000682   0x00000062   Code   RO         7324    .text               mc_w.l(uldiv.o)
-    0x080006e4   0x080006e4   0x0000001e   Code   RO         7326    .text               mc_w.l(llshl.o)
-    0x08000702   0x08000702   0x00000024   Code   RO         7328    .text               mc_w.l(llsshr.o)
-    0x08000726   0x08000726   0x00000000   Code   RO         7339    .text               mc_w.l(iusefp.o)
-    0x08000726   0x08000726   0x0000006e   Code   RO         7340    .text               mf_w.l(fepilogue.o)
-    0x08000794   0x08000794   0x000000ba   Code   RO         7342    .text               mf_w.l(depilogue.o)
-    0x0800084e   0x0800084e   0x00000030   Code   RO         7344    .text               mf_w.l(dfixul.o)
+    0x08000124   0x08000124   0x00000020   Code   RO         6956    .text               mc_w.l(llushr.o)
+    0x08000144   0x08000144   0x00000024   Code   RO         6963    .text               mc_w.l(memseta.o)
+    0x08000168   0x08000168   0x00000018   Code   RO         6965    .text               mc_w.l(strcat.o)
+    0x08000180   0x08000180   0x0000000e   Code   RO         6967    .text               mc_w.l(strlen.o)
+    0x0800018e   0x0800018e   0x0000001a   Code   RO         6969    .text               mc_w.l(memcmp.o)
+    0x080001a8   0x080001a8   0x00000012   Code   RO         6971    .text               mc_w.l(strcpy.o)
+    0x080001ba   0x080001ba   0x0000007c   Code   RO         7266    .text               mf_w.l(fdiv.o)
+    0x08000236   0x08000236   0x0000014e   Code   RO         7270    .text               mf_w.l(dadd.o)
+    0x08000384   0x08000384   0x000000e4   Code   RO         7272    .text               mf_w.l(dmul.o)
+    0x08000468   0x08000468   0x000000de   Code   RO         7274    .text               mf_w.l(ddiv.o)
+    0x08000546   0x08000546   0x0000002e   Code   RO         7276    .text               mf_w.l(dscalb.o)
+    0x08000574   0x08000574   0x0000000a   Code   RO         7280    .text               mf_w.l(ffltui.o)
+    0x0800057e   0x0800057e   0x00000022   Code   RO         7282    .text               mf_w.l(dflti.o)
+    0x080005a0   0x080005a0   0x0000001a   Code   RO         7284    .text               mf_w.l(dfltui.o)
+    0x080005ba   0x080005ba   0x0000003e   Code   RO         7286    .text               mf_w.l(dfixi.o)
+    0x080005f8   0x080005f8   0x00000026   Code   RO         7288    .text               mf_w.l(f2d.o)
+    0x0800061e   0x0800061e   0x00000038   Code   RO         7292    .text               mf_w.l(d2f.o)
+    0x08000656   0x08000656   0x0000002c   Code   RO         7352    .text               mc_w.l(uidiv.o)
+    0x08000682   0x08000682   0x00000062   Code   RO         7354    .text               mc_w.l(uldiv.o)
+    0x080006e4   0x080006e4   0x0000001e   Code   RO         7356    .text               mc_w.l(llshl.o)
+    0x08000702   0x08000702   0x00000024   Code   RO         7358    .text               mc_w.l(llsshr.o)
+    0x08000726   0x08000726   0x00000000   Code   RO         7369    .text               mc_w.l(iusefp.o)
+    0x08000726   0x08000726   0x0000006e   Code   RO         7370    .text               mf_w.l(fepilogue.o)
+    0x08000794   0x08000794   0x000000ba   Code   RO         7372    .text               mf_w.l(depilogue.o)
+    0x0800084e   0x0800084e   0x00000030   Code   RO         7374    .text               mf_w.l(dfixul.o)
     0x0800087e   0x0800087e   0x00000002   PAD
-    0x08000880   0x08000880   0x00000030   Code   RO         7346    .text               mf_w.l(cdrcmple.o)
-    0x080008b0   0x080008b0   0x00000024   Code   RO         7352    .text               mc_w.l(init.o)
-    0x080008d4   0x080008d4   0x00000056   Code   RO         7364    .text               mc_w.l(__dczerorl2.o)
+    0x08000880   0x08000880   0x00000030   Code   RO         7376    .text               mf_w.l(cdrcmple.o)
+    0x080008b0   0x080008b0   0x00000024   Code   RO         7382    .text               mc_w.l(init.o)
+    0x080008d4   0x080008d4   0x00000056   Code   RO         7394    .text               mc_w.l(__dczerorl2.o)
     0x0800092a   0x0800092a   0x00000002   PAD
     0x0800092c   0x0800092c   0x00000024   Code   RO         3998    i.AlarmEnalbe       alarm.o
     0x08000950   0x08000950   0x00000010   Code   RO          818    i.BCDtoDEC          pcf8563.o
@@ -4444,7 +4457,7 @@ Memory Map of the image
     0x08002200   0x08002200   0x00000096   Code   RO         1269    i.I2C_WaitOnMasterAddressFlagUntilTimeout  stm32f1xx_hal_i2c.o
     0x08002296   0x08002296   0x00000066   Code   RO         1270    i.I2C_WaitOnRXNEFlagUntilTimeout  stm32f1xx_hal_i2c.o
     0x080022fc   0x080022fc   0x0000004c   Code   RO         1271    i.I2C_WaitOnTXEFlagUntilTimeout  stm32f1xx_hal_i2c.o
-    0x08002348   0x08002348   0x0000002c   Code   RO         6458    i.I2C_WriteByte     oled_driver.o
+    0x08002348   0x08002348   0x0000002c   Code   RO         6488    i.I2C_WriteByte     oled_driver.o
     0x08002374   0x08002374   0x000000ac   Code   RO          190    i.MX_GPIO_Init      gpio.o
     0x08002420   0x08002420   0x00000040   Code   RO          219    i.MX_I2C1_Init      i2c.o
     0x08002460   0x08002460   0x00000074   Code   RO         1062    i.MX_TIM3_Init      tim.o
@@ -4452,8 +4465,8 @@ Memory Map of the image
     0x0800250c   0x0800250c   0x00000038   Code   RO         1118    i.MX_USART2_UART_Init  usart.o
     0x08002544   0x08002544   0x00000002   Code   RO          910    i.MemManage_Handler  stm32f1xx_it.o
     0x08002546   0x08002546   0x00000002   Code   RO          911    i.NMI_Handler       stm32f1xx_it.o
-    0x08002548   0x08002548   0x00000034   Code   RO         6459    i.OLED_CLS          oled_driver.o
-    0x0800257c   0x0800257c   0x000000fc   Code   RO         6462    i.OLED_Init         oled_driver.o
+    0x08002548   0x08002548   0x00000034   Code   RO         6489    i.OLED_CLS          oled_driver.o
+    0x0800257c   0x0800257c   0x000000fc   Code   RO         6492    i.OLED_Init         oled_driver.o
     0x08002678   0x08002678   0x00000002   Code   RO          912    i.PendSV_Handler    stm32f1xx_it.o
     0x0800267a   0x0800267a   0x00000002   PAD
     0x0800267c   0x0800267c   0x00000020   Code   RO          820    i.ReadData          pcf8563.o
@@ -4473,32 +4486,32 @@ Memory Map of the image
     0x080028d2   0x080028d2   0x00000002   PAD
     0x080028d4   0x080028d4   0x000000b8   Code   RO         3658    i.UART_SetConfig    stm32f1xx_hal_uart.o
     0x0800298c   0x0800298c   0x00000002   Code   RO          916    i.UsageFault_Handler  stm32f1xx_it.o
-    0x0800298e   0x0800298e   0x00000008   Code   RO         6468    i.WriteCmd          oled_driver.o
-    0x08002996   0x08002996   0x00000008   Code   RO         6469    i.WriteDat          oled_driver.o
+    0x0800298e   0x0800298e   0x00000008   Code   RO         6498    i.WriteCmd          oled_driver.o
+    0x08002996   0x08002996   0x00000008   Code   RO         6499    i.WriteDat          oled_driver.o
     0x0800299e   0x0800299e   0x00000002   PAD
-    0x080029a0   0x080029a0   0x00000028   Code   RO         7180    i.__0sprintf        mc_w.l(printfa.o)
-    0x080029c8   0x080029c8   0x00000024   Code   RO         7184    i.__0vsprintf       mc_w.l(printfa.o)
-    0x080029ec   0x080029ec   0x00000028   Code   RO         7348    i.__ARM_fpclassify  m_ws.l(fpclassify.o)
+    0x080029a0   0x080029a0   0x00000028   Code   RO         7210    i.__0sprintf        mc_w.l(printfa.o)
+    0x080029c8   0x080029c8   0x00000024   Code   RO         7214    i.__0vsprintf       mc_w.l(printfa.o)
+    0x080029ec   0x080029ec   0x00000028   Code   RO         7378    i.__ARM_fpclassify  m_ws.l(fpclassify.o)
     0x08002a14   0x08002a14   0x00000020   Code   RO         2119    i.__NVIC_SetPriority  stm32f1xx_hal_cortex.o
-    0x08002a34   0x08002a34   0x00000388   Code   RO         7294    i.__ieee754_rem_pio2  m_ws.l(rred.o)
-    0x08002dbc   0x08002dbc   0x000000fc   Code   RO         7276    i.__kernel_cos      m_ws.l(cos_i.o)
-    0x08002eb8   0x08002eb8   0x000000aa   Code   RO         7350    i.__kernel_poly     m_ws.l(poly.o)
+    0x08002a34   0x08002a34   0x00000388   Code   RO         7324    i.__ieee754_rem_pio2  m_ws.l(rred.o)
+    0x08002dbc   0x08002dbc   0x000000fc   Code   RO         7306    i.__kernel_cos      m_ws.l(cos_i.o)
+    0x08002eb8   0x08002eb8   0x000000aa   Code   RO         7380    i.__kernel_poly     m_ws.l(poly.o)
     0x08002f62   0x08002f62   0x00000002   PAD
-    0x08002f64   0x08002f64   0x000000ec   Code   RO         7299    i.__kernel_sin      m_ws.l(sin_i.o)
-    0x08003050   0x08003050   0x00000006   Code   RO         7280    i.__mathlib_dbl_infnan  m_ws.l(dunder.o)
-    0x08003056   0x08003056   0x0000000c   Code   RO         7282    i.__mathlib_dbl_invalid  m_ws.l(dunder.o)
+    0x08002f64   0x08002f64   0x000000ec   Code   RO         7329    i.__kernel_sin      m_ws.l(sin_i.o)
+    0x08003050   0x08003050   0x00000006   Code   RO         7310    i.__mathlib_dbl_infnan  m_ws.l(dunder.o)
+    0x08003056   0x08003056   0x0000000c   Code   RO         7312    i.__mathlib_dbl_invalid  m_ws.l(dunder.o)
     0x08003062   0x08003062   0x00000002   PAD
-    0x08003064   0x08003064   0x00000010   Code   RO         7285    i.__mathlib_dbl_underflow  m_ws.l(dunder.o)
-    0x08003074   0x08003074   0x0000000e   Code   RO         7358    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x08003082   0x08003082   0x00000002   Code   RO         7359    i.__scatterload_null  mc_w.l(handlers.o)
-    0x08003084   0x08003084   0x0000000e   Code   RO         7360    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x08003064   0x08003064   0x00000010   Code   RO         7315    i.__mathlib_dbl_underflow  m_ws.l(dunder.o)
+    0x08003074   0x08003074   0x0000000e   Code   RO         7388    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x08003082   0x08003082   0x00000002   Code   RO         7389    i.__scatterload_null  mc_w.l(handlers.o)
+    0x08003084   0x08003084   0x0000000e   Code   RO         7390    i.__scatterload_zeroinit  mc_w.l(handlers.o)
     0x08003092   0x08003092   0x00000002   PAD
-    0x08003094   0x08003094   0x0000000c   Code   RO         7334    i.__set_errno       mc_w.l(errno.o)
-    0x080030a0   0x080030a0   0x00000184   Code   RO         7185    i._fp_digits        mc_w.l(printfa.o)
-    0x08003224   0x08003224   0x000006dc   Code   RO         7186    i._printf_core      mc_w.l(printfa.o)
-    0x08003900   0x08003900   0x00000024   Code   RO         7187    i._printf_post_padding  mc_w.l(printfa.o)
-    0x08003924   0x08003924   0x0000002e   Code   RO         7188    i._printf_pre_padding  mc_w.l(printfa.o)
-    0x08003952   0x08003952   0x0000000a   Code   RO         7190    i._sputc            mc_w.l(printfa.o)
+    0x08003094   0x08003094   0x0000000c   Code   RO         7364    i.__set_errno       mc_w.l(errno.o)
+    0x080030a0   0x080030a0   0x00000184   Code   RO         7215    i._fp_digits        mc_w.l(printfa.o)
+    0x08003224   0x08003224   0x000006dc   Code   RO         7216    i._printf_core      mc_w.l(printfa.o)
+    0x08003900   0x08003900   0x00000024   Code   RO         7217    i._printf_post_padding  mc_w.l(printfa.o)
+    0x08003924   0x08003924   0x0000002e   Code   RO         7218    i._printf_pre_padding  mc_w.l(printfa.o)
+    0x08003952   0x08003952   0x0000000a   Code   RO         7220    i._sputc            mc_w.l(printfa.o)
     0x0800395c   0x0800395c   0x00000024   Code   RO         4920    i.addBackOption     menu.o
     0x08003980   0x08003980   0x00000018   Code   RO         3999    i.alarm_get         alarm.o
     0x08003998   0x08003998   0x00000004   Code   RO         4002    i.alarm_init        alarm.o
@@ -4524,7 +4537,7 @@ Memory Map of the image
     0x08003ba8   0x08003ba8   0x00000064   Code   RO          715    i.checkDataValid    mode_oddeve.o
     0x08003c0c   0x08003c0c   0x00000020   Code   RO         4924    i.checkScroll       menu.o
     0x08003c2c   0x08003c2c   0x0000000c   Code   RO         4925    i.clear             menu.o
-    0x08003c38   0x08003c38   0x00000184   Code   RO         6774    i.console_log       gui_log_console.o
+    0x08003c38   0x08003c38   0x00000184   Code   RO         6804    i.console_log       gui_log_console.o
     0x08003dbc   0x08003dbc   0x00000148   Code   RO         4566    i.crt_animation     display.o
     0x08003f04   0x08003f04   0x00000010   Code   RO         4567    i.display_load      display.o
     0x08003f14   0x08003f14   0x0000000c   Code   RO         4568    i.display_set       display.o
@@ -4534,7 +4547,7 @@ Memory Map of the image
     0x08003fc0   0x08003fc0   0x00000010   Code   RO         4926    i.doAction          menu.o
     0x08003fd0   0x08003fd0   0x0000002c   Code   RO         4927    i.doBtn             menu.o
     0x08003ffc   0x08003ffc   0x00000038   Code   RO         5099    i.draw              normal.o
-    0x08004034   0x08004034   0x00000134   Code   RO         5790    i.drawDriveSignal   ui.o
+    0x08004034   0x08004034   0x00000134   Code   RO         5820    i.drawDriveSignal   ui.o
     0x08004168   0x08004168   0x000000f8   Code   RO         5100    i.drawHeadLine      normal.o
     0x08004260   0x08004260   0x00000080   Code   RO         5101    i.drawTickerNum     normal.o
     0x080042e0   0x080042e0   0x0000003c   Code   RO         4928    i.drawTitle         menu.o
@@ -4545,13 +4558,13 @@ Memory Map of the image
     0x0800451c   0x0800451c   0x00000034   Code   RO          599    i.endSelect         mode_couple.o
     0x08004550   0x08004550   0x00000034   Code   RO          716    i.endSelect         mode_oddeve.o
     0x08004584   0x08004584   0x00000034   Code   RO          994    i.endSelect         tailnum.o
-    0x080045b8   0x080045b8   0x00000034   Code   RO         5541    i.endSelect         timedate.o
+    0x080045b8   0x080045b8   0x00000034   Code   RO         5546    i.endSelect         timedate.o
     0x080045ec   0x080045ec   0x00000020   Code   RO           18    i.eraseFlash        flash.o
     0x0800460c   0x0800460c   0x00000018   Code   RO         4929    i.exitSelected      menu.o
-    0x08004624   0x08004624   0x0000001c   Code   RO         6777    i.find_huanhang_str_idx  gui_log_console.o
-    0x08004640   0x08004640   0x00000040   Code   RO         5542    i.getMaxValForSetting  timedate.o
+    0x08004624   0x08004624   0x0000001c   Code   RO         6807    i.find_huanhang_str_idx  gui_log_console.o
+    0x08004640   0x08004640   0x00000040   Code   RO         5547    i.getMaxValForSetting  timedate.o
     0x08004680   0x08004680   0x000000a0   Code   RO         4008    i.getNextAlarm      alarm.o
-    0x08004720   0x08004720   0x00000014   Code   RO         6778    i.gui_print_s       gui_log_console.o
+    0x08004720   0x08004720   0x00000014   Code   RO         6808    i.gui_print_s       gui_log_console.o
     0x08004734   0x08004734   0x00000070   Code   RO          490    i.itemLoader        mode.o
     0x080047a4   0x080047a4   0x0000000e   Code   RO          600    i.itemLoader        mode_couple.o
     0x080047b2   0x080047b2   0x00000012   Code   RO          717    i.itemLoader        mode_oddeve.o
@@ -4559,144 +4572,145 @@ Memory Map of the image
     0x080047fc   0x080047fc   0x000000a0   Code   RO         4879    i.itemLoader        m_main.o
     0x0800489c   0x0800489c   0x0000000e   Code   RO         5361    i.itemLoader        sound.o
     0x080048aa   0x080048aa   0x00000002   PAD
-    0x080048ac   0x080048ac   0x000000e8   Code   RO         5543    i.itemLoader        timedate.o
-    0x08004994   0x08004994   0x00000020   Code   RO         4930    i.loader            menu.o
-    0x080049b4   0x080049b4   0x0000002c   Code   RO          601    i.mDown             mode_couple.o
-    0x080049e0   0x080049e0   0x00000034   Code   RO          718    i.mDown             mode_oddeve.o
-    0x08004a14   0x08004a14   0x00000024   Code   RO         5544    i.mDown             timedate.o
-    0x08004a38   0x08004a38   0x00000020   Code   RO         4880    i.mMainOpen         m_main.o
-    0x08004a58   0x08004a58   0x00000074   Code   RO         4881    i.mOpen             m_main.o
-    0x08004acc   0x08004acc   0x00000024   Code   RO          491    i.mSelect           mode.o
-    0x08004af0   0x08004af0   0x00000078   Code   RO          602    i.mSelect           mode_couple.o
-    0x08004b68   0x08004b68   0x00000074   Code   RO          719    i.mSelect           mode_oddeve.o
-    0x08004bdc   0x08004bdc   0x0000004c   Code   RO          996    i.mSelect           tailnum.o
-    0x08004c28   0x08004c28   0x00000018   Code   RO         4882    i.mSelect           m_main.o
-    0x08004c40   0x08004c40   0x00000024   Code   RO         5362    i.mSelect           sound.o
-    0x08004c64   0x08004c64   0x00000018   Code   RO         5545    i.mSelect           timedate.o
-    0x08004c7c   0x08004c7c   0x0000005c   Code   RO         5363    i.mSoundOpen        sound.o
-    0x08004cd8   0x08004cd8   0x00000078   Code   RO         5546    i.mTimeDateOpen     timedate.o
-    0x08004d50   0x08004d50   0x0000002c   Code   RO          603    i.mUp               mode_couple.o
-    0x08004d7c   0x08004d7c   0x00000038   Code   RO          720    i.mUp               mode_oddeve.o
-    0x08004db4   0x08004db4   0x00000024   Code   RO         5547    i.mUp               timedate.o
-    0x08004dd8   0x08004dd8   0x00000198   Code   RO          263    i.main              main.o
-    0x08004f70   0x08004f70   0x0000006c   Code   RO         7207    i.malloc            mc_w.l(malloc.o)
-    0x08004fdc   0x08004fdc   0x0000001c   Code   RO         4931    i.menu_close        menu.o
-    0x08004ff8   0x08004ff8   0x00000014   Code   RO         4932    i.menu_down         menu.o
-    0x0800500c   0x0800500c   0x00000090   Code   RO         4933    i.menu_draw         menu.o
-    0x0800509c   0x0800509c   0x000000e8   Code   RO         4934    i.menu_drawIcon     menu.o
-    0x08005184   0x08005184   0x0000002c   Code   RO         4936    i.menu_select       menu.o
-    0x080051b0   0x080051b0   0x00000014   Code   RO         4937    i.menu_up           menu.o
-    0x080051c4   0x080051c4   0x0000000c   Code   RO         1063    i.millis_get        tim.o
-    0x080051d0   0x080051d0   0x0000000c   Code   RO         4739    i.mod10             global.o
-    0x080051dc   0x080051dc   0x0000009c   Code   RO          604    i.modeCoupleSelect  mode_couple.o
-    0x08005278   0x08005278   0x00000080   Code   RO          721    i.modeOddevenSelect  mode_oddeve.o
-    0x080052f8   0x080052f8   0x0000005c   Code   RO          492    i.mode_select       mode.o
-    0x08005354   0x08005354   0x00000028   Code   RO         5649    i.next              tune.o
-    0x0800537c   0x0800537c   0x0000001c   Code   RO         4938    i.nextOption        menu.o
-    0x08005398   0x08005398   0x000002f0   Code   RO          722    i.oddEvenNumDraw    mode_oddeve.o
-    0x08005688   0x08005688   0x00000054   Code   RO         6470    i.oled_flush        oled_driver.o
-    0x080056dc   0x080056dc   0x00000010   Code   RO          723    i.paramDataDown     mode_oddeve.o
-    0x080056ec   0x080056ec   0x00000010   Code   RO          724    i.paramDataUp       mode_oddeve.o
-    0x080056fc   0x080056fc   0x000000b4   Code   RO          725    i.paramUpdate       mode_oddeve.o
-    0x080057b0   0x080057b0   0x00000088   Code   RO          823    i.pcf8563_Read      pcf8563.o
-    0x08005838   0x08005838   0x0000001c   Code   RO          824    i.pcf8563_gettime   pcf8563.o
-    0x08005854   0x08005854   0x0000001c   Code   RO         4939    i.prevOption        menu.o
-    0x08005870   0x08005870   0x000000e0   Code   RO         4406    i.processButtons    buttons.o
-    0x08005950   0x08005950   0x00000010   Code   RO         5152    i.pwrmgr_init       pwrmgr.o
-    0x08005960   0x08005960   0x00000014   Code   RO         5154    i.pwrmgr_userActive  pwrmgr.o
-    0x08005974   0x08005974   0x00000004   Code   RO           19    i.readFlash         flash.o
-    0x08005978   0x08005978   0x0000000c   Code   RO         4633    i.readPixels        draw.o
-    0x08005984   0x08005984   0x000000e4   Code   RO          605    i.ruleAutoMatch     mode_couple.o
-    0x08005a68   0x08005a68   0x00000034   Code   RO         5548    i.saveTimeDate      timedate.o
-    0x08005a9c   0x08005a9c   0x00000004   Code   RO          493    i.selectCouple      mode.o
-    0x08005aa0   0x08005aa0   0x00000010   Code   RO          494    i.selectCoupleLoop  mode.o
-    0x08005ab0   0x08005ab0   0x00000068   Code   RO         5549    i.selectDate        timedate.o
-    0x08005b18   0x08005b18   0x00000078   Code   RO          726    i.selectDaysleftNum  mode_oddeve.o
-    0x08005b90   0x08005b90   0x00000048   Code   RO          606    i.selectFridayNum   mode_couple.o
-    0x08005bd8   0x08005bd8   0x00000048   Code   RO          607    i.selectMondayNum   mode_couple.o
-    0x08005c20   0x08005c20   0x0000003c   Code   RO          727    i.selectOddEvenNum  mode_oddeve.o
-    0x08005c5c   0x08005c5c   0x00000004   Code   RO          495    i.selectOddOrEven   mode.o
-    0x08005c60   0x08005c60   0x00000070   Code   RO          997    i.selectTailNum     tailnum.o
-    0x08005cd0   0x08005cd0   0x00000048   Code   RO          608    i.selectThursdayNum  mode_couple.o
-    0x08005d18   0x08005d18   0x00000088   Code   RO         5550    i.selectTime        timedate.o
-    0x08005da0   0x08005da0   0x00000048   Code   RO          609    i.selectTuesdayNum  mode_couple.o
-    0x08005de8   0x08005de8   0x00000048   Code   RO          610    i.selectWednesdayNum  mode_couple.o
-    0x08005e30   0x08005e30   0x00000014   Code   RO         4940    i.setMenuFuncs      menu.o
-    0x08005e44   0x08005e44   0x00000024   Code   RO         4941    i.setMenuInfo       menu.o
-    0x08005e68   0x08005e68   0x000000b0   Code   RO         4942    i.setMenuOption     menu.o
-    0x08005f18   0x08005f18   0x0000002c   Code   RO         4943    i.setMenuOption_P   menu.o
-    0x08005f44   0x08005f44   0x00000068   Code   RO         5364    i.setMenuOptions    sound.o
-    0x08005fac   0x08005fac   0x00000024   Code   RO         4944    i.setPrevMenuExit   menu.o
-    0x08005fd0   0x08005fd0   0x00000018   Code   RO         4945    i.setPrevMenuOpen   menu.o
-    0x08005fe8   0x08005fe8   0x0000000c   Code   RO         5365    i.setVolume         sound.o
-    0x08005ff4   0x08005ff4   0x00000014   Code   RO         5366    i.setVolumeAlarm    sound.o
-    0x08006008   0x08006008   0x00000014   Code   RO         5367    i.setVolumeHour     sound.o
-    0x0800601c   0x0800601c   0x00000014   Code   RO         5368    i.setVolumeUI       sound.o
-    0x08006030   0x08006030   0x00000194   Code   RO          728    i.showDaysleftStr   mode_oddeve.o
-    0x080061c4   0x080061c4   0x00000088   Code   RO          729    i.showOddEvenStr    mode_oddeve.o
-    0x0800624c   0x0800624c   0x00000120   Code   RO          611    i.showWeekStr       mode_couple.o
-    0x0800636c   0x0800636c   0x000000a0   Code   RO         6916    i.sin               m_ws.l(sin.o)
-    0x0800640c   0x0800640c   0x00000018   Code   RO         6779    i.strcopy_cnt       gui_log_console.o
-    0x08006424   0x08006424   0x0000000a   Code   RO          612    i.switchTwoNum      mode_couple.o
-    0x0800642e   0x0800642e   0x00000002   PAD
-    0x08006430   0x08006430   0x00000018   Code   RO          998    i.tailNumDataDown   tailnum.o
-    0x08006448   0x08006448   0x00000018   Code   RO          999    i.tailNumDataUp     tailnum.o
-    0x08006460   0x08006460   0x0000005c   Code   RO         1000    i.tailNumDraw       tailnum.o
-    0x080064bc   0x080064bc   0x00000080   Code   RO         1001    i.tailnum_select    tailnum.o
-    0x0800653c   0x0800653c   0x00000044   Code   RO          496    i.thisdraw          mode.o
-    0x08006580   0x08006580   0x00000044   Code   RO         5369    i.thisdraw          sound.o
-    0x080065c4   0x080065c4   0x000002ac   Code   RO         5102    i.ticker            normal.o
-    0x08006870   0x08006870   0x00000048   Code   RO         5551    i.timeDataDown      timedate.o
-    0x080068b8   0x080068b8   0x00000040   Code   RO         5552    i.timeDataUp        timedate.o
-    0x080068f8   0x080068f8   0x000000c8   Code   RO         5553    i.timeDateDraw      timedate.o
-    0x080069c0   0x080069c0   0x0000005c   Code   RO         5445    i.time_dow          time.o
-    0x08006a1c   0x08006a1c   0x0000000c   Code   RO         5447    i.time_isLeapYear   time.o
-    0x08006a28   0x08006a28   0x0000001c   Code   RO         5448    i.time_monthDayCount  time.o
-    0x08006a44   0x08006a44   0x0000003c   Code   RO         5449    i.time_set          time.o
-    0x08006a80   0x08006a80   0x0000004c   Code   RO         5452    i.time_timeMode     time.o
-    0x08006acc   0x08006acc   0x00000040   Code   RO         5454    i.time_update       time.o
-    0x08006b0c   0x08006b0c   0x00000018   Code   RO         4011    i.toMinutes         alarm.o
-    0x08006b24   0x08006b24   0x0000001c   Code   RO         5650    i.tune_play         tune.o
-    0x08006b40   0x08006b40   0x00000038   Code   RO           20    i.wFlash            flash.o
-    0x08006b78   0x08006b78   0x00000028   Code   RO         5103    i.watchface_normal  normal.o
-    0x08006ba0   0x08006ba0   0x00000030   Code   RO          613    i.weekNumDataDown   mode_couple.o
-    0x08006bd0   0x08006bd0   0x00000030   Code   RO          614    i.weekNumDataUp     mode_couple.o
-    0x08006c00   0x08006c00   0x000000bc   Code   RO          615    i.weekNumDraw       mode_couple.o
-    0x08006cbc   0x08006cbc   0x00000028   Code   RO          827    i.writeData         pcf8563.o
-    0x08006ce4   0x08006ce4   0x0000000a   Data   RO          730    .constdata          mode_oddeve.o
-    0x08006cee   0x08006cee   0x00000010   Data   RO         3962    .constdata          system_stm32f1xx.o
-    0x08006cfe   0x08006cfe   0x00000008   Data   RO         3963    .constdata          system_stm32f1xx.o
-    0x08006d06   0x08006d06   0x00000005   Data   RO         4947    .constdata          menu.o
-    0x08006d0b   0x08006d0b   0x0000001c   Data   RO         5205    .constdata          resources.o
-    0x08006d27   0x08006d27   0x00000030   Data   RO         5206    .constdata          resources.o
-    0x08006d57   0x08006d57   0x00000080   Data   RO         5211    .constdata          resources.o
-    0x08006dd7   0x08006dd7   0x00000080   Data   RO         5213    .constdata          resources.o
-    0x08006e57   0x08006e57   0x00000200   Data   RO         5218    .constdata          resources.o
-    0x08007057   0x08007057   0x00000180   Data   RO         5219    .constdata          resources.o
-    0x080071d7   0x080071d7   0x00000180   Data   RO         5220    .constdata          resources.o
-    0x08007357   0x08007357   0x00000020   Data   RO         5228    .constdata          resources.o
-    0x08007377   0x08007377   0x00000020   Data   RO         5229    .constdata          resources.o
-    0x08007397   0x08007397   0x000003e0   Data   RO         5230    .constdata          resources.o
-    0x08007777   0x08007777   0x00000108   Data   RO         5231    .constdata          resources.o
-    0x0800787f   0x0800787f   0x000001e5   Data   RO         5232    .constdata          resources.o
-    0x08007a64   0x08007a64   0x00000008   Data   RO         5233    .constdata          resources.o
-    0x08007a6c   0x08007a6c   0x0000023a   Data   RO         5234    .constdata          resources.o
-    0x08007ca6   0x08007ca6   0x000000dc   Data   RO         5235    .constdata          resources.o
-    0x08007d82   0x08007d82   0x00000012   Data   RO         5236    .constdata          resources.o
-    0x08007d94   0x08007d94   0x00000024   Data   RO         5238    .constdata          resources.o
-    0x08007db8   0x08007db8   0x00000024   Data   RO         5239    .constdata          resources.o
-    0x08007ddc   0x08007ddc   0x00000080   Data   RO         5241    .constdata          resources.o
-    0x08007e5c   0x08007e5c   0x00000080   Data   RO         5246    .constdata          resources.o
-    0x08007edc   0x08007edc   0x00000500   Data   RO         5248    .constdata          resources.o
-    0x080083dc   0x080083dc   0x0000000c   Data   RO         5457    .constdata          time.o
-    0x080083e8   0x080083e8   0x00000010   Data   RO         5761    .constdata          tunes.o
-    0x080083f8   0x080083f8   0x00000030   Data   RO         7277    .constdata          m_ws.l(cos_i.o)
-    0x08008428   0x08008428   0x000000c8   Data   RO         7296    .constdata          m_ws.l(rred.o)
-    0x080084f0   0x080084f0   0x00000028   Data   RO         7300    .constdata          m_ws.l(sin_i.o)
-    0x08008518   0x08008518   0x00000020   Data   RO         7356    Region$$Table       anon$$obj.o
+    0x080048ac   0x080048ac   0x000000d4   Code   RO         5548    i.itemLoader        timedate.o
+    0x08004980   0x08004980   0x00000020   Code   RO         4930    i.loader            menu.o
+    0x080049a0   0x080049a0   0x0000002c   Code   RO          601    i.mDown             mode_couple.o
+    0x080049cc   0x080049cc   0x00000034   Code   RO          718    i.mDown             mode_oddeve.o
+    0x08004a00   0x08004a00   0x00000024   Code   RO         5549    i.mDown             timedate.o
+    0x08004a24   0x08004a24   0x00000020   Code   RO         4880    i.mMainOpen         m_main.o
+    0x08004a44   0x08004a44   0x00000074   Code   RO         4881    i.mOpen             m_main.o
+    0x08004ab8   0x08004ab8   0x00000024   Code   RO          491    i.mSelect           mode.o
+    0x08004adc   0x08004adc   0x00000078   Code   RO          602    i.mSelect           mode_couple.o
+    0x08004b54   0x08004b54   0x00000074   Code   RO          719    i.mSelect           mode_oddeve.o
+    0x08004bc8   0x08004bc8   0x0000004c   Code   RO          996    i.mSelect           tailnum.o
+    0x08004c14   0x08004c14   0x00000018   Code   RO         4882    i.mSelect           m_main.o
+    0x08004c2c   0x08004c2c   0x00000024   Code   RO         5362    i.mSelect           sound.o
+    0x08004c50   0x08004c50   0x00000018   Code   RO         5550    i.mSelect           timedate.o
+    0x08004c68   0x08004c68   0x0000005c   Code   RO         5363    i.mSoundOpen        sound.o
+    0x08004cc4   0x08004cc4   0x00000078   Code   RO         5551    i.mTimeDateOpen     timedate.o
+    0x08004d3c   0x08004d3c   0x0000002c   Code   RO          603    i.mUp               mode_couple.o
+    0x08004d68   0x08004d68   0x00000038   Code   RO          720    i.mUp               mode_oddeve.o
+    0x08004da0   0x08004da0   0x00000024   Code   RO         5552    i.mUp               timedate.o
+    0x08004dc4   0x08004dc4   0x00000198   Code   RO          263    i.main              main.o
+    0x08004f5c   0x08004f5c   0x0000006c   Code   RO         7237    i.malloc            mc_w.l(malloc.o)
+    0x08004fc8   0x08004fc8   0x0000001c   Code   RO         4931    i.menu_close        menu.o
+    0x08004fe4   0x08004fe4   0x00000014   Code   RO         4932    i.menu_down         menu.o
+    0x08004ff8   0x08004ff8   0x00000090   Code   RO         4933    i.menu_draw         menu.o
+    0x08005088   0x08005088   0x000000e8   Code   RO         4934    i.menu_drawIcon     menu.o
+    0x08005170   0x08005170   0x0000002c   Code   RO         4936    i.menu_select       menu.o
+    0x0800519c   0x0800519c   0x00000014   Code   RO         4937    i.menu_up           menu.o
+    0x080051b0   0x080051b0   0x0000000c   Code   RO         1063    i.millis_get        tim.o
+    0x080051bc   0x080051bc   0x0000000c   Code   RO         4739    i.mod10             global.o
+    0x080051c8   0x080051c8   0x0000009c   Code   RO          604    i.modeCoupleSelect  mode_couple.o
+    0x08005264   0x08005264   0x00000080   Code   RO          721    i.modeOddevenSelect  mode_oddeve.o
+    0x080052e4   0x080052e4   0x0000005c   Code   RO          492    i.mode_select       mode.o
+    0x08005340   0x08005340   0x00000028   Code   RO         5679    i.next              tune.o
+    0x08005368   0x08005368   0x0000001c   Code   RO         4938    i.nextOption        menu.o
+    0x08005384   0x08005384   0x000002f0   Code   RO          722    i.oddEvenNumDraw    mode_oddeve.o
+    0x08005674   0x08005674   0x00000054   Code   RO         6500    i.oled_flush        oled_driver.o
+    0x080056c8   0x080056c8   0x00000010   Code   RO          723    i.paramDataDown     mode_oddeve.o
+    0x080056d8   0x080056d8   0x00000010   Code   RO          724    i.paramDataUp       mode_oddeve.o
+    0x080056e8   0x080056e8   0x000000b4   Code   RO          725    i.paramUpdate       mode_oddeve.o
+    0x0800579c   0x0800579c   0x00000088   Code   RO          823    i.pcf8563_Read      pcf8563.o
+    0x08005824   0x08005824   0x0000001c   Code   RO          824    i.pcf8563_gettime   pcf8563.o
+    0x08005840   0x08005840   0x0000001c   Code   RO         4939    i.prevOption        menu.o
+    0x0800585c   0x0800585c   0x000000e0   Code   RO         4406    i.processButtons    buttons.o
+    0x0800593c   0x0800593c   0x00000010   Code   RO         5152    i.pwrmgr_init       pwrmgr.o
+    0x0800594c   0x0800594c   0x00000014   Code   RO         5154    i.pwrmgr_userActive  pwrmgr.o
+    0x08005960   0x08005960   0x00000004   Code   RO           19    i.readFlash         flash.o
+    0x08005964   0x08005964   0x0000000c   Code   RO         4633    i.readPixels        draw.o
+    0x08005970   0x08005970   0x000000e4   Code   RO          605    i.ruleAutoMatch     mode_couple.o
+    0x08005a54   0x08005a54   0x00000034   Code   RO         5553    i.saveTimeDate      timedate.o
+    0x08005a88   0x08005a88   0x00000004   Code   RO          493    i.selectCouple      mode.o
+    0x08005a8c   0x08005a8c   0x00000010   Code   RO          494    i.selectCoupleLoop  mode.o
+    0x08005a9c   0x08005a9c   0x00000068   Code   RO         5554    i.selectDate        timedate.o
+    0x08005b04   0x08005b04   0x00000078   Code   RO          726    i.selectDaysleftNum  mode_oddeve.o
+    0x08005b7c   0x08005b7c   0x00000048   Code   RO          606    i.selectFridayNum   mode_couple.o
+    0x08005bc4   0x08005bc4   0x00000048   Code   RO          607    i.selectMondayNum   mode_couple.o
+    0x08005c0c   0x08005c0c   0x0000003c   Code   RO          727    i.selectOddEvenNum  mode_oddeve.o
+    0x08005c48   0x08005c48   0x00000004   Code   RO          495    i.selectOddOrEven   mode.o
+    0x08005c4c   0x08005c4c   0x00000070   Code   RO          997    i.selectTailNum     tailnum.o
+    0x08005cbc   0x08005cbc   0x00000048   Code   RO          608    i.selectThursdayNum  mode_couple.o
+    0x08005d04   0x08005d04   0x00000088   Code   RO         5555    i.selectTime        timedate.o
+    0x08005d8c   0x08005d8c   0x00000048   Code   RO          609    i.selectTuesdayNum  mode_couple.o
+    0x08005dd4   0x08005dd4   0x00000048   Code   RO          610    i.selectWednesdayNum  mode_couple.o
+    0x08005e1c   0x08005e1c   0x00000014   Code   RO         4940    i.setMenuFuncs      menu.o
+    0x08005e30   0x08005e30   0x00000024   Code   RO         4941    i.setMenuInfo       menu.o
+    0x08005e54   0x08005e54   0x000000b0   Code   RO         4942    i.setMenuOption     menu.o
+    0x08005f04   0x08005f04   0x0000002c   Code   RO         4943    i.setMenuOption_P   menu.o
+    0x08005f30   0x08005f30   0x00000068   Code   RO         5364    i.setMenuOptions    sound.o
+    0x08005f98   0x08005f98   0x00000024   Code   RO         4944    i.setPrevMenuExit   menu.o
+    0x08005fbc   0x08005fbc   0x00000018   Code   RO         4945    i.setPrevMenuOpen   menu.o
+    0x08005fd4   0x08005fd4   0x0000000c   Code   RO         5365    i.setVolume         sound.o
+    0x08005fe0   0x08005fe0   0x00000014   Code   RO         5366    i.setVolumeAlarm    sound.o
+    0x08005ff4   0x08005ff4   0x00000014   Code   RO         5367    i.setVolumeHour     sound.o
+    0x08006008   0x08006008   0x00000014   Code   RO         5368    i.setVolumeUI       sound.o
+    0x0800601c   0x0800601c   0x00000194   Code   RO          728    i.showDaysleftStr   mode_oddeve.o
+    0x080061b0   0x080061b0   0x00000088   Code   RO          729    i.showOddEvenStr    mode_oddeve.o
+    0x08006238   0x08006238   0x00000120   Code   RO          611    i.showWeekStr       mode_couple.o
+    0x08006358   0x08006358   0x000000a0   Code   RO         6946    i.sin               m_ws.l(sin.o)
+    0x080063f8   0x080063f8   0x00000018   Code   RO         6809    i.strcopy_cnt       gui_log_console.o
+    0x08006410   0x08006410   0x0000000a   Code   RO          612    i.switchTwoNum      mode_couple.o
+    0x0800641a   0x0800641a   0x00000002   PAD
+    0x0800641c   0x0800641c   0x00000018   Code   RO          998    i.tailNumDataDown   tailnum.o
+    0x08006434   0x08006434   0x00000018   Code   RO          999    i.tailNumDataUp     tailnum.o
+    0x0800644c   0x0800644c   0x0000005c   Code   RO         1000    i.tailNumDraw       tailnum.o
+    0x080064a8   0x080064a8   0x00000080   Code   RO         1001    i.tailnum_select    tailnum.o
+    0x08006528   0x08006528   0x00000044   Code   RO          496    i.thisdraw          mode.o
+    0x0800656c   0x0800656c   0x00000044   Code   RO         5369    i.thisdraw          sound.o
+    0x080065b0   0x080065b0   0x000002ac   Code   RO         5102    i.ticker            normal.o
+    0x0800685c   0x0800685c   0x00000048   Code   RO         5556    i.timeDataDown      timedate.o
+    0x080068a4   0x080068a4   0x00000040   Code   RO         5557    i.timeDataUp        timedate.o
+    0x080068e4   0x080068e4   0x000000c8   Code   RO         5558    i.timeDateDraw      timedate.o
+    0x080069ac   0x080069ac   0x0000005c   Code   RO         5445    i.time_dow          time.o
+    0x08006a08   0x08006a08   0x0000000c   Code   RO         5447    i.time_isLeapYear   time.o
+    0x08006a14   0x08006a14   0x0000001c   Code   RO         5448    i.time_monthDayCount  time.o
+    0x08006a30   0x08006a30   0x0000003c   Code   RO         5449    i.time_set          time.o
+    0x08006a6c   0x08006a6c   0x0000004c   Code   RO         5452    i.time_timeMode     time.o
+    0x08006ab8   0x08006ab8   0x00000040   Code   RO         5454    i.time_update       time.o
+    0x08006af8   0x08006af8   0x00000018   Code   RO         4011    i.toMinutes         alarm.o
+    0x08006b10   0x08006b10   0x0000001c   Code   RO         5680    i.tune_play         tune.o
+    0x08006b2c   0x08006b2c   0x00000038   Code   RO           20    i.wFlash            flash.o
+    0x08006b64   0x08006b64   0x00000028   Code   RO         5103    i.watchface_normal  normal.o
+    0x08006b8c   0x08006b8c   0x00000030   Code   RO          613    i.weekNumDataDown   mode_couple.o
+    0x08006bbc   0x08006bbc   0x00000030   Code   RO          614    i.weekNumDataUp     mode_couple.o
+    0x08006bec   0x08006bec   0x000000bc   Code   RO          615    i.weekNumDraw       mode_couple.o
+    0x08006ca8   0x08006ca8   0x00000028   Code   RO          827    i.writeData         pcf8563.o
+    0x08006cd0   0x08006cd0   0x0000000a   Data   RO          730    .constdata          mode_oddeve.o
+    0x08006cda   0x08006cda   0x00000010   Data   RO         3962    .constdata          system_stm32f1xx.o
+    0x08006cea   0x08006cea   0x00000008   Data   RO         3963    .constdata          system_stm32f1xx.o
+    0x08006cf2   0x08006cf2   0x00000005   Data   RO         4947    .constdata          menu.o
+    0x08006cf7   0x08006cf7   0x0000001c   Data   RO         5205    .constdata          resources.o
+    0x08006d13   0x08006d13   0x00000030   Data   RO         5206    .constdata          resources.o
+    0x08006d43   0x08006d43   0x00000080   Data   RO         5211    .constdata          resources.o
+    0x08006dc3   0x08006dc3   0x00000080   Data   RO         5213    .constdata          resources.o
+    0x08006e43   0x08006e43   0x00000200   Data   RO         5218    .constdata          resources.o
+    0x08007043   0x08007043   0x00000180   Data   RO         5219    .constdata          resources.o
+    0x080071c3   0x080071c3   0x00000180   Data   RO         5220    .constdata          resources.o
+    0x08007343   0x08007343   0x00000020   Data   RO         5228    .constdata          resources.o
+    0x08007363   0x08007363   0x00000020   Data   RO         5229    .constdata          resources.o
+    0x08007383   0x08007383   0x000003e0   Data   RO         5230    .constdata          resources.o
+    0x08007763   0x08007763   0x00000108   Data   RO         5231    .constdata          resources.o
+    0x0800786b   0x0800786b   0x000001e5   Data   RO         5232    .constdata          resources.o
+    0x08007a50   0x08007a50   0x00000008   Data   RO         5233    .constdata          resources.o
+    0x08007a58   0x08007a58   0x0000023a   Data   RO         5234    .constdata          resources.o
+    0x08007c92   0x08007c92   0x000000dc   Data   RO         5235    .constdata          resources.o
+    0x08007d6e   0x08007d6e   0x00000012   Data   RO         5236    .constdata          resources.o
+    0x08007d80   0x08007d80   0x00000024   Data   RO         5238    .constdata          resources.o
+    0x08007da4   0x08007da4   0x00000024   Data   RO         5239    .constdata          resources.o
+    0x08007dc8   0x08007dc8   0x00000080   Data   RO         5241    .constdata          resources.o
+    0x08007e48   0x08007e48   0x00000080   Data   RO         5246    .constdata          resources.o
+    0x08007ec8   0x08007ec8   0x00000500   Data   RO         5248    .constdata          resources.o
+    0x080083c8   0x080083c8   0x0000000c   Data   RO         5457    .constdata          time.o
+    0x080083d4   0x080083d4   0x00000010   Data   RO         5791    .constdata          tunes.o
+    0x080083e4   0x080083e4   0x00000004   PAD
+    0x080083e8   0x080083e8   0x00000030   Data   RO         7307    .constdata          m_ws.l(cos_i.o)
+    0x08008418   0x08008418   0x000000c8   Data   RO         7326    .constdata          m_ws.l(rred.o)
+    0x080084e0   0x080084e0   0x00000028   Data   RO         7330    .constdata          m_ws.l(sin_i.o)
+    0x08008508   0x08008508   0x00000020   Data   RO         7386    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08008538, Size: 0x000017a0, Max: 0x00005000, ABSOLUTE, COMPRESSED[0x00000068])
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08008528, Size: 0x000017a0, Max: 0x00005000, ABSOLUTE, COMPRESSED[0x00000068])
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -4725,14 +4739,14 @@ Memory Map of the image
     0x20000128   COMPRESSED   0x00000008   Data   RW         5370    .data               sound.o
     0x20000130   COMPRESSED   0x0000000a   Data   RW         5458    .data               time.o
     0x2000013a   COMPRESSED   0x00000002   PAD
-    0x2000013c   COMPRESSED   0x00000014   Data   RW         5554    .data               timedate.o
-    0x20000150   COMPRESSED   0x00000008   Data   RW         5652    .data               tune.o
-    0x20000158   COMPRESSED   0x00000010   Data   RW         5791    .data               ui.o
-    0x20000168   COMPRESSED   0x00000005   Data   RW         6783    .data               gui_log_console.o
+    0x2000013c   COMPRESSED   0x00000014   Data   RW         5559    .data               timedate.o
+    0x20000150   COMPRESSED   0x00000008   Data   RW         5682    .data               tune.o
+    0x20000158   COMPRESSED   0x00000010   Data   RW         5821    .data               ui.o
+    0x20000168   COMPRESSED   0x00000005   Data   RW         6813    .data               gui_log_console.o
     0x2000016d   COMPRESSED   0x00000003   PAD
-    0x20000170   COMPRESSED   0x00000004   Data   RW         7330    .data               mc_w.l(mvars.o)
-    0x20000174   COMPRESSED   0x00000004   Data   RW         7331    .data               mc_w.l(mvars.o)
-    0x20000178   COMPRESSED   0x00000004   Data   RW         7335    .data               mc_w.l(errno.o)
+    0x20000170   COMPRESSED   0x00000004   Data   RW         7360    .data               mc_w.l(mvars.o)
+    0x20000174   COMPRESSED   0x00000004   Data   RW         7361    .data               mc_w.l(mvars.o)
+    0x20000178   COMPRESSED   0x00000004   Data   RW         7365    .data               mc_w.l(errno.o)
     0x2000017c        -       0x00000410   Zero   RW           22    .bss                flash.o
     0x2000058c        -       0x00000054   Zero   RW          220    .bss                i2c.o
     0x200005e0        -       0x00000009   Zero   RW          828    .bss                pcf8563.o
@@ -4745,9 +4759,9 @@ Memory Map of the image
     0x200006ec        -       0x0000000c   Zero   RW         4359    .bss                appconfig.o
     0x200006f8        -       0x00000030   Zero   RW         4407    .bss                buttons.o
     0x20000728        -       0x00000024   Zero   RW         4946    .bss                menu.o
-    0x2000074c        -       0x00000400   Zero   RW         6471    .bss                oled_driver.o
-    0x20000b4c        -       0x000000c0   Zero   RW         6710    .bss                altitude_display.o
-    0x20000c0c        -       0x00000590   Zero   RW         6781    .bss                gui_log_console.o
+    0x2000074c        -       0x00000400   Zero   RW         6501    .bss                oled_driver.o
+    0x20000b4c        -       0x000000c0   Zero   RW         6740    .bss                altitude_display.o
+    0x20000c0c        -       0x00000590   Zero   RW         6811    .bss                gui_log_console.o
     0x2000119c   COMPRESSED   0x00000004   PAD
     0x200011a0        -       0x00000200   Zero   RW            2    HEAP                startup_stm32f103xb.o
     0x200013a0        -       0x00000400   Zero   RW            1    STACK               startup_stm32f103xb.o
@@ -4802,16 +4816,16 @@ Image component sizes
        564        154          0         16          0       4434   tailnum.o
        304         44          0         12         72       3088   tim.o
        332         24         12         10          0       4407   time.o
-      1240        294          0         20          0       8052   timedate.o
+      1220        294          0         20          0       8056   timedate.o
         68         12          0          8          0       1404   tune.o
          0          0         16          0          0        815   tunes.o
        308         30          0         16          0        852   ui.o
        284         32          0          0        136       2287   usart.o
 
     ----------------------------------------------------------------------
-     21300       2704       6176        368       5668     666897   Object Totals
+     21280       2704       6180        368       5668     666901   Object Totals
          0          0         32          0          0          0   (incl. Generated)
-        20          0          0         10         11          0   (incl. Padding)
+        20          0          4         10         11          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -4888,15 +4902,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     27640       2960       6464        380       5668     656005   Grand Totals
-     27640       2960       6464        104       5668     656005   ELF Image Totals (compressed)
-     27640       2960       6464        104          0          0   ROM Totals
+     27620       2960       6468        380       5668     656009   Grand Totals
+     27620       2960       6468        104       5668     656009   ELF Image Totals (compressed)
+     27620       2960       6468        104          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                34104 (  33.30kB)
+    Total RO  Size (Code + RO Data)                34088 (  33.29kB)
     Total RW  Size (RW Data + ZI Data)              6048 (   5.91kB)
-    Total ROM Size (Code + RO Data + RW Data)      34208 (  33.41kB)
+    Total ROM Size (Code + RO Data + RW Data)      34192 (  33.39kB)
 
 ==============================================================================
 
