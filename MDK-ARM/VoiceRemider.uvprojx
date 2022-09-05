@@ -471,6 +471,11 @@
               <FilePath>..\Core\Src\mode_couple.c</FilePath>
             </File>
             <File>
+              <FileName>mode_cploop.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\mode_cploop.c</FilePath>
+            </File>
+            <File>
               <FileName>mode_oddeve.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Core\Src\mode_oddeve.c</FilePath>

@@ -52,8 +52,7 @@ bool menu_select()
 			mMainOpen();
 		}
 		else if(menuData.func.btn2 != NULL)  //打开后再次按下确认功能
-		{
-			
+		{			
 			menuData.func.btn2();
 		}
 		

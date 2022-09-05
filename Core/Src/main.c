@@ -142,6 +142,7 @@ int main(void)
   while (1)
   {
 		c_loop(); //Ñ­»·test_loop();
+		//test_loop();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -238,7 +239,7 @@ void test_loop()
 
 	display_test();
 	
-//	memset(&oledBuffer, 0x00, FRAME_BUFFER_SIZE);
+	memset(&oledBuffer, 0x00, FRAME_BUFFER_SIZE);
 }
 
 

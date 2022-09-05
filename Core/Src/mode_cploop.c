@@ -7,17 +7,17 @@
 #include "common.h"
 #include "main.h"
 
-#define OPTION_COUNT					6
+#define OPTION_COUNT			32
 
-#define PARAM_X								6//
-#define SETTING_NOW_NONE			0
+#define PARAM_X					6//
+#define SETTING_NOW_NONE		0
 #define SETTING_NOW_ODDEVEN		1
 #define SETTING_NOW_START_Y		2
 #define SETTING_NOW_START_M		3
 #define SETTING_NOW_START_D		4
-#define SETTING_NOW_END_Y			5
-#define SETTING_NOW_END_M			6
-#define SETTING_NOW_END_D			7
+#define SETTING_NOW_END_Y		5
+#define SETTING_NOW_END_M		6
+#define SETTING_NOW_END_D		7
 
 //static driverInfo_s driverInfo;
 static prev_menu_s prevMenuData;
@@ -29,21 +29,21 @@ static void showOddEvenStr(void);
 static void showDaysleftStr(void);
 static void selectOddEvenNum(void);
 static void selectDaysleftNum(void);
-void checkDataValid(void);
-void paramUpdate(void);
+void checkDataValid1(void);
+void paramUpdate1(void);
 
-void modeOddevenSelect()
+void modeCpLoopSelect()
 {
 	setMenuInfo(OPTION_COUNT, MENU_TYPE_STR, PSTR(STR_LIMITODDOREVEN));
 	setMenuFuncs(mDown, mSelect, mUp, itemLoader);
 
-	setPrevMenuOpen(&prevMenuData, modeOddevenSelect);
+	setPrevMenuOpen(&prevMenuData, modeCpLoopSelect);
 	//1.从flash读取当前的单双号模式和退出时间
 	static unsigned int sizeStruct = 0;
 	sizeStruct = sizeof(driverInfo_s);
 	readFlash(START_FLASH_ADDRESS, (uint16_t *)driverInfo_P, sizeStruct);
-	driverInfo_P->mode = 2;
-	checkDataValid();
+	driverInfo_P->mode = 3;
+	// checkDataValid();
 	menuData.selected = 1;	
 	beginAnimation2(NULL);
 }
@@ -52,23 +52,14 @@ static void mDown()
 {
 	nextOption();
 	// Some lines are blank, skip them
-	if(menuData.selected == 0 || menuData.selected == 2)
-		nextOption();
-	if(menuData.selected == 3)
-		nextOption();
-	if(menuData.selected == 4)
+	if(menuData.selected % 2 == 0)
 		nextOption();
 }
 
 static void mUp()
 {
 	prevOption();
-	if(menuData.selected == 4)
-		prevOption();
-	if(menuData.selected == 3)
-		prevOption();
-	// Some lines are blank, skip them
-	if(menuData.selected == 0 || menuData.selected == 2 || menuData.selected == 4)
+	if(menuData.selected % 2 == 0)
 		prevOption();
 }
 
@@ -78,19 +69,19 @@ static void mSelect()
 	if(isExiting)
 	{
 		//save rules to flash	
-		unsigned int ret = 99;
-		readFlash(START_FLASH_ADDRESS, (uint16_t *)flashCont, sizeof(driverInfo_s));
-		if(flashCont->limitDS.normal != driverInfo_P->limitDS.normal)
-			wFlash(START_FLASH_ADDRESS, (uint16_t *)driverInfo_P, sizeof(driverInfo_s));
-		else
-		{
-			ret = memcmp(flashCont->limitDS.endYMD, driverInfo_P->limitDS.endYMD, \
-			sizeof(flashCont->limitDS.endYMD));
-			if(ret != 0)
-				wFlash(START_FLASH_ADDRESS, (uint16_t *)driverInfo_P, sizeof(driverInfo_s));
-		}
-		if(flashCont->mode != driverInfo_P->mode)
-			wFlash(START_FLASH_ADDRESS, (uint16_t *)driverInfo_P, sizeof(driverInfo_s));
+		// unsigned int ret = 99;
+		// readFlash(START_FLASH_ADDRESS, (uint16_t *)flashCont, sizeof(driverInfo_s));
+		// if(flashCont->limitDS.normal != driverInfo_P->limitDS.normal)
+		// 	wFlash(START_FLASH_ADDRESS, (uint16_t *)driverInfo_P, sizeof(driverInfo_s));
+		// else
+		// {
+		// 	ret = memcmp(flashCont->limitDS.endYMD, driverInfo_P->limitDS.endYMD, \
+		// 	sizeof(flashCont->limitDS.endYMD));
+		// 	if(ret != 0)
+		// 		wFlash(START_FLASH_ADDRESS, (uint16_t *)driverInfo_P, sizeof(driverInfo_s));
+		// }
+		// if(flashCont->mode != driverInfo_P->mode)
+		// 	wFlash(START_FLASH_ADDRESS, (uint16_t *)driverInfo_P, sizeof(driverInfo_s));
 	}
 	setPrevMenuExit(&prevMenuData);
 	doAction(exitSelected());	
@@ -256,7 +247,7 @@ static void paramDataDown()
 {
 	static u16 days = 0;
 	setting.val--;
-	paramUpdate();
+	paramUpdate1();
 	days = formatDaysCounter(driverInfo_P->limitDS.startYMD, driverInfo_P->limitDS.endYMD);
 	//driverInfo_P->limitDS.normal = setting.val;			//?????????????????????????
 }
@@ -335,7 +326,7 @@ static void selectDaysleftNum()
 	}	
 }
 
-void paramUpdate(void)
+void paramUpdate1(void)
 {
 	byte daysOfMonth = 0;
 	switch(setting.now)
@@ -434,7 +425,7 @@ void paramUpdate(void)
 	}
 }
 
-void checkDataValid(void)
+void checkDataValid1(void)
 {
 	byte cnt;
 	if(driverInfo_P->limitDS.normal > 1)
@@ -465,16 +456,6 @@ void checkDataValid(void)
 		driverInfo_P->limitDS.endYMD[2] = timeDate.date.date;
 	}
 }
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -11,5 +11,5 @@
 
 void mTimeDateOpen(void);
 unsigned int daysCounter(timeDate_s start, timeDate_s stop);
-
+unsigned int formatDaysCounter(byte *first, byte *last);
 #endif /* TIMEDATE_H_ */

@@ -94,10 +94,8 @@ static void selectOddOrEven()
 static void selectCoupleLoop()
 {
 //	volHour = setVolume(volHour);
-
 	//appConfig.volHour = setVolume(appConfig.volHour);
-
-	driverInfo_P->mode = 3;
+	modeCpLoopSelect();
 }
 
 

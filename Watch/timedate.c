@@ -127,7 +127,7 @@ static void selectDate()
 			break;
 		case SETTING_NOW_MONTH:
 		{
-			timeDateSet.date.month = (month_t)setting.val;
+			timeDateSet.date.month = (month_t)(setting.val-1);
 			byte numDays = time_monthDayCount(timeDateSet.date.month, timeDateSet.date.year);//days of every month
 			if(timeDateSet.date.date > numDays)
 				timeDateSet.date.date = numDays;
@@ -137,7 +137,7 @@ static void selectDate()
 			break;
 		default: // Also SETTING_NOW_YEAR
 			timeDateSet.date.year = setting.val;
-			timeDateSet.date.day = time_dow(timeDateSet.date.year, timeDateSet.date.month, timeDateSet.date.date);//weeks
+			timeDateSet.date.date = time_dow(timeDateSet.date.year, timeDateSet.date.month, timeDateSet.date.date);//weeks
 
 			endSelect();
 			break;
@@ -364,9 +364,9 @@ int daysRemaining(timeDate_s calcDate)
 	byte numDays = time_monthDayCount(calcDate.date.month, calcDate.date.year);//days of every month
 	monthLeft = numDays - calcDate.date.date;	//day of current month remaining 	
 	nowDate.date.year 	= calcDate.date.year;
-	nowDate.date.month 	= calcDate.date.month;
-	nowDate.date.day 	= calcDate.date.date;
-	for(; nowDate.date.month <= 12; nowDate.date.month++)
+	nowDate.date.month 	= (month_t)(calcDate.date.month+1);//current month calculate it numDays, so loop start from next month
+	nowDate.date.date 	= calcDate.date.date;
+	for(; nowDate.date.month <= 11; nowDate.date.month++)
 		totalDays += time_monthDayCount(nowDate.date.month, nowDate.date.year);
 	totalDays += monthLeft;
 	return totalDays;
@@ -377,10 +377,10 @@ int daysPassed(timeDate_s calcDate)
 {
 	unsigned int monthLeft = 0, totalDays = 0;
 	timeDate_s nowDate;
-	monthLeft = calcDate.date.day;
+	monthLeft = calcDate.date.date;
 	nowDate.date.year 	= calcDate.date.year;
-	nowDate.date.month 	= 1;		//count from January 1.
-	nowDate.date.day 	= 1;
+	nowDate.date.month 	= (month_t)0;		//count from January 1.
+	nowDate.date.date 	= 1;
 	for(;nowDate.date.month <= calcDate.date.month-1; nowDate.date.month++)
 		totalDays += time_monthDayCount(nowDate.date.month, nowDate.date.year);
 	totalDays += monthLeft;
@@ -404,22 +404,23 @@ int daysDiffYear(timeDate_s start, timeDate_s stop){
 int daysSameYear(timeDate_s start, timeDate_s stop)
 {
 	if(start.date.month == stop.date.month)
-		return stop.date.day - start.date.day;
+		return stop.date.date - start.date.date;
 	else if(start.date.month < stop.date.month)
 	{
 		unsigned int total = 0, monthLeft = 0;
 		timeDate_s nowDate;
 		monthLeft = time_monthDayCount(start.date.month, start.date.year)\
-		 - start.date.day;			//first month
+		 - start.date.date;			//first month
 		nowDate.date.year 	= start.date.year;
-		nowDate.date.month 	= start.date.month+1;
-		nowDate.date.day 	= start.date.day;
+		nowDate.date.month 	= (month_t)(start.date.month+1);
+		nowDate.date.date 	= start.date.date;
 		for(;nowDate.date.month <= stop.date.month-1; nowDate.date.month++)
 			total += time_monthDayCount(nowDate.date.month, nowDate.date.year);		// all midddle month
-		return  monthLeft + total + stop.date.day;
+		return  monthLeft + total + stop.date.date;
 	}
 	else
 		;//exit(1);//start later than stop
+	return 0x1001;
 }
 
 unsigned int daysCounter(timeDate_s start, timeDate_s stop)
@@ -430,6 +431,18 @@ unsigned int daysCounter(timeDate_s start, timeDate_s stop)
 		return daysDiffYear(start, stop);
 	else
 		;//exit(1);//start later than stop
+	
+	return 0x1000;
 }
 
-
+unsigned int formatDaysCounter(byte *first, byte *last)
+{
+	timeDate_s start, stop;
+	start.date.year 	= first[0];
+	start.date.month 	= (month_t)first[1];
+	start.date.date		= first[2];
+	stop.date.year 		= last[0];
+	stop.date.month 	= (month_t)last[1];
+	stop.date.date 		= last[2];
+	return daysCounter(start, stop);
+}

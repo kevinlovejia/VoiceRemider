@@ -155,7 +155,13 @@ void display_test()
 
 //	if(drawFunc != NULL)
 //		busy = drawFunc();
-	draw_bitmap(times, 0, test_display, 32, 64, NOINVERT, 0);
+	int x = 0, y = 0;
+	for(y = 0;y < 4; y++)
+	{
+		for(x = 0;x < 8; x++)
+		draw_bitmap(x*16, y*16, textDisplay[x+y*8], 16, 16, NOINVERT, 0);
+	}
+
 //	draw_bitmap(46, 14, selectbar_top, 36, 8, NOINVERT, 0);			
 //	draw_bitmap(46, 42, selectbar_bottom, 36, 8, NOINVERT, 0);	
 	// End drawing, send to OLED
