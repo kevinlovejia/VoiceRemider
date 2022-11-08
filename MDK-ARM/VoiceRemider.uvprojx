@@ -555,6 +555,16 @@
               <FileType>1</FileType>
               <FilePath>../Core/Src/usart.c</FilePath>
             </File>
+            <File>
+              <FileName>JQ8X00.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\JQ8X00.c</FilePath>
+            </File>
+            <File>
+              <FileName>play.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\play.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

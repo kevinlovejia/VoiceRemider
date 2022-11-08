@@ -80,6 +80,10 @@
 .\voiceremider\tim.o: ../Core/Inc/tailnum.h
 .\voiceremider\tim.o: ../Core/Inc/mode_couple.h
 .\voiceremider\tim.o: ../Core/Inc/mode_oddeve.h
+.\voiceremider\tim.o: ../Core/Inc/mode_cploop.h
 .\voiceremider\tim.o: ../Core/Inc/flash.h
+.\voiceremider\tim.o: ../Core/Inc/JQ8X00.h
+.\voiceremider\tim.o: ../Core/Inc/usart.h
+.\voiceremider\tim.o: ../Core/Inc/play.h
 .\voiceremider\tim.o: ../MYAPP/wait_data_clock.h
 .\voiceremider\tim.o: ../MYAPP/gui_log_console.h

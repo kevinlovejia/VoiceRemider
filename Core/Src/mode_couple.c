@@ -45,25 +45,13 @@ menu_f weekDrawFunc[] = {selectMondayNum, selectTuesdayNum, \
  selectWednesdayNum, selectThursdayNum, selectFridayNum};
 
 byte presetMode[][10] ={
-	//???	???	????	????	????
-	{
-		1,6,	2,7,	3,8,	4,9,	5,0,	//[0]?????1
-	},
-	{
-		2,7,	3,8,	4,9,	5,0,	1,6,	//[1]?????2
-	},
-	{
-		3,8,	4,9,	5,0,	1,6,	2,7,
-	},
-	{
-		4,9,	5,0,	1,6,	2,7,	3,8,
-	},
-	{
-		5,0,	1,6,	2,7,	3,8,	4,9,
-	},
-	{
-		1,9,	2,8,	3,7,	4,6,	5,0,	//[5]?????3
-	},
+	//  Mon     Tue     Wed     Thu     Fri
+	{	1,6,	2,7,	3,8,	4,9,	5,0,	},//[0]rule 1
+	{	2,7,	3,8,	4,9,	5,0,	1,6,	},//[1]rule 2
+	{	3,8,	4,9,	5,0,	1,6,	2,7,	},
+	{	4,9,	5,0,	1,6,	2,7,	3,8,	},
+	{	5,0,	1,6,	2,7,	3,8,	4,9,	},
+	{	1,9,	2,8,	3,7,	4,6,	5,0,	},//[5]rule 3
  };
 
 void modeCoupleSelect()
@@ -233,7 +221,7 @@ static void showWeekStr(byte num)
 	posY = weekCalc*16 + 8;
 	posY -= menuData.scroll*8;
 	if(posY == 0)														//???y?????0??????¦Á???
-		draw_clearArea(35, 0, 56);						//???< MODE >	
+		draw_clearArea(28, 0, 70);						//< Couple >	
 	
 	LOOP(8, cnt)
 	{			

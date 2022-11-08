@@ -79,7 +79,10 @@
 .\voiceremider\tunemaker.o: ../Core/Inc/tailnum.h
 .\voiceremider\tunemaker.o: ../Core/Inc/mode_couple.h
 .\voiceremider\tunemaker.o: ../Core/Inc/mode_oddeve.h
+.\voiceremider\tunemaker.o: ../Core/Inc/mode_cploop.h
 .\voiceremider\tunemaker.o: ../Core/Inc/flash.h
+.\voiceremider\tunemaker.o: ../Core/Inc/JQ8X00.h
+.\voiceremider\tunemaker.o: ../Core/Inc/usart.h
+.\voiceremider\tunemaker.o: ../Core/Inc/play.h
 .\voiceremider\tunemaker.o: ../MYAPP/wait_data_clock.h
 .\voiceremider\tunemaker.o: ../MYAPP/gui_log_console.h
-.\voiceremider\tunemaker.o: ../Core/Inc/usart.h

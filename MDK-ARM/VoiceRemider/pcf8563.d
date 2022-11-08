@@ -81,6 +81,10 @@
 .\voiceremider\pcf8563.o: ../Core/Inc/tailnum.h
 .\voiceremider\pcf8563.o: ../Core/Inc/mode_couple.h
 .\voiceremider\pcf8563.o: ../Core/Inc/mode_oddeve.h
+.\voiceremider\pcf8563.o: ../Core/Inc/mode_cploop.h
 .\voiceremider\pcf8563.o: ../Core/Inc/flash.h
+.\voiceremider\pcf8563.o: ../Core/Inc/JQ8X00.h
+.\voiceremider\pcf8563.o: ../Core/Inc/usart.h
+.\voiceremider\pcf8563.o: ../Core/Inc/play.h
 .\voiceremider\pcf8563.o: ../MYAPP/wait_data_clock.h
 .\voiceremider\pcf8563.o: ../MYAPP/gui_log_console.h

@@ -79,7 +79,11 @@
 .\voiceremider\alarm.o: ../Core/Inc/tailnum.h
 .\voiceremider\alarm.o: ../Core/Inc/mode_couple.h
 .\voiceremider\alarm.o: ../Core/Inc/mode_oddeve.h
+.\voiceremider\alarm.o: ../Core/Inc/mode_cploop.h
 .\voiceremider\alarm.o: ../Core/Inc/flash.h
+.\voiceremider\alarm.o: ../Core/Inc/JQ8X00.h
+.\voiceremider\alarm.o: ../Core/Inc/usart.h
+.\voiceremider\alarm.o: ../Core/Inc/play.h
 .\voiceremider\alarm.o: ../MYAPP/wait_data_clock.h
 .\voiceremider\alarm.o: ../MYAPP/gui_log_console.h
 .\voiceremider\alarm.o: ../Core/Inc/DS3231.h

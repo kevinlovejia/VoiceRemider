@@ -102,7 +102,9 @@ typedef struct {
 typedef struct {
 	bool usedRule1;							
 	bool usedRule2;							
-	bool usedRule3;							
+	bool usedRule3;	
+	bool usedRule4;
+	bool usedRule5;						
 	byte matchTimes;							
 }limCoupLocal_s;								//do not save to flash
 

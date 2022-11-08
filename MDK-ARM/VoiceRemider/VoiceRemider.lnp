@@ -13,6 +13,8 @@
 ".\voiceremider\tailnum.o"
 ".\voiceremider\tim.o"
 ".\voiceremider\usart.o"
+".\voiceremider\jq8x00.o"
+".\voiceremider\play.o"
 ".\voiceremider\stm32f1xx_hal_gpio_ex.o"
 ".\voiceremider\stm32f1xx_hal_i2c.o"
 ".\voiceremider\stm32f1xx_hal.o"

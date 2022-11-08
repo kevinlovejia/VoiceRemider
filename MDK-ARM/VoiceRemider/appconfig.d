@@ -79,6 +79,10 @@
 .\voiceremider\appconfig.o: ../Core/Inc/tailnum.h
 .\voiceremider\appconfig.o: ../Core/Inc/mode_couple.h
 .\voiceremider\appconfig.o: ../Core/Inc/mode_oddeve.h
+.\voiceremider\appconfig.o: ../Core/Inc/mode_cploop.h
 .\voiceremider\appconfig.o: ../Core/Inc/flash.h
+.\voiceremider\appconfig.o: ../Core/Inc/JQ8X00.h
+.\voiceremider\appconfig.o: ../Core/Inc/usart.h
+.\voiceremider\appconfig.o: ../Core/Inc/play.h
 .\voiceremider\appconfig.o: ../MYAPP/wait_data_clock.h
 .\voiceremider\appconfig.o: ../MYAPP/gui_log_console.h

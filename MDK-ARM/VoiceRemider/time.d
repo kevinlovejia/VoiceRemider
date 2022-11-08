@@ -79,7 +79,11 @@
 .\voiceremider\time.o: ../Core/Inc/tailnum.h
 .\voiceremider\time.o: ../Core/Inc/mode_couple.h
 .\voiceremider\time.o: ../Core/Inc/mode_oddeve.h
+.\voiceremider\time.o: ../Core/Inc/mode_cploop.h
 .\voiceremider\time.o: ../Core/Inc/flash.h
+.\voiceremider\time.o: ../Core/Inc/JQ8X00.h
+.\voiceremider\time.o: ../Core/Inc/usart.h
+.\voiceremider\time.o: ../Core/Inc/play.h
 .\voiceremider\time.o: ../MYAPP/wait_data_clock.h
 .\voiceremider\time.o: ../MYAPP/gui_log_console.h
 .\voiceremider\time.o: ../Core/Inc/pcf8563.h

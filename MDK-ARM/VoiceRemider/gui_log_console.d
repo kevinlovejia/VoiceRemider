@@ -80,7 +80,11 @@
 .\voiceremider\gui_log_console.o: ../Core/Inc/tailnum.h
 .\voiceremider\gui_log_console.o: ../Core/Inc/mode_couple.h
 .\voiceremider\gui_log_console.o: ../Core/Inc/mode_oddeve.h
+.\voiceremider\gui_log_console.o: ../Core/Inc/mode_cploop.h
 .\voiceremider\gui_log_console.o: ../Core/Inc/flash.h
+.\voiceremider\gui_log_console.o: ../Core/Inc/JQ8X00.h
+.\voiceremider\gui_log_console.o: ../Core/Inc/usart.h
+.\voiceremider\gui_log_console.o: ../Core/Inc/play.h
 .\voiceremider\gui_log_console.o: ../MYAPP/wait_data_clock.h
 .\voiceremider\gui_log_console.o: ../oledlib/oled_driver.h
 .\voiceremider\gui_log_console.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h

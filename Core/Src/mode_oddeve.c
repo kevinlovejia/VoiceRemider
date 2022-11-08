@@ -441,7 +441,7 @@ void checkDataValid(void)
 		driverInfo_P->limitDS.normal = 0;
 	for(cnt = 0; cnt < 3; cnt++)
 	{
-		if(driverInfo_P->limitDS.startYMD[cnt] == 0 || driverInfo_P->limitDS.startYMD[cnt] == 0xFF)
+		if(driverInfo_P->limitDS.endYMD[cnt] == 0xFF || driverInfo_P->limitDS.startYMD[cnt] == 0xFF)
 			break;
 	}
 	if(cnt != 3) //????????0????
@@ -450,16 +450,6 @@ void checkDataValid(void)
 		driverInfo_P->limitDS.startYMD[0] = timeDate.date.year;
 		driverInfo_P->limitDS.startYMD[1] = timeDate.date.month;
 		driverInfo_P->limitDS.startYMD[2] = timeDate.date.date;
-	}
-
-	for(cnt = 0; cnt < 3; cnt++)
-	{
-		if(driverInfo_P->limitDS.endYMD[cnt] == 0 || driverInfo_P->limitDS.endYMD[cnt] == 0xFF)
-			break;
-	}
-	if(cnt != 3) //????????0????
-	{
-		//????driverInfo_P->limitDS.endYMD[cnt]
 		driverInfo_P->limitDS.endYMD[0] = timeDate.date.year;
 		driverInfo_P->limitDS.endYMD[1] = timeDate.date.month;
 		driverInfo_P->limitDS.endYMD[2] = timeDate.date.date;

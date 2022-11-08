@@ -79,6 +79,10 @@
 .\voiceremider\resources.o: ../Core/Inc/tailnum.h
 .\voiceremider\resources.o: ../Core/Inc/mode_couple.h
 .\voiceremider\resources.o: ../Core/Inc/mode_oddeve.h
+.\voiceremider\resources.o: ../Core/Inc/mode_cploop.h
 .\voiceremider\resources.o: ../Core/Inc/flash.h
+.\voiceremider\resources.o: ../Core/Inc/JQ8X00.h
+.\voiceremider\resources.o: ../Core/Inc/usart.h
+.\voiceremider\resources.o: ../Core/Inc/play.h
 .\voiceremider\resources.o: ../MYAPP/wait_data_clock.h
 .\voiceremider\resources.o: ../MYAPP/gui_log_console.h

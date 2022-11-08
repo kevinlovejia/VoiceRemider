@@ -79,9 +79,12 @@
 .\voiceremider\buttons.o: ../Core/Inc/tailnum.h
 .\voiceremider\buttons.o: ../Core/Inc/mode_couple.h
 .\voiceremider\buttons.o: ../Core/Inc/mode_oddeve.h
+.\voiceremider\buttons.o: ../Core/Inc/mode_cploop.h
 .\voiceremider\buttons.o: ../Core/Inc/flash.h
+.\voiceremider\buttons.o: ../Core/Inc/JQ8X00.h
+.\voiceremider\buttons.o: ../Core/Inc/usart.h
+.\voiceremider\buttons.o: ../Core/Inc/play.h
 .\voiceremider\buttons.o: ../MYAPP/wait_data_clock.h
 .\voiceremider\buttons.o: ../MYAPP/gui_log_console.h
 .\voiceremider\buttons.o: ../oledlib/oled_driver.h
 .\voiceremider\buttons.o: ../Core/Inc/gpio.h
-.\voiceremider\buttons.o: ../Core/Inc/usart.h

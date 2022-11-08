@@ -78,9 +78,10 @@
 #include "tailnum.h"
 #include "mode_couple.h"
 #include "mode_oddeve.h"
-
+#include "mode_cploop.h"
 #include "flash.h"
-
+#include "JQ8X00.h"
+#include "play.h"
 
 //#include "mpu6050.h"
 //#include "inv_mpu.h"

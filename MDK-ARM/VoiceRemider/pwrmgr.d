@@ -79,6 +79,10 @@
 .\voiceremider\pwrmgr.o: ../Core/Inc/tailnum.h
 .\voiceremider\pwrmgr.o: ../Core/Inc/mode_couple.h
 .\voiceremider\pwrmgr.o: ../Core/Inc/mode_oddeve.h
+.\voiceremider\pwrmgr.o: ../Core/Inc/mode_cploop.h
 .\voiceremider\pwrmgr.o: ../Core/Inc/flash.h
+.\voiceremider\pwrmgr.o: ../Core/Inc/JQ8X00.h
+.\voiceremider\pwrmgr.o: ../Core/Inc/usart.h
+.\voiceremider\pwrmgr.o: ../Core/Inc/play.h
 .\voiceremider\pwrmgr.o: ../MYAPP/wait_data_clock.h
 .\voiceremider\pwrmgr.o: ../MYAPP/gui_log_console.h

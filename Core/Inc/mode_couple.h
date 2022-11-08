@@ -10,6 +10,7 @@
 
 void modeCoupleSelect(void);
 extern byte presetMode[][10];
+void switchTwoNum(byte *one, byte *two);
 
 
 #endif /* MODE_COUPLE_H_ */
